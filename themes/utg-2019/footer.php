@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer.
  *
@@ -6,27 +7,37 @@
  */
 
 ?>
-		</div><!-- #content -->
+</div><!-- #content -->
 
-		<footer id="site-footer" class="site-footer">
-			
-			<div class="copyright-info">
-				<?php printf( esc_html('© 2020 Under The GUI')); ?></a>
-			</div>
+<footer id="site-footer" class="site-footer">
 
-			<div class="socialmedia-footer">
-				<ul>
-					<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/facebook.svg" alt="facebook-logo"></a></li>
-					<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/instagram.svg" alt="instagram-logo"></a></li>
-					<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/twitter.svg" alt="twitter-logo"></a></li>
-					<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/youtube.svg" alt="youtube-logo"></a></li>
-				</ul>
-			</div>
 
-		</footer><!-- #colophon -->
-		</div><!-- #page -->
+	<div class="footer-logo-container">
+		<div class="footer-logo">
+			<a href="<?php echo esc_url(home_url('/')); ?>">
+				<img class="footer-logo-img" src="<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/main-logo.png" alt="main logo">
+			</a>
+		</div>	
+	</div>
 
-		<?php wp_footer(); ?>
+	<div class="copyright-info">
+		<?php printf(esc_html('© 2020 Under The GUI')); ?></a>
+	</div>
 
-	</body>
+	<div class="socialmedia-footer">
+		<ul>
+			<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/facebook.svg" alt="facebook-logo"></a></li>
+			<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/instagram.svg" alt="instagram-logo"></a></li>
+			<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/twitter.svg" alt="twitter-logo"></a></li>
+			<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/youtube.svg" alt="youtube-logo"></a></li>
+		</ul>
+	</div>
+
+</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+</body>
+
 </html>
