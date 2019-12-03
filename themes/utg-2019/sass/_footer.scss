@@ -1,12 +1,23 @@
 .site-footer {
     min-width: 100%;
-    display: flex;
     position: relative;
     justify-content: space-between;
+    background-color: $color_grey;
 
     .socialmedia-footer {
         display: flex;
         justify-content: flex-end;
+        ul {
+            display: flex;
+            flex-direction: row;
+            li {
+                margin: 1rem;
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
     }
     .copyright-info {
         position: absolute;

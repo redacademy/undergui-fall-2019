@@ -619,13 +619,11 @@ object {
 /* Front page */
 .site-footer {
   min-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  background-color: #eff1f6; }
   .site-footer .socialmedia-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -633,6 +631,19 @@ object {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
+    .site-footer .socialmedia-footer ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      .site-footer .socialmedia-footer ul li {
+        margin: 1rem; }
+        .site-footer .socialmedia-footer ul li img {
+          width: 2rem;
+          height: 2rem; }
   .site-footer .copyright-info {
     position: absolute;
     bottom: 5px;
