@@ -30,7 +30,7 @@
 			</div><!-- .site-branding -->
 
 			<a href="<?php echo esc_url(home_url('/')); ?>">
-				<img src="<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/TEMP-LOGO-EDAv2.png" alt="">
+				<img src="<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/main-logo.png" alt="main logo">
 
 			</a>
 
