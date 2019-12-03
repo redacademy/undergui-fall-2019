@@ -2,12 +2,11 @@
     min-width: 100%;
     display: flex;
     position: relative;
+    justify-content: space-between;
 
     .socialmedia-footer {
         display: flex;
-        ul {
-            list-style: none;
-        }
+        justify-content: flex-end;
     }
     .copyright-info {
         position: absolute;
