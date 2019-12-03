@@ -22,22 +22,30 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
 		<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html('Skip to content'); ?></a>
+		<div class="site-branding">
+			<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+			<p class="site-description screen-reader-text"><?php bloginfo('description'); ?></p>
+		</div><!-- .site-branding -->
 
+		<div class="franchise-link">
+			<a href="<?= get_site_url(); ?>/404">Become a franchise</a>
+		</div>
 		<header id="masthead" class="site-header" role="banner">
-			<div class="site-branding">
-				<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-				<p class="site-description screen-reader-text"><?php bloginfo('description'); ?></p>
-			</div><!-- .site-branding -->
 
 			<a href="<?php echo esc_url(home_url('/')); ?>">
 				<img src="<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/TEMP-LOGO-EDAv2.png" alt="">
 
 			</a>
 
+			<div class="nav-links">
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
-			</nav><!-- #site-navigation -->
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
+				</nav><!-- #site-navigation -->
+
+				<a class="button" href="<?= get_site_url(); ?>/request-info">REQUEST INFO</a>
+
+			</div>
 		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">
