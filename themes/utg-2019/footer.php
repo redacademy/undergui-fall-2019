@@ -11,8 +11,8 @@
 		<footer id="site-footer" class="site-footer">
 
 							<!-- contact-footer -->
-			<div class="contact-socialmedia-logo">
-				<ul class="contact-footer">
+			<div class="socialmedia-footer">
+				<ul>
 					<li>
 						<a href="#"><img src="./wp-content/assets/icons/facebook.svg" alt="facebook-logo"></a>
 						<a href="#"><img src="./wp-content/assets/icons/instagram.svg" alt="instagram-logo"></a>

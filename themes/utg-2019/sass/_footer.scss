@@ -1,0 +1,17 @@
+.site-footer {
+    min-width: 100%;
+    display: flex;
+    position: relative;
+
+    .socialmedia-footer {
+        display: flex;
+        ul {
+            list-style: none;
+        }
+    }
+    .copyright-info {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+    }
+}
