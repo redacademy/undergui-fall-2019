@@ -1,3 +1,137 @@
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap');
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-ThinItalic.eot');
+  src: url('Gotham-ThinItalic.eot?#iefix') format('embedded-opentype'),
+    url('Gotham-ThinItalic.woff2') format('woff2'),
+    url('Gotham-ThinItalic.woff') format('woff'),
+    url('Gotham-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-Thin.eot');
+  src: url('Gotham-Thin.eot?#iefix') format('embedded-opentype'),
+    url('Gotham-Thin.woff2') format('woff2'),
+    url('Gotham-Thin.woff') format('woff'),
+    url('Gotham-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-Light.eot');
+  src: url('Gotham-Light.eot?#iefix') format('embedded-opentype'),
+    url('Gotham-Light.woff2') format('woff2'),
+    url('Gotham-Light.woff') format('woff'),
+    url('Gotham-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-BoldItalic.eot');
+  src: url('Gotham-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('Gotham-BoldItalic.woff2') format('woff2'),
+    url('Gotham-BoldItalic.woff') format('woff'),
+    url('Gotham-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-Medium.eot');
+  src: url('Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+    url('Gotham-Medium.woff2') format('woff2'),
+    url('Gotham-Medium.woff') format('woff'),
+    url('Gotham-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-Black.eot');
+  src: url('Gotham-Black.eot?#iefix') format('embedded-opentype'),
+    url('Gotham-Black.woff2') format('woff2'),
+    url('Gotham-Black.woff') format('woff'),
+    url('Gotham-Black.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-Book.eot');
+  src: url('Gotham-Book.eot?#iefix') format('embedded-opentype'),
+    url('Gotham-Book.woff2') format('woff2'),
+    url('Gotham-Book.woff') format('woff'),
+    url('Gotham-Book.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-Bold.eot');
+  src: url('Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+    url('Gotham-Bold.woff2') format('woff2'),
+    url('Gotham-Bold.woff') format('woff'),
+    url('Gotham-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-MediumItalic.eot');
+  src: url('Gotham-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url('Gotham-MediumItalic.woff2') format('woff2'),
+    url('Gotham-MediumItalic.woff') format('woff'),
+    url('Gotham-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-LightItalic.eot');
+  src: url('Gotham-LightItalic.eot?#iefix') format('embedded-opentype'),
+    url('Gotham-LightItalic.woff2') format('woff2'),
+    url('Gotham-LightItalic.woff') format('woff'),
+    url('Gotham-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-BlackItalic.eot');
+  src: url('Gotham-BlackItalic.eot?#iefix') format('embedded-opentype'),
+    url('Gotham-BlackItalic.woff2') format('woff2'),
+    url('Gotham-BlackItalic.woff') format('woff'),
+    url('Gotham-BlackItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-BookItalic.eot');
+  src: url('Gotham-BookItalic.eot?#iefix') format('embedded-opentype'),
+    url('Gotham-BookItalic.woff2') format('woff2'),
+    url('Gotham-BookItalic.woff') format('woff'),
+    url('Gotham-BookItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
