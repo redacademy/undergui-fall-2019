@@ -1,27 +1,27 @@
 .site-footer {
-    min-width: 100%;
-    position: relative;
-    justify-content: space-between;
-    background-color: $color_grey;
+  min-width: 100%;
+  position: relative;
+  justify-content: space-between;
+  background-color: $color_grey;
 
-    .socialmedia-footer {
-        display: flex;
-        justify-content: flex-end;
-        ul {
-            display: flex;
-            flex-direction: row;
-            li {
-                margin: 1rem;
-                img {
-                    width: 2rem;
-                    height: 2rem;
-                }
-            }
+  .socialmedia-footer {
+    display: flex;
+    justify-content: flex-end;
+    ul {
+      display: flex;
+      flex-direction: row;
+      li {
+        margin: 1rem;
+        img {
+          width: 2rem;
+          height: 2rem;
         }
+      }
     }
-    .copyright-info {
-        position: absolute;
-        bottom: 5px;
-        left: 5px;
-    }
+  }
+  .copyright-info {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+  }
 }

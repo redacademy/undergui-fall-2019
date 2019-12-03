@@ -618,6 +618,21 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.site-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .site-header img {
+    height: 50px; }
+  .site-header .main-navigation .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+@media only screen and (min-width: 900px) {
+  .site-content {
+    margin: 0 6%; } }
+
 .site-footer {
   min-width: 100%;
   position: relative;
