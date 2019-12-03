@@ -11,6 +11,15 @@
 
 <footer id="site-footer" class="site-footer">
 
+
+	<div class="footer-logo-container">
+		<div class="footer-logo">
+			<a href="<?php echo esc_url(home_url('/')); ?>">
+				<img class="footer-logo-img" src="<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/main-logo.png" alt="main logo">
+			</a>
+		</div>	
+	</div>
+
 	<div class="copyright-info">
 		<?php printf(esc_html('© 2020 Under The GUI')); ?></a>
 	</div>
