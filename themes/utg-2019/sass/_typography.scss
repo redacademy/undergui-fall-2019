@@ -6,16 +6,18 @@
 h1 {
 	font-size: 56px;
 	font-weight: bold;
+	font-family: $font_header;
 }
 
 h2 {
 	font-size: 28px;
 	font-weight: bold;
+	font-family: $font_header;
 }
 
 /* Paragraphs */
 
 p {
 	font-size: 14px;
-	font-family: 'Gotham';
+	font-family: $font_main;
 }
