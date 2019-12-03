@@ -1,7 +1,7 @@
 {
-  "name": "redstarter",
+  "name": "utg-2019",
   "version": "1.1.0",
-  "description": "A starter theme for RED students, based on Underscores.",
+  "description": "An Underscores based theme for Under the GUI Academy.",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
