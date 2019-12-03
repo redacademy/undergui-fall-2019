@@ -1,0 +1,16 @@
+.site-footer {
+    min-width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+    .socialmedia-footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .copyright-info {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+    }
+}

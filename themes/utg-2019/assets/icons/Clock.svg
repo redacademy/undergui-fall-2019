@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Clock</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="registration---payment-info-empy" transform="translate(-861.000000, -1001.000000)">
+            <g id="purchase-info" transform="translate(832.000000, 536.000000)">
+                <g id="icon-set" transform="translate(28.500000, 396.000000)">
+                    <g id="Clock" transform="translate(1.000000, 69.000000)">
+                        <g>
+                            <path d="M12,0 C5.3832,0 0,5.3832 0,12 C0,18.6168 5.3832,24 12,24 C18.6168,24 24,18.6165333 24,12 C24,5.3832 18.6168,0 12,0 Z M12,22.7221333 C6.088,22.7221333 1.27786667,17.912 1.27786667,12 C1.27786667,6.088 6.088,1.27786667 12,1.27786667 C17.912,1.27786667 22.7221333,6.088 22.7221333,12 C22.7221333,17.912 17.912,22.7221333 12,22.7221333 Z" id="Shape" fill="#2BA2DD" fill-rule="nonzero"></path>
+                            <path d="M20.6742191,11.2293034 L12.873784,11.2293034 L12.873784,4.1631261 C12.873784,3.82815085 12.5777878,3.55555556 12.2146698,3.55555556 C11.8512767,3.55555556 11.5555556,3.82815085 11.5555556,4.1631261 L11.5555556,11.8343381 C11.5555556,12.1705813 11.852377,12.4444444 12.2174207,12.4444444 L20.6742191,12.4444444 C21.0378873,12.4444444 21.3333333,12.1715956 21.3333333,11.8368739 C21.3333333,11.5018987 21.0378873,11.2293034 20.6742191,11.2293034 Z" id="Path" fill="#F0433D" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
