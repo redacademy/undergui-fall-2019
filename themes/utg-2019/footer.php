@@ -6,7 +6,6 @@
  */
 
 ?>
-
 		</div><!-- #content -->
 
 		<footer id="site-footer" class="site-footer">
