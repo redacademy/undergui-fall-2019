@@ -627,10 +627,14 @@ object {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding: 0.125rem 0.75rem; }
   .site-header li {
+    display: none;
     font-family: "Titillium Web";
     text-transform: uppercase; }
+  .site-header .button {
+    display: none; }
   .site-header img {
     height: 4.75rem; }
   @media only screen and (min-width: 900px) {
@@ -671,7 +675,7 @@ object {
           font-size: 1rem;
           color: #ffffff;
           background-color: #2ba2dd;
-          padding: 0.75rem 1.5rem;
+          padding: 1rem 1.75rem;
           margin: 0 0 0 2rem;
           border-radius: 0.25rem; } }
 

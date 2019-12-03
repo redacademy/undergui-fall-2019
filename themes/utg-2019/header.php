@@ -37,6 +37,9 @@
 
 			</a>
 
+
+			<i class="fas fa-bars"></i>
+
 			<div class="nav-links">
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">

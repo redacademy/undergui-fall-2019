@@ -2,11 +2,16 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 0.125rem 0.75rem;
 
   li {
+    display: none;
     font-family: $font_main;
-
     text-transform: uppercase;
+  }
+
+  .button {
+    display: none;
   }
 
   img {
@@ -43,7 +48,7 @@
         font-size: 1rem;
         color: $color_white;
         background-color: $color_blue;
-        padding: 0.75rem 1.5rem;
+        padding: 1rem 1.75rem;
         margin: 0 0 0 2rem;
         border-radius: 0.25rem;
       }
