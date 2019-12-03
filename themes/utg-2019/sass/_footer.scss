@@ -1,14 +1,35 @@
 .site-footer {
   min-width: 100%;
-  position: relative;
-  justify-content: space-between;
+  height: 400px;
   background-color: $color_grey;
+
+  .footer-container {
+    padding: $base__space-unit $base__space-unit*2;
+  }
+
+  .footer-logo {
+    .footer-logo-img {
+      width: 6rem;
+    }
+  }
+
+  .filler-text-container {
+      display: flex;
+      width: 600px;
+
+      .filler-text {
+          width: 200px;
+      }
+  }
 
   .socialmedia-footer {
     display: flex;
     justify-content: flex-end;
+    margin-top: auto;
+    margin-bottom: auto;
     ul {
-      display: flex;
+        display: flex;
+        align-items: center;
       flex-direction: row;
       li {
         margin: 1rem;
@@ -20,8 +41,11 @@
     }
   }
   .copyright-info {
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
+    display: flex;
+    align-items: flex-end;
+    font-family: $font_main;
+    font-size: $font_size_main - 2px;
+    font-weight: 100;
+    color: $color_paragraph;
   }
 }
