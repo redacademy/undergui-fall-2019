@@ -16,10 +16,10 @@
 
 			<div class="socialmedia-footer">
 				<ul>
-					<li><a href="#"><img src="./wp-content/themes/utg-2019/assets/icons/facebook.svg" alt="facebook-logo"></a></li>
-					<li><a href="#"><img src="./wp-content/themes/utg-2019/assets/icons/instagram.svg" alt="instagram-logo"></a></li>
-					<li><a href="#"><img src="./wp-content/themes/utg-2019/assets/icons/twitter.svg" alt="twitter-logo"></a></li>
-					<li><a href="#"><img src="./wp-content/themes/utg-2019/assets/icons/youtube.svg" alt="youtube-logo"></a></li>
+					<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/facebook.svg" alt="facebook-logo"></a></li>
+					<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/instagram.svg" alt="instagram-logo"></a></li>
+					<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/twitter.svg" alt="twitter-logo"></a></li>
+					<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/youtube.svg" alt="youtube-logo"></a></li>
 				</ul>
 			</div>
 
