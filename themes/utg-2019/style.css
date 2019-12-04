@@ -727,11 +727,34 @@ object {
 
 .site-footer {
   min-width: 100%;
-  position: relative;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   background-color: #eff1f6; }
+  .site-footer .footer-container {
+    padding: 1.5rem 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .site-footer .logo-copyright-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .site-footer .logo-copyright-container .footer-logo-img {
+      width: 6rem; }
+  .site-footer .filler-text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .site-footer .filler-text-container .filler-text {
+      width: 200px; }
   .site-footer .socialmedia-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -742,17 +765,39 @@ object {
     .site-footer .socialmedia-footer ul {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row; }
+      display: flex; }
       .site-footer .socialmedia-footer ul li {
         margin: 1rem; }
         .site-footer .socialmedia-footer ul li img {
           width: 2rem;
           height: 2rem; }
   .site-footer .copyright-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    font-family: "Titillium Web";
+    font-size: 14px;
+    font-weight: 100;
+    color: #333333; }
+
+body.home .home-hero-banner {
+  position: relative; }
+  body.home .home-hero-banner img {
+    height: 520px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-filter: brightness(65%);
+            filter: brightness(65%); }
+  body.home .home-hero-banner .home-hero-text {
     position: absolute;
-    bottom: 5px;
-    left: 5px; }
+    height: 132px;
+    width: 1440px;
+    color: #FFFFFF;
+    font-family: Gotham;
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 62px;
+    text-align: center; }

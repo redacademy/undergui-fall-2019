@@ -1,0 +1,23 @@
+body.home {
+
+
+.home-hero-banner {
+  position: relative;
+  img {
+  height: 520px;
+  object-fit: cover;
+  filter: brightness(65%);
+  }
+  .home-hero-text {
+      position: absolute;
+      height: 132px;
+      width: 1440px;
+      color: #FFFFFF;
+      font-family: Gotham;
+      font-size: 56px;
+      font-weight: bold;
+      line-height: 62px;
+      text-align: center;
+    }
+  }
+}
