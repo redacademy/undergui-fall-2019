@@ -620,10 +620,6 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-.home-hero {
-  height: 520px;
-  width: 100%; }
-
 .site-header {
   width: 100%;
   display: -webkit-box;
@@ -762,3 +758,22 @@ object {
     font-size: 14px;
     font-weight: 100;
     color: #333333; }
+
+body.home .home-hero-banner {
+  position: relative; }
+  body.home .home-hero-banner img {
+    height: 520px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-filter: brightness(65%);
+            filter: brightness(65%); }
+  body.home .home-hero-banner .home-hero-text {
+    position: absolute;
+    height: 132px;
+    width: 1440px;
+    color: #FFFFFF;
+    font-family: Gotham;
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 62px;
+    text-align: center; }
