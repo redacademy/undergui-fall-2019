@@ -621,15 +621,81 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 .site-header {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.125rem 0.75rem; }
+  .site-header li {
+    display: none;
+    font-family: "Titillium Web";
+    text-transform: uppercase; }
+  .site-header .button {
+    display: none; }
   .site-header img {
-    height: 50px; }
-  .site-header .main-navigation .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+    height: 4.75rem; }
+  @media only screen and (min-width: 900px) {
+    .site-header {
+      padding: 0.75rem 5.5rem;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .site-header .nav-links {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .site-header .nav-links .menu {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          .site-header .nav-links .menu a {
+            color: #000000; }
+          .site-header .nav-links .menu li {
+            padding: 1rem 1.5rem; }
+            .site-header .nav-links .menu li:last-child {
+              padding-right: 4rem;
+              border-right: 1px solid #000000; }
+        .site-header .nav-links .button {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          font-weight: bold;
+          font-size: 1rem;
+          color: #ffffff;
+          background-color: #2ba2dd;
+          padding: 1rem 1.75rem;
+          margin: 0 0 0 2rem;
+          border-radius: 0.25rem; } }
+
+.franchise-link {
+  display: none; }
+  @media only screen and (min-width: 900px) {
+    .franchise-link {
+      display: inline-block;
+      width: 100%;
+      padding: 0.5rem 0;
+      background-color: #eff1f6; }
+      .franchise-link a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        margin-right: 5.5rem;
+        font-weight: lighter; } }
 
 @media only screen and (min-width: 900px) {
   .site-content {

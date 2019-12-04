@@ -1,14 +1,74 @@
 .site-header {
+  width: 100%;
   display: flex;
-  img {
-    height: 50px;
-  }
-  .main-navigation {
-    .menu {
-      display: flex;
+  justify-content: space-between;
+  padding: 0.125rem 0.75rem;
 
-      &:last-child {
+  li {
+    display: none;
+    font-family: $font_main;
+    text-transform: uppercase;
+  }
+
+  .button {
+    display: none;
+  }
+
+  img {
+    height: 4.75rem;
+  }
+
+  @include media($tablet) {
+    padding: 0.75rem 5.5rem;
+    align-items: center;
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+
+      .menu {
+        display: flex;
+
+        a {
+          color: $color_black;
+        }
+        li {
+          padding: 1rem 1.5rem;
+          &:last-child {
+            padding-right: 4rem;
+            border-right: 1px solid $color_black;
+          }
+        }
       }
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1rem;
+        color: $color_white;
+        background-color: $color_blue;
+        padding: 1rem 1.75rem;
+        margin: 0 0 0 2rem;
+        border-radius: 0.25rem;
+      }
+    }
+  }
+}
+
+.franchise-link {
+  display: none;
+
+  @include media($tablet) {
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: $color_grey;
+    a {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 5.5rem;
+      font-weight: lighter;
     }
   }
 }
