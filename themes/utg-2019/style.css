@@ -656,7 +656,7 @@ object {
     height: 4.75rem; }
   @media only screen and (min-width: 800px) {
     .site-header {
-      padding: 0.75rem 5.5rem;
+      padding: 0.75rem 4vw;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
@@ -688,11 +688,32 @@ object {
   display: none; }
   @media only screen and (min-width: 800px) {
     .request-info-link {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #ffffff;
+      background-color: #2ba2dd;
+      padding: 1rem 1.75rem;
+      margin: 0 0 0 2rem;
+      border-radius: 0.25rem; } }
+
+.franchise-link {
+  display: none; }
+  @media only screen and (min-width: 800px) {
+    .franchise-link {
       display: inline-block;
       width: 100%;
       padding: 0.5rem 0;
       background-color: #eff1f6; }
-      .request-info-link a {
+      .franchise-link a {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -701,10 +722,6 @@ object {
                 justify-content: flex-end;
         margin-right: 4vw;
         font-weight: lighter; } }
-
-@media only screen and (min-width: 800px) {
-  .site-content {
-    margin: 0 6%; } }
 
 .site-footer {
   min-width: 100%;
@@ -755,25 +772,23 @@ object {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
-            order: 1;
-    margin: 0 auto; }
+            order: 1; }
     .site-footer .logo-container .footer-logo-img {
       width: 4rem; }
   .site-footer .filler-text-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -789,29 +804,22 @@ object {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      position: relative; }
+      position: relative;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
     .site-footer .logo-container {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1; }
       .site-footer .logo-container .footer-logo-img {
         width: 6rem; }
     .site-footer .filler-text-container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
       -webkit-box-ordinal-group: 3;
           -ms-flex-order: 2;
-              order: 2;
-      padding: 0 1.5rem; }
+              order: 2; }
       .site-footer .filler-text-container .filler-text {
         width: 200px; }
     .site-footer .socialmedia-footer {
@@ -830,11 +838,9 @@ object {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; }
-        .site-footer .socialmedia-footer ul li {
-          margin: 1rem; }
-          .site-footer .socialmedia-footer ul li img {
-            width: 2rem;
-            height: 2rem; }
+        .site-footer .socialmedia-footer ul li img {
+          width: 2rem;
+          height: 2rem; }
     .site-footer .copyright-info {
       position: absolute;
       bottom: 0.75rem;

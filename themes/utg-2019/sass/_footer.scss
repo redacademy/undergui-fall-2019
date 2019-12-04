@@ -1,8 +1,8 @@
 .site-footer {
-//   <---- MOBILE ---->
+  //   <---- MOBILE ---->
 
-    min-width: 100%;
-    background-color: $color_grey;
+  min-width: 100%;
+  background-color: $color_grey;
 
   .footer-container {
     padding: $base__space-unit $base__space-unit * 2;
@@ -39,11 +39,9 @@
 
   .logo-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     flex-shrink: 0;
-    justify-content: space-between;
     order: 1;
-    margin: 0 auto;
 
     .footer-logo-img {
       width: 4rem;
@@ -52,6 +50,7 @@
 
   .filler-text-container {
     display: flex;
+    justify-content: center;
     order: 3;
     padding: 0 $base__space-unit;
     .filler-text {
@@ -59,62 +58,55 @@
     }
   }
 
-
   @include media($desktop) {
-
     .footer-container {
-        flex-direction: row;
-        justify-content: space-between;
-        position: relative;
-        // flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      order: 1;
+      .footer-logo-img {
+        width: 6rem;
       }
-    
-      .logo-container {
-        display: flex;
-        flex-shrink: 0;
-        justify-content: space-between;
-        order: 1;
-        .footer-logo-img {
-          width: 6rem;
-        }
+    }
+
+    .filler-text-container {
+      order: 2;
+      .filler-text {
+        width: 200px;
       }
-    
-      .filler-text-container {
+    }
+
+    .socialmedia-footer {
+      display: flex;
+      justify-content: flex-end;
+      flex-shrink: 0;
+      order: 3;
+
+      ul {
         display: flex;
-        order: 2;
-        padding: 0 $base__space-unit;
-        .filler-text {
-          width: 200px;
-        }
-      }
-    
-      .socialmedia-footer {
-        display: flex;
-        justify-content: flex-end;
-        flex-shrink: 0;
-        order: 3;
-    
-        ul {
-          display: flex;
-    
-          li {
-            margin: 1rem;
-            img {
-              width: 2rem;
-              height: 2rem;
-            }
+
+        li {
+          img {
+            width: 2rem;
+            height: 2rem;
           }
         }
       }
-    
-      .copyright-info {
-        position: absolute;
-        bottom: $base__space-unit / 2;
-        left: $base__space-unit * 2;
-        font-family: $font_main;
-        font-size: $font_size_main - 2px;
-        font-weight: 100;
-        color: $color_paragraph;
-      }
+    }
+
+    .copyright-info {
+      position: absolute;
+      bottom: $base__space-unit / 2;
+      left: $base__space-unit * 2;
+      font-family: $font_main;
+      font-size: $font_size_main - 2px;
+      font-weight: 100;
+      color: $color_paragraph;
+    }
   }
 }
