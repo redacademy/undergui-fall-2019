@@ -38,17 +38,20 @@
 			</a>
 
 
-			<i class="fas fa-bars"></i>
-
 			<div class="nav-links">
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
 				</nav><!-- #site-navigation -->
 
-				<a class="button" href="<?= get_site_url(); ?>/request-info">REQUEST INFO</a>
+				<a class="request-info-link" href="<?= get_site_url(); ?>/request-info">REQUEST INFO</a>
 
 			</div>
+
+
+			<button class="mobile-menu">
+				<i class="fas fa-bars fa-4x"></i>
+			</button>
 		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">
