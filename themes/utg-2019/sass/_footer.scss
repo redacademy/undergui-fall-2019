@@ -1,22 +1,25 @@
 .site-footer {
   min-width: 100%;
-  height: 400px;
   background-color: $color_grey;
 
   .footer-container {
     padding: $base__space-unit $base__space-unit*2;
+    display: flex;
+    justify-content: space-between;
   }
 
-  .footer-logo {
-    .footer-logo-img {
-      width: 6rem;
-    }
+  .logo-copyright-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .footer-logo-img {
+        width: 6rem;
+      }
   }
 
   .filler-text-container {
       display: flex;
-      width: 600px;
-
       .filler-text {
           width: 200px;
       }
@@ -25,12 +28,9 @@
   .socialmedia-footer {
     display: flex;
     justify-content: flex-end;
-    margin-top: auto;
-    margin-bottom: auto;
+
     ul {
         display: flex;
-        align-items: center;
-      flex-direction: row;
       li {
         margin: 1rem;
         img {
