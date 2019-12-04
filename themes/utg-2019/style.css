@@ -691,14 +691,19 @@ object {
     top: 0;
     right: 0;
     z-index: 98; }
-    .site-header .toggle-menu .main-navigation {
-      text-align: left;
-      border-bottom: 1px solid #ffffff; }
     .site-header .toggle-menu .left-arrow {
       color: #ffffff; }
     .site-header .toggle-menu .right-arrow {
       display: none;
       color: #ffffff; }
+    .site-header .toggle-menu .switch {
+      color: #ffffff;
+      display: block; }
+    .site-header .toggle-menu .close-menu {
+      display: none; }
+    .site-header .toggle-menu .main-navigation {
+      text-align: left;
+      border-bottom: 1px solid #ffffff; }
     .site-header .toggle-menu .mobile-info-link {
       display: -webkit-box;
       display: -ms-flexbox;
