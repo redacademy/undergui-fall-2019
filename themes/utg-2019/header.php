@@ -37,30 +37,31 @@
 
 			</a>
 
+			<div class="background-shade">
 
-			<div class="nav-links">
+				<div class="nav-links">
 
 
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<nav id="site-navigation" class="main-navigation" role="navigation">
 
-					<div class="mobile-open-menu">
-						<i class="fas fa-chevron-left fa-2x left-arrow"></i>
-						<i class="fas fa-chevron-right fa-2x right-arrow"></i>
-						<a class="mobile-info-link" href="<?= get_site_url(); ?>/request-info">REQUEST INFO</a>
+						<div class="mobile-open-menu">
+							<i class="fas fa-chevron-left fa-2x left-arrow"></i>
+							<i class="fas fa-chevron-right fa-2x right-arrow"></i>
+							<a class="mobile-info-link" href="<?= get_site_url(); ?>/request-info">REQUEST INFO</a>
 
-					</div>
+						</div>
 
-					<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
-					<?php wp_nav_menu(array('theme_location' => 'primary-mobile', 'menu_id' => 'primary-mobile-menu')); ?>
+						<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
+						<?php wp_nav_menu(array('theme_location' => 'primary-mobile', 'menu_id' => 'primary-mobile-menu')); ?>
 
-				</nav><!-- #site-navigation -->
+					</nav><!-- #site-navigation -->
 
-				<a class="mobile-franchise-link" href="<?= get_site_url(); ?>/404">Become a franchise</a>
-				<a class="request-info-link" href="<?= get_site_url(); ?>/request-info">REQUEST INFO</a>
+					<a class="mobile-franchise-link" href="<?= get_site_url(); ?>/404">Become a franchise</a>
+					<a class="request-info-link" href="<?= get_site_url(); ?>/request-info">REQUEST INFO</a>
 
+				</div>
 			</div>
-
 
 
 			<button class="mobile-menu">
