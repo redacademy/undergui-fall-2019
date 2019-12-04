@@ -8,8 +8,11 @@
 get_header(); ?>
 
 <div id="primary" class="content-area">
-	<div class="home-hero">
-		<div class="home-hero-img"><?php the_post_thumbnail(); ?></div>
+	<div class="home-hero-banner">
+		<div class="home-hero-img"><?php the_post_thumbnail(); ?>
+		<h1 class="home-hero-text">Coders will be the wizards of tomorrow</h1>
+		<button>view our programs</button>
+	</div>
 	<main id="main" class="site-main" role="main">
 
 		<?php while (have_posts()) : the_post(); ?>

@@ -40,9 +40,6 @@
 			</ul>
 		</div>
 
-
-		
-
 	</div><!-- footer-container -->
 
 </footer><!-- site-footer -->
