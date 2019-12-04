@@ -31,10 +31,8 @@
 			</ul>
 		</div>
 
-
-		<div class="filler-text-container">
-			<div class="filler-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio inventore modi dignissimos eius beatae quod fuga deserunt a tenetur debitis obcaecati amet eveniet quis facere labore dolorum ipsam, nemo earum.</p></div>
-			<div class="filler-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio inventore modi dignissimos eius beatae quod fuga deserunt a tenetur debitis obcaecati amet eveniet quis facere labore dolorum ipsam, nemo earum.</p></div>
+		<div class="footer-menu">
+			<?php wp_nav_menu(array('theme_location' => 'primary-mobile', 'menu_id' => 'primary-mobile-menu')); ?>
 		</div>
 
 		<div id="footer-address" class="footer-sidebar">		

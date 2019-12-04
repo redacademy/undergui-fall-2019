@@ -668,7 +668,7 @@ object {
     right: 0;
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.5); }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 800px) {
       .site-header .toggle-shade {
         display: none; } }
     .site-header .toggle-shade .toggle-menu {
@@ -743,7 +743,7 @@ object {
     text-transform: uppercase; }
   .site-header img {
     height: 4.75rem; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 800px) {
     .site-header {
       padding: 0.75rem 4vw;
       -webkit-box-align: center;
@@ -784,23 +784,23 @@ object {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 800px) {
     .mobile-open-menu {
       display: none; } }
 
 .menu-nav-menu-container {
   display: none; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 800px) {
     .menu-nav-menu-container {
       display: block; } }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 800px) {
   .menu-nav-mobile-menu-container {
     display: none; } }
 
 .request-info-link {
   display: none; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 800px) {
     .request-info-link {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -821,7 +821,7 @@ object {
 
 .franchise-link {
   display: none; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 800px) {
     .franchise-link {
       display: inline-block;
       width: 100%;
@@ -884,18 +884,18 @@ object {
       display: none; }
     .site-footer .logo-container .footer-logo-img {
       width: 4rem; }
-  .site-footer .filler-text-container {
+  .site-footer .footer-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     padding: 0 1.5rem; }
-    .site-footer .filler-text-container .filler-text {
+    .site-footer .footer-menu .filler-text {
       width: 200px; }
   .site-footer .footer-sidebar {
     display: -webkit-box;
@@ -925,7 +925,7 @@ object {
     font-size: 14px;
     font-weight: 100;
     color: #333333; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 800px) {
     .site-footer .footer-container {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
