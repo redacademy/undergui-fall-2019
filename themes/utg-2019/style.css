@@ -762,18 +762,15 @@ object {
 body.home .home-hero-banner {
   position: relative; }
   body.home .home-hero-banner img {
-    height: 520px;
+    height: 100vh;
     -o-object-fit: cover;
        object-fit: cover;
     -webkit-filter: brightness(65%);
             filter: brightness(65%); }
   body.home .home-hero-banner .home-hero-text {
     position: absolute;
-    height: 132px;
-    width: 1440px;
-    color: #FFFFFF;
-    font-family: Gotham;
-    font-size: 56px;
-    font-weight: bold;
-    line-height: 62px;
-    text-align: center; }
+    top: 0;
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%);
+    text-align: center;
+    z-index: 1; }
