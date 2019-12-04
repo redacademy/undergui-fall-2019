@@ -956,7 +956,8 @@ object {
               flex-direction: column;
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
-              order: 1; }
+              order: 1;
+      text-align: left; }
       .site-footer .logo-container .footer-sidebar {
         display: block;
         text-align: left;

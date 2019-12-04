@@ -32,7 +32,9 @@
 		</div>
 
 		<div class="footer-menu">
-			<?php wp_nav_menu(array('theme_location' => 'primary-mobile', 'menu_id' => 'primary-mobile-menu')); ?>
+			<?php wp_nav_menu(array('theme_location' => 'footer-menu-1', 'menu_id' => 'footer-menu-1')); ?>
+			<?php wp_nav_menu(array('theme_location' => 'footer-menu-2', 'menu_id' => 'footer-menu-2')); ?>
+			<?php wp_nav_menu(array('theme_location' => 'footer-menu-3', 'menu_id' => 'footer-menu-3')); ?>
 		</div>
 
 		<div id="footer-address" class="footer-sidebar">		
