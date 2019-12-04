@@ -613,6 +613,7 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 .site-header {
+  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -646,6 +647,8 @@ object {
     right: 0; }
     .site-header .toggle-menu a {
       color: #ffffff; }
+    .site-header .toggle-menu li {
+      padding: 0.5rem 2rem; }
   .site-header li {
     font-family: "Titillium Web";
     text-transform: uppercase; }

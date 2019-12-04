@@ -48,10 +48,15 @@
 
 			</div>
 
+			<div>
+				<i class="fas fa-chevron-left"></i>
+				<i class="fas fa-chevron-right"></i>
+			</div>
 
 			<button class="mobile-menu">
 				<i class="fas fa-bars fa-4x"></i>
-			</button>
+			</button> <!-- mobile only button -->
+
 		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">

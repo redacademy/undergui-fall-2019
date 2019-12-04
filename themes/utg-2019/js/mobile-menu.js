@@ -4,5 +4,10 @@ const navLinks = document.querySelector('.nav-links');
 mobileMenu.addEventListener('click', function(e) {
   e.preventDefault();
 
-  navLinks.classList.toggle('toggle-menu');
+  if (window.innerWidth < 900) {
+    console.log('width');
+    navLinks.classList.toggle('toggle-menu');
+  } else {
+    navLinks.classList.remove('toggle-menu');
+  }
 });
