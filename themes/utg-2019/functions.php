@@ -26,8 +26,8 @@ if (!function_exists('utg_setup')) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(array(
 			'primary' => esc_html('Primary Menu'),
-			'primary-mobile' => esc_html('Primary Mobile Menu'),
-			'primary-mobile' => esc_html('Primary Mobile Menu'),
+			'second-mobile-menu' => esc_html('Second Mobile Menu'),
+			'third-mobile-menu' => esc_html('Third Mobile Menu'),
 		));
 
 		// Switch search form, comment form, and comments to output valid HTML5.
