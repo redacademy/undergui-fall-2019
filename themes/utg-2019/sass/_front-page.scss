@@ -2,22 +2,20 @@ body.home {
 
 
 .home-hero-banner {
+  // Desktop css 
   position: relative;
   img {
-  height: 520px;
+  height: 100vh;
   object-fit: cover;
   filter: brightness(65%);
   }
   .home-hero-text {
       position: absolute;
-      height: 132px;
-      width: 1440px;
-      color: #FFFFFF;
-      font-family: Gotham;
-      font-size: 56px;
-      font-weight: bold;
-      line-height: 62px;
+      // color: #FFFFFF;
+      top: 0;
+      transform: translate(0, 50%);
       text-align: center;
+      z-index: 1;
     }
   }
 }
