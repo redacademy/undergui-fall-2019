@@ -38,17 +38,29 @@
 			</a>
 
 
-			<i class="fas fa-bars"></i>
-
 			<div class="nav-links">
+
+				<div class="mobile-franchise-link">
+					<i class="fas fa-chevron-left"></i>
+					<i class="fas fa-chevron-right"></i>
+					<a href="<?= get_site_url(); ?>/404">Become a franchise</a>
+
+				</div>
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
 				</nav><!-- #site-navigation -->
 
-				<a class="button" href="<?= get_site_url(); ?>/request-info">REQUEST INFO</a>
+				<a class="request-info-link" href="<?= get_site_url(); ?>/request-info">REQUEST INFO</a>
 
 			</div>
+
+
+
+			<button class="mobile-menu">
+				<i class="fas fa-bars fa-4x"></i>
+			</button> <!-- mobile only button -->
+
 		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">
