@@ -1,28 +1,33 @@
+@include media($tablet) {
+
+    
+}
+
 .site-footer {
   min-width: 100%;
   background-color: $color_grey;
 
   .footer-container {
-    padding: $base__space-unit $base__space-unit*2;
+    padding: $base__space-unit $base__space-unit * 2;
     display: flex;
     justify-content: space-between;
   }
 
   .logo-copyright-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-      .footer-logo-img {
-        width: 6rem;
-      }
+    .footer-logo-img {
+      width: 6rem;
+    }
   }
 
   .filler-text-container {
-      display: flex;
-      .filler-text {
-          width: 200px;
-      }
+    display: flex;
+    .filler-text {
+      width: 200px;
+    }
   }
 
   .socialmedia-footer {
@@ -30,7 +35,7 @@
     justify-content: flex-end;
 
     ul {
-        display: flex;
+      display: flex;
       li {
         margin: 1rem;
         img {
@@ -40,6 +45,7 @@
       }
     }
   }
+
   .copyright-info {
     display: flex;
     align-items: flex-end;
