@@ -660,6 +660,8 @@ object {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
+      .site-header .mobile-franchise-link {
+        display: none; }
       .site-header button {
         display: none; }
       .site-header .nav-links {
@@ -721,10 +723,13 @@ object {
         margin-right: 4vw;
         font-weight: lighter; } }
 
+<<<<<<< HEAD
 @media only screen and (min-width: 800px) {
   .site-content {
     margin: 0 4vw; } }
 
+=======
+>>>>>>> 99327a0bddacf89af4f9ee680cdbfe48894a57e0
 .site-footer {
   min-width: 100%;
   background-color: #eff1f6; }
