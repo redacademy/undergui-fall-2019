@@ -13,22 +13,10 @@
 
 	<div class="footer-container">
 
-		<div class="logo-copyright-container">
-
+		<div class="logo-container">
 			<a href="<?php echo esc_url(home_url('/')); ?>">
 				<img class="footer-logo-img" src="<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/main-logo.png" alt="main logo">
 			</a>
-
-			<div class="copyright-info">
-				<?php printf(esc_html('© 2020 Under The GUI')); ?>
-			</div>
-
-		</div>
-
-		<div class="filler-text-container">
-			<div class="filler-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio inventore modi dignissimos eius beatae quod fuga deserunt a tenetur debitis obcaecati amet eveniet quis facere labore dolorum ipsam, nemo earum.</p></div>
-			<div class="filler-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio inventore modi dignissimos eius beatae quod fuga deserunt a tenetur debitis obcaecati amet eveniet quis facere labore dolorum ipsam, nemo earum.</p></div>
-			<div class="filler-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio inventore modi dignissimos eius beatae quod fuga deserunt a tenetur debitis obcaecati amet eveniet quis facere labore dolorum ipsam, nemo earum.</p></div>
 		</div>
 
 		<div class="socialmedia-footer">
@@ -38,6 +26,15 @@
 				<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/twitter.svg" alt="twitter-logo"></a></li>
 				<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/youtube.svg" alt="youtube-logo"></a></li>
 			</ul>
+		</div>
+
+		<div class="filler-text-container">
+			<div class="filler-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio inventore modi dignissimos eius beatae quod fuga deserunt a tenetur debitis obcaecati amet eveniet quis facere labore dolorum ipsam, nemo earum.</p></div>
+			<div class="filler-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio inventore modi dignissimos eius beatae quod fuga deserunt a tenetur debitis obcaecati amet eveniet quis facere labore dolorum ipsam, nemo earum.</p></div>
+		</div>
+
+		<div class="copyright-info">
+			<?php printf(esc_html('© 2020 Under The GUI')); ?>
 		</div>
 
 	</div><!-- footer-container -->

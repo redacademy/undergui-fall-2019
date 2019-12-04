@@ -637,7 +637,7 @@ object {
     display: none; }
   .site-header img {
     height: 4.75rem; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 800px) {
     .site-header {
       padding: 0.75rem 5.5rem;
       -webkit-box-align: center;
@@ -681,7 +681,7 @@ object {
 
 .franchise-link {
   display: none; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 800px) {
     .franchise-link {
       display: inline-block;
       width: 100%;
@@ -697,7 +697,7 @@ object {
         margin-right: 5.5rem;
         font-weight: lighter; } }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 800px) {
   .site-content {
     margin: 0 6%; } }
 
@@ -709,13 +709,6 @@ object {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .site-footer .logo-copyright-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -723,41 +716,128 @@ object {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-    .site-footer .logo-copyright-container .footer-logo-img {
-      width: 6rem; }
-  .site-footer .filler-text-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    .site-footer .filler-text-container .filler-text {
-      width: 200px; }
-  .site-footer .socialmedia-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
-    .site-footer .socialmedia-footer ul {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      .site-footer .socialmedia-footer ul li {
-        margin: 1rem; }
-        .site-footer .socialmedia-footer ul li img {
-          width: 2rem;
-          height: 2rem; }
   .site-footer .copyright-info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
     font-family: "Titillium Web";
     font-size: 14px;
     font-weight: 100;
     color: #333333; }
+  .site-footer .socialmedia-footer {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+    .site-footer .socialmedia-footer ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .site-footer .socialmedia-footer ul li {
+        margin: 1rem; }
+        .site-footer .socialmedia-footer ul li img {
+          width: 1.5rem;
+          height: 1.5rem; }
+  .site-footer .logo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin: 0 auto; }
+    .site-footer .logo-container .footer-logo-img {
+      width: 4rem; }
+  .site-footer .filler-text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    padding: 0 1.5rem; }
+    .site-footer .filler-text-container .filler-text {
+      width: 200px; }
+  @media only screen and (min-width: 800px) {
+    .site-footer .footer-container {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      position: relative; }
+    .site-footer .logo-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; }
+      .site-footer .logo-container .footer-logo-img {
+        width: 6rem; }
+    .site-footer .filler-text-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      padding: 0 1.5rem; }
+      .site-footer .filler-text-container .filler-text {
+        width: 200px; }
+    .site-footer .socialmedia-footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3; }
+      .site-footer .socialmedia-footer ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .site-footer .socialmedia-footer ul li {
+          margin: 1rem; }
+          .site-footer .socialmedia-footer ul li img {
+            width: 2rem;
+            height: 2rem; }
+    .site-footer .copyright-info {
+      position: absolute;
+      bottom: 0.75rem;
+      left: 3rem;
+      font-family: "Titillium Web";
+      font-size: 14px;
+      font-weight: 100;
+      color: #333333; } }
 
 body.home .home-hero-banner {
   position: relative; }
