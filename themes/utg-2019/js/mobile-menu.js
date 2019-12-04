@@ -1,10 +1,10 @@
 const mobileMenu = document.querySelector('.mobile-menu');
 const navLinks = document.querySelector('.nav-links');
-const backgroundShade = document.querySelector('.background-shade');
+const siteHeader = document.querySelector('.site-header');
 
 mobileMenu.addEventListener('click', function(e) {
   e.preventDefault();
 
-  backgroundShade.classList.toggle('toggle-shade');
+  siteHeader.classList.toggle('toggle-menu');
   navLinks.classList.toggle('toggle-menu');
 });
