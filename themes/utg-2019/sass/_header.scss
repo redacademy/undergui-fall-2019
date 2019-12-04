@@ -24,19 +24,66 @@
   .toggle-menu {
     position: absolute;
     display: flex;
-
-    padding: 0;
+    flex-direction: column;
+    padding: 1.75rem;
     margin: 0;
     height: 100vh;
     width: 75vw;
     background-color: $color_blue;
     top: 0;
     right: 0;
+    z-index: 99;
+
+    .main-navigation {
+      border-bottom: 1px solid $color_white;
+    }
+    .left-arrow {
+      color: $color_white;
+    }
+    .right-arrow {
+      display: none;
+      color: $color_white;
+    }
+
+    .mobile-info-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 0.75rem;
+      font-weight: normal;
+      color: $color_blue;
+      background-color: $color_white;
+      padding: 0.66rem 0.8125rem;
+      margin: 0 0 0 2rem;
+      border-radius: 0.25rem;
+    }
+    .nav-links {
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1rem;
+        color: $color_blue;
+        background-color: $color_white;
+        padding: 1rem 1.75rem;
+        margin: 0 0 0 2rem;
+        border-radius: 0.25rem;
+      }
+    }
+
     a {
       color: $color_white;
     }
     li {
-      padding: 0.5rem 2rem;
+      padding-bottom: 1rem;
+      a {
+        text-transform: capitalize;
+      }
+    }
+    .mobile-franchise-link {
+      padding-top: 1rem;
     }
   }
   li {
@@ -49,7 +96,7 @@
   }
 
   @include media($desktop) {
-    padding: 0.75rem 5.5rem;
+    padding: 0.75rem 4vw;
     align-items: center;
 
     .mobile-franchise-link {
@@ -82,7 +129,34 @@
   }
 }
 
+.mobile-open-menu {
+  padding-bottom: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include media($desktop) {
+    display: none;
+  }
+}
+
 .request-info-link {
+  display: none;
+
+  @include media($desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color: $color_white;
+    background-color: $color_blue;
+    padding: 1rem 1.75rem;
+    margin: 0 0 0 2rem;
+    border-radius: 0.25rem;
+  }
+}
+
+.franchise-link {
   display: none;
 
   @include media($desktop) {
@@ -100,7 +174,4 @@
 }
 
 .site-content {
-  @include media($desktop) {
-    margin: 0 6%;
-  }
 }

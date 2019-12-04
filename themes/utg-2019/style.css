@@ -652,17 +652,68 @@ object {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1.75rem;
     margin: 0;
     height: 100vh;
     width: 75vw;
     background-color: #2ba2dd;
     top: 0;
-    right: 0; }
+    right: 0;
+    z-index: 99; }
+    .site-header .toggle-menu .main-navigation {
+      border-bottom: 1px solid #ffffff; }
+    .site-header .toggle-menu .left-arrow {
+      color: #ffffff; }
+    .site-header .toggle-menu .right-arrow {
+      display: none;
+      color: #ffffff; }
+    .site-header .toggle-menu .mobile-info-link {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-weight: bold;
+      font-size: 0.75rem;
+      font-weight: normal;
+      color: #2ba2dd;
+      background-color: #ffffff;
+      padding: 0.66rem 0.8125rem;
+      margin: 0 0 0 2rem;
+      border-radius: 0.25rem; }
+    .site-header .toggle-menu .nav-links a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #2ba2dd;
+      background-color: #ffffff;
+      padding: 1rem 1.75rem;
+      margin: 0 0 0 2rem;
+      border-radius: 0.25rem; }
     .site-header .toggle-menu a {
       color: #ffffff; }
     .site-header .toggle-menu li {
-      padding: 0.5rem 2rem; }
+      padding-bottom: 1rem; }
+      .site-header .toggle-menu li a {
+        text-transform: capitalize; }
+    .site-header .toggle-menu .mobile-franchise-link {
+      padding-top: 1rem; }
   .site-header li {
     font-family: "Titillium Web";
     text-transform: uppercase; }
@@ -670,7 +721,7 @@ object {
     height: 4.75rem; }
   @media only screen and (min-width: 800px) {
     .site-header {
-      padding: 0.75rem 5.5rem;
+      padding: 0.75rem 4vw;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
@@ -698,15 +749,51 @@ object {
               padding-right: 4rem;
               border-right: 1px solid #000000; } }
 
+.mobile-open-menu {
+  padding-bottom: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media only screen and (min-width: 800px) {
+    .mobile-open-menu {
+      display: none; } }
+
 .request-info-link {
   display: none; }
   @media only screen and (min-width: 800px) {
     .request-info-link {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #ffffff;
+      background-color: #2ba2dd;
+      padding: 1rem 1.75rem;
+      margin: 0 0 0 2rem;
+      border-radius: 0.25rem; } }
+
+.franchise-link {
+  display: none; }
+  @media only screen and (min-width: 800px) {
+    .franchise-link {
       display: inline-block;
       width: 100%;
       padding: 0.5rem 0;
       background-color: #eff1f6; }
-      .request-info-link a {
+      .franchise-link a {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -715,10 +802,6 @@ object {
                 justify-content: flex-end;
         margin-right: 4vw;
         font-weight: lighter; } }
-
-@media only screen and (min-width: 800px) {
-  .site-content {
-    margin: 0 6%; } }
 
 .site-footer {
   min-width: 100%;

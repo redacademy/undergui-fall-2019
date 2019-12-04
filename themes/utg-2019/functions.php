@@ -26,6 +26,7 @@ if (!function_exists('utg_setup')) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(array(
 			'primary' => esc_html('Primary Menu'),
+			'primary-mobile' => esc_html('Primary Mobile Menu'),
 		));
 
 		// Switch search form, comment form, and comments to output valid HTML5.
@@ -112,5 +113,3 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-
