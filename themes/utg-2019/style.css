@@ -620,6 +620,10 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.home-hero {
+  height: 520px;
+  width: 100%; }
+
 .site-header {
   display: -webkit-box;
   display: -ms-flexbox;
