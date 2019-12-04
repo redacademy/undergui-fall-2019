@@ -1,26 +1,63 @@
 .site-header {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0.125rem 0.75rem;
 
-  li {
-    display: none;
-    font-family: $font_main;
-    text-transform: uppercase;
+  button {
+    background: none;
+    padding: 0;
+    border: none;
+  }
+  i {
+    color: $color_blue;
+    background: none;
+    border: none;
+    padding: 0;
   }
 
-  .button {
+  .nav-links {
     display: none;
+  }
+  //opened menu in mobile version
+  .toggle-menu {
+    position: absolute;
+    display: flex;
+
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 75vw;
+    background-color: $color_blue;
+    top: 0;
+    right: 0;
+    a {
+      color: $color_white;
+    }
+    li {
+      padding: 0.5rem 2rem;
+    }
+  }
+  li {
+    font-family: $font_main;
+    text-transform: uppercase;
   }
 
   img {
     height: 4.75rem;
   }
 
-  @include media($tablet) {
+  @include media($desktop) {
     padding: 0.75rem 5.5rem;
     align-items: center;
+
+    .mobile-franchise-link {
+      display: none;
+    }
+    button {
+      display: none;
+    }
 
     .nav-links {
       display: flex;
@@ -33,6 +70,7 @@
           color: $color_black;
         }
         li {
+          display: block;
           padding: 1rem 1.5rem;
           &:last-child {
             padding-right: 4rem;
@@ -40,26 +78,14 @@
           }
         }
       }
-      .button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        font-size: 1rem;
-        color: $color_white;
-        background-color: $color_blue;
-        padding: 1rem 1.75rem;
-        margin: 0 0 0 2rem;
-        border-radius: 0.25rem;
-      }
     }
   }
 }
 
-.franchise-link {
+.request-info-link {
   display: none;
 
-  @include media($tablet) {
+  @include media($desktop) {
     display: inline-block;
     width: 100%;
     padding: 0.5rem 0;
@@ -67,14 +93,14 @@
     a {
       display: flex;
       justify-content: flex-end;
-      margin-right: 5.5rem;
+      margin-right: 4vw;
       font-weight: lighter;
     }
   }
 }
 
 .site-content {
-  @include media($tablet) {
+  @include media($desktop) {
     margin: 0 6%;
   }
 }
