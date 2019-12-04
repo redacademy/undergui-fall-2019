@@ -11,25 +11,24 @@
 <!-- Custom loop for testimonials -->
 	
 <!--  product loop -->
-<?php
-        $args = [
-            'post_type' => 'testimonial',
-            'order' => 'ASC',
-            'posts_per_page' => 6
-        ];
-        $utg_testimonials_about_page_loop = new WP_query($args); 
-        ?>
-        
-            <?php while ($utg_testimonials_about_page_loop->have_posts()) : ($utg_testimonials_about_page_loop->the_post()); ?>
 
-						<?php the_title(); ?>
-                        <?php the_field('content'); ?>
-                        <?php the_field('title'); ?>
-                        <img src="<?php the_field('picture'); ?>"/>
 
-                    
 
-               
-            <?php endwhile;
-            wp_reset_postdata(); ?>
+<?php 
+$args = array( 
+'orderby' => 'title',
+'post_type' => 'post_testimonials',
+);
+$the_testimonials = new WP_Query( $args );
+?>
+<?php if ( $the_testimonials->have_posts() ) : while ( $the_testimonials->have_posts() ) : $the_testimonials->the_post(); ?>
+<div class="each-book">
+<h3><?php the_title() ;?></h3>
+<div><?php the_field('title');?></div>
+<div><img src="<?php the_field('picture');?>"></div>
+<div><?php the_field('content');?></div>
+
+</div>
+<?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+<?php wp_reset_query(); ?>
        
