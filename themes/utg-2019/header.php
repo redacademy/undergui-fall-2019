@@ -40,6 +40,13 @@
 
 			<div class="nav-links">
 
+				<div class="mobile-franchise-link">
+					<i class="fas fa-chevron-left"></i>
+					<i class="fas fa-chevron-right"></i>
+					<a href="<?= get_site_url(); ?>/404">Become a franchise</a>
+
+				</div>
+
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
 				</nav><!-- #site-navigation -->
@@ -48,10 +55,7 @@
 
 			</div>
 
-			<div>
-				<i class="fas fa-chevron-left"></i>
-				<i class="fas fa-chevron-right"></i>
-			</div>
+
 
 			<button class="mobile-menu">
 				<i class="fas fa-bars fa-4x"></i>
