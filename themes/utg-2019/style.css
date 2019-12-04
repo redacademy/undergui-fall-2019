@@ -327,7 +327,15 @@ h2 {
 /* Paragraphs */
 p {
   font-size: 14px;
-  font-family: "Titillium Web"; }
+  font-family: "Titillium Web";
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -654,7 +662,7 @@ object {
     text-transform: uppercase; }
   .site-header img {
     height: 4.75rem; }
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 900px) {
     .site-header {
       padding: 0.75rem 4vw;
       -webkit-box-align: center;
@@ -686,7 +694,7 @@ object {
 
 .request-info-link {
   display: none; }
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 900px) {
     .request-info-link {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -707,7 +715,7 @@ object {
 
 .franchise-link {
   display: none; }
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 900px) {
     .franchise-link {
       display: inline-block;
       width: 100%;
@@ -738,20 +746,6 @@ object {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-  .site-footer .copyright-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-    font-family: "Titillium Web";
-    font-size: 14px;
-    font-weight: 100;
-    color: #333333; }
   .site-footer .socialmedia-footer {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -780,6 +774,8 @@ object {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1; }
+    .site-footer .logo-container .footer-sidebar {
+      display: none; }
     .site-footer .logo-container .footer-logo-img {
       width: 4rem; }
   .site-footer .filler-text-container {
@@ -795,7 +791,35 @@ object {
     padding: 0 1.5rem; }
     .site-footer .filler-text-container .filler-text {
       width: 200px; }
-  @media only screen and (min-width: 800px) {
+  .site-footer .footer-sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin-top: 1.5rem;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4; }
+    .site-footer .footer-sidebar .widget_text .widget_title {
+      font-size: 16px; }
+  .site-footer .copyright-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    font-family: "Titillium Web";
+    font-size: 14px;
+    font-weight: 100;
+    color: #333333; }
+  @media only screen and (min-width: 900px) {
     .site-footer .footer-container {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -811,11 +835,21 @@ object {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1; }
+      .site-footer .logo-container .footer-sidebar {
+        display: block;
+        text-align: left;
+        margin-top: 1.5rem; }
       .site-footer .logo-container .footer-logo-img {
         width: 6rem; }
+    .site-footer .footer-sidebar {
+      display: none; }
     .site-footer .filler-text-container {
       -webkit-box-ordinal-group: 3;
           -ms-flex-order: 2;

@@ -20,4 +20,8 @@ h2 {
 p {
 	font-size: 14px;
 	font-family: $font_main;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }

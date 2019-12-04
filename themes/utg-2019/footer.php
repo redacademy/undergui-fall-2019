@@ -17,6 +17,9 @@
 			<a href="<?php echo esc_url(home_url('/')); ?>">
 				<img class="footer-logo-img" src="<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/main-logo.png" alt="main logo">
 			</a>
+			<div id="footer-address" class="footer-sidebar">		
+				<?php if(is_active_sidebar('footer-address')){dynamic_sidebar('footer-address');}?>
+			</div>
 		</div>
 
 		<div class="socialmedia-footer">
@@ -31,6 +34,10 @@
 		<div class="filler-text-container">
 			<div class="filler-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio inventore modi dignissimos eius beatae quod fuga deserunt a tenetur debitis obcaecati amet eveniet quis facere labore dolorum ipsam, nemo earum.</p></div>
 			<div class="filler-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio inventore modi dignissimos eius beatae quod fuga deserunt a tenetur debitis obcaecati amet eveniet quis facere labore dolorum ipsam, nemo earum.</p></div>
+		</div>
+
+		<div id="footer-address" class="footer-sidebar">		
+			<?php if(is_active_sidebar('footer-address')){dynamic_sidebar('footer-address');}?>
 		</div>
 
 		<div class="copyright-info">

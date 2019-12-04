@@ -67,6 +67,16 @@ function utg_widgets_init()
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	));
+
+	register_sidebar( array(
+		'name' => 'Footer Address',
+		'id' => 'footer-address',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<p class="widget-title">',
+		'after_title' => '</p>',
+		) );
 }
 add_action('widgets_init', 'utg_widgets_init');
 
