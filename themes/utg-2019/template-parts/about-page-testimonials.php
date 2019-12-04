@@ -13,7 +13,7 @@
 <!--  product loop -->
 <?php
         $args = [
-            'post_type' => 'Testimonial',
+            'post_type' => 'testimonial',
             'order' => 'ASC',
             'posts_per_page' => 6
         ];
