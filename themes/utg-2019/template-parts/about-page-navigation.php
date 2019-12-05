@@ -6,7 +6,7 @@
  */
 ?>
 
-
+<h1><?php wp_title('') ?></h1>
 <!-- faq loop for about page -->
 <?php if( have_rows('about_page_navigation') ): ?>
 
