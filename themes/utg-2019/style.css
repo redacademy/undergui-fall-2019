@@ -1197,7 +1197,6 @@ body.home {
       .page-about .site-main .our-story .goals .goals-box .goals-content p {
         text-align: left; }
 
-<<<<<<< HEAD
 .page-about .site-main .our-story .closing {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1305,7 +1304,7 @@ body.home {
       text-align: left;
       padding: 1.5rem 0;
       font-size: 16px; } }
-=======
+
 .faq-container {
   width: 86.5%;
   margin: 0 auto; }
@@ -1370,4 +1369,3 @@ body.home {
       .faq-container .faq-item .faq-answer-container p {
         color: #333333;
         margin: 0; }
->>>>>>> 05dd2e075c96e58c8ff2b019d53c6c0528cb2b93
