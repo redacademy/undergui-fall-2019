@@ -44,3 +44,7 @@ themes/utg-2019/node_modules/*
 # ================== #
 themes/utg-2019/gulpfile.js
 themes/utg-2019/build/*
+
+# Don't ignore font files #
+# ================== #
+!themes/utg-2019/fonts/*
