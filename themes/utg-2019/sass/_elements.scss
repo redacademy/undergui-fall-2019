@@ -17,11 +17,6 @@ body {
   background: $color_white; /* Fallback for when there is no custom background color defined. */
 }
 
-img {
-  height: auto; /* Make sure images are scaled correctly. */
-  max-width: 100%; /* Adhere to container width. */
-}
-
 ul {
   list-style: none;
   margin-block-start: 0;

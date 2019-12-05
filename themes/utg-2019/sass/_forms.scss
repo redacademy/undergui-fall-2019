@@ -47,6 +47,7 @@ input[type='submit'] {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 
   &:hover {
+    color: $color_white;
     background-color: lighten($color_blue, 10%);
   }
 

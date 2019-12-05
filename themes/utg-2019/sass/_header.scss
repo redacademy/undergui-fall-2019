@@ -44,8 +44,8 @@
     width: 100vw;
   }
   //animates menu when triggered
-  .open-menu {
-  }
+  //   .open-menu {
+  //   }
 
   .toggle-menu {
     position: absolute;
@@ -72,6 +72,9 @@
     .switch {
       color: $color_white;
       display: block;
+      .right-arrow {
+        display: block;
+      }
     }
     .close-menu {
       display: none;
