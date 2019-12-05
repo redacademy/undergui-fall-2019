@@ -748,7 +748,7 @@ object {
     text-transform: uppercase; }
   .site-header img {
     height: 4.75rem; }
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 900px) {
     .site-header {
       padding: 0.75rem 4vw;
       -webkit-box-align: center;
@@ -846,11 +846,15 @@ object {
         margin-right: 4vw;
         font-weight: lighter; } }
 
-.site-header .nav-links .nav-menu li {
+.site-header .nav-links .nav-menu li:nth-child(1) {
   position: relative; }
+  .site-header .nav-links .nav-menu li:nth-child(1):hover .sub-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 .site-header .nav-links .nav-menu .sub-menu {
-  height: 0;
+  display: none;
   width: 100%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -858,9 +862,6 @@ object {
   top: 100%;
   left: 50%;
   background-color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -879,9 +880,6 @@ object {
     .site-header .nav-links .nav-menu .sub-menu li a {
       font-size: 0.75rem;
       text-transform: capitalize; }
-
-.site-header .nav-links .nav-menu:hover .sub-menu {
-  height: 200px; }
 
 .site-footer {
   min-width: 100%;
@@ -941,9 +939,10 @@ object {
         -ms-flex-order: 2;
             order: 2;
     padding: 0.75rem;
-    text-align: left; }
+    text-align: left;
+    font-family: "Titillium Web"; }
     .site-footer .footer-menu ul li {
-      padding: 0.375rem 1.5rem; }
+      padding: 0 1.5rem; }
     .site-footer .footer-menu .filler-text {
       width: 200px; }
   .site-footer .footer-sidebar {
@@ -1150,3 +1149,58 @@ body.home {
     background: #ffffff;
     width: 100px;
     border: 2px solid #2ba2dd; }
+
+.page-about .site-main div {
+  margin: 1.5rem; }
+
+.page-about .site-main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .page-about .site-main ul li {
+    padding: 1.5rem; }
+
+.page-about .site-main .our-story .statement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .page-about .site-main .our-story .statement img {
+    width: 50%;
+    border-radius: 10px;
+    margin-left: 1.5rem;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8); }
+  .page-about .site-main .our-story .statement p {
+    text-align: left;
+    margin: auto;
+    padding: 0 3rem;
+    font-size: 20.8px; }
+
+.page-about .site-main .our-story .goals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto; }
+  .page-about .site-main .our-story .goals .goals-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40%;
+    height: 50%; }
+    .page-about .site-main .our-story .goals .goals-box img {
+      width: 200px;
+      height: 150px;
+      border-radius: 10px;
+      margin: 0 1.5rem; }
+    .page-about .site-main .our-story .goals .goals-box .goals-content {
+      width: 400px;
+      margin: 0; }
+      .page-about .site-main .our-story .goals .goals-box .goals-content h3 {
+        text-align: left;
+        margin-top: 0;
+        font-size: 16px; }
+      .page-about .site-main .our-story .goals .goals-box .goals-content p {
+        text-align: left; }

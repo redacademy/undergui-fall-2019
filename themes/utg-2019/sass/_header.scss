@@ -136,7 +136,7 @@
     height: 4.75rem;
   }
 
-  @include media($desktop) {
+  @include media($header-break) {
     padding: 0.75rem 4vw;
     align-items: center;
 
@@ -160,7 +160,9 @@
         li {
           display: block;
           padding: 1rem 1.5rem;
-
+          &:first-child {
+            // padding-left: 0;
+          }
           &:last-child {
             padding-right: 4rem;
             border-right: 1px solid $color_black;
@@ -232,10 +234,17 @@
   .nav-links {
     .nav-menu {
       li {
-        position: relative;
+        &:nth-child(1) {
+          position: relative;
+          &:hover {
+            .sub-menu {
+              display: flex;
+            }
+          }
+        }
       }
       .sub-menu {
-        height: 0;
+        display: none;
         width: 100%;
         transition: 0.5s;
         position: absolute;
@@ -243,7 +252,6 @@
         left: 50%;
         background-color: $color_white;
 
-        display: flex;
         flex-direction: column;
         padding: 0.5rem;
 
@@ -262,11 +270,6 @@
             font-size: 0.75rem;
             text-transform: capitalize;
           }
-        }
-      }
-      &:hover {
-        .sub-menu {
-          height: 200px;
         }
       }
     }
