@@ -9,6 +9,7 @@
 get_header(); ?>
 
 <div id="primary" class="content-area">
+
 	<div class="home-hero-banner">
 		<?php the_post_thumbnail(); ?>
 		<div class="home-hero-text">
@@ -16,9 +17,16 @@ get_header(); ?>
 			<button class="white-btn">view our programs</button>
 		</div>
 	</div>
+
 	<main id="main" class="site-main" role="main">
 
-		<?php include get_template_directory() . "/template-parts/fp-approaches.php"; ?>
+		<div class="approaches-container">
+			<?php include get_template_directory() . "/template-parts/fp-approaches.php"; ?>
+		</div>
+
+		<div class="project-showcase">
+			<p>Project showcase</p>
+		</div>
 
 	</main><!-- #main -->
 </div><!-- #primary -->

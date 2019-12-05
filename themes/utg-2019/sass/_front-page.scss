@@ -10,9 +10,10 @@ body.home {
     display: flex;
     flex-direction: column;
     justify-content: center;
-     @include media($desktop) {
-       flex-direction: row;
-     }
+
+    @include media($desktop) {
+      flex-direction: row;
+    }
 
     img {
       height: 100vh;
@@ -20,6 +21,7 @@ body.home {
       object-position: 65%;
       filter: brightness(65%);
       z-index: -1;
+
       @include media($desktop) {
         height: 520px;
         margin: 0 auto;
@@ -32,6 +34,7 @@ body.home {
       z-index: 1;
       text-align: center;
       line-height: 1.5;
+
       @include media($desktop) {
         top: 30%;
       }
@@ -41,6 +44,7 @@ body.home {
         font-size: 2.5rem;
         margin: auto;
         margin-bottom: 2rem;
+
         @include media($desktop) {
           width: 450px;
         }
@@ -52,19 +56,40 @@ body.home {
       font-weight: 700;
       font-size: 1rem;
       padding: 0.75rem 1rem;
+
       @include media($desktop) {
         padding: 1rem 2.25rem;
       }
     }
   }
-  
-  .entry-content {
-    margin: 0 3rem;
+
+  .approaches-container {
+    display: flex;
+    flex-direction: column;
+    @include media($desktop) {
+      flex-direction: row;
+    }
     h2 {
       font-size: 2.25rem;
     }
-    h3 {
-      font-size: 1.80rem;
+    .approach-item {
+      margin: 2rem;
+      img {
+        height: 165px;
+        width: 165px;
+      }
+      h3 {
+        font-size: 1.80rem;
+      }
+      p {
+      max-width: 320px;
+      margin: 0 auto;
+      }
     }
+  }
+
+  .project-showcase {
+    height: 100vh;
+    background-color:$color_blue;
   }
 }

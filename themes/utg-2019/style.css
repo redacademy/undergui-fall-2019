@@ -1069,9 +1069,32 @@ body.home {
       @media only screen and (min-width: 800px) {
         body.home .home-hero-banner .white-btn {
           padding: 1rem 2.25rem; } }
-  body.home .entry-content {
-    margin: 0 3rem; }
-    body.home .entry-content h2 {
+  body.home .approaches-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media only screen and (min-width: 800px) {
+      body.home .approaches-container {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
+    body.home .approaches-container h2 {
       font-size: 2.25rem; }
-    body.home .entry-content h3 {
-      font-size: 1.80rem; }
+    body.home .approaches-container .approach-item {
+      margin: 2rem; }
+      body.home .approaches-container .approach-item img {
+        height: 165px;
+        width: 165px; }
+      body.home .approaches-container .approach-item h3 {
+        font-size: 1.80rem; }
+      body.home .approaches-container .approach-item p {
+        max-width: 320px;
+        margin: 0 auto; }
+  body.home .project-showcase {
+    height: 100vh;
+    background-color: #2ba2dd; }
