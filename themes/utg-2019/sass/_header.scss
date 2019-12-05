@@ -232,7 +232,14 @@
   .nav-links {
     .nav-menu {
       li {
-        position: relative;
+        &:nth-child(1) {
+          position: relative;
+          &:hover {
+            .sub-menu {
+              display: flex;
+            }
+          }
+        }
       }
       .sub-menu {
         display: none;
@@ -261,11 +268,6 @@
             font-size: 0.75rem;
             text-transform: capitalize;
           }
-        }
-      }
-      &:hover {
-        .sub-menu {
-          display: flex;
         }
       }
     }

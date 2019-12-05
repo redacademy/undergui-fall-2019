@@ -846,8 +846,12 @@ object {
         margin-right: 4vw;
         font-weight: lighter; } }
 
-.site-header .nav-links .nav-menu li {
+.site-header .nav-links .nav-menu li:nth-child(1) {
   position: relative; }
+  .site-header .nav-links .nav-menu li:nth-child(1):hover .sub-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 .site-header .nav-links .nav-menu .sub-menu {
   display: none;
@@ -876,11 +880,6 @@ object {
     .site-header .nav-links .nav-menu .sub-menu li a {
       font-size: 0.75rem;
       text-transform: capitalize; }
-
-.site-header .nav-links .nav-menu:hover .sub-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
 
 .site-footer {
   min-width: 100%;
