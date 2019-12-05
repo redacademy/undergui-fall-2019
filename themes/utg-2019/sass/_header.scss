@@ -37,15 +37,6 @@
   .nav-links {
     display: none;
   }
-  //opened menu in mobile version
-  .background-shade {
-    display: none;
-    height: 100vh;
-    width: 100vw;
-  }
-  //animates menu when triggered
-  //   .open-menu {
-  //   }
 
   .toggle-menu {
     position: absolute;
@@ -69,16 +60,6 @@
       color: $color_white;
     }
 
-    .switch {
-      color: $color_white;
-      display: block;
-      .right-arrow {
-        display: block;
-      }
-    }
-    .close-menu {
-      display: none;
-    }
     .main-navigation {
       text-align: left;
       border-bottom: 1px solid $color_white;
@@ -126,6 +107,26 @@
       padding-top: 1rem;
     }
   }
+
+  //opened menu in mobile version
+  .background-shade {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+  }
+  //animates menu when triggered
+  //   .open-menu {
+  //   }
+  .nav-links {
+    .close-left-arrow {
+      display: none;
+    }
+    .open-right-arrow {
+      color: $color_white;
+      display: block;
+    }
+  }
+
   li {
     font-family: $font_main;
     text-transform: uppercase;
@@ -159,6 +160,7 @@
         li {
           display: block;
           padding: 1rem 1.5rem;
+
           &:last-child {
             padding-right: 4rem;
             border-right: 1px solid $color_black;
@@ -223,6 +225,49 @@
       justify-content: flex-end;
       margin-right: 4vw;
       font-weight: lighter;
+    }
+  }
+}
+.site-header {
+  .nav-links {
+    .nav-menu {
+      li {
+        position: relative;
+      }
+      .sub-menu {
+        display: none;
+        width: 100%;
+        transition: 0.5s;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        background-color: $color_white;
+
+        flex-direction: column;
+        padding: 0.5rem;
+
+        transform: translateX(-50%);
+        border: 1px solid $color_paragraph;
+        z-index: 99;
+        li {
+          padding: 0.25rem 0.75rem;
+          text-align: left;
+
+          &:last-child {
+            border-right: none;
+            padding-right: 1rem;
+          }
+          a {
+            font-size: 0.75rem;
+            text-transform: capitalize;
+          }
+        }
+      }
+      &:hover {
+        .sub-menu {
+          display: flex;
+        }
+      }
     }
   }
 }

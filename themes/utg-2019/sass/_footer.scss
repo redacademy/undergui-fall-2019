@@ -49,9 +49,11 @@
     order: 2;
     padding: $base__space-unit / 2;
     text-align: left;
+    font-family: $font_main;
+
     ul {
       li {
-        padding: $base__space-unit/4 $base__space-unit;
+        padding: 0 $base__space-unit;
       }
     }
     .filler-text {
