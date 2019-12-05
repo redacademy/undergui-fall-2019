@@ -1114,20 +1114,30 @@ body.home {
         display: flex;
         margin: auto; } }
     body.home .approaches-container .approaches-header {
-      font-size: 2.25rem; }
+      font-size: 34px; }
+      @media only screen and (min-width: 800px) {
+        body.home .approaches-container .approaches-header {
+          font-size: 48px; } }
     body.home .approaches-container .approach-item {
       margin: 2rem; }
       body.home .approaches-container .approach-item img {
         height: 165px;
-        width: 165px; }
+        width: 165px;
+        margin-bottom: -30px; }
       body.home .approaches-container .approach-item h3 {
         font-size: 1.80rem; }
       body.home .approaches-container .approach-item p {
         max-width: 320px;
         margin: 0 auto; }
-  body.home .projects- {
+  body.home .project-showcase-container {
     height: 100vh;
     background-color: #2ba2dd; }
+    body.home .project-showcase-container .showcase-header {
+      color: #ffffff;
+      font-size: 34px; }
+      @media only screen and (min-width: 800px) {
+        body.home .project-showcase-container .showcase-header {
+          font-size: 48px; } }
 
 .error404 .banner-404 {
   overflow: hidden; }

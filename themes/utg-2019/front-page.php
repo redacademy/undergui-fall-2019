@@ -21,15 +21,15 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 		<!-- entering approaches loop  -->
-		<div class="approaches-container">
+		<section class="approaches-container">
 			<?php include get_template_directory() . "/template-parts/fp-approaches.php"; ?>
-		</div>
+		</section>
 		<!-- exiting approaches loop -->
 
 		<!-- project showcase flickity -->
-		<div class="projects-container">
-			<p>Project showcase</p>
-		</div>
+		<section class="project-showcase">
+			<?php include get_template_directory() . "/template-parts/fp-project-showcase.php" ?>
+		</section>
 		<!-- exit flickity -->
 
 	</main><!-- #main -->
