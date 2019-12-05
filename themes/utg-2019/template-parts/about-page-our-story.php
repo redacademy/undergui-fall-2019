@@ -49,10 +49,10 @@
 
 	<div class="closing">
 		<?php if( get_field('closing_statement_image') ): ?>
-					<img class="closing-img" src="<?php the_field('closing_statement_image'); ?>" />
+					<img src="<?php the_field('closing_statement_image'); ?>" />
 				<?php endif; ?>
 
-		<p class="closing-p"><?php the_field('closing_statement_content'); ?></p>
+		<p><?php the_field('closing_statement_content'); ?></p>
 	</div>
 
 </div> <!-- end of our story -->
