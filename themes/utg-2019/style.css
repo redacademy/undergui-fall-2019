@@ -1025,7 +1025,7 @@ body.home {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 800px) {
       body.home .home-hero-banner {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -1040,7 +1040,7 @@ body.home {
       -webkit-filter: brightness(65%);
               filter: brightness(65%);
       z-index: -1; }
-      @media only screen and (min-width: 900px) {
+      @media only screen and (min-width: 800px) {
         body.home .home-hero-banner img {
           height: 520px;
           margin: 0 auto; } }
@@ -1050,7 +1050,7 @@ body.home {
       z-index: 1;
       text-align: center;
       line-height: 1.5; }
-      @media only screen and (min-width: 900px) {
+      @media only screen and (min-width: 800px) {
         body.home .home-hero-banner .home-hero-text {
           top: 30%; } }
       body.home .home-hero-banner .home-hero-text h1 {
@@ -1058,7 +1058,7 @@ body.home {
         font-size: 2.5rem;
         margin: auto;
         margin-bottom: 2rem; }
-        @media only screen and (min-width: 900px) {
+        @media only screen and (min-width: 800px) {
           body.home .home-hero-banner .home-hero-text h1 {
             width: 450px; } }
     body.home .home-hero-banner .white-btn {
@@ -1066,7 +1066,7 @@ body.home {
       font-weight: 700;
       font-size: 1rem;
       padding: 0.75rem 1rem; }
-      @media only screen and (min-width: 900px) {
+      @media only screen and (min-width: 800px) {
         body.home .home-hero-banner .white-btn {
           padding: 1rem 2.25rem; } }
   body.home .entry-content {
