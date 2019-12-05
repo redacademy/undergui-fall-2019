@@ -5,6 +5,7 @@
   justify-content: space-between;
   padding: 0.125rem 0.75rem;
 
+  // add shaded background when mobile menu opens
   &.toggle-menu::before {
     content: '';
     display: block;
@@ -42,6 +43,9 @@
     height: 100vh;
     width: 100vw;
   }
+  //animates menu when triggered
+  .open-menu {
+  }
 
   .toggle-menu {
     position: absolute;
@@ -56,16 +60,25 @@
     right: 0;
     z-index: 98;
 
-    .main-navigation {
-      text-align: left;
-      border-bottom: 1px solid $color_white;
-    }
+    //font awesome arrow icons
     .left-arrow {
       color: $color_white;
     }
     .right-arrow {
       display: none;
       color: $color_white;
+    }
+
+    .switch {
+      color: $color_white;
+      display: block;
+    }
+    .close-menu {
+      display: none;
+    }
+    .main-navigation {
+      text-align: left;
+      border-bottom: 1px solid $color_white;
     }
 
     .mobile-info-link {
