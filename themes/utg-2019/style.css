@@ -355,12 +355,6 @@ body {
   background: #ffffff;
   /* Fallback for when there is no custom background color defined. */ }
 
-img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */ }
-
 ul {
   list-style: none;
   -webkit-margin-before: 0;
@@ -1055,3 +1049,7 @@ body.home {
       font-size: 2.25rem; }
     body.home .entry-content h3 {
       font-size: 1.80rem; }
+
+.error404 .banner-404 img {
+  max-width: 100%;
+  height: auto; }
