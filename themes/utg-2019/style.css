@@ -699,6 +699,8 @@ object {
     .site-header .toggle-menu .switch {
       color: #ffffff;
       display: block; }
+      .site-header .toggle-menu .switch .right-arrow {
+        display: block; }
     .site-header .toggle-menu .close-menu {
       display: none; }
     .site-header .toggle-menu .main-navigation {
