@@ -1219,12 +1219,12 @@ body.home {
     width: 80%;
     margin: 0 auto;
     border-radius: 10px;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8); }
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); }
   .page-about .site-main .our-story .closing p {
     margin: 0 auto;
     text-align: left;
-    padding: 1.5rem 0;
+    padding: 1.5rem;
     font-size: 16px; }
 
 @media only screen and (min-width: 800px) {
@@ -1295,25 +1295,31 @@ body.home {
           font-size: 14px; }
         .page-about .site-main .our-story .goals .goals-box .goals-content p {
           text-align: left; }
-  .page-about .site-main .closing {
+  .page-about .site-main .our-story .closing {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row; }
-    .page-about .site-main .closing img {
-      width: 50%;
-      margin: 0 auto;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .page-about .site-main .our-story .closing img {
+      width: 40%;
       border-radius: 10px;
-      -webkit-transform: scale(0.5);
-              transform: scale(0.5); }
-    .page-about .site-main .closing p {
-      margin: 0 auto;
+      -webkit-transform: scale(0.6);
+              transform: scale(0.6);
+      margin: 0; }
+    .page-about .site-main .our-story .closing p {
+      width: 50%;
       text-align: left;
-      padding: 1.5rem 0;
-      font-size: 16px; } }
+      padding-right: 3rem;
+      font-size: 19.2px; } }
 
 .faq-container {
   width: 86.5%;
