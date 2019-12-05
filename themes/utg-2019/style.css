@@ -871,6 +871,16 @@ object {
           transform: translateX(-50%);
   border: 1px solid #333333;
   z-index: 99; }
+  .site-header .nav-links .nav-menu .sub-menu::before {
+    position: absolute;
+    font-family: 'Font Awesome 5 free';
+    font-weight: 900;
+    font-size: 2rem;
+    content: '\f0d8';
+    left: 50%;
+    top: -22px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
   .site-header .nav-links .nav-menu .sub-menu li {
     padding: 0.25rem 0.75rem;
     text-align: left; }

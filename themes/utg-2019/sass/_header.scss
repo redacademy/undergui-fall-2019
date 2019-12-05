@@ -251,13 +251,22 @@
         top: 100%;
         left: 50%;
         background-color: $color_white;
-
         flex-direction: column;
         padding: 0.5rem;
-
         transform: translateX(-50%);
         border: 1px solid $color_paragraph;
         z-index: 99;
+
+        &::before {
+          position: absolute;
+          font-family: 'Font Awesome 5 free';
+          font-weight: 900;
+          font-size: 2rem;
+          content: '\f0d8';
+          left: 50%;
+          top: -22px;
+          transform: translateX(-50%);
+        }
         li {
           padding: 0.25rem 0.75rem;
           text-align: left;
