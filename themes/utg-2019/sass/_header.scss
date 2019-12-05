@@ -235,7 +235,7 @@
         position: relative;
       }
       .sub-menu {
-        height: 0;
+        display: none;
         width: 100%;
         transition: 0.5s;
         position: absolute;
@@ -243,7 +243,6 @@
         left: 50%;
         background-color: $color_white;
 
-        display: flex;
         flex-direction: column;
         padding: 0.5rem;
 
@@ -266,7 +265,7 @@
       }
       &:hover {
         .sub-menu {
-          height: 200px;
+          display: flex;
         }
       }
     }
