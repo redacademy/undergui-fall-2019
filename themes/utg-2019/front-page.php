@@ -20,13 +20,17 @@ get_header(); ?>
 
 	<main id="main" class="site-main" role="main">
 
+		<!-- entering approaches loop  -->
 		<div class="approaches-container">
 			<?php include get_template_directory() . "/template-parts/fp-approaches.php"; ?>
 		</div>
+		<!-- exiting approaches loop -->
 
-		<div class="project-showcase">
+		<!-- project showcase flickity -->
+		<div class="projects-container">
 			<p>Project showcase</p>
 		</div>
+		<!-- exit flickity -->
 
 	</main><!-- #main -->
 </div><!-- #primary -->
