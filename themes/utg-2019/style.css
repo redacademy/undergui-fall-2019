@@ -850,13 +850,13 @@ object {
   position: relative; }
 
 .site-header .nav-links .nav-menu .sub-menu {
-  display: none; }
-
-.site-header .nav-links .nav-menu:hover .sub-menu {
+  height: 0;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   position: absolute;
   top: 100%;
   left: 50%;
-  width: 100%;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -870,15 +870,18 @@ object {
           transform: translateX(-50%);
   border: 1px solid #333333;
   z-index: 99; }
-  .site-header .nav-links .nav-menu:hover .sub-menu li {
+  .site-header .nav-links .nav-menu .sub-menu li {
     padding: 0.25rem 0.75rem;
     text-align: left; }
-    .site-header .nav-links .nav-menu:hover .sub-menu li:last-child {
+    .site-header .nav-links .nav-menu .sub-menu li:last-child {
       border-right: none;
       padding-right: 1rem; }
-    .site-header .nav-links .nav-menu:hover .sub-menu li a {
+    .site-header .nav-links .nav-menu .sub-menu li a {
       font-size: 0.75rem;
       text-transform: capitalize; }
+
+.site-header .nav-links .nav-menu:hover .sub-menu {
+  height: 200px; }
 
 .site-footer {
   min-width: 100%;

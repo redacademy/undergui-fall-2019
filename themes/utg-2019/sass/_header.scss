@@ -235,37 +235,38 @@
         position: relative;
       }
       .sub-menu {
-        display: none;
+        height: 0;
+        width: 100%;
+        transition: 0.5s;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        background-color: $color_white;
+
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+
+        transform: translateX(-50%);
+        border: 1px solid $color_paragraph;
+        z-index: 99;
+        li {
+          padding: 0.25rem 0.75rem;
+          text-align: left;
+
+          &:last-child {
+            border-right: none;
+            padding-right: 1rem;
+          }
+          a {
+            font-size: 0.75rem;
+            text-transform: capitalize;
+          }
+        }
       }
       &:hover {
         .sub-menu {
-          //   display: none;
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          width: 100%;
-          background-color: $color_white;
-
-          display: flex;
-          flex-direction: column;
-          padding: 0.5rem;
-
-          transform: translateX(-50%);
-          border: 1px solid $color_paragraph;
-          z-index: 99;
-          li {
-            padding: 0.25rem 0.75rem;
-            text-align: left;
-
-            &:last-child {
-              border-right: none;
-              padding-right: 1rem;
-            }
-            a {
-              font-size: 0.75rem;
-              text-transform: capitalize;
-            }
-          }
+          height: 200px;
         }
       }
     }
