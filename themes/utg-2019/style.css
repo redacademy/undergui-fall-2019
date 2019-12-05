@@ -665,10 +665,6 @@ object {
     padding: 0; }
   .site-header .nav-links {
     display: none; }
-  .site-header .background-shade {
-    display: none;
-    height: 100vh;
-    width: 100vw; }
   .site-header .toggle-menu {
     position: absolute;
     display: -webkit-box;
@@ -691,13 +687,6 @@ object {
     .site-header .toggle-menu .right-arrow {
       display: none;
       color: #ffffff; }
-    .site-header .toggle-menu .switch {
-      color: #ffffff;
-      display: block; }
-      .site-header .toggle-menu .switch .right-arrow {
-        display: block; }
-    .site-header .toggle-menu .close-menu {
-      display: none; }
     .site-header .toggle-menu .main-navigation {
       text-align: left;
       border-bottom: 1px solid #ffffff; }
@@ -745,6 +734,15 @@ object {
     .site-header .toggle-menu .mobile-franchise-link {
       text-align: left;
       padding-top: 1rem; }
+  .site-header .background-shade {
+    display: none;
+    height: 100vh;
+    width: 100vw; }
+  .site-header .nav-links .close-left-arrow {
+    display: none; }
+  .site-header .nav-links .open-right-arrow {
+    color: #ffffff;
+    display: block; }
   .site-header li {
     font-family: "Titillium Web";
     text-transform: uppercase; }

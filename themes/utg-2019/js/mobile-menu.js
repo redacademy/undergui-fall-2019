@@ -7,8 +7,8 @@ const switchArrowDireciton = document.querySelector('.right-arrow');
 //on click hamburger icon, opens mobile menu
 hamburgerMenu.addEventListener('click', function(e) {
   e.preventDefault();
-  closeMenuButton.classList.remove('close-menu');
-  switchArrowDireciton.classList.remove('switch');
+  closeMenuButton.classList.remove('close-left-arrow');
+  switchArrowDireciton.classList.remove('open-right-arrow');
   siteHeader.classList.add('toggle-menu');
   navLinks.classList.add('toggle-menu');
 });
@@ -16,8 +16,11 @@ hamburgerMenu.addEventListener('click', function(e) {
 //on click arrow button, switches arrow direction and closes menu
 closeMenuButton.addEventListener('click', function(e) {
   e.preventDefault();
-  siteHeader.classList.remove('toggle-menu');
-  navLinks.classList.remove('toggle-menu');
-  closeMenuButton.classList.add('close-menu');
-  switchArrowDireciton.classList.add('switch');
+  closeMenuButton.classList.add('close-left-arrow');
+  switchArrowDireciton.classList.add('open-right-arrow');
+
+  setTimeout(function() {
+    siteHeader.classList.remove('toggle-menu');
+    navLinks.classList.remove('toggle-menu');
+  }, 500);
 });
