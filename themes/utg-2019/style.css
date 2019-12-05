@@ -1011,8 +1011,6 @@ object {
 
 body.home {
   text-align: center; }
-  body.home .entry-title {
-    display: none; }
   body.home .home-hero-banner {
     position: relative;
     display: -webkit-box;
