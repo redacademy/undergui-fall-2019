@@ -45,9 +45,15 @@
 
   .footer-menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     order: 2;
-    padding: 0 $base__space-unit;
+    padding: $base__space-unit / 2;
+    text-align: left;
+    ul {
+      li {
+        padding: $base__space-unit/4 $base__space-unit;
+      }
+    }
     .filler-text {
       width: 200px;
     }
