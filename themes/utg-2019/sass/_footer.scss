@@ -43,11 +43,17 @@
     }
   }
 
-  .filler-text-container {
+  .footer-menu {
     display: flex;
-    justify-content: center;
-    order: 3;
-    padding: 0 $base__space-unit;
+    justify-content: space-between;
+    order: 2;
+    padding: $base__space-unit / 2;
+    text-align: left;
+    ul {
+      li {
+        padding: $base__space-unit/4 $base__space-unit;
+      }
+    }
     .filler-text {
       width: 200px;
     }
@@ -88,6 +94,8 @@
       display: flex;
       flex-direction: column;
       order: 1;
+      text-align: left;
+
       .footer-sidebar {
         display: block;
         text-align: left;

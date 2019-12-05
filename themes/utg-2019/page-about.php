@@ -12,6 +12,7 @@ get_header(); ?>
 
 	
 
+ <?php include get_template_directory() . "/template-parts/about-page-our-story.php"; ?>
  <?php include get_template_directory() . "/template-parts/about-page-testimonials.php"; ?>
  <?php include get_template_directory() . "/template-parts/about-page-faq.php"; ?>
  <?php include get_template_directory() . "/template-parts/about-page-partners.php"; ?>

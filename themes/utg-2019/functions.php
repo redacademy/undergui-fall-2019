@@ -27,6 +27,9 @@ if (!function_exists('utg_setup')) :
 		register_nav_menus(array(
 			'primary' => esc_html('Primary Menu'),
 			'primary-mobile' => esc_html('Primary Mobile Menu'),
+			'footer-menu-1' => esc_html('Footer Menu 1'),
+			'footer-menu-2' => esc_html('Footer Menu 2'),
+			'footer-menu-3' => esc_html('Footer Menu 3'),
 		));
 
 		// Switch search form, comment form, and comments to output valid HTML5.
