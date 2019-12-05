@@ -45,8 +45,10 @@
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 
 					<div class="mobile-open-menu">
-						<i class="fas fa-chevron-left fa-2x left-arrow"></i>
-						<i class="fas fa-chevron-right fa-2x right-arrow"></i>
+						<button>
+							<i class="fas fa-chevron-right fa-2x right-arrow"></i>
+							<i class="fas fa-chevron-left fa-2x left-arrow "></i>
+						</button>
 						<a class="mobile-info-link" href="<?= get_site_url(); ?>/request-info">REQUEST INFO</a>
 
 					</div>
