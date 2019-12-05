@@ -18,11 +18,12 @@
 $args = array( 
 'orderby' => 'title',
 'post_type' => 'post_testimonials',
+'posts_per_page' => 6
 );
 $the_testimonials = new WP_Query( $args );
 ?>
 <?php if ( $the_testimonials->have_posts() ) : while ( $the_testimonials->have_posts() ) : $the_testimonials->the_post(); ?>
-<div class="each-book">
+<div>
 <h3><?php the_title() ;?></h3>
 <div><?php the_field('title');?></div>
 <div><img src="<?php the_field('picture');?>"></div>
