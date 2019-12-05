@@ -1,0 +1,18 @@
+.error404 {
+    
+  .banner-404 {
+    overflow: hidden;
+
+      img {
+        width: 100vw;
+        transform: scale(1.2);
+      }
+
+      .home-btn-404 {
+        color: $color_blue;
+        background: $color_white;
+        width: 100px;
+        border: 2px solid $color_blue;
+      }
+  }
+}

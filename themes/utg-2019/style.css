@@ -355,12 +355,6 @@ body {
   background: #ffffff;
   /* Fallback for when there is no custom background color defined. */ }
 
-img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */ }
-
 ul {
   list-style: none;
   -webkit-margin-before: 0;
@@ -700,6 +694,8 @@ object {
     .site-header .toggle-menu .switch {
       color: #ffffff;
       display: block; }
+      .site-header .toggle-menu .switch .right-arrow {
+        display: block; }
     .site-header .toggle-menu .close-menu {
       display: none; }
     .site-header .toggle-menu .main-navigation {
@@ -1096,3 +1092,15 @@ body.home {
   body.home .project-showcase {
     height: 100vh;
     background-color: #2ba2dd; }
+
+.error404 .banner-404 {
+  overflow: hidden; }
+  .error404 .banner-404 img {
+    width: 100vw;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+  .error404 .banner-404 .home-btn-404 {
+    color: #2ba2dd;
+    background: #ffffff;
+    width: 100px;
+    border: 2px solid #2ba2dd; }
