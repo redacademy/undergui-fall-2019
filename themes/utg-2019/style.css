@@ -1204,3 +1204,68 @@ body.home {
         font-size: 16px; }
       .page-about .site-main .our-story .goals .goals-box .goals-content p {
         text-align: left; }
+
+.faq-container {
+  width: 86.5%;
+  margin: 0 auto; }
+  .faq-container .faq-item {
+    padding: 1rem 0; }
+    .faq-container .faq-item .faq-question-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border: 1px solid #000000;
+      border-radius: 4px;
+      padding: 1rem 1.5rem;
+      margin: 0; }
+      .faq-container .faq-item .faq-question-container .faq-question {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin: 0; }
+      .faq-container .faq-item .faq-question-container h2 {
+        margin: 0;
+        padding-right: 3rem; }
+      .faq-container .faq-item .faq-question-container h3 {
+        color: #333333;
+        margin: 0; }
+      .faq-container .faq-item .faq-question-container .up {
+        display: none; }
+    .faq-container .faq-item .faq-answer-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background-color: #e9f5fb;
+      border: 1px solid #000000;
+      border-radius: 4px;
+      margin: 0;
+      padding: 1rem 1.5rem; }
+      .faq-container .faq-item .faq-answer-container h2 {
+        margin: 0;
+        padding-right: 3rem; }
+      .faq-container .faq-item .faq-answer-container .faq-answer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+      .faq-container .faq-item .faq-answer-container p {
+        color: #333333;
+        margin: 0; }
