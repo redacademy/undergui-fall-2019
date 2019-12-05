@@ -3,6 +3,7 @@ const navLinks = document.querySelector('.nav-links');
 const siteHeader = document.querySelector('.site-header');
 const closeMenuButton = document.querySelector('.left-arrow');
 const switchArrowDireciton = document.querySelector('.right-arrow');
+// const hoverDropMenu = document.querySelector('.nav-menu a');
 
 //on click hamburger icon, opens mobile menu
 hamburgerMenu.addEventListener('click', function(e) {

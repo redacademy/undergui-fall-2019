@@ -160,6 +160,7 @@
         li {
           display: block;
           padding: 1rem 1.5rem;
+
           &:last-child {
             padding-right: 4rem;
             border-right: 1px solid $color_black;
@@ -224,6 +225,49 @@
       justify-content: flex-end;
       margin-right: 4vw;
       font-weight: lighter;
+    }
+  }
+}
+.site-header {
+  .nav-links {
+    .nav-menu {
+      li {
+        position: relative;
+      }
+      .sub-menu {
+        display: none;
+      }
+      &:hover {
+        .sub-menu {
+          //   display: none;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          width: 100%;
+          background-color: $color_white;
+
+          display: flex;
+          flex-direction: column;
+          padding: 0.5rem;
+
+          transform: translateX(-50%);
+          border: 1px solid $color_paragraph;
+          z-index: 99;
+          li {
+            padding: 0.25rem 0.75rem;
+            text-align: left;
+
+            &:last-child {
+              border-right: none;
+              padding-right: 1rem;
+            }
+            a {
+              font-size: 0.75rem;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
     }
   }
 }
