@@ -16,10 +16,12 @@ get_header(); ?>
 
 				<header class="banner-404">
 					<img src="<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/404jpg-eda.jpg"/>
+					
+					<a class="home-btn-404" href="#">Go Back Home</a>
+
 				</header>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+			</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

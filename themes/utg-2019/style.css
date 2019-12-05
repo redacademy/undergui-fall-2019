@@ -1072,6 +1072,14 @@ body.home {
     body.home .entry-content h3 {
       font-size: 1.80rem; }
 
-.error404 .banner-404 img {
-  max-width: 100%;
-  height: auto; }
+.error404 .banner-404 {
+  overflow: hidden; }
+  .error404 .banner-404 img {
+    width: 100vw;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+  .error404 .banner-404 .home-btn-404 {
+    color: #2ba2dd;
+    background: #ffffff;
+    width: 100px;
+    border: 2px solid #2ba2dd; }
