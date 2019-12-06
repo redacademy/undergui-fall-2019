@@ -1186,7 +1186,7 @@ body.home {
         width: 100px; }
       body.home .latest-events-container .events-wrapper .event-container .event-text {
         width: 100%; }
-        body.home .latest-events-container .events-wrapper .event-container .event-text h3 {
+        body.home .latest-events-container .events-wrapper .event-container .event-text h3, body.home .latest-events-container .events-wrapper .event-container .event-text h2 {
           margin: 0; }
       body.home .latest-events-container .events-wrapper .event-container .event-title {
         font-size: 16px; }
