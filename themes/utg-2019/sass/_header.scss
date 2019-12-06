@@ -136,7 +136,7 @@
     height: 4.75rem;
   }
 
-  @include media($desktop) {
+  @include media($header-break) {
     padding: 0.75rem 4vw;
     align-items: center;
 
@@ -160,7 +160,9 @@
         li {
           display: block;
           padding: 1rem 1.5rem;
-
+          &:first-child {
+            // padding-left: 0;
+          }
           &:last-child {
             padding-right: 4rem;
             border-right: 1px solid $color_black;
@@ -232,7 +234,14 @@
   .nav-links {
     .nav-menu {
       li {
-        position: relative;
+        &:nth-child(1) {
+          position: relative;
+          &:hover {
+            .sub-menu {
+              display: flex;
+            }
+          }
+        }
       }
       .sub-menu {
         display: none;
@@ -242,13 +251,22 @@
         top: 100%;
         left: 50%;
         background-color: $color_white;
-
         flex-direction: column;
         padding: 0.5rem;
-
         transform: translateX(-50%);
         border: 1px solid $color_paragraph;
         z-index: 99;
+
+        &::before {
+          position: absolute;
+          font-family: 'Font Awesome 5 free';
+          font-weight: 900;
+          font-size: 2rem;
+          content: '\f0d8';
+          left: 50%;
+          top: -22px;
+          transform: translateX(-50%);
+        }
         li {
           padding: 0.25rem 0.75rem;
           text-align: left;
@@ -261,11 +279,6 @@
             font-size: 0.75rem;
             text-transform: capitalize;
           }
-        }
-      }
-      &:hover {
-        .sub-menu {
-          display: flex;
         }
       }
     }

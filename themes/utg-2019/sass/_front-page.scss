@@ -81,16 +81,20 @@ body.home {
     }
 
     .approaches-header {
-      font-size: 2.25rem;
+      font-size: $font_size_h2 + 6px;
+      @include media($desktop) {
+        font-size: $font_size_h2 + 20px;
+      }
     }
 
     // Approach item styling
     .approach-item {
-      margin: 2rem;
+      margin: $base__space-unit + 0.5rem;
 
       img {
         height: 165px;
         width: 165px;
+        margin-bottom: -30px;
       }
 
       h3 {
@@ -104,8 +108,17 @@ body.home {
     }
   }
 
-  .projects- {
+  .project-showcase-container {
     height: 100vh;
     background-color: $color_blue;
+
+    .showcase-header {
+      color: $color_white;
+      font-size: $font_size_h2 + 6px;
+
+      @include media($desktop) {
+        font-size: $font_size_h2 + 20px;
+      }
+    }
   }
 }
