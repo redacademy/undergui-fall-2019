@@ -7,7 +7,6 @@
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(3, 1fr);
 
-<<<<<<< HEAD
                 &:nth-child(odd) {
                     border: 2px solid $color_yellow;
                     box-shadow: 5px 5px $color_yellow;
@@ -26,42 +25,6 @@
                     padding-bottom: $base__space-unit;
                 }
             }
-=======
-      .testemonial-box {
-        text-align: center;
-        font-family: $font_main;
-        border: 2px solid $color_blue;
-        box-shadow: 5px 5px $color_blue;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        height: 400px;
-
-        &:nth-child(odd) {
-          border: 2px solid $color_yellow;
-          box-shadow: 5px 5px $color_yellow;
-          border-radius: 5px;
-        }
-
-        .testimonial-photo {
-          width: 40%;
-          height: 40%;
-          margin: auto auto;
-          border-radius: 50%;
-        }
-        // img {
-        //     width: 190px;
-        //     height: 180px;
-        //     margin: 0 auto;
-        //     border-radius: 50%;
-        // }
-        .testimonial-name {
-          margin: 0;
-        }
-        .testimonial-title {
-          margin: 0;
-          padding-bottom: $base__space-unit;
->>>>>>> e8b2d1c17e814b837307e137e33361d66614d9c8
         }
       }
     }
