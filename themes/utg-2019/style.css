@@ -1389,8 +1389,6 @@ body.home {
               box-shadow: 5px 5px #ffcc00;
       border-radius: 5px; }
     .page-about .site-main .testimonial-container .testemonial-box img {
-      width: 190px;
-      height: 180px;
       margin: 0 auto;
       border-radius: 50%; }
     .page-about .site-main .testimonial-container .testemonial-box .testimonial-name {
@@ -1470,7 +1468,26 @@ body.home {
         color: #333333;
         margin-bottom: 1rem; }
 
-<<<<<<< HEAD
+.faq-container .faq-item .animate {
+  position: relative;
+  top: -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: none;
+  z-index: 0; }
+
+.faq-container .faq-item .focus {
+  background: #ffffff;
+  -webkit-box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5); }
+
+.faq-container .faq-item .toggle-down {
+  display: none; }
+
+.faq-container .faq-item .toggle-up {
+  display: block; }
+
 .page-about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1508,52 +1525,6 @@ body.home {
       display: none; }
     .page-about .tab-pane.active {
       display: block; } }
-=======
-.faq-container .faq-item .animate {
-  position: relative;
-  top: -10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-top: none;
-  z-index: 0; }
-
-.faq-container .faq-item .focus {
-  background: #ffffff;
-  -webkit-box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5); }
-
-.faq-container .faq-item .toggle-down {
-  display: none; }
-
-.faq-container .faq-item .toggle-up {
-  display: block; }
-
-.page-about .nav {
-  margin-bottom: 1.5rem; }
-  .page-about .nav a {
-    text-decoration: none;
-    color: #000000;
-    padding: 0.75rem;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-    .page-about .nav a:hover {
-      border-color: transparent;
-      background: #2ba2dd;
-      color: white;
-      border-radius: 2px; }
-
-.page-about .nav .active a {
-  color: #2ba2dd;
-  border-bottom: 2px solid #2ba2dd; }
-  .page-about .nav .active a:hover {
-    border-color: transparent;
-    background: #2ba2dd;
-    color: white; }
-
-.page-about .tab-pane {
-  display: none; }
->>>>>>> 47675488913c32f630376c06106862c57486820e
 
 .page-about .partners-container {
   display: -webkit-box;
@@ -1563,15 +1534,57 @@ body.home {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   height: auto; }
   .page-about .partners-container img {
-    width: 30%;
-    max-height: 300px;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5); }
+    margin: 0;
+    padding: 0;
+    width: 33%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8); }
   .page-about .partners-container h3 {
     display: none; }
   .page-about .partners-container p {
     display: none; }
+
+@media only screen and (min-width: 800px) {
+  .page-about .partners-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    margin: 0 auto; }
+    .page-about .partners-container .partners-box {
+      width: 48%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .page-about .partners-container img {
+      margin: 0;
+      padding: 0;
+      border: 2px solid black;
+      border-radius: 10px;
+      height: 50%;
+      width: 50%; }
+    .page-about .partners-container .partners-info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .page-about .partners-container .partners-info h3 {
+        display: block;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start; }
+      .page-about .partners-container .partners-info p {
+        display: block;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end; } }
