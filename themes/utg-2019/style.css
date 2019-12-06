@@ -1129,14 +1129,37 @@ body.home {
         max-width: 320px;
         margin: 0 auto; }
   body.home .project-showcase-container {
-    height: 100vh;
-    background-color: #2ba2dd; }
+    height: 685px;
+    background-color: #2ba2dd;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     body.home .project-showcase-container .showcase-header {
       color: #ffffff;
       font-size: 34px; }
       @media only screen and (min-width: 800px) {
         body.home .project-showcase-container .showcase-header {
           font-size: 48px; } }
+    body.home .project-showcase-container .project-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 100%; }
+      body.home .project-showcase-container .project-wrapper .project-desc {
+        font-size: 16px;
+        margin-left: 4rem;
+        text-align: left;
+        width: 450px; }
 
 .error404 .banner-404 {
   overflow: hidden; }
