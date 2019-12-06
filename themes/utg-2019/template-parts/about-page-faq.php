@@ -25,8 +25,8 @@
 						<h4><?php the_sub_field('question'); ?></h4>
 
 					</div>
-					<i class="fas fa-chevron-down down"></i>
-					<i class="fas fa-chevron-up up"></i>
+					<button class="faq-slide-down"><i class="fas fa-chevron-down down"></i></button>
+					<button class="faq-slide-up"><i class="fas fa-chevron-up up"></i></button>
 
 				</div>
 

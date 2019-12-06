@@ -4,6 +4,9 @@
 
 html {
   box-sizing: border-box;
+  max-width: 1440px;
+  background-color: $color_grey;
+  margin: 0 auto;
 }
 
 *,

@@ -25,7 +25,18 @@
         color: $color_paragraph;
         margin: 0;
       }
-      .up {
+      .faq-slide-down {
+        padding: 0;
+        border: none;
+        background: none;
+        i {
+          color: $color_black;
+        }
+      }
+      .faq-slide-up {
+        padding: 0;
+        border: none;
+        background: none;
         display: none;
       }
     }
