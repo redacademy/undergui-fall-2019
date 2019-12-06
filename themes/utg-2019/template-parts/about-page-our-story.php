@@ -43,8 +43,6 @@
 
 	</div>
 
-
-
 	<!-- getting the closing image and statement -->
 
 	<div class="closing">

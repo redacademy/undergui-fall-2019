@@ -53,7 +53,9 @@
 
 					</div>
 
+
 					<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
+
 					<?php wp_nav_menu(array('theme_location' => 'primary-mobile', 'menu_id' => 'primary-mobile-menu')); ?>
 				</nav><!-- #site-navigation -->
 
