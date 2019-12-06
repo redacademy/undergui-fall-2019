@@ -4,6 +4,16 @@
 
     .category-container {
       display: flex;
+      h3 {
+        padding-right: 2.5rem;
+      }
     }
+  }
+}
+
+.site-card {
+  width: 90%;
+
+  @include media($desktop) {
   }
 }

@@ -21,9 +21,9 @@
     if ($myposts) {
         foreach ($myposts as $post) :
             setup_postdata($post); ?>
-            <a href="<?php echo get_post_permalink(); ?>">
+            <a class="site-card" href="<?php echo get_post_permalink(); ?>">
                 <div>
-                    <?php the_post_thumbnail('full'); ?>
+                    <?php the_post_thumbnail('large'); ?>
                     <?php echo get_the_date('F j, Y'); ?>
                     <?php echo get_post_field('Catagory'); ?>
                     <?php single_post_title(); ?>

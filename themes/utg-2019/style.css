@@ -1593,3 +1593,8 @@ body.home {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    .blog .community-blog-container .category-container h3 {
+      padding-right: 2.5rem; }
+
+.site-card {
+  width: 90%; }
