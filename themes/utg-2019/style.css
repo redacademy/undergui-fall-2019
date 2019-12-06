@@ -348,10 +348,7 @@ p {
 --------------------------------------------------------------*/
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  max-width: 1440px;
-  background-color: #eff1f6;
-  margin: 0 auto; }
+          box-sizing: border-box; }
 
 *,
 *:before,
