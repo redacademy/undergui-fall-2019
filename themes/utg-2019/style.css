@@ -43,7 +43,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700&display=swap");
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -309,6 +308,13 @@ th {
   src: url("../../fonts/gotham-font/Gotham-BookItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/gotham-font/Gotham-BookItalic.woff2") format("woff2"), url("../../fonts/gotham-font/Gotham-BookItalic.woff") format("woff"), url("../../fonts/gotham-font/Gotham-BookItalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic; }
+
+@font-face {
+  font-family: 'Blox';
+  src: url("../../fonts/blox/BloxBRK.eot");
+  src: url("../../fonts/blox/BloxBRK.eot?#iefix") format("embedded-opentype"), url("../../fonts/blox/BloxBRK.woff2") format("woff2"), url("../../fonts/blox/BloxBRK.woff") format("woff"), url("../../fonts/blox/BloxBRK.ttf") format("truetype"), url("../../fonts/blox/BloxBRK.svg#BloxBRK") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 /*--------------------------------------------------------------
 # Typography
@@ -1400,7 +1406,7 @@ body.home {
       padding-bottom: 1.5rem; }
 
 .faq-container {
-  width: 86.5%;
+  width: 88.5%;
   margin: 0 auto; }
   .faq-container .faq-item {
     padding: 1rem 0; }
@@ -1420,7 +1426,7 @@ body.home {
               align-items: center;
       border: 1px solid #000000;
       border-radius: 4px;
-      padding: 1rem 1.5rem;
+      padding: 1.5rem 2rem;
       margin: 0;
       z-index: 999; }
       .faq-container .faq-item .faq-question-container .faq-question {
@@ -1430,22 +1436,33 @@ body.home {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         margin: 0; }
       .faq-container .faq-item .faq-question-container h2 {
         margin: 0;
-        padding-right: 3rem; }
-      .faq-container .faq-item .faq-question-container h4 {
+        padding-right: 0.5rem;
+        color: #ffcc00;
+        font-family: 'Blox', sans-serif;
+        font-weight: 100;
+        font-size: 2rem; }
+        @media only screen and (min-width: 800px) {
+          .faq-container .faq-item .faq-question-container h2 {
+            padding-right: 3rem; } }
+      .faq-container .faq-item .faq-question-container h3 {
         color: #333333;
-        margin: 0; }
+        margin: 0;
+        font-size: 1rem; }
       .faq-container .faq-item .faq-question-container .down {
         color: #000000; }
     .faq-container .faq-item .up {
       display: none; }
     .faq-container .faq-item .faq-answer-container {
       display: none;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start;
@@ -1453,10 +1470,17 @@ body.home {
       border: 1px solid #000000;
       border-radius: 4px;
       margin: 0;
-      padding: 2rem 1.5rem 1rem 1.5rem; }
+      padding: 2rem 2rem 1rem 2rem; }
       .faq-container .faq-item .faq-answer-container h2 {
         margin: 0;
-        padding-right: 3rem; }
+        padding-right: 0.5rem;
+        color: #00a362;
+        font-family: 'Blox', sans-serif;
+        font-size: 2rem;
+        font-weight: 100; }
+        @media only screen and (min-width: 800px) {
+          .faq-container .faq-item .faq-answer-container h2 {
+            padding-right: 3rem; } }
       .faq-container .faq-item .faq-answer-container .faq-answer {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1470,7 +1494,26 @@ body.home {
         color: #333333;
         margin-bottom: 1rem; }
 
-<<<<<<< HEAD
+.faq-container .faq-item .animate {
+  position: relative;
+  top: -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: none;
+  z-index: 0; }
+
+.faq-container .faq-item .focus {
+  background: #ffffff;
+  -webkit-box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.5); }
+
+.faq-container .faq-item .toggle-down {
+  display: none; }
+
+.faq-container .faq-item .toggle-up {
+  display: block; }
+
 .page-about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1508,52 +1551,6 @@ body.home {
       display: none; }
     .page-about .tab-pane.active {
       display: block; } }
-=======
-.faq-container .faq-item .animate {
-  position: relative;
-  top: -10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-top: none;
-  z-index: 0; }
-
-.faq-container .faq-item .focus {
-  background: #ffffff;
-  -webkit-box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5); }
-
-.faq-container .faq-item .toggle-down {
-  display: none; }
-
-.faq-container .faq-item .toggle-up {
-  display: block; }
-
-.page-about .nav {
-  margin-bottom: 1.5rem; }
-  .page-about .nav a {
-    text-decoration: none;
-    color: #000000;
-    padding: 0.75rem;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-    .page-about .nav a:hover {
-      border-color: transparent;
-      background: #2ba2dd;
-      color: white;
-      border-radius: 2px; }
-
-.page-about .nav .active a {
-  color: #2ba2dd;
-  border-bottom: 2px solid #2ba2dd; }
-  .page-about .nav .active a:hover {
-    border-color: transparent;
-    background: #2ba2dd;
-    color: white; }
-
-.page-about .tab-pane {
-  display: none; }
->>>>>>> 47675488913c32f630376c06106862c57486820e
 
 .page-about .partners-container {
   display: -webkit-box;
