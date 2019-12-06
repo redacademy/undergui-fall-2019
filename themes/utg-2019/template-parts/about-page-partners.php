@@ -15,16 +15,22 @@
 	<!-- loop through the rows of data -->
 	<?php while ( have_rows('partners') ) : the_row(); ?>
 
-	<!-- <div class="partners-box"> -->
-
-		<!-- display a sub field value from partners -->
-		<h3><?php the_sub_field('name'); ?></h3>
+	<div class="partners-box">
 
 		<?php if( get_sub_field('logo') ): ?>
 			<img src="<?php the_sub_field('logo'); ?>" />
 		<?php endif; ?>
 
-		<p><?php the_sub_field('content'); ?></p>
+		<div class="partners-info">
+			<!-- display a sub field value from partners -->
+			<h3><?php the_sub_field('name'); ?></h3>
+
+			<p><?php the_sub_field('content'); ?></p>
+
+		</div>
+
+	</div><!-- end of partners box -->
+
 
 		<?php endwhile;
 
@@ -34,6 +40,5 @@
 
 		endif; ?>
 
-	<!-- </div> -->
 </div>
 
