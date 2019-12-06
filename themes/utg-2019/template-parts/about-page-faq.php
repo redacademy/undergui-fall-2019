@@ -18,17 +18,17 @@
 
 				<!-- display a sub field value -->
 
-				<div class="faq-question-container">
+				<button class="faq-question-container">
 					<!-- <img src="" alt=""> -->
 					<div class="faq-question">
 						<h2>Q</h2>
-						<h4><?php the_sub_field('question'); ?></h4>
+						<h3><?php the_sub_field('question'); ?></h3>
 
 					</div>
-					<button class="faq-slide-down"><i class="fas fa-chevron-down down"></i></button>
-					<button class="faq-slide-up"><i class="fas fa-chevron-up up"></i></button>
+					<i class="fas fa-chevron-down down"></i>
+					<i class="fas fa-chevron-up up"></i>
 
-				</div>
+				</button>
 
 				<div class="faq-answer-container">
 					<!-- <img src="" alt=""> -->

@@ -32,6 +32,16 @@ get_header(); ?>
 		</section>
 		<!-- exit flickity -->
 
+		<!-- latest commuinty posts -->
+		<section class="latest-commuinty-posts">
+			<?php include get_template_directory() . "/template-parts/fp-latest-comm.php" ?>
+		</section>
+
+		<!-- testimonials -->
+		<section class="">
+			<?php include get_template_directory() . "/template-parts/fp-testimonials.php" ?>
+		</section>
+
 	</main><!-- #main -->
 </div><!-- #primary -->
 
