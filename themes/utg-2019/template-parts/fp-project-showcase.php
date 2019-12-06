@@ -8,8 +8,12 @@
 
 ?>
 
-<div class="project-showcase-container" id="project-slider">
-	<div class="projects">
+<div class="project-showcase-container">
+
+	<h2 class="showcase-header">Project showcase</h2>
+
+	<div class="projects" data-flickity='{}'>
+
 		<div class="project-wrapper">
 			<img src="https://picsum.photos/id/237/400/300" />
 			<p class="project-desc">
@@ -24,6 +28,7 @@
 				lyft mustache, tumblr crucifix selvage sriracha la croix jianbing bushwick.
 			</p>
 		</div>
+
 		<div class="project-wrapper">
 			<img src="https://picsum.photos/id/238/400/300" />
 			<p class="project-desc">
@@ -38,6 +43,7 @@
 				lyft mustache, tumblr crucifix selvage sriracha la croix jianbing bushwick.
 			</p>
 		</div>
+
 		<div class="project-wrapper">
 			<img src="https://picsum.photos/id/239/400/300" />
 			<p class="project-desc">
@@ -52,5 +58,6 @@
 				lyft mustache, tumblr crucifix selvage sriracha la croix jianbing bushwick.
 			</p>
 		</div>
+
 	</div>
 </div>
