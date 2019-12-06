@@ -43,7 +43,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700&display=swap");
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -310,6 +309,13 @@ th {
   font-weight: 500;
   font-style: italic; }
 
+@font-face {
+  font-family: 'Blox';
+  src: url("../../fonts/blox/BloxBRK.eot");
+  src: url("../../fonts/blox/BloxBRK.eot?#iefix") format("embedded-opentype"), url("../../fonts/blox/BloxBRK.woff2") format("woff2"), url("../../fonts/blox/BloxBRK.woff") format("woff"), url("../../fonts/blox/BloxBRK.ttf") format("truetype"), url("../../fonts/blox/BloxBRK.svg#BloxBRK") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -337,15 +343,21 @@ p {
   -webkit-margin-end: 0px;
           margin-inline-end: 0px; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #333333; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  max-width: 1440px;
-  background-color: #eff1f6;
-  margin: 0 auto; }
+          box-sizing: border-box; }
 
 *,
 *:before,
@@ -1382,14 +1394,29 @@ body.home {
     border: 2px solid #2ba2dd;
     -webkit-box-shadow: 5px 5px #2ba2dd;
             box-shadow: 5px 5px #2ba2dd;
-    border-radius: 5px; }
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 400px; }
     .page-about .site-main .testimonial-container .testemonial-box:nth-child(odd) {
       border: 2px solid #ffcc00;
       -webkit-box-shadow: 5px 5px #ffcc00;
               box-shadow: 5px 5px #ffcc00;
       border-radius: 5px; }
+<<<<<<< HEAD
     .page-about .site-main .testimonial-container .testemonial-box img {
       margin: 0 auto;
+=======
+    .page-about .site-main .testimonial-container .testemonial-box .testimonial-photo {
+      width: 40%;
+      height: 40%;
+      margin: auto auto;
+>>>>>>> e8b2d1c17e814b837307e137e33361d66614d9c8
       border-radius: 50%; }
     .page-about .site-main .testimonial-container .testemonial-box .testimonial-name {
       margin: 0; }
@@ -1398,7 +1425,7 @@ body.home {
       padding-bottom: 1.5rem; }
 
 .faq-container {
-  width: 86.5%;
+  width: 88.5%;
   margin: 0 auto; }
   .faq-container .faq-item {
     padding: 1rem 0; }
@@ -1418,7 +1445,7 @@ body.home {
               align-items: center;
       border: 1px solid #000000;
       border-radius: 4px;
-      padding: 1rem 1.5rem;
+      padding: 1.5rem 2rem;
       margin: 0;
       z-index: 999; }
       .faq-container .faq-item .faq-question-container .faq-question {
@@ -1428,22 +1455,33 @@ body.home {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         margin: 0; }
       .faq-container .faq-item .faq-question-container h2 {
         margin: 0;
-        padding-right: 3rem; }
-      .faq-container .faq-item .faq-question-container h4 {
+        padding-right: 0.5rem;
+        color: #ffcc00;
+        font-family: 'Blox', sans-serif;
+        font-weight: 100;
+        font-size: 2rem; }
+        @media only screen and (min-width: 800px) {
+          .faq-container .faq-item .faq-question-container h2 {
+            padding-right: 3rem; } }
+      .faq-container .faq-item .faq-question-container h3 {
         color: #333333;
-        margin: 0; }
+        margin: 0;
+        font-size: 1rem; }
       .faq-container .faq-item .faq-question-container .down {
         color: #000000; }
     .faq-container .faq-item .up {
       display: none; }
     .faq-container .faq-item .faq-answer-container {
       display: none;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start;
@@ -1451,10 +1489,17 @@ body.home {
       border: 1px solid #000000;
       border-radius: 4px;
       margin: 0;
-      padding: 2rem 1.5rem 1rem 1.5rem; }
+      padding: 2rem 2rem 1rem 2rem; }
       .faq-container .faq-item .faq-answer-container h2 {
         margin: 0;
-        padding-right: 3rem; }
+        padding-right: 0.5rem;
+        color: #00a362;
+        font-family: 'Blox', sans-serif;
+        font-size: 2rem;
+        font-weight: 100; }
+        @media only screen and (min-width: 800px) {
+          .faq-container .faq-item .faq-answer-container h2 {
+            padding-right: 3rem; } }
       .faq-container .faq-item .faq-answer-container .faq-answer {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1479,8 +1524,13 @@ body.home {
 
 .faq-container .faq-item .focus {
   background: #ffffff;
+<<<<<<< HEAD
   -webkit-box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
           box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5); }
+=======
+  -webkit-box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.5); }
+>>>>>>> e8b2d1c17e814b837307e137e33361d66614d9c8
 
 .faq-container .faq-item .toggle-down {
   display: none; }
@@ -1551,6 +1601,7 @@ body.home {
   .page-about .partners-container p {
     display: none; }
 
+<<<<<<< HEAD
 @media only screen and (min-width: 800px) {
   .page-about .partners-container {
     -webkit-box-pack: start;
@@ -1588,3 +1639,11 @@ body.home {
         -webkit-box-align: end;
             -ms-flex-align: end;
                 align-items: flex-end; } }
+=======
+.blog .community-blog-container {
+  padding: 0 4vw; }
+  .blog .community-blog-container .category-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+>>>>>>> e8b2d1c17e814b837307e137e33361d66614d9c8

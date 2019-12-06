@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying faq in about page.
  *
@@ -7,30 +8,37 @@
 ?>
 
 <!-- Custom loop for testimonials -->
-	
+
 <!--  product loop -->
 
-    <div class="testimonial-container">
+<div class="testimonial-container">
 
-        <?php 
-            $args = array( 
-            'orderby' => 'title',
-            'post_type' => 'post_testimonials',
-            'posts_per_page' => 6
-            );
-            $the_testimonials = new WP_Query( $args );
-        ?>
-        <?php if ( $the_testimonials->have_posts() ) : while ( $the_testimonials->have_posts() ) : $the_testimonials->the_post(); ?>
+    <?php
+    $args = array(
+        'orderby' => 'title',
+        'post_type' => 'post_testimonials',
+        'posts_per_page' => 6
+    );
+    $the_testimonials = new WP_Query($args);
+    ?>
+    <?php if ($the_testimonials->have_posts()) : while ($the_testimonials->have_posts()) : $the_testimonials->the_post(); ?>
             <div class="testemonial-box">
+<<<<<<< HEAD
                 <div class="testimonial-photo" style="background: url(<?php echo the_field('picture'); ?>); background-size: cover; background-position: center"; ></div>
 
                 <div class="testimonial-content"><?php the_field('content');?></div>
                 <h3 class="testimonial-name"><?php the_title() ;?></h3>
                 <div class="testimonial-title"><?php the_field('title');?></div>
+=======
+                <div class="testimonial-photo" style=" background: url(<?php the_field('picture'); ?>); background-size:cover; background-position: center;"></div>
+                <div class="testimonial-content"><?php the_field('content'); ?></div>
+                <h3 class="testimonial-name"><?php the_title(); ?></h3>
+                <div class="testimonial-title"><?php the_field('title'); ?></div>
+>>>>>>> e8b2d1c17e814b837307e137e33361d66614d9c8
             </div>
-        <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+        <?php endwhile;
+        else : ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
 
-    </div>
+</div>
 
-    <?php wp_reset_query(); ?>
-       
+<?php wp_reset_query(); ?>
