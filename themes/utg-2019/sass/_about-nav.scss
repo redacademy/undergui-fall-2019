@@ -1,0 +1,37 @@
+.page-about {
+  .nav {
+    margin-bottom: $base__space-unit;
+
+    a {
+      text-decoration: none;
+      color: $color_black;
+      padding: $base__space-unit / 2;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        border-color: transparent;
+        background: $color_blue;
+        color: white;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .nav .active a {
+    color: $color_blue;
+    border-bottom: 2px solid $color_blue;
+    &:hover {
+      border-color: transparent;
+      background: $color_blue;
+      color: white;
+    }
+  }
+
+  .tab-pane {
+    display: none;
+  }
+
+  .tab-pane.active {
+    display: block;
+  }
+}

@@ -12,11 +12,12 @@
 
 	<!-- loop through the rows of data -->
 	<?php while ( have_rows('about_page_navigation') ) : the_row(); ?>
-		<ul>
-			<li><?php the_sub_field('page_one'); ?></p>
-			<li><?php the_sub_field('page_two'); ?></p>
-			<li><?php the_sub_field('page_three'); ?></p>
-			<li><?php the_sub_field('page_four'); ?></p>
+		
+		<ul id="nav-tab" class="nav">
+			<li><a href="#story"><?php the_sub_field('page_one'); ?></a></li>
+			<li><a href="#testimonials"><?php the_sub_field('page_two'); ?></a></li>
+			<li><a href="#faq"><?php the_sub_field('page_three'); ?></a></li>
+			<li><a href="#partners"><?php the_sub_field('page_four'); ?></a></li>
 		</ul>
 	<?php endwhile;
 

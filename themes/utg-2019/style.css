@@ -1375,7 +1375,7 @@ body.home {
               box-shadow: 5px 5px #ffcc00;
       border-radius: 5px; }
     .page-about .site-main .testimonial-container .testemonial-box img {
-      width: 180px;
+      width: 190px;
       height: 180px;
       margin: 0 auto;
       border-radius: 50%; }
@@ -1459,3 +1459,31 @@ body.home {
       .faq-container .faq-item .faq-answer-container p {
         color: #333333;
         margin-bottom: 1rem; }
+
+.page-about .nav {
+  margin-bottom: 1.5rem; }
+  .page-about .nav a {
+    text-decoration: none;
+    color: #000000;
+    padding: 0.75rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .page-about .nav a:hover {
+      border-color: transparent;
+      background: #2ba2dd;
+      color: white;
+      border-radius: 2px; }
+
+.page-about .nav .active a {
+  color: #2ba2dd;
+  border-bottom: 2px solid #2ba2dd; }
+  .page-about .nav .active a:hover {
+    border-color: transparent;
+    background: #2ba2dd;
+    color: white; }
+
+.page-about .tab-pane {
+  display: none; }
+
+.page-about .tab-pane.active {
+  display: block; }
