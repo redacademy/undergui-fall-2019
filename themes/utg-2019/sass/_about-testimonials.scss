@@ -12,15 +12,11 @@
                 font-family: $font_main;
                 border: 2px solid $color_blue;
                 box-shadow: 5px 5px $color_blue;
-                // border-right: 5px solid $color_blue;
-                // border-bottom: 5px solid $color_blue;
                 border-radius: 5px;
 
                 &:nth-child(odd) {
                     border: 2px solid $color_yellow;
                     box-shadow: 5px 5px $color_yellow;
-                    // border-right: 5px solid $color_yellow;
-                    // border-bottom: 5px solid $color_yellow;
                     border-radius: 5px;
                 }
     
