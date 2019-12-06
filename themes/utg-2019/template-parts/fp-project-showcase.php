@@ -12,9 +12,9 @@
 
 	<h2 class="showcase-header">Project showcase</h2>
 
-	<div class="projects" data-flickity='{}'>
+	<div class="projects-wrapper" data-flickity='{}'>
 
-		<div class="project-wrapper">
+		<div class="single-project-container">
 			<img src="https://picsum.photos/id/237/400/300" />
 			<p class="project-desc">
 				Lorem ipsum dolor amet post-ironic snackwave whatever,
@@ -29,7 +29,7 @@
 			</p>
 		</div>
 
-		<div class="project-wrapper">
+		<div class="single-project-container">
 			<img src="https://picsum.photos/id/238/400/300" />
 			<p class="project-desc">
 				Lorem ipsum dolor amet post-ironic snackwave whatever,
@@ -44,7 +44,7 @@
 			</p>
 		</div>
 
-		<div class="project-wrapper">
+		<div class="single-project-container">
 			<img src="https://picsum.photos/id/239/400/300" />
 			<p class="project-desc">
 				Lorem ipsum dolor amet post-ironic snackwave whatever,
