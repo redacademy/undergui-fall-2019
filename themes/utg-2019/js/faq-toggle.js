@@ -1,9 +1,16 @@
 // Waits for page to load
 document.addEventListener('DOMContentLoaded', function() {
+<<<<<<< HEAD
   // Checks if user is on about page
   if (window.location.pathname === '/utg/about/') {
     // Grabs all the faq containers
     const faqContainer = document.querySelectorAll('.faq-item');
+=======
+  if (window.location.pathname === '/utg/about/') {
+    // const faqContainer = document.querySelector('.faq-answer-container')
+    const faqSlideDown = document.querySelector('.faq-slide-down');
+    // const faqSlideUp = document.querySelector('.faq-slide-up');
+>>>>>>> e2a5d5de2a0f8e03ee1a86965ad3e50f6de3e87e
 
     // Loops through array container, grabs elements that will be changed, adds event listener to all array items
     faqContainer.forEach(el => {
