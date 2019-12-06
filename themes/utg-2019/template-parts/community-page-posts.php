@@ -1,16 +1,26 @@
 
+<div>
+<?php 
+    foreach((get_categories()) as $category){
+        echo $category->name . '<br>';
+
+        }
+    ?>
+</div>
+
  <!-- get post loop for 8 posts to be displayed on cummunity and get more to show up with more button -->
     <?php
     global $post;
  
     $myposts = get_posts( array(
         'posts_per_page' => -1,
+        'hide_empty'     => 1,
     ) );
  
     if ( $myposts ) {
         foreach ( $myposts as $post ) : 
             setup_postdata( $post ); ?>
-        <a href="<?php get_permalink();?>">  
+        <a href="<?php echo get_post_permalink();?>">  
             <div>
                 <?php the_post_thumbnail('full'); ?>
                 <?php echo get_the_date( 'F j, Y' ); ?>
