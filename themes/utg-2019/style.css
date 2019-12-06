@@ -1460,30 +1460,61 @@ body.home {
         color: #333333;
         margin-bottom: 1rem; }
 
-.page-about .nav {
-  margin-bottom: 1.5rem; }
-  .page-about .nav a {
-    text-decoration: none;
-    color: #000000;
-    padding: 0.75rem;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-    .page-about .nav a:hover {
-      border-color: transparent;
-      background: #2ba2dd;
-      color: white;
-      border-radius: 2px; }
+.page-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .page-about .tab-pane {
+    display: block; }
+  .page-about .nav {
+    display: block; }
+  @media only screen and (min-width: 800px) {
+    .page-about .nav {
+      margin-bottom: 1.5rem; }
+      .page-about .nav a {
+        text-decoration: none;
+        color: #000000;
+        padding: 0.75rem;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+        .page-about .nav a:hover {
+          border-color: transparent;
+          background: #2ba2dd;
+          color: white;
+          border-radius: 2px; }
+    .page-about .nav .active a {
+      color: #2ba2dd;
+      border-bottom: 2px solid #2ba2dd; }
+      .page-about .nav .active a:hover {
+        border-color: transparent;
+        background: #2ba2dd;
+        color: white; }
+    .page-about .tab-pane {
+      display: none; }
+    .page-about .tab-pane.active {
+      display: block; } }
 
-.page-about .nav .active a {
-  color: #2ba2dd;
-  border-bottom: 2px solid #2ba2dd; }
-  .page-about .nav .active a:hover {
-    border-color: transparent;
-    background: #2ba2dd;
-    color: white; }
-
-.page-about .tab-pane {
-  display: none; }
-
-.page-about .tab-pane.active {
-  display: block; }
+.page-about .partners-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: auto; }
+  .page-about .partners-container img {
+    width: 30%;
+    max-height: 300px;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5); }
+  .page-about .partners-container h3 {
+    display: none; }
+  .page-about .partners-container p {
+    display: none; }
