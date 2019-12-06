@@ -1,6 +1,14 @@
 body.home {
   text-align: center;
 
+  h2 {
+    font-size: $font_size_h2+6px;
+
+    @include media($desktop) {
+      font-size: $font_size_h2 + 20px;
+    }
+  }
+
 
   // Hero banner styling
   .home-hero-banner {
@@ -21,7 +29,6 @@ body.home {
       object-fit: cover;
       object-position: 65%;
       filter: brightness(65%);
-      z-index: -1;
 
       // Breakpoint mixin
       @include media($desktop) {
@@ -80,13 +87,6 @@ body.home {
       }
     }
 
-    .approaches-header {
-      font-size: $font_size_h2 + 6px;
-      @include media($desktop) {
-        font-size: $font_size_h2 + 20px;
-      }
-    }
-
     // Approach item styling
     .approach-item {
       margin: $base__space-unit + 0.5rem;
@@ -108,31 +108,57 @@ body.home {
     }
   }
 
+  // Project showcase styling
   .project-showcase-container {
     height: 685px;
     background-color: $color_blue;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
 
     .showcase-header {
       color: $color_white;
-      font-size: $font_size_h2 + 6px;
-
-      @include media($desktop) {
-        font-size: $font_size_h2 + 20px;
-        // margin-bottom: 10rem;
-      }
     }
+
     .project-wrapper {
       display: flex;
       justify-content: center;
       width: 100%;
+
       .project-desc {
         font-size: $font_size_main;
         margin-left: 4rem;
         text-align: left;
         width: 450px;
+      }
+    }
+  }
+
+  // Latest events styling
+  .latest-events-container {
+
+    .events-wrapper {
+      display: flex;
+      justify-content: center;
+
+      .event-container {
+        margin: 0 3rem;
+        .event-time {
+          text-transform: uppercase;
+          font-size: $font_size_main - 2px;
+          font-weight: 200;
+          color: $color_paragraph;
+        }
+
+        .event-title {
+          font-size: $font_size_main + 2px;
+          color: $color_black;
+        }
+
+        .event-location {
+          color: $color_paragraph;
+        }
+
       }
     }
   }
