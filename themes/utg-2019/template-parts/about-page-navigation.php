@@ -16,8 +16,8 @@
 		<ul id="nav-tab" class="nav">
 			<li><a href="#story"><?php the_sub_field('page_one'); ?></a></li>
 			<li><a href="#testimonials"><?php the_sub_field('page_two'); ?></a></li>
-			<li><a href="#faq"><?php the_sub_field('page_three'); ?></a></li>
-			<li><a href="#partners"><?php the_sub_field('page_four'); ?></a></li>
+			<li><a href="#partners"><?php the_sub_field('page_three'); ?></a></li>
+			<li><a href="#faq"><?php the_sub_field('page_four'); ?></a></li>
 		</ul>
 	<?php endwhile;
 
