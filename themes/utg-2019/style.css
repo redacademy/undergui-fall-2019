@@ -43,7 +43,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700&display=swap");
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -1054,6 +1054,11 @@ object {
 
 body.home {
   text-align: center; }
+  body.home h2 {
+    font-size: 34px; }
+    @media only screen and (min-width: 800px) {
+      body.home h2 {
+        font-size: 48px; } }
   body.home .home-hero-banner {
     position: relative;
     display: -webkit-box;
@@ -1080,8 +1085,7 @@ body.home {
       -o-object-position: 65%;
          object-position: 65%;
       -webkit-filter: brightness(65%);
-              filter: brightness(65%);
-      z-index: -1; }
+              filter: brightness(65%); }
       @media only screen and (min-width: 800px) {
         body.home .home-hero-banner img {
           height: 520px;
@@ -1125,11 +1129,6 @@ body.home {
         display: -ms-flexbox;
         display: flex;
         margin: auto; } }
-    body.home .approaches-container .approaches-header {
-      font-size: 34px; }
-      @media only screen and (min-width: 800px) {
-        body.home .approaches-container .approaches-header {
-          font-size: 48px; } }
     body.home .approaches-container .approach-item {
       margin: 2rem; }
       body.home .approaches-container .approach-item img {
@@ -1151,15 +1150,11 @@ body.home {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly; }
     body.home .project-showcase-container .showcase-header {
-      color: #ffffff;
-      font-size: 34px; }
-      @media only screen and (min-width: 800px) {
-        body.home .project-showcase-container .showcase-header {
-          font-size: 48px; } }
+      color: #ffffff; }
     body.home .project-showcase-container .project-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1173,6 +1168,25 @@ body.home {
         margin-left: 4rem;
         text-align: left;
         width: 450px; }
+  body.home .latest-events-container .events-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    body.home .latest-events-container .events-wrapper .event-container {
+      margin: 0 3rem; }
+      body.home .latest-events-container .events-wrapper .event-container .event-time {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 200;
+        color: #333333; }
+      body.home .latest-events-container .events-wrapper .event-container .event-title {
+        font-size: 18px;
+        color: #000000; }
+      body.home .latest-events-container .events-wrapper .event-container .event-location {
+        color: #333333; }
 
 .error404 .banner-404 {
   overflow: hidden; }
