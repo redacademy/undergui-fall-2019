@@ -118,6 +118,8 @@ function utg_scripts()
 	wp_enqueue_script('utg-mobile-menu', get_template_directory_uri() . '/build/js/mobile-menu.min.js', array(), '', true);
 	//FAQ container toggles
 	wp_enqueue_script('utg-faq-toggle', get_template_directory_uri() . '/build/js/faq-toggle.min.js', array(), '', true);
+	//Tabbed content scripts
+	wp_enqueue_script('utg-tabbed-content', get_template_directory_uri() . '/build/js/tabbed-content.min.js', array(), '', true);
 	//Flickity CDN scripts
 	wp_enqueue_script('utg-flickity-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), '', true);
 
