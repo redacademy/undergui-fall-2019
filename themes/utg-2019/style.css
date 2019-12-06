@@ -343,6 +343,15 @@ p {
   -webkit-margin-end: 0px;
           margin-inline-end: 0px; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #333333; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -1385,16 +1394,24 @@ body.home {
     border: 2px solid #2ba2dd;
     -webkit-box-shadow: 5px 5px #2ba2dd;
             box-shadow: 5px 5px #2ba2dd;
-    border-radius: 5px; }
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 400px; }
     .page-about .site-main .testimonial-container .testemonial-box:nth-child(odd) {
       border: 2px solid #ffcc00;
       -webkit-box-shadow: 5px 5px #ffcc00;
               box-shadow: 5px 5px #ffcc00;
       border-radius: 5px; }
-    .page-about .site-main .testimonial-container .testemonial-box img {
-      width: 190px;
-      height: 180px;
-      margin: 0 auto;
+    .page-about .site-main .testimonial-container .testemonial-box .testimonial-photo {
+      width: 40%;
+      height: 40%;
+      margin: auto auto;
       border-radius: 50%; }
     .page-about .site-main .testimonial-container .testemonial-box .testimonial-name {
       margin: 0; }
@@ -1569,3 +1586,10 @@ body.home {
     display: none; }
   .page-about .partners-container p {
     display: none; }
+
+.blog .community-blog-container {
+  padding: 0 4vw; }
+  .blog .community-blog-container .category-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }

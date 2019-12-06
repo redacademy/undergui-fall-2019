@@ -4,24 +4,34 @@
 /* Headings */
 
 h1 {
-	font-size: 56px;
-	font-weight: bold;
-	font-family: $font_header;
+  font-size: 56px;
+  font-weight: bold;
+  font-family: $font_header;
 }
 
 h2 {
-	font-size: 28px;
-	font-weight: bold;
-	font-family: $font_header;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: $font_header;
 }
 
 /* Paragraphs */
 
 p {
-	font-size: 14px;
-	font-family: $font_main;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  font-size: 14px;
+  font-family: $font_main;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: $color_paragraph;
 }
