@@ -1419,13 +1419,13 @@ body.home {
         color: #333333;
         margin: 0; }
       .faq-container .faq-item .faq-question-container .faq-slide-down {
-        padding: 0;
+        padding: 1rem;
         border: none;
         background: none; }
         .faq-container .faq-item .faq-question-container .faq-slide-down i {
           color: #000000; }
       .faq-container .faq-item .faq-question-container .faq-slide-up {
-        padding: 0;
+        padding: 1rem;
         border: none;
         background: none;
         display: none; }
