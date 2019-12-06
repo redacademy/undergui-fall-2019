@@ -22,7 +22,7 @@
 					<!-- <img src="" alt=""> -->
 					<div class="faq-question">
 						<h2>Q</h2>
-						<h3><?php the_sub_field('question'); ?></h3>
+						<h4><?php the_sub_field('question'); ?></h4>
 
 					</div>
 					<i class="fas fa-chevron-down down"></i>

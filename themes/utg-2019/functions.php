@@ -102,15 +102,23 @@ add_filter('stylesheet_uri', 'utg_minified_css', 10, 2);
  */
 function utg_scripts()
 {
+	// CSS styles
 	wp_enqueue_style('utg-style', get_stylesheet_uri());
 
 	//Font Awesome
 	wp_enqueue_style('utg-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css');
+	//Flickity styles
 	wp_enqueue_style('utg-flickity-css', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
 
+
+	//Underscores a11y and navigation scripts
 	wp_enqueue_script('utg-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);
 	wp_enqueue_script('utg-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);
+	//Mobile menu control
 	wp_enqueue_script('utg-mobile-menu', get_template_directory_uri() . '/build/js/mobile-menu.min.js', array(), '', true);
+	//FAQ container toggles
+	wp_enqueue_script('utg-faq-toggle', get_template_directory_uri() . '/build/js/faq-toggle.min.js', array(), '', true);
+	//Flickity CDN scripts
 	wp_enqueue_script('utg-flickity-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), '', true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {

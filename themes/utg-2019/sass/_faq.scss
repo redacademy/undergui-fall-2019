@@ -21,7 +21,7 @@
         margin: 0;
         padding-right: 3rem;
       }
-      h3 {
+      h4 {
         color: $color_paragraph;
         margin: 0;
       }
@@ -32,7 +32,7 @@
     .faq-answer-container {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       background-color: $color_faq_background;
       border: 1px solid $color_black;
       border-radius: 4px;
@@ -47,10 +47,11 @@
       .faq-answer {
         display: flex;
         flex-direction: column;
+        margin: 0;
       }
       p {
         color: $color_paragraph;
-        margin: 0;
+        margin-bottom: 1rem;
       }
     }
   }
