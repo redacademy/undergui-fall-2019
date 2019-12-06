@@ -2,7 +2,9 @@
 # Embedded Fonts
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700&display=swap');
+// Titillium is enqueued inside functions.php as a Google Font
+
+// Gotham
 
 @font-face {
   font-family: 'Gotham';
@@ -146,4 +148,18 @@
     url('../../fonts/gotham-font/Gotham-BookItalic.ttf') format('truetype');
   font-weight: 500;
   font-style: italic;
+}
+
+// Blox
+
+@font-face {
+  font-family: 'Blox';
+  src: url('../../fonts/blox/BloxBRK.eot');
+  src: url('../../fonts/blox/BloxBRK.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/blox/BloxBRK.woff2') format('woff2'),
+    url('../../fonts/blox/BloxBRK.woff') format('woff'),
+    url('../../fonts/blox/BloxBRK.ttf') format('truetype'),
+    url('../../fonts/blox/BloxBRK.svg#BloxBRK') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }

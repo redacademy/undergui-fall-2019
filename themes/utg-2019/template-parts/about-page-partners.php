@@ -6,31 +6,39 @@
  */
 ?>
 
-
-<!-- partners loop for about page -->
-<?php if( have_rows('partners') ): ?>
-
-<!-- loop through the rows of data -->
-<?php while ( have_rows('partners') ) : the_row(); ?>
-
-<!-- display a sub field value from partners -->
-<h3><?php the_sub_field('name'); ?></h3>
+<div class="partners-container">
 
 
-<?php if( get_sub_field('logo') ): ?>
-	<img src="<?php the_sub_field('logo'); ?>" />
-<?php endif; ?>
+	<!-- partners loop for about page -->
+	<?php if( have_rows('partners') ): ?>
+
+	<!-- loop through the rows of data -->
+	<?php while ( have_rows('partners') ) : the_row(); ?>
+
+	<div class="partners-box">
+
+		<?php if( get_sub_field('logo') ): ?>
+			<img src="<?php the_sub_field('logo'); ?>" />
+		<?php endif; ?>
+
+		<div class="partners-info">
+			<!-- display a sub field value from partners -->
+			<h3><?php the_sub_field('name'); ?></h3>
+
+			<p><?php the_sub_field('content'); ?></p>
+
+		</div>
+
+	</div><!-- end of partners box -->
 
 
-<p><?php the_sub_field('content'); ?></p>
+		<?php endwhile;
 
-<?php endwhile;
+		else :
 
-else :
+		// no rows found
 
-// no rows found
+		endif; ?>
 
-endif; ?>
-
-
+</div>
 

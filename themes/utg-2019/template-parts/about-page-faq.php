@@ -21,18 +21,18 @@
 				<button class="faq-question-container">
 					<!-- <img src="" alt=""> -->
 					<div class="faq-question">
-						<h2>Q</h2>
+						<h2>q</h2>
 						<h3><?php the_sub_field('question'); ?></h3>
 
 					</div>
-					<i class="fas fa-chevron-down down"></i>
-					<i class="fas fa-chevron-up up"></i>
+					<i class="fas fa-chevron-down fa-2x down"></i>
+					<i class="fas fa-chevron-up fa-2x up"></i>
 
 				</button>
 
 				<div class="faq-answer-container">
 					<!-- <img src="" alt=""> -->
-					<h2>A</h2>
+					<h2>a</h2>
 					<div class="faq-answer">
 						<?php if (have_rows('answer')) : ?>
 							<?php while (have_rows('answer')) : the_row(); ?>

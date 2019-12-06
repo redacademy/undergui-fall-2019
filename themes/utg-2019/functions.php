@@ -109,6 +109,8 @@ function utg_scripts()
 	wp_enqueue_style('utg-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css');
 	//Flickity styles
 	wp_enqueue_style('utg-flickity-css', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
+	//Google Titillium Web font
+	wp_enqueue_style('utg-titillium-web-font', 'https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700&display=swap');
 
 
 	//Underscores a11y and navigation scripts

@@ -1,0 +1,64 @@
+.page-about {
+
+    .partners-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+
+        img {
+            margin: 0;
+            padding: 0;
+            width: 33%;
+            transform: scale(0.8);
+        }
+        h3 {
+            display: none;
+        }
+        p {
+            display: none;
+        }
+    }
+
+    @include media($desktop) {
+
+    .partners-container {
+        justify-content: flex-start;
+        width: 100%;
+        margin: 0 auto;
+
+        .partners-box {
+            width: 48%;
+            display: flex;
+        }
+
+        img {
+            margin: 0;
+            padding: 0;
+            border: 2px solid black;
+            border-radius: 10px;
+            height: 50%;
+            width: 50%;
+            // transform: scaleY(.6);
+            // transform: scale(.5);
+        }
+        .partners-info {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                display: block;
+                align-items: flex-start;
+            }
+            p {
+                display: block;
+                align-items: flex-end;
+            }
+        }
+
+
+    }
+}
+
+}
