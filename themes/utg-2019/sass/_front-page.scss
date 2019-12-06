@@ -109,8 +109,11 @@ body.home {
   }
 
   .project-showcase-container {
-    height: 100vh;
+    height: 685px;
     background-color: $color_blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .showcase-header {
       color: $color_white;
@@ -118,6 +121,18 @@ body.home {
 
       @include media($desktop) {
         font-size: $font_size_h2 + 20px;
+        // margin-bottom: 10rem;
+      }
+    }
+    .project-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      .project-desc {
+        font-size: $font_size_main;
+        margin-left: 4rem;
+        text-align: left;
+        width: 450px;
       }
     }
   }
