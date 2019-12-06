@@ -1,0 +1,33 @@
+.page-about {
+    //   <---- MOBILE ---->
+  
+    .site-main {
+        .testimonial-container {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+
+            .testemonial-box {
+                text-align: center;
+                font-family: $font_main;
+                border: 2px solid $color_blue;
+                border-right: 5px solid $color_blue;
+                border-bottom: 5px solid $color_blue;
+    
+                img {
+                    width: 180px;
+                    height: 180px;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                }
+                .testimonial-name {
+                    margin: 0;
+                }
+                .testimonial-title {
+                    margin: 0;
+                    padding-bottom: $base__space-unit;
+                }
+            }
+        }
+    }
+}

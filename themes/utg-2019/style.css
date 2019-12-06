@@ -1185,7 +1185,8 @@ body.home {
     width: 100%;
     text-align: left;
     margin: auto;
-    padding: 1.5rem 0; }
+    padding: 1.5rem 0;
+    font-size: 17.6px; }
 
 .page-about .site-main .our-story .goals {
   display: -webkit-box;
@@ -1330,6 +1331,27 @@ body.home {
       text-align: left;
       padding-right: 3rem;
       font-size: 19.2px; } }
+
+.page-about .site-main .testimonial-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr); }
+  .page-about .site-main .testimonial-container .testemonial-box {
+    text-align: center;
+    font-family: "Titillium Web";
+    border: 2px solid #2ba2dd;
+    border-right: 5px solid #2ba2dd;
+    border-bottom: 5px solid #2ba2dd; }
+    .page-about .site-main .testimonial-container .testemonial-box img {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto;
+      border-radius: 50%; }
+    .page-about .site-main .testimonial-container .testemonial-box .testimonial-name {
+      margin: 0; }
+    .page-about .site-main .testimonial-container .testemonial-box .testimonial-title {
+      margin: 0;
+      padding-bottom: 1.5rem; }
 
 .faq-container {
   width: 86.5%;
