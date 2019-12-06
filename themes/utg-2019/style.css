@@ -1443,9 +1443,9 @@ body.home {
       display: none; }
     .faq-container .faq-item .faq-answer-container {
       display: none;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start;

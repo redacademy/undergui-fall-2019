@@ -40,7 +40,7 @@
 
     .faq-answer-container {
       display: none;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: flex-start;
       background-color: $color_faq_background;
       border: 1px solid $color_black;
