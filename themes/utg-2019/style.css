@@ -1340,8 +1340,14 @@ body.home {
     text-align: center;
     font-family: "Titillium Web";
     border: 2px solid #2ba2dd;
-    border-right: 5px solid #2ba2dd;
-    border-bottom: 5px solid #2ba2dd; }
+    -webkit-box-shadow: 5px 5px #2ba2dd;
+            box-shadow: 5px 5px #2ba2dd;
+    border-radius: 5px; }
+    .page-about .site-main .testimonial-container .testemonial-box:nth-child(odd) {
+      border: 2px solid #ffcc00;
+      -webkit-box-shadow: 5px 5px #ffcc00;
+              box-shadow: 5px 5px #ffcc00;
+      border-radius: 5px; }
     .page-about .site-main .testimonial-container .testemonial-box img {
       width: 180px;
       height: 180px;
