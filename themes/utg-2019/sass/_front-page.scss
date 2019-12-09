@@ -168,18 +168,18 @@ body.home {
       .event-container {
         display: flex;
         text-align: left;
-        border: 2px solid lightgrey;
-        border-bottom: 3px solid lightgrey;
-        border-right: 3px solid lightgrey;
+        border: 1px solid lightgrey;
         border-radius: 4px;
+        box-shadow: 0 1px 4px $color_black;
         margin: 0.4rem auto;
         width: 400px;
-        height: 105px;
+        height: 101px;
         
         img {
           height: 100px;
           width: 100px;
           margin-right: 0.5rem;
+          border-radius: 4px 0 0 4px;
         }
 
         .event-text {
@@ -187,6 +187,8 @@ body.home {
           flex-direction: column;
           justify-content: flex-start;
           width: 100%;
+          padding: 1rem;
+
           h3,
           h2 {
             margin: 0;
@@ -201,10 +203,14 @@ body.home {
             margin-bottom: auto;
           }
           .event-location {
-            align-self: end;
             margin-top: auto;
           }
         }
+        .more-comm-posts {
+          a {
+          font-weight: 200;
+        }
+      }
       }
     }
 
@@ -233,8 +239,15 @@ body.home {
     //   }
     // }
   }
+  
 
   .testimonials-container {
+    background: $color_yellow;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+
+  }
 
     // Desktop
     // height: 520px;
@@ -260,4 +273,4 @@ body.home {
     //   }
     // }
   }
-}
+// }
