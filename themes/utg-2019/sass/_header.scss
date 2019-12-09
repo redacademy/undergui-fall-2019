@@ -5,6 +5,10 @@
   justify-content: space-between;
   padding: 0.125rem 0.75rem;
 
+  .sub-menu {
+    transition: all .5s ease;
+  }
+
   // add shaded background when mobile menu opens
   &.toggle-menu::before {
     content: '';

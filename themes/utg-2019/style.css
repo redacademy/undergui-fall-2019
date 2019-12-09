@@ -657,6 +657,9 @@ object {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.125rem 0.75rem; }
+  .site-header .sub-menu {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease; }
   .site-header.toggle-menu::before {
     content: '';
     display: block;
@@ -1241,6 +1244,9 @@ body.home {
     width: 100px;
     border: 2px solid #2ba2dd; }
 
+.page-about .site-main .about-page-container h1 {
+  margin-left: 3rem; }
+
 .page-about .site-main div {
   margin: 1.5rem 0.75rem; }
 
@@ -1436,6 +1442,7 @@ body.home {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    max-width: 480px;
     height: 450px;
     overflow: hidden; }
     .page-about .site-main .testimonial-container .testimonial-box:nth-child(odd) {
@@ -1596,10 +1603,10 @@ body.home {
       display: flex;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-      margin: auto; }
+      margin: auto;
+      max-width: 95%; }
       .page-about .nav li {
-        display: block;
-        padding: 0; }
+        display: block; }
       .page-about .nav a {
         text-decoration: none;
         color: #333333;
