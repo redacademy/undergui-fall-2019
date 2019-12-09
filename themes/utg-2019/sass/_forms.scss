@@ -53,10 +53,10 @@ input[type='submit'] {
 
   &:active,
   &:focus {
+    color: $color_white;
     background-color: darken($color_blue, 10%);
   }
 }
-
 
 /* Fields */
 

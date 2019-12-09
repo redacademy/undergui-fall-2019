@@ -4,7 +4,9 @@
     <div class="category-container">
         <?php
         foreach ((get_categories()) as $category) : ?>
-            <h3><?= $category->name . '<br>'; ?></h3>
+            <a href="">
+                <h3><?= $category->name . '<br>'; ?></h3>
+            </a>
 
         <?php endforeach; ?>
     </div>
@@ -15,22 +17,34 @@
         global $post;
 
         $myposts = get_posts(array(
-            'posts_per_page' => -1,
+            'posts_per_page' => 8,
             'hide_empty'     => 1,
+            'order'          => 'DESC',
         ));
 
         if ($myposts) {
             foreach ($myposts as $post) :
                 setup_postdata($post); ?>
+                <!-- website default card -->
                 <a class="site-card" href="<?php echo get_post_permalink(); ?>">
-                    <?php the_post_thumbnail(); ?>
+
+                    <!-- dynamic post image for card -->
+
+                    <div class="image-container" style="background: url('<?php the_post_thumbnail_url('full'); ?>'); background-size: cover; background-position: center;">
+                    </div>
+
+                    <!-- dynamic post title, date, and category -->
                     <div class="post-meta">
                         <div>
                             <h3 class="post-date"><?php echo get_the_date('F j, Y'); ?></h3>
                             <h2 class="post-title"><?= get_the_title(); ?></h2>
 
                         </div>
-                        <p class="post-category"><?= get_sub_field($category) ?></p>
+                        <p> <?php
+                                    $cat_list = get_the_category();
+                                    echo $cat_list[0]->name;
+                                    ?>
+                        </p>
                     </div>
                 </a>
         <?php
@@ -39,6 +53,10 @@
         }
         ?>
 
+    </div>
+
+    <div class="button-box">
+        <button class="white-btn">SHOW MORE</button>
     </div>
 
 </section>
