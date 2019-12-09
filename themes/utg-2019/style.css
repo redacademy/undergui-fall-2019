@@ -1584,16 +1584,16 @@ body.home {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem; }
   .page-about .partners-container .partners-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin: 0; }
   .page-about .partners-container .img-box {
-    margin: 0; }
-  .page-about .partners-container img {
-    margin: auto;
-    -o-object-position: center;
-       object-position: center;
-    padding: 0;
-    width: 100%;
-    max-height: 150px; }
+    margin: auto; }
+    .page-about .partners-container .img-box img {
+      padding: 0;
+      width: 100%;
+      max-height: 150px; }
   .page-about .partners-container h3 {
     display: none; }
   .page-about .partners-container p {
