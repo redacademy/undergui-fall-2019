@@ -11,6 +11,15 @@
 
 <!--  product loop -->
 
+<div class="testimonial-title">
+    <?php if( have_rows('about_page_navigation') ): ?>
+            <?php while ( have_rows('about_page_navigation') ) : the_row(); ?>
+                <h2 class="about-page-headers"><?php the_sub_field('page_two'); ?></h2>
+            <?php endwhile;
+            else :
+            endif; ?>        
+</div>
+
 <div class="testimonial-container">
 
     <?php

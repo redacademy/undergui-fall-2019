@@ -29,9 +29,14 @@
   }
 
   @include media($desktop) {
+
+    .partners-title {
+      display: none;
+    }
     .partners-container {
       grid-template-rows: repeat(auto, 1fr);
       grid-template-columns: repeat(2, 1fr);
+      padding-top: $base__space-unit;
 
       .partners-box {
         max-width: 100%;
