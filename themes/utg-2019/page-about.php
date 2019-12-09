@@ -14,7 +14,6 @@ get_header(); ?>
 
 			<?php include get_template_directory() . "/template-parts/about-page-navigation.php"; ?>
 			
-			
 			<div class="tab-pane active" id="story">
 				<?php include get_template_directory() . "/template-parts/about-page-our-story.php"; ?>
 			</div>	

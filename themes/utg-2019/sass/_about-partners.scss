@@ -1,64 +1,74 @@
 .page-about {
+  //   <---- MOBILE ---->
 
-    .partners-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        height: auto;
+  .partners-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $base__space-unit;
 
-        img {
-            margin: 0;
-            padding: 0;
-            width: 33%;
-            transform: scale(0.8);
-        }
-        h3 {
-            display: none;
-        }
-        p {
-            display: none;
-        }
+    .partners-box {
+      display: flex;
+      margin: 0;
     }
-
-    @include media($desktop) {
-
-    .partners-container {
-        justify-content: flex-start;
+    .img-box {
+      margin: auto;
+      img {
+        padding: 0;
         width: 100%;
-        margin: 0 auto;
-
-        .partners-box {
-            width: 48%;
-            display: flex;
-        }
-
-        img {
-            margin: 0;
-            padding: 0;
-            border: 2px solid black;
-            border-radius: 10px;
-            height: 50%;
-            width: 50%;
-            // transform: scaleY(.6);
-            // transform: scale(.5);
-        }
-        .partners-info {
-            display: flex;
-            flex-direction: column;
-
-            h3 {
-                display: block;
-                align-items: flex-start;
-            }
-            p {
-                display: block;
-                align-items: flex-end;
-            }
-        }
-
-
+        max-height: 150px;
+      }
     }
-}
 
+    h3 {
+      display: none;
+    }
+    p {
+      display: none;
+    }
+  }
+
+  @include media($desktop) {
+    .partners-container {
+      grid-template-rows: repeat(auto, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+
+      .partners-box {
+        max-width: 100%;
+
+        .img-box {
+          display: flex;
+          border: 1px solid black;
+          border-radius: 10px;
+          align-items: flex-start;
+          margin: $base__space-unit 0;
+          min-width: 150px;
+          max-width: 150px;
+          height: 140px;
+
+          img {
+            margin: auto;
+            object-fit: cover;
+            object-position: center;
+            max-width: 150px;
+            max-height: 130px;
+          }
+        }
+
+        .partners-info {
+          flex-direction: column;
+
+          h3 {
+            display: block;
+            align-items: flex-start;
+            margin-top: 0;
+          }
+          p {
+            display: block;
+            align-items: flex-end;
+          }
+        }
+      }
+    }
+  }
 }
