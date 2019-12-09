@@ -140,3 +140,21 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+
+/*
+*	use to shorten big titles to fix titles breaking site cards
+*	takes two parameters, what follows the shortened title and an integer 
+*	that counts the amount of words in the new title
+  */
+function short_title($after = '', $length)
+{
+	$mytitle = explode(' ', get_the_title(), $length);
+	if (count($mytitle) >= $length) {
+		array_pop($mytitle);
+		$mytitle = implode(" ", $mytitle) . $after;
+	} else {
+		$mytitle = implode(" ", $mytitle);
+	}
+	return $mytitle;
+};
