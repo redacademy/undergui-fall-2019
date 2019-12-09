@@ -52,12 +52,13 @@ body.home {
 
       h1 {
         width: 80%;
-        font-size: 2.5rem;
+        font-size: $font-size_h1;
         margin: auto;
         margin-bottom: 2rem;
+        color: $color_white;
 
         @include media($desktop) {
-          width: 450px;
+          width: $base__space-unit + 40rem;
         }
       }
     }
@@ -166,29 +167,43 @@ body.home {
       flex-direction: column;
       .event-container {
         display: flex;
+        text-align: left;
         border: 2px solid lightgrey;
-        border-bottom: 4px solid lightgrey;
-        border-right: 4px solid lightgrey;
-        border-radius: 5px;
-        margin: 1rem auto;
+        border-bottom: 3px solid lightgrey;
+        border-right: 3px solid lightgrey;
+        border-radius: 4px;
+        margin: 0.4rem auto;
         width: 400px;
         height: 105px;
         
         img {
           height: 100px;
           width: 100px;
+          margin-right: 0.5rem;
         }
 
         .event-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
           width: 100%;
-          h3, h2 {
+          h3,
+          h2 {
             margin: 0;
           }
-        }
-        
-        .event-title {
-          font-size: $font_size_main;
-          
+          .event-date {
+            text-transform: uppercase;
+            font-weight: 200;
+            font-size: $font_size_main - 4px;
+          }
+          .event-title {
+            font-size: $font_size_main;
+            margin-bottom: auto;
+          }
+          .event-location {
+            align-self: end;
+            margin-top: auto;
+          }
         }
       }
     }
