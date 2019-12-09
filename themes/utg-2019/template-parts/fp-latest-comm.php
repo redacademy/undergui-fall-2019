@@ -41,8 +41,8 @@
 			</div>
 		</div>
 
-	</div>
+		<a class="more-comm-posts" href="#">More</a>
 
-	<button>more</button>
+	</div>
 
 </div>
