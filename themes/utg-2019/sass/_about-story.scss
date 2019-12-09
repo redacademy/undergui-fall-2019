@@ -10,7 +10,7 @@
       display: flex;
 
       li {
-        display: none;
+        // display: none;
       }
     }
     .our-story {
@@ -84,14 +84,7 @@
     }
 
     @include media($desktop) {
-      ul {
-        display: flex;
 
-        li {
-          display: block;
-          padding: $base__space-unit;
-        }
-      }
       .our-story {
         .statement {
           display: flex;

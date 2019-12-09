@@ -13,6 +13,7 @@ h2 {
   font-size: 28px;
   font-weight: bold;
   font-family: $font_header;
+  color: $color_paragraph;
 }
 
 /* Paragraphs */
@@ -24,6 +25,7 @@ p {
   margin-block-end: 0;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  color: $color_paragraph;
 }
 
 h1,
