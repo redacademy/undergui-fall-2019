@@ -2,11 +2,19 @@
   //   <---- MOBILE ---->
 
   .site-main {
+
+    @include media($desktop) {
+      .testimonial-title {
+        display: none;
+      }
+    }
+
     .testimonial-container {
       display: grid;
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(3, 1fr);
       grid-gap: $base__space-unit;
+      padding-top: $base__space-unit;
 
       .testimonial-box {
         display: flex;

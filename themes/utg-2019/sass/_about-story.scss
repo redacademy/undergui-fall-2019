@@ -3,20 +3,20 @@
 
   .site-main {
     div {
-      margin: $base__space-unit $base__space-unit/2;
+      margin: $base__space-unit $base__space-unit / 2;
     }
-
     ul {
       display: flex;
-
-      li {
-        // display: none;
-      }
     }
     .our-story {
+
       .statement {
         display: flex;
         flex-direction: column;
+
+        h2 {
+          display: block;
+        }
 
         img {
           width: 100%;
@@ -86,9 +86,15 @@
     @include media($desktop) {
 
       .our-story {
+        padding-top: $base__space-unit;
+
         .statement {
           display: flex;
           flex-direction: row;
+
+          h2 {
+            display: none;
+          }
 
           img {
             width: 50%;

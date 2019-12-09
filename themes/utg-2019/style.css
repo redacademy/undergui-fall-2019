@@ -1257,6 +1257,8 @@ body.home {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .page-about .site-main .our-story .statement h2 {
+    display: block; }
   .page-about .site-main .our-story .statement img {
     width: 100%;
     border-radius: 10px; }
@@ -1319,97 +1321,106 @@ body.home {
     font-size: 16px; }
 
 @media only screen and (min-width: 800px) {
-  .page-about .site-main .our-story .statement {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
-    .page-about .site-main .our-story .statement img {
-      width: 50%;
-      border-radius: 10px;
-      -webkit-transform: scale(0.8);
-              transform: scale(0.8); }
-    .page-about .site-main .our-story .statement p {
-      width: 100%;
-      text-align: left;
-      margin: auto;
-      padding: 1.5rem;
-      font-size: 17.6px; }
-  .page-about .site-main .our-story .goals {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-    margin: 0 auto; }
-    .page-about .site-main .our-story .goals .goals-box {
+  .page-about .site-main .our-story {
+    padding-top: 1.5rem; }
+    .page-about .site-main .our-story .statement {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      overflow: hidden;
-      width: 46%; }
-      .page-about .site-main .our-story .goals .goals-box img {
-        width: 160px;
-        height: 120px;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      .page-about .site-main .our-story .statement h2 {
+        display: none; }
+      .page-about .site-main .our-story .statement img {
+        width: 50%;
         border-radius: 10px;
-        margin-right: 1.5rem; }
-      .page-about .site-main .our-story .goals .goals-box .goals-content {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8); }
+      .page-about .site-main .our-story .statement p {
+        width: 100%;
+        text-align: left;
+        margin: auto;
+        padding: 1.5rem;
+        font-size: 17.6px; }
+    .page-about .site-main .our-story .goals {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 100%;
+      margin: 0 auto; }
+      .page-about .site-main .our-story .goals .goals-box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         overflow: hidden;
-        width: 55%;
-        height: 100%;
+        width: 46%; }
+        .page-about .site-main .our-story .goals .goals-box img {
+          width: 160px;
+          height: 120px;
+          border-radius: 10px;
+          margin-right: 1.5rem; }
+        .page-about .site-main .our-story .goals .goals-box .goals-content {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          overflow: hidden;
+          width: 55%;
+          height: 100%;
+          margin: 0; }
+          .page-about .site-main .our-story .goals .goals-box .goals-content h3 {
+            text-align: left;
+            margin-top: 0;
+            font-size: 14px; }
+          .page-about .site-main .our-story .goals .goals-box .goals-content p {
+            text-align: left; }
+    .page-about .site-main .our-story .closing {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .page-about .site-main .our-story .closing img {
+        width: 40%;
+        border-radius: 10px;
+        -webkit-transform: scale(0.6);
+                transform: scale(0.6);
         margin: 0; }
-        .page-about .site-main .our-story .goals .goals-box .goals-content h3 {
-          text-align: left;
-          margin-top: 0;
-          font-size: 14px; }
-        .page-about .site-main .our-story .goals .goals-box .goals-content p {
-          text-align: left; }
-  .page-about .site-main .our-story .closing {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .page-about .site-main .our-story .closing img {
-      width: 40%;
-      border-radius: 10px;
-      -webkit-transform: scale(0.6);
-              transform: scale(0.6);
-      margin: 0; }
-    .page-about .site-main .our-story .closing p {
-      width: 50%;
-      text-align: left;
-      padding-right: 3rem;
-      font-size: 19.2px; } }
+      .page-about .site-main .our-story .closing p {
+        width: 50%;
+        text-align: left;
+        padding-right: 3rem;
+        font-size: 19.2px; } }
+
+@media only screen and (min-width: 800px) {
+  .page-about .site-main .testimonial-title {
+    display: none; } }
 
 .page-about .site-main .testimonial-container {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.5rem; }
+  grid-gap: 1.5rem;
+  padding-top: 1.5rem; }
   .page-about .site-main .testimonial-container .testimonial-box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1448,9 +1459,16 @@ body.home {
       margin: 0;
       padding-bottom: 1.5rem; }
 
+@media only screen and (min-width: 800px) {
+  .faq-title {
+    display: none; } }
+
 .faq-container {
   width: 88.5%;
   margin: 0 auto; }
+  @media only screen and (min-width: 800px) {
+    .faq-container {
+      padding-top: 1.5rem; } }
   .faq-container .faq-item {
     padding: 1rem 0; }
     .faq-container .faq-item .faq-question-container {
@@ -1565,10 +1583,12 @@ body.home {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .page-about .about-page-headers {
+    margin-left: 1.5rem; }
   .page-about .tab-pane {
     display: block; }
-  .page-about .nav {
-    display: block; }
+  .page-about .nav li {
+    display: none; }
   @media only screen and (min-width: 800px) {
     .page-about .nav {
       display: -webkit-box;
@@ -1578,6 +1598,7 @@ body.home {
           justify-content: space-around;
       margin: auto; }
       .page-about .nav li {
+        display: block;
         padding: 0; }
       .page-about .nav a {
         text-decoration: none;
@@ -1624,9 +1645,12 @@ body.home {
     display: none; }
 
 @media only screen and (min-width: 800px) {
+  .page-about .partners-title {
+    display: none; }
   .page-about .partners-container {
     grid-template-rows: repeat(auto, 1fr);
-    grid-template-columns: repeat(2, 1fr); }
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 1.5rem; }
     .page-about .partners-container .partners-box {
       max-width: 100%; }
       .page-about .partners-container .partners-box .img-box {

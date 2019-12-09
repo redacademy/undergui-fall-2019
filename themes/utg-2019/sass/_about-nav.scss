@@ -4,11 +4,16 @@
   display: flex;
   flex-direction: column;
 
+  .about-page-headers {
+    margin-left: $base__space-unit;
+  }
   .tab-pane {
     display: block;
   }
-  .nav {
-    display: block;
+  .nav{
+    li {
+      display: none;
+    }
   }
 
   @include media($desktop) {
@@ -18,6 +23,7 @@
       margin: auto;
 
       li {
+        display: block;
         padding: 0;
       }
 
