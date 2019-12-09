@@ -53,7 +53,9 @@
         <?php
             endforeach;
             wp_reset_postdata();
-        }
+        } ?>
+
+        <?php utg_numbered_pagination();
         ?>
 
     </div>
