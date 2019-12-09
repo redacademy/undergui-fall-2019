@@ -1639,7 +1639,50 @@ body.home {
     display: -ms-flexbox;
     display: flex; }
     .blog .community-blog-container .category-container h3 {
-      padding-right: 2.5rem; }
+      padding: 0 2.5rem 1rem 0; }
+  @media only screen and (min-width: 800px) {
+    .blog .community-blog-container .post-container {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem; } }
 
 .site-card {
-  width: 90%; }
+  -webkit-box-shadow: 0 1px 4px #000000;
+          box-shadow: 0 1px 4px #000000;
+  border: 1px solid #eff1f6;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 400px;
+  width: 100%; }
+  @media only screen and (min-width: 800px) {
+    .site-card img {
+      border: none;
+      border-radius: 0;
+      min-height: 60%;
+      max-height: 60%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      width: 100%; }
+    .site-card .post-meta {
+      border-top: 1px solid #eff1f6;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      min-height: 40%;
+      padding: 1rem; }
+      .site-card .post-meta div {
+        font-family: "Titillium Web"; }
+        .site-card .post-meta div h3 {
+          text-transform: uppercase;
+          font-weight: lighter;
+          font-size: 0.75rem;
+          margin: 0; }
+        .site-card .post-meta div h2 {
+          margin: 0;
+          font-size: 1rem; } }
