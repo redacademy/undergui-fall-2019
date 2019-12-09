@@ -1113,12 +1113,13 @@ body.home {
           top: 30%; } }
       body.home .home-hero-banner .home-hero-text h1 {
         width: 80%;
-        font-size: 2.5rem;
+        font-size: 56px;
         margin: auto;
-        margin-bottom: 2rem; }
+        margin-bottom: 2rem;
+        color: #ffffff; }
         @media only screen and (min-width: 800px) {
           body.home .home-hero-banner .home-hero-text h1 {
-            width: 450px; } }
+            width: 41.5rem; } }
     body.home .home-hero-banner .white-btn {
       text-transform: uppercase;
       font-weight: 700;
@@ -1186,22 +1187,44 @@ body.home {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      text-align: left;
       border: 2px solid lightgrey;
-      border-bottom: 4px solid lightgrey;
-      border-right: 4px solid lightgrey;
-      border-radius: 5px;
-      margin: 1rem auto;
+      border-bottom: 3px solid lightgrey;
+      border-right: 3px solid lightgrey;
+      border-radius: 4px;
+      margin: 0.4rem auto;
       width: 400px;
       height: 105px; }
       body.home .latest-events-container .events-wrapper .event-container img {
         height: 100px;
-        width: 100px; }
+        width: 100px;
+        margin-right: 0.5rem; }
       body.home .latest-events-container .events-wrapper .event-container .event-text {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         width: 100%; }
-        body.home .latest-events-container .events-wrapper .event-container .event-text h3, body.home .latest-events-container .events-wrapper .event-container .event-text h2 {
+        body.home .latest-events-container .events-wrapper .event-container .event-text h3,
+        body.home .latest-events-container .events-wrapper .event-container .event-text h2 {
           margin: 0; }
-      body.home .latest-events-container .events-wrapper .event-container .event-title {
-        font-size: 16px; }
+        body.home .latest-events-container .events-wrapper .event-container .event-text .event-date {
+          text-transform: uppercase;
+          font-weight: 200;
+          font-size: 12px; }
+        body.home .latest-events-container .events-wrapper .event-container .event-text .event-title {
+          font-size: 16px;
+          margin-bottom: auto; }
+        body.home .latest-events-container .events-wrapper .event-container .event-text .event-location {
+          -ms-flex-item-align: end;
+              align-self: end;
+          margin-top: auto; }
 
 .error404 .banner-404 {
   overflow: hidden; }
