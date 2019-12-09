@@ -6,7 +6,7 @@
       display: grid;
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: $base__space-unit * 2;
+      grid-gap: $base__space-unit;
 
       .testimonial-box {
         display: flex;
