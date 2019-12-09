@@ -4,7 +4,7 @@
     <div class="category-container">
         <?php
         foreach ((get_categories()) as $category) : ?>
-            <a href="">
+            <a href=" <?= get_category_link($category); ?>">
                 <h3><?= $category->name . '<br>'; ?></h3>
             </a>
 
@@ -33,11 +33,14 @@
                     <div class="image-container" style="background: url('<?php the_post_thumbnail_url('full'); ?>'); background-size: cover; background-position: center;">
                     </div>
 
+                    <?php the_post_thumbnail('full'); ?>
                     <!-- dynamic post title, date, and category -->
                     <div class="post-meta">
                         <div>
                             <h3 class="post-date"><?php echo get_the_date('F j, Y'); ?></h3>
-                            <h2 class="post-title"><?= get_the_title(); ?></h2>
+
+                            <h2 class="post-title"><?= the_title(); ?></h2>
+                            <h2 class="post-title-mobile"><?= short_title('...', 6); ?></h2>
 
                         </div>
                         <p> <?php

@@ -1693,8 +1693,6 @@ body.home {
 
 .blog .community-blog-container {
   padding: 3vw 4vw 10vw 4vw; }
-  .blog .community-blog-container a:hover {
-    color: #333333; }
   .blog .community-blog-container h2 {
     margin: 0; }
   .blog .community-blog-container .category-container {
@@ -1703,14 +1701,26 @@ body.home {
     display: -ms-flexbox;
     display: flex; }
     .blog .community-blog-container .category-container h3 {
-      padding: 0 2.5rem 1rem 0; }
-  @media only screen and (min-width: 800px) {
-    .blog .community-blog-container .post-container {
-      padding-bottom: 4rem;
-      display: grid;
-      grid-template-rows: repeat(2, 1fr);
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 1rem; } }
+      display: none; }
+      @media only screen and (min-width: 800px) {
+        .blog .community-blog-container .category-container h3 {
+          display: block;
+          padding: 0 2.5rem 1rem 0; } }
+  .blog .community-blog-container .post-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media only screen and (min-width: 900px) {
+      .blog .community-blog-container .post-container {
+        padding-bottom: 4rem;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem; } }
 
 .blog .button-box {
   width: 50%;
@@ -1725,30 +1735,89 @@ body.home {
     font-family: "Gotham"; }
 
 .site-card {
-  -webkit-box-shadow: 0 1px 4px #000000;
-          box-shadow: 0 1px 4px #000000;
-  border: 1px solid #eff1f6;
-  border-radius: 6px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 400px;
-  width: 100%; }
-  @media only screen and (min-width: 800px) {
+  text-align: left;
+  border: 2px solid lightgrey;
+  border-bottom: 3px solid lightgrey;
+  border-right: 3px solid lightgrey;
+  border-radius: 4px;
+  width: 90%;
+  height: 105px;
+  margin: 0.4rem auto; }
+  .site-card .image-container {
+    display: none; }
+  .site-card img {
+    height: 100px;
+    width: 100px;
+    margin-right: 0.5rem;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .site-card .post-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    padding: 1rem; }
+    .site-card .post-meta .post-title-mobile {
+      display: block; }
+      @media only screen and (min-width: 900px) {
+        .site-card .post-meta .post-title-mobile {
+          display: none; } }
+    .site-card .post-meta .post-title {
+      display: none; }
+      @media only screen and (min-width: 900px) {
+        .site-card .post-meta .post-title {
+          display: block; } }
+    .site-card .post-meta h3,
+    .site-card .post-meta h2 {
+      margin: 0; }
+    .site-card .post-meta h3 {
+      text-transform: uppercase;
+      font-weight: 200;
+      font-size: 12px; }
+    .site-card .post-meta h2 {
+      font-size: 16px;
+      margin-bottom: auto; }
+    .site-card .post-meta p {
+      -ms-flex-item-align: end;
+          align-self: end;
+      margin-top: auto; }
+  @media only screen and (min-width: 900px) {
     .site-card {
+      -webkit-box-shadow: 0 1px 4px #000000;
+              box-shadow: 0 1px 4px #000000;
+      border: 1px solid #eff1f6;
+      border-radius: 6px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      height: 400px;
+      width: 100%;
       overflow: hidden; }
+      .site-card img {
+        display: none; }
       .site-card .image-container {
-        height: 66%;
+        display: block;
+        min-height: 65%;
         overflow: hidden; }
       .site-card .post-meta {
         border-top: 1px solid #eff1f6;
         -webkit-box-shadow: none;
                 box-shadow: none;
-        min-height: 40%;
+        min-height: 35%;
         padding: 1rem;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1761,6 +1830,8 @@ body.home {
             -ms-flex-pack: justify;
                 justify-content: space-between; }
         .site-card .post-meta div {
+          max-height: 70%;
+          overflow: hidden;
           font-family: "Titillium Web"; }
           .site-card .post-meta div h3 {
             text-transform: uppercase;
