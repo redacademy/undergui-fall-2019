@@ -21,7 +21,7 @@
 			<?php if( get_sub_field('logo') ): ?>
 				<img src="<?php the_sub_field('logo'); ?>" />
 			<?php endif; ?>
-		</div>
+	</div>
 
 		<div class="partners-info">
 			<!-- display a sub field value from partners -->
