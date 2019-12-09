@@ -6,16 +6,19 @@
       display: grid;
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(3, 1fr);
+      grid-gap: $base__space-unit * 2;
 
-      .testemonial-box {
+      .testimonial-box {
+        display: flex;
+        margin: auto;
         text-align: center;
         font-family: $font_main;
         border: 2px solid $color_blue;
         box-shadow: 5px 5px $color_blue;
         border-radius: 5px;
-        display: flex;
         flex-direction: column;
-        height: 400px;
+        height: 450px;
+        overflow: hidden;
 
         &:nth-child(odd) {
           border: 2px solid $color_yellow;
@@ -24,17 +27,17 @@
         }
 
         .testimonial-photo {
-          width: 40%;
-          height: 40%;
-          margin: auto auto;
+          margin: $base__space-unit auto;
+          justify-self: center;
+          min-width: 60%;
+          min-height: 40%;
           border-radius: 50%;
+          object-position: center;
         }
-        // img {
-        //     width: 190px;
-        //     height: 180px;
-        //     margin: 0 auto;
-        //     border-radius: 50%;
-        // }
+        .testimonial-content {
+          margin: $base__space-unit;
+        }
+
         .testimonial-name {
           margin: 0;
         }
@@ -43,6 +46,8 @@
           padding-bottom: $base__space-unit;
         }
       }
+
+
     }
-}
+  }
 }
