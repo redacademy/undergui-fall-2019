@@ -1,7 +1,15 @@
+@include media ($desktop) {
+  .faq-title {
+    display: none;
+  }
+}
+
 .faq-container {
   width: 88.5%;
   margin: 0 auto;
-
+  @include media($desktop) {
+  padding-top: $base__space-unit;
+  }
   .faq-item {
     padding: 1rem 0;
     .faq-question-container {
