@@ -28,13 +28,17 @@
 
   @include media($desktop) {
     .partners-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
       justify-content: flex-start;
       width: 100%;
       margin: 0 auto;
 
       .partners-box {
-        max-width: 47%;
+        max-width: 44%;
         display: flex;
+        margin: $base__space-unit;
 
         .img-box {
             display: flex;
@@ -43,13 +47,14 @@
           min-width: 180px;
           max-width: 180px;
           height: 140px;
+          margin-right: $base__space-unit;
 
           img {
             margin: auto;
             object-fit: cover;
             object-position: center;
-            width: 180px;
-            max-height: 140px;
+            max-width: 170px;
+            max-height: 130px;
           }
         }
 
