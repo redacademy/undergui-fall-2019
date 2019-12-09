@@ -10,6 +10,14 @@
 <div class="our-story">
 
 	<div class="statement">
+	
+		<?php if( have_rows('about_page_navigation') ): ?>
+		<?php while ( have_rows('about_page_navigation') ) : the_row(); ?>
+			<h2><?php the_sub_field('page_one'); ?></h2>
+		<?php endwhile;
+		else :
+		endif; ?>
+
 		<p class="statement-p"><?php the_field('statement_content'); ?></p>
 
 		<?php if( get_field('statement_image') ): ?>
