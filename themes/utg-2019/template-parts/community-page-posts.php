@@ -5,7 +5,7 @@
         <?php
         foreach ((get_categories()) as $category) : ?>
             <a href=" <?= get_category_link($category); ?>">
-                <h3><?= $category->name . '<br>'; ?></h3>
+                <?= $category->name . '<br>'; ?>
             </a>
 
         <?php endforeach; ?>
@@ -26,7 +26,7 @@
             foreach ($myposts as $post) :
                 setup_postdata($post); ?>
                 <!-- website default card -->
-                <a class="site-card" href="<?php echo get_post_permalink(); ?>">
+                <a class="post-card" href="<?php echo get_post_permalink(); ?>">
 
                     <!-- dynamic post image for card -->
 
@@ -37,10 +37,9 @@
                     <!-- dynamic post title, date, and category -->
                     <div class="post-meta">
                         <div>
-                            <h3 class="post-date"><?php echo get_the_date('F j, Y'); ?></h3>
-
-                            <h2 class="post-title"><?= the_title(); ?></h2>
-                            <h2 class="post-title-mobile"><?= the_title(); ?></h2>
+                            <p class="post-data"><?php echo get_the_date('F j, Y'); ?></p>
+                            <h3 class="post-title"><?= the_title(); ?></h3>
+                            <h3 class="post-title-mobile"><?= the_title(); ?></h3>
 
                         </div>
                         <p> <?php
