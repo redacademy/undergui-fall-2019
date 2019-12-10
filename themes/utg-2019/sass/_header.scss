@@ -18,7 +18,7 @@
     width: 100vw;
     z-index: 9;
     background-color: rgba($color_black, 0.5);
-    @include media($desktop) {
+    @include media($header-break) {
       content: none;
     }
   }
@@ -50,10 +50,17 @@
     top: 0;
     right: 0;
     z-index: 98;
+    transition: all .5s ease;
 
     //font awesome arrow icons
     .left-arrow {
       color: $color_white;
+      transition: transform .3s;
+      animation-fill-mode: forwards;
+
+      &:checked {
+        transform: rotate(180deg);
+      }
     }
     .right-arrow {
       display: none;
@@ -116,22 +123,19 @@
   }
   //animates menu when triggered
     .open-menu {
-      // transform: rotate(180deg);
 
-      // transition: transform .35s;
-      // transition-property: transform;
-      // transition-duration: 0.35s;
-      // transition-timing-function: ease;
-      // transition-delay: 0s;
-      // transform-origin: center;
+      transition: transform .35s;
+      transition-property: transform;
+      transition-duration: 0.35s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+      transform-origin: center;
     }
   .nav-links {
     .close-left-arrow {
-      display: none;
     }
     .open-right-arrow {
       color: $color_white;
-      display: block;
     }
   }
 
@@ -186,21 +190,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include media($desktop) {
+  @include media($header-break) {
     display: none;
   }
 }
 
 .menu-nav-menu-container {
   display: none;
-  @include media($desktop) {
+  @include media($header-break) {
     display: block;
   }
 }
 
 .menu-nav-mobile-menu-container {
   display: flex;
-  @include media($desktop) {
+  @include media($header-break) {
     display: none;
   }
 }
@@ -208,7 +212,7 @@
 .request-info-link {
   display: none;
 
-  @include media($desktop) {
+  @include media($header-break) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,7 +229,7 @@
 .franchise-link {
   display: none;
 
-  @include media($desktop) {
+  @include media($header-break) {
     display: inline-block;
     width: 100%;
     padding: 0.5rem 0;
@@ -287,7 +291,6 @@
         background-color: $color_white;
         flex-direction: column;
         transform: translateX(-50%);
-        // border: 1px solid $color_paragraph;
         border-radius: 5px;
         z-index: 99;
 
