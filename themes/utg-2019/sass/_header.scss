@@ -115,16 +115,16 @@
     width: 100vw;
   }
   //animates menu when triggered
-    .open-menu {
-      // transform: rotate(180deg);
+  .open-menu {
+    // transform: rotate(180deg);
 
-      // transition: transform .35s;
-      // transition-property: transform;
-      // transition-duration: 0.35s;
-      // transition-timing-function: ease;
-      // transition-delay: 0s;
-      // transform-origin: center;
-    }
+    // transition: transform .35s;
+    // transition-property: transform;
+    // transition-duration: 0.35s;
+    // transition-timing-function: ease;
+    // transition-delay: 0s;
+    // transform-origin: center;
+  }
   .nav-links {
     .close-left-arrow {
       display: none;
@@ -248,19 +248,19 @@
         text-decoration: none;
 
         .sub-menu {
-          overflow: hidden;
+          // overflow: hidden;
           max-height: 0;
           opacity: 0;
           height: 0;
           background-color: $color_white;
-          transition: all 0.5 ease-in-out;
+          transition: all 0.5s ease-in-out;
         }
         &:hover {
           .sub-menu {
-            transition: all 0.5 ease-in-out;
+            transition: all 0.5s ease-in-out;
             display: block;
             opacity: 1;
-            max-height: calc(100% + 100px);     
+            max-height: calc(100% + 100px);
           }
         }
       }

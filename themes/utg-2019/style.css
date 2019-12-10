@@ -869,16 +869,15 @@ object {
   font-size: 18px;
   text-decoration: none; }
   .site-header .nav-links .nav-menu .menu-item .sub-menu {
-    overflow: hidden;
     max-height: 0;
     opacity: 0;
     height: 0;
     background-color: #ffffff;
-    -webkit-transition: all 0.5 ease-in-out;
-    transition: all 0.5 ease-in-out; }
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
   .site-header .nav-links .nav-menu .menu-item:hover .sub-menu {
-    -webkit-transition: all 0.5 ease-in-out;
-    transition: all 0.5 ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     display: block;
     opacity: 1;
     max-height: calc(100% + 100px); }
