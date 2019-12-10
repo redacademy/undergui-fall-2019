@@ -37,7 +37,7 @@
             ?>
 
 
-            <?php if( get_field('starting_date') ): ?>
+                <?php if( get_field('starting_date') ): ?>
 					<?php the_field("starting_date"); ?>
 				<?php endif; ?>
 

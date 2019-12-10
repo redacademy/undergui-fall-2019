@@ -646,7 +646,9 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Front page */
+.site-main {
+  padding: 0 4vw; }
+
 .site-header {
   position: relative;
   width: 100%;
@@ -1140,14 +1142,13 @@ body.home {
         @media only screen and (min-width: 800px) {
           body.home .home-hero-banner .home-hero-text h1 {
             width: 41.5rem; } }
-    body.home .home-hero-banner .white-btn {
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 0.75rem 1rem; }
-      @media only screen and (min-width: 800px) {
-        body.home .home-hero-banner .white-btn {
-          padding: 1rem 2.25rem; } }
+  body.home .latest-events-container .more-events {
+    margin: 2rem auto;
+    text-transform: uppercase;
+    background-color: #ffffff; }
+    body.home .latest-events-container .more-events:hover {
+      color: #ffffff;
+      background-color: #2ba2dd; }
   body.home .approaches-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1208,17 +1209,18 @@ body.home {
       display: -ms-flexbox;
       display: flex;
       text-align: left;
-      border: 2px solid lightgrey;
-      border-bottom: 3px solid lightgrey;
-      border-right: 3px solid lightgrey;
+      border: 1px solid lightgrey;
       border-radius: 4px;
+      -webkit-box-shadow: 0 1px 4px #000000;
+              box-shadow: 0 1px 4px #000000;
       margin: 0.4rem auto;
       width: 400px;
-      height: 105px; }
+      height: 101px; }
       body.home .latest-events-container .events-wrapper .event-container img {
         height: 100px;
         width: 100px;
-        margin-right: 0.5rem; }
+        margin-right: 0.5rem;
+        border-radius: 4px 0 0 4px; }
       body.home .latest-events-container .events-wrapper .event-container .event-text {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1230,7 +1232,8 @@ body.home {
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
-        width: 100%; }
+        width: 100%;
+        padding: 1rem; }
         body.home .latest-events-container .events-wrapper .event-container .event-text h3,
         body.home .latest-events-container .events-wrapper .event-container .event-text h2 {
           margin: 0; }
@@ -1242,9 +1245,19 @@ body.home {
           font-size: 16px;
           margin-bottom: auto; }
         body.home .latest-events-container .events-wrapper .event-container .event-text .event-location {
-          -ms-flex-item-align: end;
-              align-self: end;
           margin-top: auto; }
+      body.home .latest-events-container .events-wrapper .event-container .more-comm-posts a {
+        font-weight: 200; }
+  body.home .testimonials-container {
+    background: #ffcc00;
+    height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
 
 .error404 .banner-404 {
   overflow: hidden; }
@@ -1713,9 +1726,13 @@ body.home {
                   align-items: flex-end; } }
 
 .blog .community-blog-container {
-  padding: 3vw 4vw 10vw 4vw; }
-  .blog .community-blog-container a:hover {
-    color: #333333; }
+  padding: 3vw 0 10vw 0; }
+  .blog .community-blog-container .search-pagination {
+    color: #000000;
+    margin: 0 auto; }
+    @media only screen and (min-width: 900px) {
+      .blog .community-blog-container .search-pagination {
+        display: none; } }
   .blog .community-blog-container h2 {
     margin: 0; }
   .blog .community-blog-container .category-container {
@@ -1724,52 +1741,108 @@ body.home {
     display: -ms-flexbox;
     display: flex; }
     .blog .community-blog-container .category-container h3 {
-      padding: 0 2.5rem 1rem 0; }
-  @media only screen and (min-width: 800px) {
-    .blog .community-blog-container .post-container {
-      padding-bottom: 4rem;
-      display: grid;
-      grid-template-rows: repeat(2, 1fr);
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 1rem; } }
+      display: none; }
+      @media only screen and (min-width: 900px) {
+        .blog .community-blog-container .category-container h3 {
+          display: block;
+          padding: 0 2.5rem 1rem 0; } }
+  .blog .community-blog-container .post-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media only screen and (min-width: 900px) {
+      .blog .community-blog-container .post-container {
+        padding-bottom: 4rem;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem; } }
 
 .blog .button-box {
-  width: 50%;
-  margin: 0 auto;
-  text-align: center; }
-  .blog .button-box .white-btn {
-    padding: 0.75rem 2.5rem;
-    font-weight: bold;
-    font-size: 1rem;
-    border-color: #2ba2dd;
-    border-radius: 6px;
-    font-family: "Gotham"; }
+  display: none; }
+  @media only screen and (min-width: 900px) {
+    .blog .button-box {
+      display: block;
+      width: 50%;
+      text-align: center;
+      margin: 0 auto; }
+      .blog .button-box .white-btn {
+        padding: 0.75rem 2.5rem;
+        font-weight: bold;
+        font-size: 1rem;
+        border: 1px solid #2ba2dd;
+        border-color: #2ba2dd;
+        border-radius: 6px;
+        font-family: "Gotham"; } }
 
-.site-card {
-  -webkit-box-shadow: 0 1px 4px #000000;
-          box-shadow: 0 1px 4px #000000;
-  border: 1px solid #eff1f6;
-  border-radius: 6px;
+.blog .site-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 400px;
-  width: 100%; }
-  @media only screen and (min-width: 800px) {
-    .site-card {
-      overflow: hidden; }
-      .site-card .image-container {
-        height: 66%;
-        overflow: hidden; }
-      .site-card .post-meta {
+  text-align: left;
+  border: 2px solid lightgrey;
+  border-bottom: 3px solid lightgrey;
+  border-right: 3px solid lightgrey;
+  border-radius: 4px;
+  width: 90%;
+  height: 105px;
+  margin: 0.4rem auto;
+  overflow: hidden; }
+  @media only screen and (min-width: 900px) {
+    .blog .site-card {
+      -webkit-box-shadow: 0 1px 4px #000000;
+              box-shadow: 0 1px 4px #000000;
+      border: 1px solid #eff1f6;
+      border-radius: 6px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      height: 400px;
+      width: 100%;
+      overflow: hidden; } }
+  .blog .site-card .image-container {
+    display: none; }
+    @media only screen and (min-width: 900px) {
+      .blog .site-card .image-container {
+        display: block;
+        min-height: 65%;
+        overflow: hidden; } }
+  .blog .site-card img {
+    height: 100px;
+    width: 100px;
+    margin-right: 0.5rem;
+    -o-object-fit: cover;
+       object-fit: cover; }
+    @media only screen and (min-width: 900px) {
+      .blog .site-card img {
+        display: none; } }
+  .blog .site-card .post-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    padding: 0.75rem; }
+    @media only screen and (min-width: 900px) {
+      .blog .site-card .post-meta {
         border-top: 1px solid #eff1f6;
         -webkit-box-shadow: none;
                 box-shadow: none;
-        min-height: 40%;
+        min-height: 35%;
         padding: 1rem;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1780,18 +1853,51 @@ body.home {
                 flex-direction: column;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
-                justify-content: space-between; }
-        .site-card .post-meta div {
-          font-family: "Titillium Web"; }
-          .site-card .post-meta div h3 {
-            text-transform: uppercase;
-            font-weight: lighter;
-            font-size: 0.75rem;
-            margin: 0; }
-          .site-card .post-meta div h2 {
-            margin: 0;
-            font-size: 1rem; }
-        .site-card .post-meta p {
+                justify-content: space-between; } }
+    .blog .site-card .post-meta div {
+      height: 69%;
+      overflow: hidden; }
+      @media only screen and (min-width: 900px) {
+        .blog .site-card .post-meta div {
+          max-height: 70%;
+          overflow: hidden;
+          font-family: "Titillium Web"; } }
+    .blog .site-card .post-meta .post-title-mobile {
+      display: block; }
+      @media only screen and (min-width: 900px) {
+        .blog .site-card .post-meta .post-title-mobile {
+          display: none; } }
+    .blog .site-card .post-meta .post-title {
+      display: none; }
+      @media only screen and (min-width: 900px) {
+        .blog .site-card .post-meta .post-title {
+          display: block; } }
+    .blog .site-card .post-meta h3,
+    .blog .site-card .post-meta h2 {
+      margin: 0; }
+    .blog .site-card .post-meta h3 {
+      text-transform: uppercase;
+      font-weight: 200;
+      font-size: 12px; }
+      @media only screen and (min-width: 900px) {
+        .blog .site-card .post-meta h3 {
+          text-transform: uppercase;
+          font-weight: lighter;
+          font-size: 0.75rem;
+          margin: 0; } }
+    .blog .site-card .post-meta h2 {
+      font-size: 16px;
+      margin-bottom: auto; }
+      @media only screen and (min-width: 900px) {
+        .blog .site-card .post-meta h2 {
+          margin: 0;
+          font-size: 1rem; } }
+    .blog .site-card .post-meta p {
+      -ms-flex-item-align: end;
+          align-self: end;
+      margin-top: auto; }
+      @media only screen and (min-width: 900px) {
+        .blog .site-card .post-meta p {
           font-size: 1rem;
           font-family: "Titillium Web";
           color: #2ba2dd;

@@ -43,6 +43,9 @@
 
 	</div>
 
-	<button>more</button>
+	<button class="more-events white-btn" href="#">
+		<p>More</p>
+	</button>
+
 
 </div>
