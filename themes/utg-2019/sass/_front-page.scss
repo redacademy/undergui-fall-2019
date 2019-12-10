@@ -161,6 +161,11 @@ body.home {
     display: flex;
     justify-content: space-evenly;
     .post-container {
+      @include mobile-card;
+
+      @include media($header-break) {
+        @include desktop-card;
+      }
     }
   }
 
