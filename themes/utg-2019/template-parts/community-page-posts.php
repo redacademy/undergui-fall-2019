@@ -40,7 +40,7 @@
                             <h3 class="post-date"><?php echo get_the_date('F j, Y'); ?></h3>
 
                             <h2 class="post-title"><?= the_title(); ?></h2>
-                            <h2 class="post-title-mobile"><?= short_title('...', 6); ?></h2>
+                            <h2 class="post-title-mobile"><?= the_title(); ?></h2>
 
                         </div>
                         <p> <?php
@@ -53,7 +53,9 @@
         <?php
             endforeach;
             wp_reset_postdata();
-        }
+        } ?>
+
+        <?php utg_numbered_pagination();
         ?>
 
     </div>
