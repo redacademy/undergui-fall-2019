@@ -5,10 +5,6 @@
   justify-content: space-between;
   padding: 0.125rem 0.75rem;
 
-  .sub-menu {
-    transition: all .5s ease;
-  }
-
   // add shaded background when mobile menu opens
   &.toggle-menu::before {
     content: '';
@@ -238,35 +234,55 @@
   .nav-links {
     .nav-menu {
       li {
-        &:nth-child(1) {
-          position: relative;
-          &:hover {
-            .sub-menu {
-              display: flex;
+        position: relative;
+        color: $color_paragraph;
+        font-size: $font_size_main + 2px;
+        text-decoration: none;
+        transition: all .5 ease;
+        .sub-menu {
+          display: none;
+          background-color: $color_white;
+          transition: all .5 ease-in-out;        
+        }
+        &:hover {
+          .sub-menu {
+            display: block;
+            height: auto;
+            li {
+              background-color: $color_white;
             }
           }
         }
       }
+
+      .menu-item {
+
+        ul {
+
+          li {
+            width: 100%;
+            &:hover {
+              background-color: $color_blue;
+              color: $color_white;
+            }
+          }
+        }
+      }
+
       .sub-menu {
-        display: none;
+        height: 0;
         width: 100%;
-        transition: 0.5s;
         position: absolute;
         top: 100%;
         left: 50%;
         background-color: $color_white;
         flex-direction: column;
-        padding: 0.5rem;
         transform: translateX(-50%);
         border: 1px solid $color_paragraph;
         z-index: 99;
 
         &::before {
           position: absolute;
-          font-family: 'Font Awesome 5 free';
-          font-weight: 900;
-          font-size: 2rem;
-          content: '\f0d8';
           left: 50%;
           top: -22px;
           transform: translateX(-50%);
@@ -274,13 +290,20 @@
         li {
           padding: 0.25rem 0.75rem;
           text-align: left;
+          &:hover {
+            a {
+              color: $color_white;
+              text-decoration: underline;
+            }
+          }
 
           &:last-child {
             border-right: none;
             padding-right: 1rem;
           }
           a {
-            font-size: 0.75rem;
+            color: $color_paragraph;
+            font-size: $font_size_main - 2px;
             text-transform: capitalize;
           }
         }

@@ -657,9 +657,6 @@ object {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.125rem 0.75rem; }
-  .site-header .sub-menu {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease; }
   .site-header.toggle-menu::before {
     content: '';
     display: block;
@@ -867,18 +864,33 @@ object {
         margin-right: 4vw;
         font-weight: lighter; } }
 
-.site-header .nav-links .nav-menu li:nth-child(1) {
-  position: relative; }
-  .site-header .nav-links .nav-menu li:nth-child(1):hover .sub-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+.site-header .nav-links .nav-menu li {
+  position: relative;
+  color: #333333;
+  font-size: 18px;
+  text-decoration: none;
+  -webkit-transition: all .5 ease;
+  transition: all .5 ease; }
+  .site-header .nav-links .nav-menu li .sub-menu {
+    display: none;
+    background-color: #ffffff;
+    -webkit-transition: all .5 ease-in-out;
+    transition: all .5 ease-in-out; }
+  .site-header .nav-links .nav-menu li:hover .sub-menu {
+    display: block;
+    height: auto; }
+    .site-header .nav-links .nav-menu li:hover .sub-menu li {
+      background-color: #ffffff; }
+
+.site-header .nav-links .nav-menu .menu-item ul li {
+  width: 100%; }
+  .site-header .nav-links .nav-menu .menu-item ul li:hover {
+    background-color: #2ba2dd;
+    color: #ffffff; }
 
 .site-header .nav-links .nav-menu .sub-menu {
-  display: none;
+  height: 0;
   width: 100%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -887,17 +899,12 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0.5rem;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   border: 1px solid #333333;
   z-index: 99; }
   .site-header .nav-links .nav-menu .sub-menu::before {
     position: absolute;
-    font-family: 'Font Awesome 5 free';
-    font-weight: 900;
-    font-size: 2rem;
-    content: '\f0d8';
     left: 50%;
     top: -22px;
     -webkit-transform: translateX(-50%);
@@ -905,11 +912,15 @@ object {
   .site-header .nav-links .nav-menu .sub-menu li {
     padding: 0.25rem 0.75rem;
     text-align: left; }
+    .site-header .nav-links .nav-menu .sub-menu li:hover a {
+      color: #ffffff;
+      text-decoration: underline; }
     .site-header .nav-links .nav-menu .sub-menu li:last-child {
       border-right: none;
       padding-right: 1rem; }
     .site-header .nav-links .nav-menu .sub-menu li a {
-      font-size: 0.75rem;
+      color: #333333;
+      font-size: 14px;
       text-transform: capitalize; }
 
 .site-footer {

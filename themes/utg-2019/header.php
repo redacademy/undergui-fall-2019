@@ -47,21 +47,18 @@
 							<i class="fas fa-chevron-left fa-2x left-arrow "></i>
 						</button>
 						<a class="mobile-info-link" href="<?= get_site_url(); ?>/request-info">REQUEST INFO</a>
-
 					</div>
-
 
 					<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
 
 					<?php wp_nav_menu(array('theme_location' => 'primary-mobile', 'menu_id' => 'primary-mobile-menu')); ?>
+
 				</nav><!-- #site-navigation -->
 
 				<a class="mobile-franchise-link" href="<?= get_site_url(); ?>/404">Become a franchise</a>
 				<a class="request-info-link" href="<?= get_site_url(); ?>/request-info">REQUEST INFO</a>
 
-
 			</div>
-
 
 			<button class="mobile-menu">
 				<i class="fas fa-bars fa-4x"></i>
