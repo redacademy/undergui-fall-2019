@@ -137,7 +137,7 @@
   }
 
   @include media($header-break) {
-    padding: 0.75rem 4vw;
+    padding: 0.75rem 7vw;
     align-items: center;
 
     .mobile-franchise-link {
@@ -244,11 +244,11 @@
           opacity: 0;
           height: 0;
           background-color: $color_white;
-          transition: all .5 ease-in-out;
+          transition: all 0.5 ease-in-out;
         }
         &:hover {
           .sub-menu {
-            transition: all .5 ease-in-out;
+            transition: all 0.5 ease-in-out;
             display: block;
             opacity: 1;
             height: auto;
