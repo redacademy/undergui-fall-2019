@@ -58,7 +58,7 @@
     //font awesome arrow icons
     .left-arrow {
       color: $color_white;
-      transition: transform .3s;
+      transition: transform 0.3s;
       &:hover {
         transform: rotate(180deg);
       }
@@ -123,9 +123,9 @@
     width: 100vw;
   }
   //animates menu when triggered
-    // .open-menu {
+  // .open-menu {
 
-    // }
+  // }
   .nav-links {
     .close-left-arrow {
       display: none;
@@ -249,16 +249,16 @@
         text-decoration: none;
 
         .sub-menu {
-          overflow: hidden;
+          // overflow: hidden;
           max-height: 0;
           opacity: 0;
           background-color: $color_light_blue;
-          transition: all .3s ease-in;
+          transition: all 0.3s ease-in;
         }
         &:hover {
           .sub-menu {
             opacity: 1;
-            max-height: calc(100% + 100px);          
+            max-height: calc(100% + 100px);
           }
         }
       }
