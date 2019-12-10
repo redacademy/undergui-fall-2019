@@ -115,8 +115,16 @@
     width: 100vw;
   }
   //animates menu when triggered
-  //   .open-menu {
-  //   }
+    .open-menu {
+      // transform: rotate(180deg);
+
+      // transition: transform .35s;
+      // transition-property: transform;
+      // transition-duration: 0.35s;
+      // transition-timing-function: ease;
+      // transition-delay: 0s;
+      // transform-origin: center;
+    }
   .nav-links {
     .close-left-arrow {
       display: none;
@@ -233,35 +241,31 @@
 .site-header {
   .nav-links {
     .nav-menu {
-      li {
+      .menu-item {
         position: relative;
         color: $color_paragraph;
         font-size: $font_size_main + 2px;
         text-decoration: none;
 
         .sub-menu {
-          display: none;
+          overflow: hidden;
+          max-height: 0;
           opacity: 0;
-          height: 0;
-          background-color: $color_white;
-          transition: all .5 ease-in-out;
+          background-color: $color_light_blue;
+          transition: all .3s ease-in;
         }
         &:hover {
           .sub-menu {
-            transition: all .5 ease-in-out;
-            display: block;
             opacity: 1;
-            height: auto;
-
-            li {
-              background-color: $color_white;
-            }
+            max-height: calc(100% + 100px);          
           }
         }
       }
 
       .menu-item {
         ul {
+          max-height: 0;
+
           li {
             width: 100%;
             &:hover {
@@ -273,7 +277,6 @@
       }
 
       .sub-menu {
-        height: 0;
         width: 100%;
         position: absolute;
         top: 100%;
@@ -281,7 +284,8 @@
         background-color: $color_white;
         flex-direction: column;
         transform: translateX(-50%);
-        border: 1px solid $color_paragraph;
+        // border: 1px solid $color_paragraph;
+        border-radius: 5px;
         z-index: 99;
 
         &::before {
