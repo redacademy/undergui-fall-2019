@@ -18,7 +18,8 @@
     width: 100vw;
     z-index: 9;
     background-color: rgba($color_black, 0.5);
-    @include media($desktop) {
+
+    @include media($header-break) {
       content: none;
     }
   }
@@ -36,6 +37,7 @@
 
   .nav-links {
     display: none;
+    transition: all .5s;
   }
 
   .toggle-menu {
@@ -50,10 +52,16 @@
     top: 0;
     right: 0;
     z-index: 98;
+    // transition: all .5s;
+    // transition: transform .7s;
 
     //font awesome arrow icons
     .left-arrow {
       color: $color_white;
+      transition: transform 0.3s;
+      &:hover {
+        transform: rotate(180deg);
+      }
     }
     .right-arrow {
       display: none;
@@ -115,8 +123,9 @@
     width: 100vw;
   }
   //animates menu when triggered
-    // .open-menu {
-    // }
+  // .open-menu {
+
+  // }
   .nav-links {
     .close-left-arrow {
       display: none;
@@ -178,21 +187,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include media($desktop) {
+  @include media($header-break) {
     display: none;
   }
 }
 
 .menu-nav-menu-container {
   display: none;
-  @include media($desktop) {
+  @include media($header-break) {
     display: block;
   }
 }
 
 .menu-nav-mobile-menu-container {
   display: flex;
-  @include media($desktop) {
+  @include media($header-break) {
     display: none;
   }
 }
@@ -200,7 +209,7 @@
 .request-info-link {
   display: none;
 
-  @include media($desktop) {
+  @include media($header-break) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,7 +226,7 @@
 .franchise-link {
   display: none;
 
-  @include media($desktop) {
+  @include media($header-break) {
     display: inline-block;
     width: 100%;
     padding: 0.5rem 0;
@@ -240,16 +249,16 @@
         text-decoration: none;
 
         .sub-menu {
-          overflow: hidden;
+          // overflow: hidden;
           max-height: 0;
           opacity: 0;
           background-color: $color_light_blue;
-          transition: all .3s ease-in;
+          transition: all 0.3s ease-in;
         }
         &:hover {
           .sub-menu {
             opacity: 1;
-            max-height: calc(100% + 100px);          
+            max-height: calc(100% + 100px);
           }
         }
       }
