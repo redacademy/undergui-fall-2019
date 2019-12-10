@@ -12,16 +12,14 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+		<?php the_title(); ?>
+		<?php if( get_field('starting_date') ): ?>
+			<?php the_field("starting_date"); ?>
+		<?php endif; ?>
 
-			<?php the_post_navigation(); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+		<?php if( get_field('end_date') ): ?>
+				to <?php the_field("end_date"); ?> 
+		<?php endif; ?>			
 
 		<?php endwhile; // End of the loop. ?>
 
