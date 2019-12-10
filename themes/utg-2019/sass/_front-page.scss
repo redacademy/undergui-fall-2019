@@ -158,88 +158,10 @@ body.home {
 
   // Latest events styling
   .latest-events-container {
-
-    .events-wrapper {
-      display: flex;
-      flex-direction: column;
-
-      .event-container {
-        display: flex;
-        text-align: left;
-        border: 1px solid lightgrey;
-        border-radius: 4px;
-        box-shadow: 0 1px 4px $color_black;
-        margin: 0.4rem auto;
-        width: 400px;
-        height: 101px;
-
-        img {
-          height: 100px;
-          width: 100px;
-          margin-right: 0.5rem;
-          border-radius: 4px 0 0 4px;
-        }
-
-        .event-text {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          width: 100%;
-          padding: 1rem;
-
-          h3,
-          h2 {
-            margin: 0;
-          }
-
-          .event-date {
-            text-transform: uppercase;
-            font-weight: 200;
-            font-size: $font_size_main - 4px;
-          }
-
-          .event-title {
-            font-size: $font_size_main;
-            margin-bottom: auto;
-          }
-
-          .event-location {
-            margin-top: auto;
-          }
-        }
-
-        .more-comm-posts {
-          a {
-            font-weight: 200;
-          }
-        }
-      }
+    display: flex;
+    justify-content: space-evenly;
+    .post-container {
     }
-
-    // .events-wrapper {
-    //   display: flex;
-    //   justify-content: center;
-
-    //   .event-container {
-    //     margin: 0 3rem;
-    //     .event-time {
-    //       text-transform: uppercase;
-    //       font-size: $font_size_main - 2px;
-    //       font-weight: 200;
-    //       color: $color_paragraph;
-    //     }
-
-    //     .event-title {
-    //       font-size: $font_size_main + 2px;
-    //       color: $color_black;
-    //     }
-
-    //     .event-location {
-    //       color: $color_paragraph;
-    //     }
-
-    //   }
-    // }
   }
 
 

@@ -33,8 +33,8 @@ get_header(); ?>
 		<!-- exit flickity -->
 
 		<!-- latest commuinty posts -->
-		<section class="latest-commuinty-posts">
-			<?php include get_template_directory() . "/template-parts/community-page-events.php" ?>
+		<section class="latest-commuinty-events">
+			<?php include get_template_directory() . "/template-parts/fp-latest-comm.php" ?>
 		</section>
 
 		<!-- testimonials -->
