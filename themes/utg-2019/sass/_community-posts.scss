@@ -1,6 +1,6 @@
 .blog {
   .community-blog-container {
-    padding: 3vw 4vw 10vw 4vw;
+    padding: 3vw 0 10vw 0;
 
     .search-pagination {
       color: $color_black;
@@ -9,9 +9,11 @@
         display: none;
       }
     }
+
     h2 {
       margin: 0;
     }
+
     .category-container {
       padding-top: 2rem;
       display: flex;
@@ -23,6 +25,7 @@
         }
       }
     }
+
     .post-container {
       display: flex;
       flex-direction: column;
@@ -54,116 +57,120 @@
       }
     }
   }
-}
 
-.site-card {
-  display: flex;
-  text-align: left;
-  border: 2px solid lightgrey;
-  border-bottom: 3px solid lightgrey;
-  border-right: 3px solid lightgrey;
-  border-radius: 4px;
-  width: 90%;
-  height: 105px;
-  margin: 0.4rem auto;
-
-  .image-container {
-    display: none;
-  }
-
-  img {
-    height: 100px;
-    width: 100px;
-    margin-right: 0.5rem;
-    object-fit: cover;
-  }
-
-  .post-meta {
+  .site-card {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 1rem;
+    text-align: left;
+    border: 2px solid lightgrey;
+    border-bottom: 3px solid lightgrey;
+    border-right: 3px solid lightgrey;
+    border-radius: 4px;
+    width: 90%;
+    height: 105px;
+    margin: 0.4rem auto;
+    overflow: hidden;
 
-    .post-title-mobile {
-      display: block;
+    @include media($header-break) {
+      box-shadow: 0 1px 4px $color_black;
+      border: 1px solid $color_grey;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .image-container {
+      display: none;
+      @include media($header-break) {
+        display: block;
+        min-height: 65%;
+        overflow: hidden;
+      }
+    }
+
+    img {
+      height: 100px;
+      width: 100px;
+      margin-right: 0.5rem;
+      object-fit: cover;
       @include media($header-break) {
         display: none;
       }
     }
-    .post-title {
-      display: none;
-      @include media($header-break) {
-        display: block;
-      }
-    }
-    h3,
-    h2 {
-      margin: 0;
-    }
-    h3 {
-      text-transform: uppercase;
-      font-weight: 200;
-      font-size: $font_size_main - 4px;
-    }
-    h2 {
-      font-size: $font_size_main;
-      margin-bottom: auto;
-    }
-    p {
-      align-self: end;
-      margin-top: auto;
-    }
-  }
 
-  @include media($header-break) {
-    box-shadow: 0 1px 4px $color_black;
-    border: 1px solid $color_grey;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    height: 400px;
-    width: 100%;
-    overflow: hidden;
-
-    img {
-      display: none;
-    }
-
-    .image-container {
-      display: block;
-      min-height: 65%;
-      overflow: hidden;
-    }
     .post-meta {
-      border-top: 1px solid $color_grey;
-      box-shadow: none;
-      min-height: 35%;
-      padding: 1rem;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 0.75rem;
+
+      @include media($header-break) {
+        border-top: 1px solid $color_grey;
+        box-shadow: none;
+        min-height: 35%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
       div {
-        max-height: 70%;
+        height: 69%;
         overflow: hidden;
-        font-family: $font_main;
-        h3 {
+        @include media($header-break) {
+          max-height: 70%;
+          overflow: hidden;
+          font-family: $font_main;
+        }
+      }
+      .post-title-mobile {
+        display: block;
+        @include media($header-break) {
+          display: none;
+        }
+      }
+      .post-title {
+        display: none;
+        @include media($header-break) {
+          display: block;
+        }
+      }
+      h3,
+      h2 {
+        margin: 0;
+      }
+      h3 {
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: $font_size_main - 4px;
+        @include media($header-break) {
           text-transform: uppercase;
           font-weight: lighter;
           font-size: 0.75rem;
           margin: 0;
         }
-        h2 {
+      }
+      h2 {
+        font-size: $font_size_main;
+        margin-bottom: auto;
+        @include media($header-break) {
           margin: 0;
           font-size: 1rem;
         }
       }
       p {
-        font-size: 1rem;
-        font-family: $font_main;
-        color: $color_blue;
-        text-transform: uppercase;
+        align-self: end;
+        margin-top: auto;
+
+        @include media($header-break) {
+          font-size: 1rem;
+          font-family: $font_main;
+          color: $color_blue;
+          text-transform: uppercase;
+        }
       }
     }
   }
