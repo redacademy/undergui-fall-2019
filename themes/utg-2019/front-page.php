@@ -34,7 +34,7 @@ get_header(); ?>
 
 		<!-- latest commuinty posts -->
 		<section class="latest-commuinty-posts">
-			<?php include get_template_directory() . "/template-parts/fp-latest-comm.php" ?>
+			<?php include get_template_directory() . "/template-parts/community-page-events.php" ?>
 		</section>
 
 		<!-- testimonials -->

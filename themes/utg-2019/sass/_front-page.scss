@@ -64,18 +64,19 @@ body.home {
     }
   }
 
-    // Button styling
-    .latest-events-container {
-      // margin-bottom: 1rem;
-      
+  // Button styling
+  .latest-events-container {
+    // margin-bottom: 1rem;
+
     .more-events {
       margin: 2rem auto;
       text-transform: uppercase;
       background-color: $color_white;
-       &:hover {
-         color: $color_white;
-         background-color: $color_blue;
-       }
+
+      &:hover {
+        color: $color_white;
+        background-color: $color_blue;
+      }
     }
   }
 
@@ -121,6 +122,12 @@ body.home {
     justify-content: center;
     padding-bottom: 3rem;
 
+    @include media($desktop) {
+      height: 685px;
+      justify-content: space-evenly;
+    }
+
+
     .showcase-header {
       color: $color_white;
       margin-bottom: 3rem;
@@ -129,38 +136,25 @@ body.home {
     .single-project-container {
       width: 100%;
 
+      @include media($desktop) {
+        display: flex;
+        justify-content: center;
+      }
+
       .project-desc {
         visibility: hidden;
         height: 0px;
+
+        @include media($desktop) {
+          visibility: visible;
+          font-size: $font_size_main;
+          margin-left: 4rem;
+          text-align: left;
+          width: 450px;
+        }
       }
     }
   }
-
-  // desktop
-  // .project-showcase-container {
-  //   height: 685px;
-  //   background-color: $color_blue;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-evenly;
-
-  // .showcase-header {
-  //   color: $color_white;
-  // }
-
-  //   .single-project-container {
-  //     display: flex;
-  //     justify-content: center;
-  //     width: 100%;
-
-  //     .project-desc {
-  //       font-size: $font_size_main;
-  //       margin-left: 4rem;
-  //       text-align: left;
-  //       width: 450px;
-  //     }
-  //   }
-  // }
 
   // Latest events styling
   .latest-events-container {
