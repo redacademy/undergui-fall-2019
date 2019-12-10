@@ -16,7 +16,7 @@
     <div class="post-container">
 
         <?php if ($the_events->have_posts()) : while ($the_events->have_posts()) : $the_events->the_post(); ?>
-                <a class="site-card">
+                <a href="<?php echo get_post_permalink(); ?>" class="site-card">
 
                     <!-- get the image for the event post -->
                     <?php $eventImage = get_field('images')[0]['image']; // get the event post image 
