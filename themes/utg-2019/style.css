@@ -872,21 +872,14 @@ object {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-<<<<<<< HEAD
-    background-color: #8ecaeb;
-    -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in; }
-  .site-header .nav-links .nav-menu .menu-item:hover .sub-menu {
-=======
     height: 0;
     background-color: #ffffff;
     -webkit-transition: all 0.5 ease-in-out;
     transition: all 0.5 ease-in-out; }
-  .site-header .nav-links .nav-menu li:hover .sub-menu {
+  .site-header .nav-links .nav-menu .menu-item:hover .sub-menu {
     -webkit-transition: all 0.5 ease-in-out;
     transition: all 0.5 ease-in-out;
     display: block;
->>>>>>> a22b9db2f5f3c459094cadd2d0899ce87b9cbcaa
     opacity: 1;
     max-height: calc(100% + 100px); }
 
@@ -936,7 +929,7 @@ object {
   min-width: 100%;
   background-color: #eff1f6; }
   .site-footer .footer-container {
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 5vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -993,7 +986,7 @@ object {
     text-align: left;
     font-family: "Titillium Web"; }
     .site-footer .footer-menu ul li {
-      padding: 0 1.5rem; }
+      padding: 0 2vw; }
     .site-footer .footer-menu .filler-text {
       width: 200px; }
   .site-footer .footer-sidebar {
