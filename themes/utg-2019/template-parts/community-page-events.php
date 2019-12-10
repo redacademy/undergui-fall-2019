@@ -43,14 +43,8 @@
 
 
 
-<<<<<<< HEAD
                 </a>
             <?php endwhile; ?>
-=======
-                <?php if( get_field('starting_date') ): ?>
-					<?php the_field("starting_date"); ?>
-				<?php endif; ?>
->>>>>>> 57a2568c2bb6093a120cf6df1a9e726e8712903c
 
     </div>
 <?php
