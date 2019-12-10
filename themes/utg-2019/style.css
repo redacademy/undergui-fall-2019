@@ -647,7 +647,7 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 .site-main {
-  padding: 0 4vw; }
+  padding: 0 7vw; }
 
 .site-header {
   position: relative;
@@ -1708,39 +1708,43 @@ body.home {
 .blog .community-blog-container {
   padding: 3vw 0 10vw 0; }
   .blog .community-blog-container .search-pagination {
-    color: #000000;
     margin: 0 auto; }
+    .blog .community-blog-container .search-pagination a {
+      color: #000000; }
     @media only screen and (min-width: 900px) {
       .blog .community-blog-container .search-pagination {
         display: none; } }
-  .blog .community-blog-container h2 {
-    margin: 0; }
   .blog .community-blog-container .category-container {
     padding-top: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .blog .community-blog-container .category-container h3 {
-      display: none; }
+    .blog .community-blog-container .category-container a {
+      display: none;
+      color: #333333;
+      font-family: "Titillium Web";
+      font-weight: bold;
+      font-size: 1.25rem; }
       @media only screen and (min-width: 900px) {
-        .blog .community-blog-container .category-container h3 {
+        .blog .community-blog-container .category-container a {
           display: block;
           padding: 0 2.5rem 1rem 0; } }
-  .blog .community-blog-container .post-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    @media only screen and (min-width: 900px) {
-      .blog .community-blog-container .post-container {
-        padding-bottom: 4rem;
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 1rem; } }
+
+.blog .post-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media only screen and (min-width: 900px) {
+    .blog .post-container {
+      padding-bottom: 2rem;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem; } }
 
 .blog .button-box {
   display: none; }
@@ -1855,21 +1859,25 @@ body.home {
     .blog .site-card .post-meta h3,
     .blog .site-card .post-meta h2 {
       margin: 0; }
-    .blog .site-card .post-meta h3 {
+    .blog .site-card .post-meta .post-data {
+      color: #333333;
       text-transform: uppercase;
       font-weight: 200;
       font-size: 12px; }
       @media only screen and (min-width: 900px) {
-        .blog .site-card .post-meta h3 {
+        .blog .site-card .post-meta .post-data {
           text-transform: uppercase;
           font-weight: lighter;
           font-size: 0.75rem;
           margin: 0; } }
-    .blog .site-card .post-meta h2 {
+    .blog .site-card .post-meta .post-title,
+    .blog .site-card .post-meta .post-title-mobile {
       font-size: 16px;
+      font-family: "Gotham";
       margin-bottom: auto; }
       @media only screen and (min-width: 900px) {
-        .blog .site-card .post-meta h2 {
+        .blog .site-card .post-meta .post-title,
+        .blog .site-card .post-meta .post-title-mobile {
           margin: 0;
           font-size: 1rem; } }
     .blog .site-card .post-meta p {
@@ -1882,3 +1890,12 @@ body.home {
           font-family: "Titillium Web";
           color: #2ba2dd;
           text-transform: uppercase; } }
+
+.blog .community-event-container {
+  width: 100%; }
+  .blog .community-event-container .post-container {
+    display: none; }
+    @media only screen and (min-width: 900px) {
+      .blog .community-event-container .post-container {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr); } }
