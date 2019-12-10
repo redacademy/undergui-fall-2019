@@ -8,44 +8,51 @@
 
 ?>
 
+<h2> The latest from our community</h2>
+
 <div class="latest-events-container">
 
-	<h2 class="latest-events-header">The latest from our community</h2>
+	<!-- get post loop for 3 posts to be displayed on cummunity and get more to show up with more button -->
+	<div class="post-container">
+		<?php
+		$args = array(
+			'orderby' => 'title',
+			'post_type' => 'post_events',
+			'posts_per_page' => 3
+		);
+		$the_events = new WP_Query($args);
+		?>
 
-	<div class="events-wrapper">
 
-		<div class="event-container">
-			<img src="https://picsum.photos/id/236/300/200" />
-			<div class="event-text">
-				<h3 class="event-date">August 5, 2019</h3>
-				<h2 class="event-title">HTML 101</h2>
-				<p class="event-location">Kitsilano</p>
-			</div>
-		</div>
+		<?php if ($the_events->have_posts()) : while ($the_events->have_posts()) : $the_events->the_post(); ?>
+				<a href="<?php echo get_post_permalink(); ?>" class="site-card">
 
-		<div class="event-container">
-			<img src="https://picsum.photos/id/235/300/200" />
-			<div class="event-text">
-				<h3 class="event-date">September 13, 2019</h3>
-				<h2 class="event-title">CSS 101</h2>
-				<p class="event-location">Kitsilano</p>
-			</div>
-		</div>
+					<!-- get the image for the event post -->
+					<?php $eventImage = get_field('images')[0]['image']; // get the event post image 
+							?>
+					<div class="image-container" style="background:url(<?= $eventImage; ?>); background-position: center; background-size:cover;">
+					</div>
 
-		<div class="event-container">
-			<img src="https://picsum.photos/id/234/300/200" />
-			<div class="event-text">
-				<h3 class="event-date">Ongoing</h3>
-				<h2 class="event-title">JavaScript 101</h2>
-				<p class="event-location">Kitsilano</p>
-			</div>
-		</div>
+					<div class="post-meta">
+						<div>
+							<!-- check if there's an end date and appends date -->
+							<p class="post-data"><?php (get_field('end_date')) ? the_field("starting_date") && the_field("end_date") : the_field("starting_date"); ?></p>
+							<h3 class="post-title"><?php the_title(); ?></h3>
+
+						</div>
+
+						<!-- get the location for the event post -->
+						<p class="post-data"><?= $rows_location = get_field('location')[0]['location_name'];
+																			?></p>
+					</div>
+				</a>
+			<?php endwhile; ?>
 
 	</div>
-
-	<button class="more-events white-btn" href="#">
-		<p>More</p>
-	</button>
-
-
+<?php
+else : ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
 </div>
+
+<button class="more-events white-btn" href="#">
+	<p>More</p>
+</button>
