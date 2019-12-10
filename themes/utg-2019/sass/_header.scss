@@ -18,7 +18,7 @@
     width: 100vw;
     z-index: 9;
     background-color: rgba($color_black, 0.5);
-    @include media($header-break) {
+    @include media($desktop) {
       content: none;
     }
   }
@@ -50,17 +50,10 @@
     top: 0;
     right: 0;
     z-index: 98;
-    transition: all .5s ease;
 
     //font awesome arrow icons
     .left-arrow {
       color: $color_white;
-      transition: transform .3s;
-      animation-fill-mode: forwards;
-
-      &:checked {
-        transform: rotate(180deg);
-      }
     }
     .right-arrow {
       display: none;
@@ -122,20 +115,15 @@
     width: 100vw;
   }
   //animates menu when triggered
-    .open-menu {
-
-      transition: transform .35s;
-      transition-property: transform;
-      transition-duration: 0.35s;
-      transition-timing-function: ease;
-      transition-delay: 0s;
-      transform-origin: center;
-    }
+    // .open-menu {
+    // }
   .nav-links {
     .close-left-arrow {
+      display: none;
     }
     .open-right-arrow {
       color: $color_white;
+      display: block;
     }
   }
 
@@ -149,7 +137,7 @@
   }
 
   @include media($header-break) {
-    padding: 0.75rem 7vw;
+    padding: 0.75rem 4vw;
     align-items: center;
 
     .mobile-franchise-link {
@@ -190,21 +178,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include media($header-break) {
+  @include media($desktop) {
     display: none;
   }
 }
 
 .menu-nav-menu-container {
   display: none;
-  @include media($header-break) {
+  @include media($desktop) {
     display: block;
   }
 }
 
 .menu-nav-mobile-menu-container {
   display: flex;
-  @include media($header-break) {
+  @include media($desktop) {
     display: none;
   }
 }
@@ -212,7 +200,7 @@
 .request-info-link {
   display: none;
 
-  @include media($header-break) {
+  @include media($desktop) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,7 +217,7 @@
 .franchise-link {
   display: none;
 
-  @include media($header-break) {
+  @include media($desktop) {
     display: inline-block;
     width: 100%;
     padding: 0.5rem 0;
@@ -255,16 +243,13 @@
           overflow: hidden;
           max-height: 0;
           opacity: 0;
-          height: 0;
-          background-color: $color_white;
-          transition: all 0.5 ease-in-out;
+          background-color: $color_light_blue;
+          transition: all .3s ease-in;
         }
         &:hover {
           .sub-menu {
-            transition: all 0.5 ease-in-out;
-            display: block;
             opacity: 1;
-            max-height: calc(100% + 100px);     
+            max-height: calc(100% + 100px);          
           }
         }
       }
@@ -291,6 +276,7 @@
         background-color: $color_white;
         flex-direction: column;
         transform: translateX(-50%);
+        // border: 1px solid $color_paragraph;
         border-radius: 5px;
         z-index: 99;
 

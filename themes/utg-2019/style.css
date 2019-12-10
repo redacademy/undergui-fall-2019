@@ -668,7 +668,7 @@ object {
     width: 100vw;
     z-index: 9;
     background-color: rgba(0, 0, 0, 0.5); }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 800px) {
       .site-header.toggle-menu::before {
         content: none; } }
   .site-header button {
@@ -698,20 +698,9 @@ object {
     background-color: #2ba2dd;
     top: 0;
     right: 0;
-    z-index: 98;
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease; }
+    z-index: 98; }
     .site-header .toggle-menu .left-arrow {
-      color: #ffffff;
-      -webkit-transition: -webkit-transform .3s;
-      transition: -webkit-transform .3s;
-      transition: transform .3s;
-      transition: transform .3s, -webkit-transform .3s;
-      -webkit-animation-fill-mode: forwards;
-              animation-fill-mode: forwards; }
-      .site-header .toggle-menu .left-arrow:checked {
-        -webkit-transform: rotate(180deg);
-                transform: rotate(180deg); }
+      color: #ffffff; }
     .site-header .toggle-menu .right-arrow {
       display: none;
       color: #ffffff; }
@@ -766,25 +755,11 @@ object {
     display: none;
     height: 100vh;
     width: 100vw; }
-  .site-header .open-menu {
-    -webkit-transition: -webkit-transform .35s;
-    transition: -webkit-transform .35s;
-    transition: transform .35s;
-    transition: transform .35s, -webkit-transform .35s;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    transition-property: transform;
-    transition-property: transform, -webkit-transform;
-    -webkit-transition-duration: 0.35s;
-            transition-duration: 0.35s;
-    -webkit-transition-timing-function: ease;
-            transition-timing-function: ease;
-    -webkit-transition-delay: 0s;
-            transition-delay: 0s;
-    -webkit-transform-origin: center;
-            transform-origin: center; }
+  .site-header .nav-links .close-left-arrow {
+    display: none; }
   .site-header .nav-links .open-right-arrow {
-    color: #ffffff; }
+    color: #ffffff;
+    display: block; }
   .site-header li {
     font-family: "Titillium Web";
     text-transform: uppercase; }
@@ -792,7 +767,7 @@ object {
     height: 4.75rem; }
   @media only screen and (min-width: 900px) {
     .site-header {
-      padding: 0.75rem 7vw;
+      padding: 0.75rem 4vw;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
@@ -831,13 +806,13 @@ object {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 800px) {
     .mobile-open-menu {
       display: none; } }
 
 .menu-nav-menu-container {
   display: none; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 800px) {
     .menu-nav-menu-container {
       display: block; } }
 
@@ -845,13 +820,13 @@ object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 800px) {
     .menu-nav-mobile-menu-container {
       display: none; } }
 
 .request-info-link {
   display: none; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 800px) {
     .request-info-link {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -872,7 +847,7 @@ object {
 
 .franchise-link {
   display: none; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 800px) {
     .franchise-link {
       display: inline-block;
       width: 100%;
@@ -897,14 +872,10 @@ object {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    height: 0;
-    background-color: #ffffff;
-    -webkit-transition: all 0.5 ease-in-out;
-    transition: all 0.5 ease-in-out; }
+    background-color: #8ecaeb;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in; }
   .site-header .nav-links .nav-menu .menu-item:hover .sub-menu {
-    -webkit-transition: all 0.5 ease-in-out;
-    transition: all 0.5 ease-in-out;
-    display: block;
     opacity: 1;
     max-height: calc(100% + 100px); }
 
