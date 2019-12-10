@@ -13,13 +13,18 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 		<?php the_title(); ?>
+
+		
 		<?php if( get_field('starting_date') ): ?>
 			<?php the_field("starting_date"); ?>
 		<?php endif; ?>
 
 		<?php if( get_field('end_date') ): ?>
 				to <?php the_field("end_date"); ?> 
-		<?php endif; ?>			
+		<?php endif; ?>	
+
+		<?php the_field('location_name'); ?>
+		<?php the_field('location_address'); ?>		
 
 		<?php endwhile; // End of the loop. ?>
 
