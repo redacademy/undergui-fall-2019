@@ -118,6 +118,8 @@ function utg_scripts()
 	wp_enqueue_script('utg-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);
 	//Mobile menu control
 	wp_enqueue_script('utg-mobile-menu', get_template_directory_uri() . '/build/js/mobile-menu.min.js', array(), '', true);
+	//Posts category ajax funtionality  
+	wp_enqueue_script('utg-post-category-ajax', get_template_directory_uri() . '/build/js/post-category-ajax.min.js', array('jquery'), '', true);
 	//FAQ container toggles
 	wp_enqueue_script('utg-faq-toggle', get_template_directory_uri() . '/build/js/faq-toggle.min.js', array(), '', true);
 	//Tabbed content scripts
@@ -128,6 +130,20 @@ function utg_scripts()
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
+
+
+	//localized script to access DB with JS
+	$localized_scripts = array(
+		'rest_url' => esc_url_raw(rest_url()),
+		// 'nonce' => wp_create_nonce('wp_rest'),
+		// 'home_url' => home_url(),
+		// 'post_id' => get_the_ID(),
+		// 'user_id' => get_current_user_id(),
+		'success' => 'Thanks, your submission was received!',
+		'failure' => 'Your submission could not be processed.',
+	);
+
+	wp_localize_script('utg-post-category-ajax', 'utg_vars', $localized_scripts);
 }
 add_action('wp_enqueue_scripts', 'utg_scripts');
 

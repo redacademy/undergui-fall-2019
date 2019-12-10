@@ -4,7 +4,7 @@
     <div class="category-container">
         <?php
         foreach ((get_categories()) as $category) : ?>
-            <a href=" <?= get_category_link($category); ?>">
+            <a class="category-link" id="cat-<?= $category->term_id ?>" href=" <?= get_category_link($category); ?>">
                 <?= $category->name . '<br>'; ?>
             </a>
 
@@ -12,7 +12,7 @@
     </div>
 
     <!-- get post loop for 8 posts to be displayed on cummunity and get more to show up with more button -->
-    <div class="post-container">
+    <div class="post-container community-posts">
         <?php
         global $post;
 
@@ -42,10 +42,10 @@
                             <h3 class="post-title-mobile"><?= the_title(); ?></h3>
 
                         </div>
-                        <p> <?php
-                                    $cat_list = get_the_category();
-                                    echo $cat_list[0]->name;
-                                    ?>
+                        <p class="post-category"> <?php
+                                                            $cat_list = get_the_category();
+                                                            echo $cat_list[0]->name;
+                                                            ?>
                         </p>
                     </div>
                 </a>
