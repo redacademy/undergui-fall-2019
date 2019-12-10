@@ -646,9 +646,6 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-.site-main {
-  padding: 0 7vw; }
-
 .site-header {
   position: relative;
   width: 100%;
@@ -770,7 +767,7 @@ object {
     height: 4.75rem; }
   @media only screen and (min-width: 900px) {
     .site-header {
-      padding: 0.75rem 4vw;
+      padding: 0.75rem 7vw;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
@@ -866,35 +863,35 @@ object {
         margin-right: 4vw;
         font-weight: lighter; } }
 
-.site-header .nav-links .nav-menu li {
+.site-header .nav-links .nav-menu .menu-item {
   position: relative;
   color: #333333;
   font-size: 18px;
   text-decoration: none; }
-  .site-header .nav-links .nav-menu li .sub-menu {
-    display: none;
+  .site-header .nav-links .nav-menu .menu-item .sub-menu {
+    overflow: hidden;
+    max-height: 0;
     opacity: 0;
     height: 0;
     background-color: #ffffff;
-    -webkit-transition: all .5 ease-in-out;
-    transition: all .5 ease-in-out; }
-  .site-header .nav-links .nav-menu li:hover .sub-menu {
-    -webkit-transition: all .5 ease-in-out;
-    transition: all .5 ease-in-out;
+    -webkit-transition: all 0.5 ease-in-out;
+    transition: all 0.5 ease-in-out; }
+  .site-header .nav-links .nav-menu .menu-item:hover .sub-menu {
+    -webkit-transition: all 0.5 ease-in-out;
+    transition: all 0.5 ease-in-out;
     display: block;
     opacity: 1;
-    height: auto; }
-    .site-header .nav-links .nav-menu li:hover .sub-menu li {
-      background-color: #ffffff; }
+    max-height: calc(100% + 100px); }
 
-.site-header .nav-links .nav-menu .menu-item ul li {
-  width: 100%; }
-  .site-header .nav-links .nav-menu .menu-item ul li:hover {
-    background-color: #2ba2dd;
-    color: #ffffff; }
+.site-header .nav-links .nav-menu .menu-item ul {
+  max-height: 0; }
+  .site-header .nav-links .nav-menu .menu-item ul li {
+    width: 100%; }
+    .site-header .nav-links .nav-menu .menu-item ul li:hover {
+      background-color: #2ba2dd;
+      color: #ffffff; }
 
 .site-header .nav-links .nav-menu .sub-menu {
-  height: 0;
   width: 100%;
   position: absolute;
   top: 100%;
@@ -906,7 +903,7 @@ object {
           flex-direction: column;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  border: 1px solid #333333;
+  border-radius: 5px;
   z-index: 99; }
   .site-header .nav-links .nav-menu .sub-menu::before {
     position: absolute;
@@ -932,7 +929,7 @@ object {
   min-width: 100%;
   background-color: #eff1f6; }
   .site-footer .footer-container {
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 5vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -989,7 +986,7 @@ object {
     text-align: left;
     font-family: "Titillium Web"; }
     .site-footer .footer-menu ul li {
-      padding: 0 1.5rem; }
+      padding: 0 2vw; }
     .site-footer .footer-menu .filler-text {
       width: 200px; }
   .site-footer .footer-sidebar {
@@ -1759,7 +1756,7 @@ body.home {
         border-radius: 6px;
         font-family: "Gotham"; } }
 
-.site-card {
+.post-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1772,8 +1769,51 @@ body.home {
   height: 105px;
   margin: 0.4rem auto;
   overflow: hidden; }
+  .post-card .image-container {
+    display: none; }
+  .post-card img {
+    height: 100px;
+    width: 100px;
+    margin-right: 0.5rem;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .post-card .post-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    padding: 0.75rem; }
+    .post-card .post-meta div {
+      height: 69%;
+      overflow: hidden; }
+    .post-card .post-meta .post-title-mobile {
+      display: block; }
+    .post-card .post-meta h3,
+    .post-card .post-meta h2 {
+      margin: 0; }
+    .post-card .post-meta .post-data {
+      color: #333333;
+      text-transform: uppercase;
+      font-weight: 200;
+      font-size: 12px; }
+    .post-card .post-meta .post-title,
+    .post-card .post-meta .post-title-mobile {
+      font-size: 16px;
+      font-family: "Gotham";
+      margin-bottom: auto; }
+    .post-card .post-meta p {
+      -ms-flex-item-align: end;
+          align-self: end;
+      margin-top: auto; }
   @media only screen and (min-width: 900px) {
-    .site-card {
+    .post-card {
       -webkit-box-shadow: 0 1px 4px #000000;
               box-shadow: 0 1px 4px #000000;
       border: 1px solid #eff1f6;
@@ -1787,38 +1827,14 @@ body.home {
               flex-direction: column;
       height: 400px;
       width: 100%;
-      overflow: hidden; } }
-  .site-card .image-container {
-    display: none; }
-    @media only screen and (min-width: 900px) {
-      .site-card .image-container {
-        display: block;
+      overflow: hidden; }
+      .post-card .image-container {
         min-height: 65%;
-        overflow: hidden; } }
-  .site-card img {
-    height: 100px;
-    width: 100px;
-    margin-right: 0.5rem;
-    -o-object-fit: cover;
-       object-fit: cover; }
-    @media only screen and (min-width: 900px) {
-      .site-card img {
-        display: none; } }
-  .site-card .post-meta {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    width: 100%;
-    padding: 0.75rem; }
-    @media only screen and (min-width: 900px) {
-      .site-card .post-meta {
+        display: block;
+        overflow: hidden; }
+      .post-card img {
+        display: none; }
+      .post-card .post-meta {
         border-top: 1px solid #eff1f6;
         -webkit-box-shadow: none;
                 box-shadow: none;
@@ -1833,68 +1849,165 @@ body.home {
                 flex-direction: column;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
-                justify-content: space-between; } }
-    .site-card .post-meta div {
-      height: 69%;
-      overflow: hidden; }
-      @media only screen and (min-width: 900px) {
-        .site-card .post-meta div {
+                justify-content: space-between; }
+        .post-card .post-meta div {
           max-height: 70%;
           overflow: hidden;
-          font-family: "Titillium Web"; } }
-    .site-card .post-meta .post-title-mobile {
-      display: block; }
-      @media only screen and (min-width: 900px) {
-        .site-card .post-meta .post-title-mobile {
-          display: none; } }
-    .site-card .post-meta .post-title {
-      display: none; }
-      @media only screen and (min-width: 900px) {
-        .site-card .post-meta .post-title {
-          display: block; } }
-    .site-card .post-meta h3,
-    .site-card .post-meta h2 {
-      margin: 0; }
-    .site-card .post-meta .post-data {
-      color: #333333;
-      text-transform: uppercase;
-      font-weight: 200;
-      font-size: 12px; }
-      @media only screen and (min-width: 900px) {
-        .site-card .post-meta .post-data {
+          font-family: "Titillium Web"; }
+        .post-card .post-meta .post-title-mobile {
+          display: none; }
+        .post-card .post-meta .post-title {
+          display: block; }
+        .post-card .post-meta .post-data {
           text-transform: uppercase;
           font-weight: lighter;
           font-size: 0.75rem;
-          margin: 0; } }
-    .site-card .post-meta .post-title,
-    .site-card .post-meta .post-title-mobile {
-      font-size: 16px;
-      font-family: "Gotham";
-      margin-bottom: auto; }
-      @media only screen and (min-width: 900px) {
-        .site-card .post-meta .post-title,
-        .site-card .post-meta .post-title-mobile {
+          margin: 0; }
+        .post-card .post-meta .post-title,
+        .post-card .post-meta .post-title-mobile {
           margin: 0;
-          font-size: 1rem; } }
-    .site-card .post-meta p {
-      -ms-flex-item-align: end;
-          align-self: end;
-      margin-top: auto; }
-      @media only screen and (min-width: 900px) {
-        .site-card .post-meta p {
+          font-size: 1rem; }
+        .post-card .post-meta p {
           font-size: 1rem;
           font-family: "Titillium Web";
           color: #2ba2dd;
           text-transform: uppercase; } }
 
+.blog .content-area {
+  padding: 0 7vw; }
+
 .blog .community-event-container {
   width: 100%; }
-  @media only screen and (min-width: 900px) {
-    .blog .community-event-container .post-container {
-      display: grid;
-      grid-template-rows: repeat(1, 1fr); } }
-  .blog .community-event-container .post-container .events-flickity {
-    display: block; }
+  .blog .community-event-container .post-container {
+    display: none; }
     @media only screen and (min-width: 900px) {
-      .blog .community-event-container .post-container .events-flickity {
+      .blog .community-event-container .post-container {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr); }
+        .blog .community-event-container .post-container .events-card {
+          -webkit-box-shadow: 0 1px 4px #000000;
+                  box-shadow: 0 1px 4px #000000;
+          border: 1px solid #eff1f6;
+          border-radius: 6px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          height: 400px;
+          width: 100%;
+          overflow: hidden; }
+          .blog .community-event-container .post-container .events-card .image-container {
+            min-height: 65%;
+            display: block;
+            overflow: hidden; }
+          .blog .community-event-container .post-container .events-card img {
+            display: none; }
+          .blog .community-event-container .post-container .events-card .post-meta {
+            border-top: 1px solid #eff1f6;
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            min-height: 35%;
+            padding: 1rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between; }
+            .blog .community-event-container .post-container .events-card .post-meta div {
+              max-height: 70%;
+              overflow: hidden;
+              font-family: "Titillium Web"; }
+            .blog .community-event-container .post-container .events-card .post-meta .post-title-mobile {
+              display: none; }
+            .blog .community-event-container .post-container .events-card .post-meta .post-title {
+              display: block; }
+            .blog .community-event-container .post-container .events-card .post-meta .post-data {
+              text-transform: uppercase;
+              font-weight: lighter;
+              font-size: 0.75rem;
+              margin: 0; }
+            .blog .community-event-container .post-container .events-card .post-meta .post-title,
+            .blog .community-event-container .post-container .events-card .post-meta .post-title-mobile {
+              margin: 0;
+              font-size: 1rem; }
+            .blog .community-event-container .post-container .events-card .post-meta p {
+              font-size: 1rem;
+              font-family: "Titillium Web";
+              color: #2ba2dd;
+              text-transform: uppercase; } }
+  .blog .community-event-container .events-flickity {
+    height: 400px;
+    display: block; }
+    .blog .community-event-container .events-flickity .events-flickity-item {
+      width: 100%;
+      padding: 0 15%; }
+      .blog .community-event-container .events-flickity .events-flickity-item .events-card {
+        -webkit-box-shadow: 0 1px 4px #000000;
+                box-shadow: 0 1px 4px #000000;
+        border: 1px solid #eff1f6;
+        border-radius: 6px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        height: 400px;
+        width: 100%;
+        overflow: hidden; }
+        .blog .community-event-container .events-flickity .events-flickity-item .events-card .image-container {
+          min-height: 65%;
+          display: block;
+          overflow: hidden; }
+        .blog .community-event-container .events-flickity .events-flickity-item .events-card img {
+          display: none; }
+        .blog .community-event-container .events-flickity .events-flickity-item .events-card .post-meta {
+          border-top: 1px solid #eff1f6;
+          -webkit-box-shadow: none;
+                  box-shadow: none;
+          min-height: 35%;
+          padding: 1rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
+          .blog .community-event-container .events-flickity .events-flickity-item .events-card .post-meta div {
+            max-height: 70%;
+            overflow: hidden;
+            font-family: "Titillium Web"; }
+          .blog .community-event-container .events-flickity .events-flickity-item .events-card .post-meta .post-title-mobile {
+            display: none; }
+          .blog .community-event-container .events-flickity .events-flickity-item .events-card .post-meta .post-title {
+            display: block; }
+          .blog .community-event-container .events-flickity .events-flickity-item .events-card .post-meta .post-data {
+            text-transform: uppercase;
+            font-weight: lighter;
+            font-size: 0.75rem;
+            margin: 0; }
+          .blog .community-event-container .events-flickity .events-flickity-item .events-card .post-meta .post-title,
+          .blog .community-event-container .events-flickity .events-flickity-item .events-card .post-meta .post-title-mobile {
+            margin: 0;
+            font-size: 1rem; }
+          .blog .community-event-container .events-flickity .events-flickity-item .events-card .post-meta p {
+            font-size: 1rem;
+            font-family: "Titillium Web";
+            color: #2ba2dd;
+            text-transform: uppercase; }
+    @media only screen and (min-width: 900px) {
+      .blog .community-event-container .events-flickity {
         display: none; } }

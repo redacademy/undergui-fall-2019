@@ -26,7 +26,7 @@
             foreach ($myposts as $post) :
                 setup_postdata($post); ?>
                 <!-- website default card -->
-                <a class="site-card" href="<?php echo get_post_permalink(); ?>">
+                <a class="post-card" href="<?php echo get_post_permalink(); ?>">
 
                     <!-- dynamic post image for card -->
 
