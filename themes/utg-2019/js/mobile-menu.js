@@ -24,6 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
       siteHeader.classList.remove('toggle-menu');
       navLinks.classList.remove('toggle-menu');
-    }, 500);
+    });
   });
 });

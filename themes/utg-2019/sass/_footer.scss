@@ -5,7 +5,7 @@
   background-color: $color_grey;
 
   .footer-container {
-    padding: $base__space-unit $base__space-unit * 2;
+    padding: $base__space-unit 5vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -50,10 +50,12 @@
     padding: $base__space-unit / 2;
     text-align: left;
     font-family: $font_main;
+    // margin: 0 auto;
+    // max-width: 350px;
 
     ul {
       li {
-        padding: 0 $base__space-unit;
+        padding: 0 2vw;
       }
     }
     .filler-text {

@@ -1,11 +1,33 @@
 .blog {
+  .content-area {
+    @include content-padding;
+  }
   .community-event-container {
     width: 100%;
+
     .post-container {
       display: none;
       @include media($header-break) {
+        .events-card {
+          @include desktop-card;
+        }
         display: grid;
         grid-template-rows: repeat(1, 1fr);
+      }
+    }
+    .events-flickity {
+      height: 400px;
+      display: block;
+
+      .events-flickity-item {
+        width: 100%;
+        padding: 0 15%;
+        .events-card {
+          @include desktop-card;
+        }
+      }
+      @include media($header-break) {
+        display: none;
       }
     }
   }
