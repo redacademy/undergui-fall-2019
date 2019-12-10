@@ -866,18 +866,36 @@ object {
         margin-right: 4vw;
         font-weight: lighter; } }
 
-.site-header .nav-links .nav-menu li:nth-child(1) {
-  position: relative; }
-  .site-header .nav-links .nav-menu li:nth-child(1):hover .sub-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+.site-header .nav-links .nav-menu li {
+  position: relative;
+  color: #333333;
+  font-size: 18px;
+  text-decoration: none; }
+  .site-header .nav-links .nav-menu li .sub-menu {
+    display: none;
+    opacity: 0;
+    height: 0;
+    background-color: #ffffff;
+    -webkit-transition: all .5 ease-in-out;
+    transition: all .5 ease-in-out; }
+  .site-header .nav-links .nav-menu li:hover .sub-menu {
+    -webkit-transition: all .5 ease-in-out;
+    transition: all .5 ease-in-out;
+    display: block;
+    opacity: 1;
+    height: auto; }
+    .site-header .nav-links .nav-menu li:hover .sub-menu li {
+      background-color: #ffffff; }
+
+.site-header .nav-links .nav-menu .menu-item ul li {
+  width: 100%; }
+  .site-header .nav-links .nav-menu .menu-item ul li:hover {
+    background-color: #2ba2dd;
+    color: #ffffff; }
 
 .site-header .nav-links .nav-menu .sub-menu {
-  display: none;
+  height: 0;
   width: 100%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -886,17 +904,12 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0.5rem;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   border: 1px solid #333333;
   z-index: 99; }
   .site-header .nav-links .nav-menu .sub-menu::before {
     position: absolute;
-    font-family: 'Font Awesome 5 free';
-    font-weight: 900;
-    font-size: 2rem;
-    content: '\f0d8';
     left: 50%;
     top: -22px;
     -webkit-transform: translateX(-50%);
@@ -904,11 +917,15 @@ object {
   .site-header .nav-links .nav-menu .sub-menu li {
     padding: 0.25rem 0.75rem;
     text-align: left; }
+    .site-header .nav-links .nav-menu .sub-menu li:hover a {
+      color: #ffffff;
+      text-decoration: underline; }
     .site-header .nav-links .nav-menu .sub-menu li:last-child {
       border-right: none;
       padding-right: 1rem; }
     .site-header .nav-links .nav-menu .sub-menu li a {
-      font-size: 0.75rem;
+      color: #333333;
+      font-size: 14px;
       text-transform: capitalize; }
 
 .site-footer {
@@ -1125,14 +1142,13 @@ body.home {
         @media only screen and (min-width: 800px) {
           body.home .home-hero-banner .home-hero-text h1 {
             width: 41.5rem; } }
-    body.home .home-hero-banner .white-btn {
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 0.75rem 1rem; }
-      @media only screen and (min-width: 800px) {
-        body.home .home-hero-banner .white-btn {
-          padding: 1rem 2.25rem; } }
+  body.home .latest-events-container .more-events {
+    margin: 2rem auto;
+    text-transform: uppercase;
+    background-color: #ffffff; }
+    body.home .latest-events-container .more-events:hover {
+      color: #ffffff;
+      background-color: #2ba2dd; }
   body.home .approaches-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1254,6 +1270,9 @@ body.home {
     background: #ffffff;
     width: 100px;
     border: 2px solid #2ba2dd; }
+
+.page-about .site-main .about-page-container h1 {
+  margin-left: 3rem; }
 
 .page-about .site-main div {
   margin: 1.5rem 0.75rem; }
@@ -1450,6 +1469,7 @@ body.home {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    max-width: 480px;
     height: 450px;
     overflow: hidden; }
     .page-about .site-main .testimonial-container .testimonial-box:nth-child(odd) {
@@ -1610,10 +1630,10 @@ body.home {
       display: flex;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-      margin: auto; }
+      margin: auto;
+      max-width: 95%; }
       .page-about .nav li {
-        display: block;
-        padding: 0; }
+        display: block; }
       .page-about .nav a {
         text-decoration: none;
         color: #333333;

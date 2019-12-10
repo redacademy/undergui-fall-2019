@@ -2,6 +2,11 @@
   //   <---- MOBILE ---->
 
   .site-main {
+    .about-page-container {
+      h1 {
+        margin-left: $base__space-unit * 2;
+      }
+    }
     div {
       margin: $base__space-unit $base__space-unit / 2;
     }
