@@ -16,19 +16,20 @@
       //   }
     })
       .done(function(data) {
-        // console.log(data);
+        // console.log(data[0].date);
         // let utgPost = data.shift();
         // console.log(utgPost);
 
-        $.each(data, function(data) {
-          console.log(data);
-          // a $('.post-card')
+        $.each(data, function appendContent(data, arrayItem) {
+          console.log(arrayItem);
+          //   $('.post-card')  a -> div(img) img(mobile img) div(meta)-> div( p(date) h3(title) h3(title mobile) ) p(post location)
           // div $('.image-container').
           // img
           // div $('.post-meta')
-          $('.post-data').append(data.date);
-          $('.post-title').append(data.title);
-          $('.post-title-mobile').append(data.title);
+
+          $('.post-data').append(arrayItem.date);
+          $('.post-title').append(arrayItem.title);
+          $('.post-title-mobile').append(arrayItem.title);
           //  p $('.post-category')
           //   data[0].link;
         });

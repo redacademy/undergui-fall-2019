@@ -767,7 +767,7 @@ object {
     height: 4.75rem; }
   @media only screen and (min-width: 900px) {
     .site-header {
-      padding: 0.75rem 7vw;
+      padding: 0.75rem 4vw;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
@@ -871,14 +871,10 @@ object {
   .site-header .nav-links .nav-menu .menu-item .sub-menu {
     max-height: 0;
     opacity: 0;
-    height: 0;
-    background-color: #ffffff;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out; }
+    background-color: #8ecaeb;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in; }
   .site-header .nav-links .nav-menu .menu-item:hover .sub-menu {
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    display: block;
     opacity: 1;
     max-height: calc(100% + 100px); }
 
