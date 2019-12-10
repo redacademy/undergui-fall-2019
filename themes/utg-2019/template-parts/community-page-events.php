@@ -4,16 +4,16 @@
 
 
     <!-- get post loop for 8 posts to be displayed on cummunity and get more to show up with more button -->
-    <?php
-    $args = array(
-        'orderby' => 'title',
-        'post_type' => 'post_events',
-        'posts_per_page' => 4
-    );
-    $the_events = new WP_Query($args);
-    ?>
-
     <div class="post-container">
+        <?php
+        $args = array(
+            'orderby' => 'title',
+            'post_type' => 'post_events',
+            'posts_per_page' => 4
+        );
+        $the_events = new WP_Query($args);
+        ?>
+
 
         <?php if ($the_events->have_posts()) : while ($the_events->have_posts()) : $the_events->the_post(); ?>
                 <a href="<?php echo get_post_permalink(); ?>" class="site-card">
@@ -35,14 +35,7 @@
                         <!-- get the location for the event post -->
                         <p class="post-data"><?= $rows_location = get_field('location')[0]['location_name'];
                                                         ?></p>
-
                     </div>
-
-
-
-
-
-
                 </a>
             <?php endwhile; ?>
 
@@ -51,3 +44,9 @@
 else : ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
 
 </section>
+
+
+
+<div class="events-flickity" data-flickity='{}'>
+
+</div>
