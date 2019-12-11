@@ -30,13 +30,15 @@
 					<!-- get the image for the event post -->
 					<?php $eventImage = get_field('images')[0]['image']; // get the event post image 
 							?>
-					<div class="image-container"> <?php the_post_thumbnail() ?> </div>
+					<div class="image-container" style="background:url(<?= $eventImage; ?>); background-position: center; background-size:cover;">
+					</div>
 
 					<div class="post-meta">
 						<div>
 							<!-- check if there's an end date and appends date -->
 							<p class="post-data"><?php (get_field('end_date')) ? the_field("starting_date") && the_field("end_date") : the_field("starting_date"); ?></p>
 							<h3 class="post-title"><?php the_title(); ?></h3>
+							<h3 class="post-title-mobile"><?php the_title(); ?></h3>
 
 						</div>
 
