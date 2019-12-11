@@ -39,13 +39,8 @@
                         <div>
                             <p class="post-data"><?php echo get_the_date('F j, Y'); ?></p>
                             <h3 class="post-title"><?= the_title(); ?></h3>
-
                         </div>
-                        <p class="post-category"> <?php
-                                                            $cat_list = get_the_category();
-
-                                                            echo $cat_list[0]->name;
-                                                            ?>
+                        <p class="post-category"> <?php $cat_list = get_the_category(); echo $cat_list[0]->name;?>
                         </p>
                     </div>
                 </a>
