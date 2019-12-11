@@ -4,7 +4,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding: $base__space-unit $base__space-unit/2;
-    max-width: 100%;
+    width: 100%;
 
     @include media($desktop) {
       width: 100%;
@@ -35,7 +35,6 @@
 
     .events-pics-container {
       max-width: 100%;
-
       margin: 0 auto;
 
       img {
