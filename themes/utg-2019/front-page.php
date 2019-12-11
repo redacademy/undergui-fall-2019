@@ -14,7 +14,7 @@ get_header(); ?>
 		<?php the_post_thumbnail(); ?>
 		<div class="home-hero-text">
 			<h1>Coders will be the wizards of tomorrow</h1>
-			<button class="white-btn">view our programs</button>
+			<button class="view-programs-btn white-btn">view our programs</button>
 		</div>
 	</div>
 
@@ -33,7 +33,7 @@ get_header(); ?>
 		<!-- exit flickity -->
 
 		<!-- latest commuinty posts -->
-		<section class="latest-commuinty-events">
+		<section class="latest-community-events">
 			<?php include get_template_directory() . "/template-parts/fp-latest-comm.php" ?>
 		</section>
 

@@ -64,26 +64,12 @@ body.home {
     }
   }
 
-  // Button styling
-  .latest-events-container {
-    // margin-bottom: 1rem;
-
-    .more-events {
-      margin: 2rem auto;
-      text-transform: uppercase;
-      background-color: $color_white;
-
-      &:hover {
-        color: $color_white;
-        background-color: $color_blue;
-      }
-    }
-  }
 
   // Approaches styling
   .approaches-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2.5rem;
 
     .approaches-wrapper {
       @include media($desktop) {
@@ -157,15 +143,52 @@ body.home {
   }
 
   // Latest events styling
-  .latest-events-container {
-    display: flex;
-    justify-content: space-evenly;
-    .post-container {
-      @include mobile-card;
+  section.latest-community-events {
+    margin-bottom: 1rem;
 
+    button.more-events.white-btn {
+      margin: 2rem;
+    }
+
+    .latest-events-container {
       @include media($header-break) {
-        @include desktop-card;
+        display: flex;
+        justify-content: space-evenly;
       }
+
+      .event-container {
+        display: flex;
+        flex-direction: column;
+
+        @include media($header-break) {
+          flex-direction: row;
+        }
+
+        .event-card {
+          @include mobile-card;
+
+          @include media($header-break) {
+            @include desktop-card;
+            margin: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    font-weight: 700;
+    text-transform: uppercase;
+    border-color: $color_blue;
+
+    &:hover {
+      p {
+        color: $color_white
+      }
+    }
+
+    p {
+      color: $color_blue;
     }
   }
 
@@ -175,7 +198,6 @@ body.home {
     height: 80vh;
     display: flex;
     flex-direction: column;
-
   }
 
   // Desktop
@@ -202,5 +224,3 @@ body.home {
   //   }
   // }
 }
-
-// }
