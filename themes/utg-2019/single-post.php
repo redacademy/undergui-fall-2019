@@ -32,7 +32,7 @@ get_header(); ?>
 			<div class="social-tags">
 
 				<div class="socialmedia">
-					<p>Share with Friends</p>
+					<h3>Share with Friends</h3>
 					<ul>
 						<li><a href="https://www.facebook.com/underthegui/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/facebook.svg" alt="facebook-logo"></a></li>
 						<li><a href="https://www.instagram.com/underthegui/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/instagram.svg" alt="instagram-logo"></a></li>
@@ -40,11 +40,10 @@ get_header(); ?>
 						<li><a href="https://www.youtube.com/channel/UCofp7_k1-lrU1UTkf0UYKMw/videos"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/youtube.svg" alt="youtube-logo"></a></li>
 					</ul>
 				</div>
-
 				
 				<div class="post-category">
-					<p>TAGS</p>
-					<p class="category"><?php $cat_list = get_the_category(); echo $cat_list[0]->name; ?></p>
+					<h3>TAGS</h3>
+					<a><p class="category"><?php $cat_list = get_the_category(); echo $cat_list[0]->name; ?></p></a>
 				</div>
 			</div>
 
