@@ -30,20 +30,32 @@
 					<!-- get the image for the event post -->
 					<?php $eventImage = get_field('images')[0]['image']; // get the event post image 
 							?>
+<<<<<<< HEAD
 					<div class="image-container" style="background:url(<?= $eventImage; ?>); background-position: center; background-size:cover;">
 					</div>
+=======
+					<div class="image-container" style="background:url(<?= $eventImage; ?>); background-position: center; background-size:cover;"> <?php the_post_thumbnail() ?> </div>
+>>>>>>> 7184932e01d56fc7054298370cc30def6bc7c5b7
 
 					<div class="post-meta">
 						<div>
 							<!-- check if there's an end date and appends date -->
 							<p class="post-data"><?php (get_field('end_date')) ? the_field("starting_date") && the_field("end_date") : the_field("starting_date"); ?></p>
+<<<<<<< HEAD
 							<h3 class="post-title"><?php the_title(); ?></h3>
+=======
+>>>>>>> 7184932e01d56fc7054298370cc30def6bc7c5b7
 							<h3 class="post-title-mobile"><?php the_title(); ?></h3>
 
 						</div>
 
 						<!-- get the location for the event post -->
+<<<<<<< HEAD
 						<p class="post-data"><?= $rows_location = get_field('location')[0]['location_name']; ?></p>
+=======
+						<p class="post-data"><?= $rows_location = get_field('location')[0]['location_name'];
+														?></p>
+>>>>>>> 7184932e01d56fc7054298370cc30def6bc7c5b7
 					</div>
 				</a>
 			<?php endwhile; ?>
