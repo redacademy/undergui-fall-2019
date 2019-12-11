@@ -1269,7 +1269,6 @@ body.home {
           width: 100%;
           padding: 0.75rem; }
           body.home section.latest-community-events .latest-events-container .event-container .event-card .post-meta div {
-            height: 75%;
             overflow: hidden; }
           body.home section.latest-community-events .latest-events-container .event-container .event-card .post-meta h3,
           body.home section.latest-community-events .latest-events-container .event-container .event-card .post-meta h2 {
@@ -1929,7 +1928,6 @@ body.home {
     width: 100%;
     padding: 0.75rem; }
     .post-card .post-meta div {
-      height: 75%;
       overflow: hidden; }
     .post-card .post-meta h3,
     .post-card .post-meta h2 {
