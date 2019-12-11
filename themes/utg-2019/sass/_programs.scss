@@ -1,6 +1,5 @@
 .programs-container {
-  @include content-padding;
-
+  padding: 0 $site-padding;
   @include media($desktop) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

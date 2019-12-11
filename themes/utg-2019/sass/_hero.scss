@@ -59,6 +59,8 @@
 
 .page-banner {
   @extend .home-hero-banner;
+  height: 275px;
+
   @include media($desktop) {
     justify-content: flex-start;
     align-items: center;
