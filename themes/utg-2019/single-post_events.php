@@ -12,49 +12,54 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php the_title(); ?>
+		<div class="header-content-container">
+			<div class="events-header">
+				<h1><?php the_title(); ?></h1>
+			</div>
+
+			<div class="content-container">
+				<?php the_content(); ?>
+			</div>
+		</div>
 
 
+		<div class="events-pics-container">
+			<?php if( have_rows('images') ): ?>
+			<!-- loop through the rows of data -->
+			<?php while ( have_rows('images') ) : the_row(); ?>
+			
+			<img src="<?php the_sub_field('image');?>">
+				
+			<?php endwhile;
+			else :
+				// no rows found
+			endif; ?>
+		</div>
 
+		<div class="date-container">
+			<?php if( get_field('starting_date') ): ?>
+				<?php the_field("starting_date"); ?>
+			<?php endif; ?>
 
-		<?php if( get_field('starting_date') ): ?>
-			<?php the_field("starting_date"); ?>
-		<?php endif; ?>
-
-		<?php if( get_field('end_date') ): ?>
+			<?php if( get_field('end_date') ): ?>
 				to <?php the_field("end_date"); ?> 
-		<?php endif; ?>	
+			<?php endif; ?>	
+			<?php endwhile; // End of the loop. ?>
+		</div>
 
+		<div class="location-container">
 			<!-- partners loop for loaction for events page -->
-		<?php if( have_rows('location') ): ?>
+			<?php if( have_rows('location') ): ?>
 			<!-- loop through the rows of data -->
 			<?php while ( have_rows('location') ) : the_row(); ?>
 
 			<?php the_sub_field('location_name'); ?>
 			<?php the_sub_field('location_address'); ?>		
 			<?php endwhile;
-
 			else :
 			// no rows found
-		endif; ?>
-
-		<?php the_content(); ?>
-
-		<?php if( have_rows('images') ): ?>
-			<!-- loop through the rows of data -->
-			<?php while ( have_rows('images') ) : the_row(); ?>
-
-			<img src="<?php the_sub_field('image');?>">
-			
-				
-			<?php endwhile;
-
-			else :
-			// no rows found
-		endif; ?>
-
-
-		<?php endwhile; // End of the loop. ?>
+			endif; ?>
+		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

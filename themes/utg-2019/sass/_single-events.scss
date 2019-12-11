@@ -1,0 +1,28 @@
+.single-post_events {
+    .site-main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .header-content-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            max-width: 60%;
+            .header-container {
+                
+            }
+        }
+
+        .events-pics-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            img {
+                max-width: 30%;
+                border-radius: 5px;
+                margin-bottom: $base__space-unit;
+            }
+        }
+    }
+}

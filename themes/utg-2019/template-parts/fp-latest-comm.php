@@ -43,8 +43,7 @@
 						</div>
 
 						<!-- get the location for the event post -->
-						<p class="post-data"><?= $rows_location = get_field('location')[0]['location_name'];
-																			?></p>
+						<p class="post-data"><?= $rows_location = get_field('location')[0]['location_name']; ?></p>
 					</div>
 				</a>
 			<?php endwhile; ?>
