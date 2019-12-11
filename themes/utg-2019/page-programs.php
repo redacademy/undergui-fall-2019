@@ -11,56 +11,9 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 
-		<div class="home-hero-banner">
-			<?php the_post_thumbnail(); ?>
-			<div class="home-hero-text">
-				<!-- <h1>Coders will be the wizards of tomorrow</h1>
-				<button class="view-programs-btn white-btn">view our programs</button> -->
-			</div>
-		</div>
-
-		<div class="programs-container">
-
-			<?php
-			$args = array(
-				'order' => 'ASC',
-				'post_type' => 'post_programs',
-				'posts_per_page' => 8
-			);
-			$the_programs = new WP_Query($args);
-			?>
-			<?php if ($the_programs->have_posts()) : while ($the_programs->have_posts()) : $the_programs->the_post(); ?>
-
-					<!-- website default card -->
-					<a class="program-card" href="<?php echo get_post_permalink(); ?>" style="background: <?= the_field('background_color'); ?>">
-
-						<!-- dynamic post image for card -->
-
-						<div class="image-container" style="background:  url('<?php the_post_thumbnail_url('full'); ?>'), <?= the_field('background_color'); ?>  ; background-size: cover; background-position: center;">
-						</div>
-
-						<!-- dynamic post title, date, and category -->
-						<div class="post-meta">
-							<div>
-								<p class="post-data">level &nbsp;<?= the_field('level') ?></p>
-								<h3 class="post-title"><?= the_title(); ?></h3>
-								<!-- <div></div> -->
-							</div>
-
-							<div class="program-subfields">
-								<p class="post-data">Ages &nbsp;<?= the_field('age') ?></p>
-								<p class="post-data">Prerequisites &nbsp;<?= the_field('prerequisites') ?></p>
-
-							</div>
-						</div>
-					</a>
-				<?php endwhile;
-				else : ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
-
-		</div>
-
-
-
+		<?php include get_template_directory() . "/template-parts/programs-page-top.php"; ?>
+		<?php include get_template_directory() . "/template-parts/programs-page-program-cards.php"; ?>
+		<?php include get_template_directory() . "/template-parts/programs-page-bottom.php"; ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
