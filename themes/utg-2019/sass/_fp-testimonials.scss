@@ -5,6 +5,18 @@ section.testimonials-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+  .testimonials-slider {
+    .flickity-prev-next-button {
+      display: none;
+    }
+    @include media($desktop) {
+      .flickity-prev-next-button {
+        display: inline;
+      }
+    }
+  }
+
   h2 {
     margin: 0px;
   }
@@ -12,11 +24,6 @@ section.testimonials-container {
   .testimonials-header {
     color: $color_dark_grey;
   }
-
-  .testimonial-slider {
-    
-  }
-
   .testimonial-item {
     display: flex;
     flex-direction: column;

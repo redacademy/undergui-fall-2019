@@ -10,8 +10,7 @@
 
 <h2 class="testimonials-header">Testimonials</h2>
 
-<div class="testimonials-slider" data-flickity='{"prevNextButtons": false}'>
-
+<div class="testimonials-slider" data-flickity='{}'>
 	<?php
 	$args = array(
 		'orderby' => 'title',
