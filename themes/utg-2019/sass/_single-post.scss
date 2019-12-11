@@ -60,13 +60,44 @@
       }
     }
 
+    .social-tags{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+
+    .post-category {
+        padding: $base__space-unit $base__space-unit * 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            padding-right: $base__space-unit;
+        }
+        .category {
+            border: 1px solid $color_medium_blue;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        @include media($desktop) {
+            justify-content: flex-end;
+        }
+    }
+
     .socialmedia {
       padding: $base__space-unit $base__space-unit * 2;
+      justify-content: flex-start;
+
+       p {
+           margin: 1rem;
+       }
 
       ul {
         display: flex;
-        justify-content: center;
-
         li {
           margin: 1rem;
           img {
