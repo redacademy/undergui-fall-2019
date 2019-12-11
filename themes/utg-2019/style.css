@@ -1362,6 +1362,12 @@ body.home {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+    body.home .testimonials-container .testimonial-photo {
+      width: 12rem;
+      height: 12rem; }
+    body.home .testimonials-container .testimonials-content {
+      width: 10rem;
+      height: 10rem; }
 
 .error404 .banner-404 {
   overflow: hidden;

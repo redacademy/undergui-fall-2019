@@ -198,6 +198,14 @@ body.home {
     height: 80vh;
     display: flex;
     flex-direction: column;
+    .testimonial-photo {
+      width: 12rem;
+      height: 12rem;
+    }
+    .testimonials-content {
+      width: 10rem;
+      height: 10rem;
+    }
   }
 
   // Desktop
