@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<div class="header-content-container">
 			<div class="events-header">
-				<h1><?php the_title(); ?></h1>
+				<h2><?php the_title(); ?></h2>
 			</div>
 
 			<div class="content-container">
@@ -36,29 +36,31 @@ get_header(); ?>
 			endif; ?>
 		</div>
 
-		<div class="date-container">
-			<?php if( get_field('starting_date') ): ?>
-				<?php the_field("starting_date"); ?>
-			<?php endif; ?>
+		<div class="meta-container">
+			<div class="date-container">
+				<?php if( get_field('starting_date') ): ?>
+					<?php the_field("starting_date"); ?>
+				<?php endif; ?>
 
-			<?php if( get_field('end_date') ): ?>
-				to <?php the_field("end_date"); ?> 
-			<?php endif; ?>	
-			<?php endwhile; // End of the loop. ?>
-		</div>
+				<?php if( get_field('end_date') ): ?>
+					to <?php the_field("end_date"); ?> 
+				<?php endif; ?>	
+				<?php endwhile; // End of the loop. ?>
+			</div>
 
-		<div class="location-container">
-			<!-- partners loop for loaction for events page -->
-			<?php if( have_rows('location') ): ?>
-			<!-- loop through the rows of data -->
-			<?php while ( have_rows('location') ) : the_row(); ?>
+			<div class="location-container">
+				<!-- partners loop for loaction for events page -->
+				<?php if( have_rows('location') ): ?>
+				<!-- loop through the rows of data -->
+				<?php while ( have_rows('location') ) : the_row(); ?>
 
-			<?php the_sub_field('location_name'); ?>
-			<?php the_sub_field('location_address'); ?>		
-			<?php endwhile;
-			else :
-			// no rows found
-			endif; ?>
+				<?php the_sub_field('location_name'); ?>
+				<?php the_sub_field('location_address'); ?>		
+				<?php endwhile;
+				else :
+				// no rows found
+				endif; ?>
+			</div>
 		</div>
 
 		</main><!-- #main -->
