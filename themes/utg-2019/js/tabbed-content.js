@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let activeTabs = document.querySelectorAll('.active');
     event.preventDefault();
 
-    // console.log(event.target.href.split('#')[1]);
     // deactivate existing active tab and panel
     activeTabs.forEach(function(tab) {
       if (event.target.className === 'nav') {
