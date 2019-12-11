@@ -12,6 +12,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
+	<section class="event-info">
 		<div class="header-content-container">
 			<div class="events-header">
 				<h2><?php the_title(); ?></h2>
@@ -20,20 +21,6 @@ get_header(); ?>
 			<div class="content-container">
 				<?php the_content(); ?>
 			</div>
-		</div>
-
-
-		<div class="events-pics-container">
-			<?php if( have_rows('images') ): ?>
-			<!-- loop through the rows of data -->
-			<?php while ( have_rows('images') ) : the_row(); ?>
-			
-			<img src="<?php the_sub_field('image');?>">
-				
-			<?php endwhile;
-			else :
-				// no rows found
-			endif; ?>
 		</div>
 
 		<div class="meta-container">
@@ -54,13 +41,27 @@ get_header(); ?>
 				<!-- loop through the rows of data -->
 				<?php while ( have_rows('location') ) : the_row(); ?>
 
-				<?php the_sub_field('location_name'); ?>
-				<?php the_sub_field('location_address'); ?>		
+				<div class="location-name"><?php the_sub_field('location_name'); ?></div>
+				<div class="location-address"><?php the_sub_field('location_address'); ?></div>	
 				<?php endwhile;
 				else :
 				// no rows found
 				endif; ?>
 			</div>
+		</div>
+	</section>
+
+		<div class="events-pics-container">
+			<?php if( have_rows('images') ): ?>
+			<!-- loop through the rows of data -->
+			<?php while ( have_rows('images') ) : the_row(); ?>
+			
+			<img src="<?php the_sub_field('image');?>">
+				
+			<?php endwhile;
+			else :
+				// no rows found
+			endif; ?>
 		</div>
 
 		</main><!-- #main -->
