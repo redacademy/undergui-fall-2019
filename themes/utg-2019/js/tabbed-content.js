@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function onTabClick(event) {
     let activeTabs = document.querySelectorAll('.active');
+    event.preventDefault();
 
     // console.log(event.target.href.split('#')[1]);
     // deactivate existing active tab and panel
