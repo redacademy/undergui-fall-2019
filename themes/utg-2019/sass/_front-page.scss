@@ -9,173 +9,6 @@ body.home {
     }
   }
 
-
-  // Hero banner styling
-  .home-hero-banner {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    // Breakpoint mixin
-    @include media($desktop) {
-      flex-direction: row;
-    }
-
-    // Hero image styling
-    img {
-      height: 100vh;
-      max-width: 100vw;
-      object-fit: cover;
-      object-position: 65%;
-      filter: brightness(65%);
-
-      // Breakpoint mixin
-      @include media($desktop) {
-        height: 520px;
-        width: 100%;
-      }
-    }
-
-    // Hero banner text styling
-    .home-hero-text {
-      position: absolute;
-      color: #FFFFFF;
-      z-index: 1;
-      text-align: center;
-      line-height: 1.5;
-
-      // Breakpoint mixin
-      @include media($desktop) {
-        top: 30%;
-      }
-
-      h1 {
-        width: 80%;
-        font-size: $font-size_h1;
-        margin: auto;
-        margin-bottom: 2rem;
-        color: $color_white;
-
-        @include media($desktop) {
-          width: $base__space-unit + 40rem;
-        }
-      }
-    }
-  }
-
-
-  // Approaches styling
-  .approaches-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2.5rem;
-
-    .approaches-wrapper {
-      @include media($desktop) {
-        display: flex;
-        margin: auto;
-      }
-    }
-
-    // Approach item styling
-    .approach-item {
-      margin: $base__space-unit + 0.5rem;
-
-      img {
-        height: 165px;
-        width: 165px;
-        margin-bottom: -30px;
-      }
-
-      h3 {
-        font-size: 1.80rem;
-      }
-
-      p {
-        max-width: 320px;
-        margin: 0 auto;
-      }
-    }
-  }
-
-  // Project showcase styling
-  .project-showcase-container {
-    height: 500px;
-    background-color: $color_blue;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 3rem;
-
-    @include media($desktop) {
-      height: 685px;
-      justify-content: space-evenly;
-    }
-
-
-    .showcase-header {
-      color: $color_white;
-      margin-bottom: 3rem;
-    }
-
-    .single-project-container {
-      width: 100%;
-
-      @include media($desktop) {
-        display: flex;
-        justify-content: center;
-      }
-
-      .project-desc {
-        visibility: hidden;
-        height: 0px;
-
-        @include media($desktop) {
-          visibility: visible;
-          font-size: $font_size_main;
-          margin-left: 4rem;
-          text-align: left;
-          width: 450px;
-        }
-      }
-    }
-  }
-
-  // Latest events styling
-  section.latest-community-events {
-    margin-bottom: 1rem;
-
-    button.more-events.white-btn {
-      margin: 2rem;
-    }
-
-    .latest-events-container {
-      @include media($header-break) {
-        display: flex;
-        justify-content: space-evenly;
-      }
-
-      .event-container {
-        display: flex;
-        flex-direction: column;
-
-        @include media($header-break) {
-          flex-direction: row;
-        }
-
-        .event-card {
-          @include mobile-card;
-
-          @include media($header-break) {
-            @include desktop-card;
-            margin: 1rem;
-          }
-        }
-      }
-    }
-  }
-
   button {
     font-weight: 700;
     text-transform: uppercase;
@@ -193,15 +26,23 @@ body.home {
   }
 
 
+  @import 'fp-hero';
+  @import 'fp-approaches';
+  @import 'fp-projectshowcase';
+  @import '_fp-latestevents';
+
+
   .testimonials-container {
     background: $color_yellow;
     height: 80vh;
     display: flex;
     flex-direction: column;
+
     .testimonial-photo {
       width: 12rem;
       height: 12rem;
     }
+
     .testimonials-content {
       width: 10rem;
       height: 10rem;

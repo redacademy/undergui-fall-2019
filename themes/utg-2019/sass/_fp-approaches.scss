@@ -1,0 +1,33 @@
+// Approaches styling
+  .approaches-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+
+    .approaches-wrapper {
+      @include media($desktop) {
+        display: flex;
+        margin: auto;
+      }
+    }
+
+    // Approach item styling
+    .approach-item {
+      margin: $base__space-unit + 0.5rem;
+
+      img {
+        height: 165px;
+        width: 165px;
+        margin-bottom: -30px;
+      }
+
+      h3 {
+        font-size: 1.80rem;
+      }
+
+      p {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+    }
+  }
