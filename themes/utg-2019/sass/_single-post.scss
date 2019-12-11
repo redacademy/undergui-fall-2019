@@ -5,7 +5,7 @@
       flex-direction: column;
       flex-wrap: wrap;
       padding: $base__space-unit $base__space-unit/2;
-      width: 80%;
+      width: 90%;
       border-bottom: 2px solid black;
       margin: 0 auto;
 
@@ -60,52 +60,54 @@
       }
     }
 
-    .social-tags{
-        display: flex;
-        flex-direction: row;
-        width: 90%;
-        margin: 0 auto;
-        justify-content: space-around;
+    .social-tags {
+      display: flex;
+      flex-direction: row;
+      width: 90%;
+      margin: 0 auto;
+      justify-content: space-around;
     }
 
     .post-category {
-        padding: $base__space-unit 2%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 100%;
+      padding: $base__space-unit 2%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
 
-        h3 {
-            padding-right: $base__space-unit/2;
-        }
+      h3 {
+        padding-right: $base__space-unit / 2;
+      }
 
-        p {
-            padding: $base__space-unit / 4;
-        }
-        .category {
-            border: 1px solid $color_medium_blue;
-            border-radius: 5px;
-            text-align: center;
-        }
+      p {
+        padding: $base__space-unit / 4;
+      }
+      .category {
+        border: 1px solid $color_medium_blue;
+        border-radius: 5px;
+        width: auto;
+      }
 
-        @include media($desktop) {
-            justify-content: flex-end;
-        }
+      @include media($desktop) {
+        justify-content: flex-end;
+      }
     }
 
     .socialmedia {
       padding: $base__space-unit $base__space-unit/2;
       justify-content: flex-start;
+      align-items: center;
       max-width: 50%;
+      text-align: center;
 
-       p {
-           margin: 1rem;
-       }
+      h3 {
+        margin: $base__space-unit / 2;
+      }
 
       ul {
         display: flex;
         li {
-          margin: 10%;
+          margin: 5%;
           img {
             width: 1.5rem;
             height: 1.5rem;
@@ -116,8 +118,6 @@
         display: flex;
         justify-content: flex-start;
         flex-shrink: 0;
-        order: 3;
-
         ul {
           display: flex;
 
