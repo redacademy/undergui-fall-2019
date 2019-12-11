@@ -43,7 +43,7 @@ get_header(); ?>
 
 				
 				<div class="post-category">
-					<p>TAGS</p>
+					<h3>TAGS</h3>
 					<p class="category"><?php $cat_list = get_the_category(); echo $cat_list[0]->name; ?></p>
 				</div>
 			</div>
