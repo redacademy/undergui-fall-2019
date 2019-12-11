@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  if (window.location.pathname === '/utg/about/') {
+  if (window.location.pathname === '/about/') {
     const element = document.getElementById('nav-tab');
     element.addEventListener('click', onTabClick, false);
   } else {
