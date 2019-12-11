@@ -681,7 +681,9 @@ object {
     border: none;
     padding: 0; }
   .site-header .nav-links {
-    display: none; }
+    display: none;
+    -webkit-transition: all .5s;
+    transition: all .5s; }
   .site-header .toggle-menu {
     position: absolute;
     display: -webkit-box;
@@ -1350,11 +1352,24 @@ body.home {
             flex-direction: column; }
 
 .error404 .banner-404 {
-  overflow: hidden; }
+  overflow: hidden;
+  height: 280px; }
+  @media only screen and (min-width: 800px) {
+    .error404 .banner-404 {
+      height: 600px; } }
   .error404 .banner-404 img {
-    width: 100vw;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2); }
+    width: 100%;
+    height: 100%;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover; }
+    @media only screen and (min-width: 800px) {
+      .error404 .banner-404 img {
+        -o-object-fit: cover;
+           object-fit: cover;
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2); } }
   .error404 .banner-404 .home-btn-404 {
     color: #2ba2dd;
     background: #ffffff;
