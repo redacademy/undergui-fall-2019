@@ -7,7 +7,6 @@
             <a class="category-link" id="cat-<?= $category->term_id ?>" href=" <?= get_category_link($category); ?>">
                 <?= $category->name . '<br>'; ?>
             </a>
-
         <?php endforeach; ?>
     </div>
 
@@ -33,7 +32,6 @@
                     <div class="image-container" style="background: url('<?php the_post_thumbnail_url('full'); ?>'); background-size: cover; background-position: center;">
                     </div>
 
-                    <?php the_post_thumbnail('full'); ?>
                     <!-- dynamic post title, date, and category -->
                     <div class="post-meta">
                         <div>

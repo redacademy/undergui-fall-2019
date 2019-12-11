@@ -13,7 +13,7 @@
 <div class="latest-events-container">
 
 	<!-- get post loop for 3 posts to be displayed on cummunity and get more to show up with more button -->
-	<div class="post-container">
+	<div class="event-container">
 		<?php
 		$args = array(
 			'orderby' => 'title',
@@ -30,8 +30,7 @@
 					<!-- get the image for the event post -->
 					<?php $eventImage = get_field('images')[0]['image']; // get the event post image 
 							?>
-					<div class="image-container" style="background:url(<?= $eventImage; ?>); background-position: center; background-size:cover;">
-					</div>
+					<div class="image-container"> <?php the_post_thumbnail() ?> </div>
 
 					<div class="post-meta">
 						<div>

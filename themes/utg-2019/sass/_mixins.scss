@@ -36,14 +36,11 @@
   margin: 0.4rem auto;
   overflow: hidden;
   .image-container {
-    display: none;
-  }
-  img {
     height: 100px;
     width: 100px;
     margin-right: 0.5rem;
-    object-fit: cover;
   }
+
   .post-meta {
     display: flex;
     flex-direction: column;
@@ -56,6 +53,9 @@
     }
     .post-title-mobile {
       display: block;
+    }
+    .post-title {
+      display: none;
     }
     h3,
     h2 {
@@ -91,6 +91,7 @@
   width: 100%;
   overflow: hidden;
   .image-container {
+    width: 100%;
     min-height: 65%;
     display: block;
     overflow: hidden;
