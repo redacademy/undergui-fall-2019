@@ -2,7 +2,6 @@
   //   <---- MOBILE ---->
 
   .site-main {
-
     @include media($desktop) {
       .testimonial-header-title {
         display: none;
