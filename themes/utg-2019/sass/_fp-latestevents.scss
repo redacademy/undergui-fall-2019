@@ -1,0 +1,33 @@
+// Latest events styling
+  section.latest-community-events {
+    margin-bottom: 1rem;
+
+    button.more-events.white-btn {
+      margin: 2rem;
+    }
+
+    .latest-events-container {
+      @include media($header-break) {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .event-container {
+        display: flex;
+        flex-direction: column;
+
+        @include media($header-break) {
+          flex-direction: row;
+        }
+
+        .event-card {
+          @include mobile-card;
+
+          @include media($header-break) {
+            @include desktop-card;
+            margin: 1rem;
+          }
+        }
+      }
+    }
+  }

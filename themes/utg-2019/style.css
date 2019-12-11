@@ -1095,6 +1095,14 @@ body.home {
     @media only screen and (min-width: 800px) {
       body.home h2 {
         font-size: 48px; } }
+  body.home button {
+    font-weight: 700;
+    text-transform: uppercase;
+    border-color: #2ba2dd; }
+    body.home button:hover p {
+      color: #ffffff; }
+    body.home button p {
+      color: #2ba2dd; }
   body.home .home-hero-banner {
     position: relative;
     display: -webkit-box;
@@ -1329,8 +1337,10 @@ body.home {
                 overflow: hidden;
                 font-family: "Titillium Web"; }
               body.home section.latest-community-events .latest-events-container .event-container .event-card .post-meta .post-title {
+                color: #333333;
                 display: block; }
               body.home section.latest-community-events .latest-events-container .event-container .event-card .post-meta .post-data {
+                color: #333333;
                 text-transform: uppercase;
                 font-weight: lighter;
                 font-size: 0.75rem;
@@ -1343,15 +1353,7 @@ body.home {
                 font-family: "Titillium Web";
                 color: #2ba2dd;
                 text-transform: uppercase; } }
-  body.home button {
-    font-weight: 700;
-    text-transform: uppercase;
-    border-color: #2ba2dd; }
-    body.home button:hover p {
-      color: #ffffff; }
-    body.home button p {
-      color: #2ba2dd; }
-  body.home .testimonials-container {
+  body.home section.testimonials-container {
     background: #ffcc00;
     height: 80vh;
     display: -webkit-box;
@@ -1361,10 +1363,12 @@ body.home {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-    body.home .testimonials-container .testimonial-photo {
+    body.home section.testimonials-container .testimonials-header {
+      color: #eff1f6; }
+    body.home section.testimonials-container .testimonial-photo {
       width: 12rem;
       height: 12rem; }
-    body.home .testimonials-container .testimonials-content {
+    body.home section.testimonials-container .testimonials-content {
       width: 10rem;
       height: 10rem; }
 
@@ -1993,8 +1997,10 @@ body.home {
           overflow: hidden;
           font-family: "Titillium Web"; }
         .post-card .post-meta .post-title {
+          color: #333333;
           display: block; }
         .post-card .post-meta .post-data {
+          color: #333333;
           text-transform: uppercase;
           font-weight: lighter;
           font-size: 0.75rem;
@@ -2062,8 +2068,10 @@ body.home {
               overflow: hidden;
               font-family: "Titillium Web"; }
             .blog .community-event-container .post-container .events-card .post-meta .post-title {
+              color: #333333;
               display: block; }
             .blog .community-event-container .post-container .events-card .post-meta .post-data {
+              color: #333333;
               text-transform: uppercase;
               font-weight: lighter;
               font-size: 0.75rem;
@@ -2125,8 +2133,10 @@ body.home {
             overflow: hidden;
             font-family: "Titillium Web"; }
           .blog .community-event-container .events-flickity .events-flickity-item .events-card .post-meta .post-title {
+            color: #333333;
             display: block; }
           .blog .community-event-container .events-flickity .events-flickity-item .events-card .post-meta .post-data {
+            color: #333333;
             text-transform: uppercase;
             font-weight: lighter;
             font-size: 0.75rem;
@@ -2224,6 +2234,7 @@ body.home {
       .single-post_events .site-main .meta-container .location-container p {
         font-size: 16px; }
 
+<<<<<<< HEAD
 .single-post .site-main .single-post-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2277,6 +2288,81 @@ body.home {
       height: auto; }
     @media only screen and (min-width: 800px) {
       .single-post .site-main .single-post-container .image-container {
+=======
+.programs-container {
+  padding: 0 7vw; }
+  @media only screen and (min-width: 800px) {
+    .programs-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem; } }
+  .programs-container .program-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    border: 2px solid lightgrey;
+    border-bottom: 3px solid lightgrey;
+    border-right: 3px solid lightgrey;
+    border-radius: 4px;
+    width: 90%;
+    height: 105px;
+    margin: 0.4rem auto;
+    overflow: hidden;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
+    .programs-container .program-card .image-container {
+      height: 100px;
+      width: 120px; }
+    .programs-container .program-card .post-meta {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 100%;
+      padding: 0.75rem; }
+      .programs-container .program-card .post-meta div {
+        overflow: hidden; }
+      .programs-container .program-card .post-meta h3,
+      .programs-container .program-card .post-meta h2 {
+        margin: 0; }
+      .programs-container .program-card .post-meta .post-data {
+        color: #333333;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 12px; }
+      .programs-container .program-card .post-meta .post-title {
+        font-size: 16px;
+        font-family: "Gotham"; }
+      .programs-container .program-card .post-meta p {
+        -ms-flex-item-align: end;
+            align-self: end; }
+    .programs-container .program-card .post-meta .post-data,
+    .programs-container .program-card .post-meta h3 {
+      color: #ffffff; }
+    .programs-container .program-card .post-meta .program-subfields {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .programs-container .program-card .post-meta .program-subfields :first-child::after {
+        padding: 0 0.5rem;
+        content: '|'; }
+    @media only screen and (min-width: 800px) {
+      .programs-container .program-card {
+        background: none !important;
+        -webkit-box-shadow: 0 1px 4px #000000;
+                box-shadow: 0 1px 4px #000000;
+        border: 1px solid #eff1f6;
+        border-radius: 6px;
+>>>>>>> 1d9a14009ccc40326d5b5210f4c284175204e961
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -2284,6 +2370,7 @@ body.home {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
+<<<<<<< HEAD
         justify-self: flex-start;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
@@ -2327,3 +2414,62 @@ body.home {
         .single-post .site-main .socialmedia ul li img {
           width: 2rem;
           height: 2rem; } }
+=======
+        height: 400px;
+        width: 100%;
+        overflow: hidden; }
+        .programs-container .program-card .image-container {
+          width: 100%;
+          min-height: 65%;
+          display: block;
+          overflow: hidden; }
+        .programs-container .program-card img {
+          display: none; }
+        .programs-container .program-card .post-meta {
+          border-top: 1px solid #eff1f6;
+          -webkit-box-shadow: none;
+                  box-shadow: none;
+          min-height: 35%;
+          padding: 1rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
+          .programs-container .program-card .post-meta div {
+            max-height: 70%;
+            overflow: hidden;
+            font-family: "Titillium Web"; }
+          .programs-container .program-card .post-meta .post-title {
+            color: #333333;
+            display: block; }
+          .programs-container .program-card .post-meta .post-data {
+            color: #333333;
+            text-transform: uppercase;
+            font-weight: lighter;
+            font-size: 0.75rem;
+            margin: 0; }
+          .programs-container .program-card .post-meta .post-title {
+            margin: 0;
+            font-size: 1rem; }
+          .programs-container .program-card .post-meta p {
+            font-size: 1rem;
+            font-family: "Titillium Web";
+            color: #2ba2dd;
+            text-transform: uppercase; }
+        .programs-container .program-card .post-meta .program-subfields {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column; }
+          .programs-container .program-card .post-meta .program-subfields :first-child::after {
+            content: none; } }
+>>>>>>> 1d9a14009ccc40326d5b5210f4c284175204e961

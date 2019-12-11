@@ -1,0 +1,25 @@
+// Front page Testimonials styling
+section.testimonials-container {
+  background: $color_yellow;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+
+  .testimonials-header {
+    color: $color_grey;
+  }
+
+  .testimonials-slider {
+
+  }
+
+  .testimonial-photo {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .testimonials-content {
+    width: 10rem;
+    height: 10rem;
+  }
+}

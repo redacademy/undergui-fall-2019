@@ -1,0 +1,44 @@
+.programs-container {
+  @include content-padding;
+
+  @include media($desktop) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+  }
+  .program-card {
+    @include mobile-card;
+    flex-direction: row-reverse;
+
+    .post-meta {
+      .post-data,
+      h3 {
+        color: $color_white;
+      }
+      .program-subfields {
+        display: flex;
+        :first-child {
+          &::after {
+            padding: 0 0.5rem;
+            content: '|';
+          }
+        }
+      }
+    }
+    @include media($desktop) {
+      background: none !important;
+      @include desktop-card;
+      .post-meta {
+        .program-subfields {
+          display: flex;
+          flex-direction: column;
+          :first-child {
+            &::after {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
