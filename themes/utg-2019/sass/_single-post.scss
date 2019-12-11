@@ -1,0 +1,134 @@
+.single-post {
+  .site-main {
+    .single-post-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: $base__space-unit $base__space-unit/2;
+      width: 80%;
+      border-bottom: 2px solid black;
+      margin: 0 auto;
+
+      @include media($desktop) {
+        width: 90%;
+        flex-direction: row;
+        padding: $base__space-unit * 2 0;
+      }
+
+      .post-info {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+
+        .content {
+          padding-bottom: $base__space-unit / 2;
+        }
+
+        @include media($desktop) {
+          flex-direction: column;
+          max-width: 64%;
+          padding-right: $base__space-unit;
+        }
+      }
+
+      .image-container {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: $base__space-unit;
+
+        img {
+          max-width: 100%;
+          justify-self: flex-start;
+          border-radius: 5px;
+          margin-bottom: $base__space-unit / 2;
+          height: auto;
+        }
+
+        @include media($desktop) {
+          display: flex;
+          flex-direction: column;
+          justify-self: flex-start;
+          flex-wrap: wrap;
+          width: auto;
+          max-width: 35%;
+
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .social-tags{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+
+    .post-category {
+        padding: $base__space-unit 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+
+        h3 {
+            padding-right: $base__space-unit/2;
+        }
+
+        p {
+            padding: $base__space-unit / 4;
+        }
+        .category {
+            border: 1px solid $color_medium_blue;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        @include media($desktop) {
+            justify-content: flex-end;
+        }
+    }
+
+    .socialmedia {
+      padding: $base__space-unit $base__space-unit/2;
+      justify-content: flex-start;
+      max-width: 50%;
+
+       p {
+           margin: 1rem;
+       }
+
+      ul {
+        display: flex;
+        li {
+          margin: 10%;
+          img {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+      }
+      @include media($desktop) {
+        display: flex;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        order: 3;
+
+        ul {
+          display: flex;
+
+          li {
+            img {
+              width: 2rem;
+              height: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
