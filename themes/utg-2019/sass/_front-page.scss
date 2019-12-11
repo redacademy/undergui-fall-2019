@@ -2,7 +2,7 @@ body.home {
   text-align: center;
 
   h2 {
-    font-size: $font_size_h2+6px;
+    font-size: $font_size_h2 + 6px;
 
     @include media($desktop) {
       font-size: $font_size_h2 + 20px;
@@ -16,7 +16,7 @@ body.home {
 
     &:hover {
       p {
-        color: $color_white
+        color: $color_white;
       }
     }
 
@@ -25,12 +25,10 @@ body.home {
     }
   }
 
-
-  @import 'fp-hero';
   @import 'fp-approaches';
   @import 'fp-projectshowcase';
   @import 'fp-latestevents';
-  @import 'fp-testimonials'; 
+  @import 'fp-testimonials';
 
   // .testimonials-header {
   //   color: $color_white;

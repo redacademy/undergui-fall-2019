@@ -2,6 +2,7 @@
 
     <h2>From the UTG blog...</h2>
     <div class="category-container">
+        <a href="#" class="category-link">All</a>
         <?php
         foreach ((get_categories()) as $category) : ?>
             <a class="category-link" id="cat-<?= $category->term_id ?>" href=" <?= get_category_link($category); ?>">
@@ -42,6 +43,7 @@
                         </div>
                         <p class="post-category"> <?php
                                                             $cat_list = get_the_category();
+
                                                             echo $cat_list[0]->name;
                                                             ?>
                         </p>
