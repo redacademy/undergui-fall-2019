@@ -878,6 +878,7 @@ object {
   font-size: 18px;
   text-decoration: none; }
   .site-header .nav-links .nav-menu .menu-item .sub-menu {
+    overflow: hidden;
     max-height: 0;
     opacity: 0;
     background-color: #8ecaeb;
@@ -1551,7 +1552,7 @@ body.home {
         font-size: 19.2px; } }
 
 @media only screen and (min-width: 800px) {
-  .page-about .site-main .testimonial-title {
+  .page-about .site-main .testimonial-header-title {
     display: none; } }
 
 .page-about .site-main .testimonial-container {
@@ -1575,7 +1576,7 @@ body.home {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-width: 480px;
+    max-width: 450px;
     height: 450px;
     overflow: hidden; }
     .page-about .site-main .testimonial-container .testimonial-box:nth-child(odd) {
@@ -2144,3 +2145,40 @@ body.home {
     @media only screen and (min-width: 900px) {
       .blog .community-event-container .events-flickity {
         display: none; } }
+
+.single-post_events .site-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%; }
+  .single-post_events .site-main .header-content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    max-width: 60%; }
+  .single-post_events .site-main .events-pics-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+    .single-post_events .site-main .events-pics-container img {
+      max-width: 30%;
+      border-radius: 5px;
+      margin-bottom: 1.5rem; }
