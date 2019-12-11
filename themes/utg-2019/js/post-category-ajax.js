@@ -60,7 +60,7 @@
         </a>`);
         });
       })
-      .fail(function(error) {
+      .fail(function() {
         $('.community-posts').append(
           `
             <h3>Opps! There seems to be an issue grabbing that category! </h3>`
