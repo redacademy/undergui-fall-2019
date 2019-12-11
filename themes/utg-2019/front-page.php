@@ -10,13 +10,6 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 
-	<div class="home-hero-banner">
-		<?php the_post_thumbnail(); ?>
-		<div class="home-hero-text">
-			<h1>Coders will be the wizards of tomorrow</h1>
-			<button class="view-programs-btn white-btn">view our programs</button>
-		</div>
-	</div>
 
 	<main id="main" class="site-main" role="main">
 
