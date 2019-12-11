@@ -29,15 +29,24 @@ get_header(); ?>
 			</div>			
 
 
-			<div class="socialmedia">
-				<ul>
-					<li><a href="https://www.facebook.com/underthegui/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/facebook.svg" alt="facebook-logo"></a></li>
-					<li><a href="https://www.instagram.com/underthegui/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/instagram.svg" alt="instagram-logo"></a></li>
-					<li><a href="https://twitter.com/underthegui"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/twitter.svg" alt="twitter-logo"></a></li>
-					<li><a href="https://www.youtube.com/channel/UCofp7_k1-lrU1UTkf0UYKMw/videos"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/youtube.svg" alt="youtube-logo"></a></li>
-				</ul>
-			</div>
+			<div class="social-tags">
 
+				<div class="socialmedia">
+					<p>Share with Friends</p>
+					<ul>
+						<li><a href="https://www.facebook.com/underthegui/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/facebook.svg" alt="facebook-logo"></a></li>
+						<li><a href="https://www.instagram.com/underthegui/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/instagram.svg" alt="instagram-logo"></a></li>
+						<li><a href="https://twitter.com/underthegui"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/twitter.svg" alt="twitter-logo"></a></li>
+						<li><a href="https://www.youtube.com/channel/UCofp7_k1-lrU1UTkf0UYKMw/videos"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/youtube.svg" alt="youtube-logo"></a></li>
+					</ul>
+				</div>
+
+				
+				<div class="post-category">
+					<h3>TAGS</h3>
+					<p class="category"><?php $cat_list = get_the_category(); echo $cat_list[0]->name; ?></p>
+				</div>
+			</div>
 
 		<?php endwhile; // End of the loop. ?>
 

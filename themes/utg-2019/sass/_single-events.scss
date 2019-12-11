@@ -61,7 +61,7 @@
     .meta-container {
       display: flex;
       justify-content: space-around;
-      padding: $base__space-unit $base__space-unit / 2;
+      padding: $base__space-unit 0;
 
       .date-container {
         justify-content: flex-start;

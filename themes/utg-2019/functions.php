@@ -131,29 +131,29 @@ function utg_scripts()
 		wp_enqueue_script('comment-reply');
 	}
 
-
 	//localized script to access DB with JS
 	$localized_scripts = array(
 		'rest_url' => esc_url_raw(rest_url()),
+		'home_url' => home_url(),
 	);
 
 	wp_localize_script('utg-post-category-ajax', 'utg_vars', $localized_scripts);
-}
-add_action('wp_enqueue_scripts', 'utg_scripts');
+	}
+	add_action('wp_enqueue_scripts', 'utg_scripts');
 
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
+	/**
+	 * Custom template tags for this theme.
+	 */
+	require get_template_directory() . '/inc/template-tags.php';
 
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
+	/**
+	 * Custom functions that act independently of the theme templates.
+	 */
+	require get_template_directory() . '/inc/extras.php';
 
 
-/*
-*	use to shorten big titles to fix titles breaking site cards
-*	takes two parameters, what follows the shortened title and an integer 
-*	that counts the amount of words in the new title
-  */
+	/*
+	*	use to shorten big titles to fix titles breaking site cards
+	*	takes two parameters, what follows the shortened title and an integer 
+	*	that counts the amount of words in the new title
+	*/
