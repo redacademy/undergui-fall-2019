@@ -12,22 +12,32 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php the_title(); ?>
-		<?php the_date(); ?>
-		<?php the_content(); ?>
-		<?php the_post_thumbnail(); ?>
-		<?php the_field('image');?>
+		<div class="single-post-container">
 
-		<div class="socialmedia-footer">
-			<ul>
-				<li><a href="https://www.facebook.com/underthegui/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/facebook.svg" alt="facebook-logo"></a></li>
-				<li><a href="https://www.instagram.com/underthegui/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/instagram.svg" alt="instagram-logo"></a></li>
-				<li><a href="https://twitter.com/underthegui"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/twitter.svg" alt="twitter-logo"></a></li>
-				<li><a href="https://www.youtube.com/channel/UCofp7_k1-lrU1UTkf0UYKMw/videos"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/youtube.svg" alt="youtube-logo"></a></li>
-			</ul>
-		</div>
+			<div class="post-info">
 
-			
+				<div class="title"><h2><?php the_title(); ?></h2></div>
+				<div class="date"><?php the_date(); ?></div>
+				<div class="content"><?php the_content(); ?></div>
+
+			</div>
+
+			<div class="image-container">
+				<div class="image"><?php the_post_thumbnail(); ?></div>
+				<div class="image"><img src="<?php the_field('image');?>"></div>
+			</div>
+			</div>			
+
+
+			<div class="socialmedia">
+				<ul>
+					<li><a href="https://www.facebook.com/underthegui/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/facebook.svg" alt="facebook-logo"></a></li>
+					<li><a href="https://www.instagram.com/underthegui/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/instagram.svg" alt="instagram-logo"></a></li>
+					<li><a href="https://twitter.com/underthegui"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/twitter.svg" alt="twitter-logo"></a></li>
+					<li><a href="https://www.youtube.com/channel/UCofp7_k1-lrU1UTkf0UYKMw/videos"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/youtube.svg" alt="youtube-logo"></a></li>
+				</ul>
+			</div>
+
 
 		<?php endwhile; // End of the loop. ?>
 
