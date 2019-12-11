@@ -55,7 +55,7 @@ $args = array(
 );
 $the_events = new WP_Query($args);
 ?>
-<div class="events-flickity" data-flickity='{"prevNextButtons": false}'>
+<div class="events-flickity" data-flickity='{}'>
     <?php if ($the_events->have_posts()) : while ($the_events->have_posts()) : $the_events->the_post(); ?>
             <div class="events-flickity-item">
 
