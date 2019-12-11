@@ -1,7 +1,9 @@
 // Waits for page to load
 document.addEventListener('DOMContentLoaded', function() {
   // Checks if user is on about page
-  if (window.location.pathname === '/utg/about/') {
+
+  // path only works on live site, change to /utg/about/ for local
+  if (window.location.pathname === '/about/') {
     // Grabs all the faq containers
     const faqContainer = document.querySelectorAll('.faq-item');
 

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // path only works on live site, change to /utg/about/ for local
   if (window.location.pathname === '/about/') {
     const element = document.getElementById('nav-tab');
     element.addEventListener('click', onTabClick, false);
