@@ -29,32 +29,8 @@ body.home {
   @import 'fp-hero';
   @import 'fp-approaches';
   @import 'fp-projectshowcase';
-  @import '_fp-latestevents';
-
-
-  .testimonials-container {
-    background: $color_yellow;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-
-    .testimonial-photo {
-      width: 12rem;
-      height: 12rem;
-    }
-
-    .testimonials-content {
-      width: 10rem;
-      height: 10rem;
-    }
-  }
-
-  // Desktop
-  // height: 520px;
-  // background-color: $color_yellow;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-evenly;
+  @import 'fp-latestevents';
+  @import 'fp-testimonials'; 
 
   // .testimonials-header {
   //   color: $color_white;

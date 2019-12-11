@@ -8,9 +8,9 @@
 
 ?>
 
-<div class="testimonials-container">
+<h2 class="testimonials-header">Testimonials</h2>
 
-	<h2 class="testimonials-header">Testimonials</h2>
+<div class="testimonials-slider">
 
 	<?php
 	$args = array(

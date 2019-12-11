@@ -38,7 +38,7 @@ get_header(); ?>
 		</section>
 
 		<!-- testimonials -->
-		<section class="">
+		<section class="testimonials-container">
 			<?php include get_template_directory() . "/template-parts/fp-testimonials.php" ?>
 		</section>
 
