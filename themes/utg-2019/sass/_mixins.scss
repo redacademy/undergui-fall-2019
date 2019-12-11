@@ -102,9 +102,11 @@
       font-family: $font_main;
     }
     .post-title {
+      color: $color_paragraph;
       display: block;
     }
     .post-data {
+      color: $color_paragraph;
       text-transform: uppercase;
       font-weight: lighter;
       font-size: 0.75rem;
