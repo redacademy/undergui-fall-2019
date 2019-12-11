@@ -1315,15 +1315,45 @@ body.home {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly; }
+    body.home section.testimonials-container .testimonials-slider .flickity-prev-next-button {
+      display: none; }
+    @media only screen and (min-width: 800px) {
+      body.home section.testimonials-container .testimonials-slider .flickity-prev-next-button {
+        display: inline; } }
+    body.home section.testimonials-container h2 {
+      margin: 0px; }
     body.home section.testimonials-container .testimonials-header {
-      color: #eff1f6; }
+      color: #595757; }
+    body.home section.testimonials-container .testimonial-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 100%; }
     body.home section.testimonials-container .testimonial-photo {
-      width: 12rem;
-      height: 12rem; }
-    body.home section.testimonials-container .testimonials-content {
-      width: 10rem;
-      height: 10rem; }
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 120px;
+      margin-bottom: 2rem; }
+    body.home section.testimonials-container .testimonial-content {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      width: 22rem;
+      line-height: 1.2rem; }
 
 .error404 .banner-404 {
   overflow: hidden;
@@ -2588,5 +2618,47 @@ body.home {
         -ms-flex-align: center;
             align-items: center; }
     .program-classes .chat-bubble img {
+      height: 40%;
+      width: 35%; }
+
+.program-curriculum {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 2rem 7vw;
+  line-height: 1.75; }
+  .program-curriculum p {
+    font-size: 0.9rem; }
+  .program-curriculum .classes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem 2rem 0; }
+  .program-curriculum .chat-bubble {
+    border: 1px solid #eff1f6;
+    -webkit-box-shadow: 0 1px 4px #000000;
+            box-shadow: 0 1px 4px #000000;
+    border-radius: 6px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2rem 0 2rem 2rem;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .program-curriculum .chat-bubble img {
       height: 40%;
       width: 35%; }
