@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const element = document.getElementById('nav-tab');
     element.addEventListener('click', onTabClick, false);
   } else {
-    console.log(window.location.pathname);
     return;
   }
 

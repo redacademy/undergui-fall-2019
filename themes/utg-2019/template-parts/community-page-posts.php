@@ -19,6 +19,7 @@
             'posts_per_page' => 8,
             'hide_empty'     => 1,
             'order'          => 'DESC',
+            'paged'          => (get_query_var('paged')) ? get_query_var('paged') : 1,
         ));
 
         if ($myposts) {
@@ -57,7 +58,7 @@
     </div>
 
     <div class="button-box">
-        <button class="white-btn">SHOW MORE</button>
+        <button class="white-btn show-more-posts">SHOW MORE</button>
     </div>
 
 </section>
