@@ -21,9 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     closeMenuButton.classList.add('close-left-arrow');
     switchArrowDireciton.classList.add('open-right-arrow');
 
-    setTimeout(function() {
-      siteHeader.classList.remove('toggle-menu');
-      navLinks.classList.remove('toggle-menu');
-    });
+    siteHeader.classList.remove('toggle-menu');
+    navLinks.classList.remove('toggle-menu');
   });
 });

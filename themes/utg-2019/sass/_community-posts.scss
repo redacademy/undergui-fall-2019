@@ -33,7 +33,6 @@
   @include media($header-break) {
     padding-bottom: 2rem;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
   }
