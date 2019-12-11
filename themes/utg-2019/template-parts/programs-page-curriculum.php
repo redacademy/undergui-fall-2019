@@ -1,7 +1,6 @@
 <article class="program-curriculum">
 
     <img src="<?php the_field('bottom_page_image'); ?>" alt="">
-
     <div class="curriculum">
         <h2><?php the_field('curriculum_title'); ?></h2>
         <?php the_field('curriculum_paragraph'); ?>
