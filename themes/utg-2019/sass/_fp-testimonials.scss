@@ -12,25 +12,29 @@ section.testimonials-container {
   .testimonials-header {
     color: $color_dark_grey;
   }
-  
+
+  .testimonial-slider {
+    
+  }
+
   .testimonial-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100vh;
   }
 
   .testimonial-photo {
     order: 1;
     width: 15rem;
     height: 15rem;
-    // transform:translateY(-2rem);
     border-radius: 120px;
+    margin-bottom: 2rem;
   }
 
   .testimonial-content {
     order: 2;
-    width: 20rem;
+    width: 22rem;
+    line-height: 1.2rem;
   }
 }
