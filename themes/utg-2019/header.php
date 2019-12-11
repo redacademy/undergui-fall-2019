@@ -66,4 +66,29 @@
 
 		</header><!-- #masthead -->
 
+		<?php // check if the page has a page Thumbnail assigned to it.
+		if (has_post_thumbnail()) { ?>
+
+			<?php if (is_page('home')) { ?>
+
+				<div class=" home-hero-banner" style="background: linear-gradient(rgba(22, 27, 56,0.5),rgba(22, 27, 56,0.5)),url(<?= get_the_post_thumbnail_url(); ?>) ; background-size: cover; background-position: center;">
+					<div class="home-hero-text">
+						<?php the_excerpt(); ?>
+						<button class="view-programs-btn white-btn">view our programs</button>
+					</div>
+				</div>
+
+			<?php } elseif (is_page()) { ?>
+
+				<div class="page-banner" style="background:  url(<?= get_the_post_thumbnail_url(); ?>); background-size: cover; background-position: center;">
+					<div class="banner-text">
+						<p><?= $post->post_name ?></p>
+						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
+						<?php the_excerpt(); ?>
+
+					</div>
+				</div>
+
+		<?php }
+		} ?>
 		<div id="content" class="site-content">

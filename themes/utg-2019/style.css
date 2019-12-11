@@ -682,8 +682,8 @@ object {
     padding: 0; }
   .site-header .nav-links {
     display: none;
-    -webkit-transition: all .5s;
-    transition: all .5s; }
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s; }
   .site-header .toggle-menu {
     position: absolute;
     display: -webkit-box;
@@ -1103,55 +1103,6 @@ body.home {
       color: #ffffff; }
     body.home button p {
       color: #2ba2dd; }
-  body.home .home-hero-banner {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    @media only screen and (min-width: 800px) {
-      body.home .home-hero-banner {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row; } }
-    body.home .home-hero-banner img {
-      height: 100vh;
-      max-width: 100vw;
-      -o-object-fit: cover;
-         object-fit: cover;
-      -o-object-position: 65%;
-         object-position: 65%;
-      -webkit-filter: brightness(65%);
-              filter: brightness(65%); }
-      @media only screen and (min-width: 800px) {
-        body.home .home-hero-banner img {
-          height: 520px;
-          width: 100%; } }
-    body.home .home-hero-banner .home-hero-text {
-      position: absolute;
-      color: #FFFFFF;
-      z-index: 1;
-      text-align: center;
-      line-height: 1.5; }
-      @media only screen and (min-width: 800px) {
-        body.home .home-hero-banner .home-hero-text {
-          top: 30%; } }
-      body.home .home-hero-banner .home-hero-text h1 {
-        width: 80%;
-        font-size: 56px;
-        margin: auto;
-        margin-bottom: 2rem;
-        color: #ffffff; }
-        @media only screen and (min-width: 800px) {
-          body.home .home-hero-banner .home-hero-text h1 {
-            width: 41.5rem; } }
   body.home .approaches-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2371,3 +2322,73 @@ body.home {
                   flex-direction: column; }
           .programs-container .program-card .post-meta .program-subfields :first-child::after {
             content: none; } }
+
+.home-hero-banner, .page-banner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  max-width: 100vw; }
+  @media only screen and (min-width: 800px) {
+    .home-hero-banner, .page-banner {
+      height: 525px;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  .home-hero-banner img, .page-banner img {
+    height: 100vh;
+    max-width: 100vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 65%;
+       object-position: 65%;
+    -webkit-filter: brightness(65%);
+            filter: brightness(65%); }
+    @media only screen and (min-width: 800px) {
+      .home-hero-banner img, .page-banner img {
+        height: 520px;
+        width: 100%; } }
+  .home-hero-banner .home-hero-text, .page-banner .home-hero-text {
+    position: absolute;
+    color: #ffffff;
+    z-index: 1;
+    text-align: center;
+    line-height: 1.5; }
+    @media only screen and (min-width: 800px) {
+      .home-hero-banner .home-hero-text, .page-banner .home-hero-text {
+        top: 30%; } }
+    .home-hero-banner .home-hero-text p, .page-banner .home-hero-text p {
+      font-family: "Gotham";
+      font-weight: bold;
+      width: 75%;
+      font-size: 56px;
+      margin: auto;
+      margin-bottom: 2rem;
+      color: #ffffff; }
+      @media only screen and (min-width: 800px) {
+        .home-hero-banner .home-hero-text p, .page-banner .home-hero-text p {
+          width: 41.5rem; } }
+
+@media only screen and (min-width: 800px) {
+  .page-banner {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 275px; } }
+
+.page-banner .banner-text {
+  padding: 0 7vw; }
+  .page-banner .banner-text * {
+    color: #ffffff; }

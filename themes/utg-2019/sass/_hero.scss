@@ -1,0 +1,73 @@
+// Hero banner styling
+.home-hero-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  max-width: 100vw;
+
+  // Breakpoint mixin
+  @include media($desktop) {
+    height: 525px;
+    flex-direction: row;
+  }
+
+  // Hero image styling
+  img {
+    height: 100vh;
+    max-width: 100vw;
+    object-fit: cover;
+    object-position: 65%;
+    filter: brightness(65%);
+
+    // Breakpoint mixin
+    @include media($desktop) {
+      height: 520px;
+      width: 100%;
+    }
+  }
+
+  // Hero banner text styling
+  .home-hero-text {
+    position: absolute;
+    color: #ffffff;
+    z-index: 1;
+    text-align: center;
+    line-height: 1.5;
+
+    // Breakpoint mixin
+    @include media($desktop) {
+      top: 30%;
+    }
+
+    p {
+      font-family: $font_header;
+      font-weight: bold;
+      width: 75%;
+      font-size: $font-size_h1;
+      margin: auto;
+      margin-bottom: 2rem;
+      color: $color_white;
+
+      @include media($desktop) {
+        width: $base__space-unit + 40rem;
+      }
+    }
+  }
+}
+
+.page-banner {
+  @extend .home-hero-banner;
+  @include media($desktop) {
+    justify-content: flex-start;
+    align-items: center;
+    height: 275px;
+  }
+  .banner-text {
+    padding: 0 7vw;
+    * {
+      color: $color_white;
+    }
+  }
+}
