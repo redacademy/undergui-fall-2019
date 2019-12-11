@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<div class="header-content-container">
 			<div class="events-header">
-				<h1><?php the_title(); ?></h1>
+				<h2><?php the_title(); ?></h2>
 			</div>
 
 			<div class="content-container">

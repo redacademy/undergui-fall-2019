@@ -4,7 +4,6 @@
   $category.on('click', function(event) {
     event.preventDefault();
 
-    console.log($('.category-link'));
     $('.community-posts').empty();
     let catId = event.target.id;
     let filteredID = catId.replace('cat-', '');
@@ -47,25 +46,24 @@
           let newDateFormat = `${monthName} ${newDay}, ${newYear}`;
 
           // append json date to html elements
-          $('.community-posts').append(` <a class='post-card'>
+          $('.community-posts').append(` 
+          <a href='${arrayItem.link}' class='post-card'>
 
-          <div class='image-container' style='background: url(${arrayItem._embedded['wp:featuredmedia']['0'].source_url}); background-size: cover; background-position: center;'></div>
-          <img src='${arrayItem._embedded['wp:featuredmedia']['0'].source_url}'>
-            <div class='post-meta'>
-                <div>
-                <p class='post-data'> ${newDateFormat}</p>  
-                <h3 class='post-title'>${arrayItem.title.rendered}</h3> 
-                <h3 class='post-title-mobile'>${arrayItem.title.rendered}</h3> 
+            <div class='image-container' style='background: url(${arrayItem._embedded['wp:featuredmedia']['0'].source_url}); background-size: cover; background-position: center;'></div>
+                <div class='post-meta'>
+                    <div>
+                    <p class='post-data'> ${newDateFormat}</p>  
+                    <h3 class='post-title'>${arrayItem.title.rendered}</h3> 
+                    </div>
+                    <p class='post-category'>${arrayItem._embedded['wp:term']['0']['0'].name}</p>
                 </div>
-                <p class='post-category'>${$category[0].text}</p>
-            </div>
         </a>`);
         });
       })
-      .fail(function(error) {
+      .fail(function() {
         $('.community-posts').append(
-          `<h3>${error}</h3>
-            <p>Opps! There seems to be an issue grabbing that category! </p>`
+          `
+            <h3>Opps! There seems to be an issue grabbing that category! </h3>`
         );
       });
   });

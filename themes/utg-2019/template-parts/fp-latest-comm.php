@@ -38,7 +38,6 @@
 							<!-- check if there's an end date and appends date -->
 							<p class="post-data"><?php (get_field('end_date')) ? the_field("starting_date") && the_field("end_date") : the_field("starting_date"); ?></p>
 							<h3 class="post-title"><?php the_title(); ?></h3>
-							
 
 						</div>
 
