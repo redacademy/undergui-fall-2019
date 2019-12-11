@@ -37,7 +37,6 @@
                         <div>
                             <p class="post-data"><?php echo get_the_date('F j, Y'); ?></p>
                             <h3 class="post-title"><?= the_title(); ?></h3>
-                            <h3 class="post-title-mobile"><?= the_title(); ?></h3>
 
                         </div>
                         <p class="post-category"> <?php

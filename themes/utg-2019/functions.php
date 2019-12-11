@@ -157,14 +157,3 @@ require get_template_directory() . '/inc/extras.php';
 *	takes two parameters, what follows the shortened title and an integer 
 *	that counts the amount of words in the new title
   */
-function short_title($after = '', $length)
-{
-	$mytitle = explode(' ', get_the_title(), $length);
-	if (count($mytitle) >= $length) {
-		array_pop($mytitle);
-		$mytitle = implode(" ", $mytitle) . $after;
-	} else {
-		$mytitle = implode(" ", $mytitle);
-	}
-	return $mytitle;
-};
