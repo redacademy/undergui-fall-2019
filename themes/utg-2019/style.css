@@ -1360,15 +1360,39 @@ body.home {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly; }
+    body.home section.testimonials-container h2 {
+      margin: 0px; }
     body.home section.testimonials-container .testimonials-header {
-      color: #eff1f6; }
+      color: #595757; }
+    body.home section.testimonials-container .testimonial-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 100%;
+      height: 100vh; }
     body.home section.testimonials-container .testimonial-photo {
-      width: 12rem;
-      height: 12rem; }
-    body.home section.testimonials-container .testimonials-content {
-      width: 10rem;
-      height: 10rem; }
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 120px; }
+    body.home section.testimonials-container .testimonial-content {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      width: 20rem; }
 
 .error404 .banner-404 {
   overflow: hidden;
