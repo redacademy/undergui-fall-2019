@@ -9,41 +9,9 @@ body.home {
     }
   }
 
-  button {
-    font-weight: 700;
-    text-transform: uppercase;
-    border-color: $color_blue;
-
-    &:hover {
-      p {
-        color: $color_white;
-      }
-    }
-
-    p {
-      color: $color_blue;
-    }
-  }
-
   @import 'fp-approaches';
   @import 'fp-projectshowcase';
   @import 'fp-latestevents';
   @import 'fp-testimonials';
 
-  // .testimonials-header {
-  //   color: $color_white;
-  // }
-
-  // .single-testimonial-container {
-  //   display: flex;
-  //   justify-content: center;
-  //   width: 100%;
-
-  //   .testimonial-desc {
-  //     font-size: $font_size_main;
-  //     margin-left: 4rem;
-  //     text-align: left;
-  //     width: 450px;
-  //   }
-  // }
 }

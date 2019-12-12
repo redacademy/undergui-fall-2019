@@ -74,7 +74,8 @@
 				<div class=" home-hero-banner" style="background: linear-gradient(rgba(22, 27, 56,0.5),rgba(22, 27, 56,0.5)),url(<?= get_the_post_thumbnail_url(); ?>) ; background-size: cover; background-position: center;">
 					<div class="home-hero-text">
 						<?php the_excerpt(); ?>
-						<button class="view-programs-btn white-btn">view our programs</button>
+						<input type="button" onclick="location.href='<?= get_site_url() . '/programs' ?>';" value="view our programs"/>
+						<!-- <button class="view-programs-btn white-btn">view our programs</button> -->
 					</div>
 				</div>
 

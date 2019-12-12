@@ -17,9 +17,6 @@
   img {
     height: 100vh;
     max-width: 100vw;
-    object-fit: cover;
-    object-position: 65%;
-    filter: brightness(65%);
 
     // Breakpoint mixin
     @include media($desktop) {
@@ -44,15 +41,36 @@
     p {
       font-family: $font_header;
       font-weight: bold;
-      width: 75%;
-      font-size: $font-size_h1;
+      width: 50%;
+      font-size: $font_size_h2 + 3px;
       margin: auto;
       margin-bottom: 2rem;
       color: $color_white;
 
       @include media($desktop) {
+        font-size: $font_size_h1;
         width: $base__space-unit + 40rem;
       }
+    }
+  }
+
+  input[type=button] {
+    font-weight: 700;
+    text-transform: uppercase;
+    border-color: $color_blue;
+    color: $color_blue;
+    background: $color_white;
+    font-size: $font_size_main;
+    padding: 0.75rem 1rem;
+
+    @include media($desktop) {
+      font-size: $font_size_main + 2px;
+      padding: 0.75rem 2rem;
+    }
+
+    &:hover {
+      color: $color_white;
+      background: $color_blue;
     }
   }
 }
@@ -66,8 +84,10 @@
     align-items: center;
     height: 275px;
   }
+
   .banner-text {
     padding: 0 $site-padding-mobile;
+
     @include media($desktop) {
       padding: 0 $site-padding;
     }
@@ -75,14 +95,18 @@
     * {
       color: $color_white;
     }
+
     .slug {
       display: none;
+
       @include media($desktop) {
         display: block;
       }
     }
+
     h1 {
       font-size: 2rem;
+
       @include media($desktop) {
         font-size: 56px;
       }

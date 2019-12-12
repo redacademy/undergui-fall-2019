@@ -52,6 +52,4 @@
 else : ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
 </div>
 
-<button class="more-events white-btn" href="#">
-	<p>More</p>
-</button>
+<input type="button" onclick="location.href='<?= get_home_url() . '/community' ?>';" value="more" />

@@ -10,10 +10,32 @@ section.testimonials-container {
     .flickity-prev-next-button {
       display: none;
     }
+
     @include media($desktop) {
+      .flickity-button {
+        background: transparent;
+      }
+
       .flickity-prev-next-button {
         display: inline;
       }
+    }
+
+    .flickity-page-dots {
+      bottom: -2rem;
+    }
+
+    /* white circles */
+    .flickity-page-dots .dot {
+      width: 12px;
+      height: 12px;
+      opacity: 1;
+      background: $color_white;
+    }
+
+    /* fill-in selected dot */
+    .flickity-page-dots .dot.is-selected {
+      background: $color_dark_grey;
     }
   }
 
@@ -24,11 +46,17 @@ section.testimonials-container {
   .testimonials-header {
     color: $color_dark_grey;
   }
+
   .testimonial-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+
+    @include media($desktop) {
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 
   .testimonial-photo {
@@ -37,11 +65,26 @@ section.testimonials-container {
     height: 15rem;
     border-radius: 120px;
     margin-bottom: 2rem;
+
+    @include media($desktop) {
+      order: 2;
+      margin-left: 5rem;
+    }
   }
 
   .testimonial-content {
     order: 2;
     width: 22rem;
     line-height: 1.2rem;
+
+    @include media($desktop) {
+      width: 35rem;
+
+      p {
+        font-size: 28px;
+        line-height: 2.2rem;
+        color: $color_dark_grey;
+      }
+    }
   }
 }

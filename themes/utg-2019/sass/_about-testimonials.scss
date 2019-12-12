@@ -76,7 +76,7 @@
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(3, 1fr);
         grid-gap: $base__space-unit;
-        padding-top: $base__space-unit;
+        padding-top: $base__space-unit * 2;
       }
 
       .testimonial-box {
