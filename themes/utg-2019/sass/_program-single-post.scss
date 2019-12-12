@@ -6,7 +6,7 @@
   }
   .class-card {
     z-index: -1;
-    @include desktop-card;
+    @include classes-mobile-card;
     @include media($desktop) {
       @include classes-desktop-card;
     }

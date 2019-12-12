@@ -1,13 +1,44 @@
-.classes {
+.page-classes {
 
     .site-main {
-        article {
-            display: none;
+        .classes-container {
+            display: grid;
+            grid-auto-rows: repeat(auto, 1fr);
+            width: 100%;
+
+            article {
+                display: none;
+            }
+            .classes-box {
+                border: 1px solid black;
+                border-radius: $border-radius;
+                height: 100%;
+                width: 70%;
+                padding: 2rem $site-padding;
+                display: flex;
+                justify-content: space-evenly;
+                margin: $base__space-unit auto;
+
+                .class-image {
+                    justify-content: flex-start;
+                    width: 35%;
+                    height: 100%;
+                    border-radius: $border-radius;
+                }
+
+                .post-meta {
+                    display: flex;
+                }
+
+                .teacher-image {
+                    img {
+                        max-width: 150px;
+                        border-radius: 50%;
+                    }
+                }
+            }
         }
-
-
+          
     }
 
-
-    
 }
