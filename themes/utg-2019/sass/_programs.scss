@@ -1,13 +1,15 @@
 .programs-container {
-  // padding: 0 $site-padding;
+  padding: 0 $site-padding-mobile;
+
   @include media($desktop) {
+    padding: 0 $site-padding;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
   }
   .program-card {
     @include mobile-card;
-
+    width: 100%;
     flex-direction: row-reverse;
 
     .post-meta {

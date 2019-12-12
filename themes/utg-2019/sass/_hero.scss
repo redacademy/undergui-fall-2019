@@ -67,7 +67,7 @@
     height: 275px;
   }
   .banner-text {
-    padding: 0 $border-radius-mobile;
+    padding: 0 $site-padding-mobile;
     @include media($desktop) {
       padding: 0 $site-padding;
     }

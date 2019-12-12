@@ -16,10 +16,11 @@
     object-fit: cover;
     object-position: center;
     height: 200px;
+    width: 100%;
+
     @include media($desktop) {
       border-radius: $border-radius;
       height: 400px;
-      width: 100%;
     }
   }
   .curriculum {
