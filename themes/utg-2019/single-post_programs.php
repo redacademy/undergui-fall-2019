@@ -11,21 +11,11 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 
-		<?php while (have_posts()) : the_post(); ?>
+		<section class="courses-container">
+			<h2>Courses</h2>
+			<?php include get_template_directory() . "/template-parts/programs-single-post.php"; ?>
 
-			<?php get_template_part('template-parts/programs-page-single-post.php'); ?>
-
-			<?php the_post_navigation(); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if (comments_open() || get_comments_number()) :
-					comments_template();
-				endif;
-				?>
-
-		<?php endwhile; // End of the loop. 
-		?>
+		</section>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
