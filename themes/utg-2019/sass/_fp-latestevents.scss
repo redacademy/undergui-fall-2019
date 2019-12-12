@@ -1,33 +1,50 @@
 // Latest events styling
-  section.latest-community-events {
-    margin-bottom: 1rem;
+section.latest-community-events {
+  margin-bottom: 1rem;
 
-    button.more-events.white-btn {
+  input[type=button] {
+    font-weight: 700;
+    text-transform: uppercase;
+    border-color: $color_blue;
+    color: $color_blue;
+    background: $color_white;
+    font-size: $font_size_main;
+    padding: 0.75rem 1rem;
+
+    @include media($desktop) {
+      font-size: $font_size_main + 2px;
+      padding: 0.75rem 2rem;
       margin: 2rem;
     }
 
-    .latest-events-container {
+    &:hover {
+      color: $color_white;
+      background: $color_blue;
+    }
+  }
+
+  .latest-events-container {
+    @include media($header-break) {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .event-container {
+      display: flex;
+      flex-direction: column;
+
       @include media($header-break) {
-        display: flex;
-        justify-content: space-evenly;
+        flex-direction: row;
       }
 
-      .event-container {
-        display: flex;
-        flex-direction: column;
+      .event-card {
+        @include mobile-card;
 
         @include media($header-break) {
-          flex-direction: row;
-        }
-
-        .event-card {
-          @include mobile-card;
-
-          @include media($header-break) {
-            @include desktop-card;
-            margin: 1rem;
-          }
+          @include desktop-card;
+          margin: 1rem;
         }
       }
     }
   }
+}
