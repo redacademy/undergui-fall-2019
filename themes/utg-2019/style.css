@@ -1379,7 +1379,7 @@ body.home {
 .page-about .site-main .about-page-container {
   margin: 1.5rem; }
   .page-about .site-main .about-page-container h1 {
-    margin-left: 3rem; }
+    margin-left: 1.5rem; }
 
 .page-about .site-main ul {
   display: -webkit-box;
@@ -1446,7 +1446,8 @@ body.home {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 100%; }
   .page-about .site-main .our-story .closing img {
     width: 80%;
     margin: 0 auto;
@@ -1456,7 +1457,7 @@ body.home {
   .page-about .site-main .our-story .closing p {
     margin: 0 auto;
     text-align: left;
-    padding: 1.5rem;
+    padding: 0.75rem;
     font-size: 16px; }
 
 @media only screen and (min-width: 800px) {
@@ -1503,7 +1504,7 @@ body.home {
         display: -ms-flexbox;
         display: flex;
         overflow: hidden;
-        width: 46%; }
+        width: 50%; }
         .page-about .site-main .our-story .goals .goals-box img {
           width: 160px;
           height: 120px;
@@ -1517,7 +1518,8 @@ body.home {
           overflow: hidden;
           width: 55%;
           height: 100%;
-          margin: 0; }
+          margin: 0;
+          padding-right: 0.75rem; }
           .page-about .site-main .our-story .goals .goals-box .goals-content h3 {
             text-align: left;
             margin-top: 0;
@@ -1614,7 +1616,7 @@ body.home {
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 1.5rem;
-      padding-top: 1.5rem; } }
+      padding-top: 3rem; } }
   .page-about .site-main .testimonial-container .testimonial-box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1779,7 +1781,8 @@ body.home {
       -ms-flex-direction: column;
           flex-direction: column; }
   .page-about .about-page-headers {
-    margin-left: 1.5rem; }
+    margin: 1.5rem;
+    padding-top: 1.5rem; }
   .page-about .tab-pane {
     display: block; }
   .page-about .nav li {
@@ -1791,7 +1794,6 @@ body.home {
       display: flex;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-      margin: auto;
       max-width: 95%; }
       .page-about .nav li {
         display: block; }
@@ -1847,7 +1849,7 @@ body.home {
   .page-about .partners-container {
     grid-template-rows: repeat(auto, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 6rem; }
+    padding-top: 4.5rem; }
     .page-about .partners-container .partners-box {
       max-width: 100%; }
       .page-about .partners-container .partners-box .img-box {
@@ -1883,10 +1885,7 @@ body.home {
                   align-items: flex-start;
           margin-top: 0; }
         .page-about .partners-container .partners-box .partners-info p {
-          display: block;
-          -webkit-box-align: end;
-              -ms-flex-align: end;
-                  align-items: flex-end; } }
+          display: block; } }
 
 .community-blog-container {
   padding: 3vw 0 10vw 0; }

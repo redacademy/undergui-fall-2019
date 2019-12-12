@@ -5,7 +5,8 @@
   flex-direction: column;
 
   .about-page-headers {
-    margin-left: $base__space-unit;
+    margin: $base__space-unit;
+    padding-top: $base__space-unit;
   }
   .tab-pane {
     display: block;
@@ -20,7 +21,7 @@
     .nav {
       display: flex;
       justify-content: space-around;
-      margin: auto;
+      // margin: auto;
       max-width: 95%;
 
       li {
