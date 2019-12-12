@@ -51,7 +51,7 @@
       font-size: 1rem;
       border: 1px solid $color_blue;
       border-color: $color_blue;
-      border-radius: 6px;
+      border-radius: $border-radius;
       font-family: $font_header;
     }
   }

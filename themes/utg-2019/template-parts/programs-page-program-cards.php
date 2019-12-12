@@ -15,7 +15,7 @@
 
 				<!-- dynamic post image for card -->
 
-				<div class="image-container" style="background:  url('<?php the_post_thumbnail_url('full'); ?>'), <?= the_field('background_color'); ?>  ; background-size: cover; background-position: center;">
+				<div class="image-container" style="background:  url('<?php the_field('card_image') ?>'), <?= the_field('background_color'); ?>  ; background-size: cover; background-position: center;">
 				</div>
 
 				<!-- dynamic post title, date, and category -->

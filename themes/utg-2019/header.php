@@ -78,11 +78,12 @@
 					</div>
 				</div>
 
-			<?php } elseif (is_page()) { ?>
+			<?php } elseif (is_page() || is_singular('post_programs')) { ?>
 
 				<div class="page-banner" style="background:  url(<?= get_the_post_thumbnail_url(); ?>); background-size: cover; background-position: center;">
 					<div class="banner-text">
-						<p class="slug"><?= $post->post_name ?></p>
+						<p class="slug"><?php echo get_site_url();
+												echo	'/' . $post->post_name ?></p>
 						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
 						<?php the_excerpt(); ?>
 
@@ -91,4 +92,5 @@
 
 		<?php }
 		} ?>
+
 		<div id="content" class="site-content">

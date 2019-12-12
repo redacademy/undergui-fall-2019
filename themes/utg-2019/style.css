@@ -393,7 +393,7 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-  border-radius: 3px;
+  border-radius: 5px;
   background: #2ba2dd;
   color: #ffffff;
   font-size: 12px;
@@ -415,7 +415,7 @@ input[type='submit'] {
     background-color: #1d84b8; }
 
 .white-btn {
-  border-radius: 3px;
+  border-radius: 5px;
   background: #ffffff;
   color: #2ba2dd;
   font-size: 12px;
@@ -438,7 +438,7 @@ input[type='search'],
 textarea {
   color: #eff1f6;
   border: 1px solid #ccc;
-  border-radius: 3px; }
+  border-radius: 5px; }
   input[type='text']:focus,
   input[type='email']:focus,
   input[type='url']:focus,
@@ -774,7 +774,7 @@ object {
     height: 4.75rem; }
   @media only screen and (min-width: 900px) {
     .site-header {
-      padding: 0.75rem 4vw;
+      padding: 0.75rem 7vw;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
@@ -1203,7 +1203,7 @@ body.home {
         text-align: left;
         -webkit-box-shadow: 0 0.5px 3px #000000;
                 box-shadow: 0 0.5px 3px #000000;
-        border-radius: 6px;
+        border-radius: 5px;
         width: 90%;
         height: 105px;
         margin: 1rem auto;
@@ -1244,7 +1244,7 @@ body.home {
           body.home section.latest-community-events .latest-events-container .event-container .event-card {
             -webkit-box-shadow: 0 1px 4px #000000;
                     box-shadow: 0 1px 4px #000000;
-            border-radius: 6px;
+            border-radius: 5px;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -1679,7 +1679,7 @@ body.home {
           -ms-flex-align: center;
               align-items: center;
       border: 1px solid #000000;
-      border-radius: 4px;
+      border-radius: 5px;
       padding: 1.5rem 2rem;
       margin: 0;
       z-index: 999; }
@@ -1722,7 +1722,7 @@ body.home {
               align-items: flex-start;
       background-color: #e9f5fb;
       border: 1px solid #000000;
-      border-radius: 4px;
+      border-radius: 5px;
       margin: 0;
       padding: 2rem 2rem 1rem 2rem; }
       .faq-container .faq-item .faq-answer-container h2 {
@@ -1940,7 +1940,7 @@ body.home {
         font-size: 1rem;
         border: 1px solid #2ba2dd;
         border-color: #2ba2dd;
-        border-radius: 6px;
+        border-radius: 5px;
         font-family: "Gotham"; } }
 
 .post-card {
@@ -1950,7 +1950,7 @@ body.home {
   text-align: left;
   -webkit-box-shadow: 0 0.5px 3px #000000;
           box-shadow: 0 0.5px 3px #000000;
-  border-radius: 6px;
+  border-radius: 5px;
   width: 90%;
   height: 105px;
   margin: 1rem auto;
@@ -1991,7 +1991,7 @@ body.home {
     .post-card {
       -webkit-box-shadow: 0 1px 4px #000000;
               box-shadow: 0 1px 4px #000000;
-      border-radius: 6px;
+      border-radius: 5px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -2048,7 +2048,7 @@ body.home {
           text-transform: uppercase; } }
 
 .blog .content-area {
-  padding: 0 2vw; }
+  padding: 0 7vw; }
 
 .blog .community-event-container {
   width: 100%; }
@@ -2061,7 +2061,7 @@ body.home {
         .blog .community-event-container .post-container .events-card {
           -webkit-box-shadow: 0 1px 4px #000000;
                   box-shadow: 0 1px 4px #000000;
-          border-radius: 6px;
+          border-radius: 5px;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -2125,7 +2125,7 @@ body.home {
       .blog .community-event-container .events-flickity .events-flickity-item .events-card {
         -webkit-box-shadow: 0 1px 4px #000000;
                 box-shadow: 0 1px 4px #000000;
-        border-radius: 6px;
+        border-radius: 5px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -2416,7 +2416,7 @@ body.home {
   padding: 0 0.75rem; }
   @media only screen and (min-width: 800px) {
     .programs-container {
-      padding: 0 2vw;
+      padding: 0 7vw;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 1rem; } }
@@ -2427,7 +2427,7 @@ body.home {
     text-align: left;
     -webkit-box-shadow: 0 0.5px 3px #000000;
             box-shadow: 0 0.5px 3px #000000;
-    border-radius: 6px;
+    border-radius: 5px;
     width: 90%;
     height: 105px;
     margin: 1rem auto;
@@ -2484,7 +2484,7 @@ body.home {
         background: none !important;
         -webkit-box-shadow: 0 1px 4px #000000;
                 box-shadow: 0 1px 4px #000000;
-        border-radius: 6px;
+        border-radius: 5px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -2495,7 +2495,8 @@ body.home {
         height: 400px;
         width: 100%;
         overflow: hidden;
-        height: 325px; }
+        height: 325px;
+        margin: 0; }
         .programs-container .program-card .image-container {
           width: 100%;
           min-height: 65%;
@@ -2625,7 +2626,7 @@ body.home {
     padding: 0 0.75rem; }
     @media only screen and (min-width: 800px) {
       .page-banner .banner-text {
-        padding: 0 2vw; } }
+        padding: 0 7vw; } }
     .page-banner .banner-text * {
       color: #ffffff; }
     .page-banner .banner-text .slug {
@@ -2654,7 +2655,7 @@ body.home {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 1rem;
-      padding: 2rem 2vw; } }
+      padding: 2rem 7vw; } }
   .program-classes p {
     font-size: 0.9rem; }
   .program-classes .classes {
@@ -2676,7 +2677,7 @@ body.home {
   .program-classes .chat-bubble {
     -webkit-box-shadow: 0 0.5px 3px #000000;
             box-shadow: 0 0.5px 3px #000000;
-    border-radius: 6px;
+    border-radius: 5px;
     width: 100%;
     padding: 4rem 0.75rem;
     position: relative;
@@ -2712,7 +2713,7 @@ body.home {
         width: 35%; } }
 
 .program-curriculum {
-  padding: 2rem 2vw;
+  padding: 2rem 7vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2735,7 +2736,7 @@ body.home {
     text-align: left;
     -webkit-box-shadow: 0 0.5px 3px #000000;
             box-shadow: 0 0.5px 3px #000000;
-    border-radius: 6px;
+    border-radius: 5px;
     width: 90%;
     height: 105px;
     margin: 1rem auto;
@@ -2780,7 +2781,7 @@ body.home {
             align-self: end; }
     @media only screen and (min-width: 800px) {
       .program-curriculum img {
-        border-radius: 6px;
+        border-radius: 5px;
         height: 400px; } }
   .program-curriculum .curriculum {
     display: -webkit-box;
@@ -2803,7 +2804,7 @@ body.home {
             -ms-flex-pack: justify;
                 justify-content: space-between;
         width: 100%;
-        height: 400px;
+        height: 100%;
         padding: 1rem; } }
   .program-curriculum .additional-info {
     display: -webkit-box;
@@ -2833,11 +2834,12 @@ body.home {
   padding: 0 0.75rem; }
   @media only screen and (min-width: 800px) {
     .courses-container {
-      padding: 0 2vw; } }
+      padding: 0 7vw; } }
   .courses-container .class-card {
+    z-index: -1;
     -webkit-box-shadow: 0 1px 4px #000000;
             box-shadow: 0 1px 4px #000000;
-    border-radius: 6px;
+    border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2897,27 +2899,21 @@ body.home {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        text-align: left;
-        -webkit-box-shadow: 0 0.5px 3px #000000;
-                box-shadow: 0 0.5px 3px #000000;
-        border-radius: 6px;
-        width: 90%;
-        height: 105px;
-        margin: 1rem auto;
-        overflow: hidden;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
                 flex-direction: row;
-        margin: 4rem 0;
+        border-radius: 5px;
+        border: 1px solid #000000;
         width: 100%;
         height: 235px;
+        margin: 4rem 0;
+        overflow: hidden;
         -webkit-box-shadow: none;
-                box-shadow: none;
-        border: 1px solid #000000; }
+                box-shadow: none; }
         .courses-container .class-card .image-container {
-          height: 100px;
-          width: 120px; }
+          width: 24%;
+          height: 100%; }
         .courses-container .class-card .post-meta {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -2929,10 +2925,25 @@ body.home {
           -webkit-box-pack: justify;
               -ms-flex-pack: justify;
                   justify-content: space-between;
-          width: 100%;
-          padding: 1rem 0 1rem 1rem; }
-          .courses-container .class-card .post-meta div {
-            overflow: hidden; }
+          width: 76%;
+          padding: 1.5rem; }
+          .courses-container .class-card .post-meta .class-description {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            height: 75%; }
+            .courses-container .class-card .post-meta .class-description .post-title {
+              font-size: 1.75rem; }
+            .courses-container .class-card .post-meta .class-description .content-container p {
+              text-transform: none;
+              color: #333333; }
           .courses-container .class-card .post-meta h3,
           .courses-container .class-card .post-meta h2 {
             margin: 0; }
@@ -2947,26 +2958,6 @@ body.home {
           .courses-container .class-card .post-meta p {
             -ms-flex-item-align: end;
                 align-self: end; }
-        .courses-container .class-card .image-container {
-          width: 24%;
-          height: 100%; }
-        .courses-container .class-card .post-meta {
-          padding: 1.5rem;
-          width: 76%; }
-          .courses-container .class-card .post-meta .post-title {
-            font-size: 1.75rem; }
-          .courses-container .class-card .post-meta .class-description {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                    justify-content: space-between;
-            height: 75%; }
         .courses-container .class-card .program-subfields {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -2982,6 +2973,7 @@ body.home {
               -ms-flex-pack: end;
                   justify-content: flex-end; }
           .courses-container .class-card .link-container .find-classes-button {
+            z-index: 99;
             color: #ffffff;
             background-color: #2ba2dd;
             font-family: "Gotham";
@@ -2989,4 +2981,9 @@ body.home {
             justify-self: flex-end;
             font-size: 1rem;
             text-transform: uppercase;
-            padding: 0.75rem 2.25rem; } }
+            padding: 0.75rem 2.25rem; }
+            .courses-container .class-card .link-container .find-classes-button:hover {
+              color: #2ba2dd;
+              background-color: #ffffff;
+              border-color: #2ba2dd;
+              border: 1px solid #2ba2dd; } }
