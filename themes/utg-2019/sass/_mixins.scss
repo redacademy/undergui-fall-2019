@@ -18,7 +18,9 @@
   }
 }
 
-// Mobile card
+/*----------------------------------------------------------------------------------------------------------------------------
+# Mobile Card
+----------------------------------------------------------------------------------------------------------------------------*/
 @mixin mobile-card {
   display: flex;
   text-align: left;
@@ -62,7 +64,9 @@
   }
 }
 
-// Desktop card
+/*----------------------------------------------------------------------------------------------------------------------------
+# Desktop Card
+----------------------------------------------------------------------------------------------------------------------------*/
 @mixin desktop-card {
   box-shadow: 0 1px 4px $color_black;
   border-radius: $border-radius;
@@ -78,9 +82,7 @@
     display: block;
     overflow: hidden;
   }
-  img {
-    display: none;
-  }
+
   .post-meta {
     border-top: 1px solid $color_grey;
     box-shadow: none;
@@ -118,7 +120,9 @@
   }
 }
 
-// Classes Desktop card
+/*----------------------------------------------------------------------------------------------------------------------------
+# Classes Desktop Card
+----------------------------------------------------------------------------------------------------------------------------*/
 @mixin classes-desktop-card {
   display: flex;
   flex-direction: row;
@@ -140,6 +144,8 @@
     flex-direction: column;
     justify-content: space-between;
     width: 76%;
+    height: 100%;
+
     padding: 1.5rem;
 
     .class-description {
@@ -198,9 +204,103 @@
       justify-self: flex-end;
       font-size: 1rem;
       text-transform: uppercase;
-      //   width: 30%;
       padding: 0.75rem 2.25rem;
-      //   text-align: center;
+      &:hover {
+        color: $color_blue;
+        background-color: $color_white;
+        border-color: $color_blue;
+        border: 1px solid $color_blue;
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+# Classes Mobile Card
+----------------------------------------------------------------------------------------------------------------------------*/
+@mixin classes-mobile-card {
+  box-shadow: 0 1px 4px $color_black;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  height: 425px;
+  width: 100%;
+  overflow: hidden;
+  margin: 1rem 0;
+  .image-container {
+    width: 100%;
+    min-height: 30%;
+    display: block;
+    overflow: hidden;
+  }
+
+  .post-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 70%;
+    padding: 1rem;
+
+    .class-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 70%;
+      .post-title {
+        font-size: 1rem;
+      }
+      .content-container {
+        overflow: hidden;
+        p {
+          font-size: 0.75rem;
+          text-transform: none;
+          color: $color_paragraph;
+        }
+      }
+    }
+
+    h3,
+    h2 {
+      margin: 0;
+    }
+    .post-data {
+      color: $color_paragraph;
+      text-transform: none;
+      font-weight: bold;
+      font-size: $font_size_main - 4px;
+    }
+    .post-title {
+      font-size: $font_size_main;
+      font-family: $font_header;
+    }
+    p {
+      align-self: end;
+    }
+  }
+
+  .program-subfields {
+    display: flex;
+    :first-child {
+      &::after {
+        padding: 0 0.5rem;
+        content: '|';
+      }
+    }
+  }
+  .link-container {
+    display: flex;
+    justify-content: center;
+    .find-classes-button {
+      z-index: 99;
+      color: $color_white;
+      background-color: $color_blue;
+      font-family: $font_header;
+      font-weight: bold;
+      justify-self: flex-end;
+      font-size: 1rem;
+      text-transform: uppercase;
+      padding: 0.75rem 2.25rem;
       &:hover {
         color: $color_blue;
         background-color: $color_white;

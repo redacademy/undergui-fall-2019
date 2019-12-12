@@ -14,7 +14,7 @@
         <a class="classes-box" href="<?php echo get_post_permalink(); ?>" style="background: <?= the_field('background_color'); ?> ">
 
             <!-- dynamic post image for card -->
-            <div class="class-image" style="background:  url('<?php the_post_thumbnail_url('full'); ?>'); background-size: cover; background-position: center;">
+            <div class="class-image" style="background: url('<?php the_post_thumbnail_url('full'); ?>'); background-size: cover; background-position: center;">
             </div>
 
             <!-- dynamic post title, date, and category -->
