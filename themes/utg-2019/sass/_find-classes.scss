@@ -1,16 +1,13 @@
-.page-find-classes {
+.classes {
 
-    .page-banner {
-        background-color: $color_blue;
-        height: 275px;
+    .site-main {
+        article {
+            display: none;
+        }
 
-        h1 {
-            color: $color_white;
-        }
-        h3 {
-            color: $color_white;
-        }
+
     }
+
 
     
 }
