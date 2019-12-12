@@ -25,7 +25,6 @@ input[type='submit'] {
   @include font-size(0.75);
   line-height: 1;
   padding: 1rem 1.75rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 
   &:hover {
     background-color: lighten($color_blue, 10%);
@@ -44,7 +43,6 @@ input[type='submit'] {
   @include font-size(0.75);
   line-height: 1;
   padding: 1rem 1.75rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 
   &:hover {
     color: $color_white;

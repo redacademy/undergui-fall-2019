@@ -399,8 +399,7 @@ input[type='submit'] {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: 1rem 1.75rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  padding: 1rem 1.75rem; }
   button:hover,
   input[type='button']:hover,
   input[type='reset']:hover,
@@ -422,8 +421,7 @@ input[type='submit'] {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: 1rem 1.75rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  padding: 1rem 1.75rem; }
   .white-btn:hover {
     color: #ffffff;
     background-color: #57b5e4; }
@@ -2830,3 +2828,165 @@ body.home {
             -ms-flex-pack: justify;
                 justify-content: space-between;
         padding: 1rem; } }
+
+.courses-container {
+  padding: 0 0.75rem; }
+  @media only screen and (min-width: 800px) {
+    .courses-container {
+      padding: 0 2vw; } }
+  .courses-container .class-card {
+    -webkit-box-shadow: 0 1px 4px #000000;
+            box-shadow: 0 1px 4px #000000;
+    border-radius: 6px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 400px;
+    width: 100%;
+    overflow: hidden; }
+    .courses-container .class-card .image-container {
+      width: 100%;
+      min-height: 65%;
+      display: block;
+      overflow: hidden; }
+    .courses-container .class-card img {
+      display: none; }
+    .courses-container .class-card .post-meta {
+      border-top: 1px solid #eff1f6;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      min-height: 35%;
+      padding: 1rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .courses-container .class-card .post-meta div {
+        max-height: 70%;
+        overflow: hidden;
+        font-family: "Titillium Web"; }
+      .courses-container .class-card .post-meta .post-title {
+        color: #333333;
+        display: block; }
+      .courses-container .class-card .post-meta .post-data {
+        color: #333333;
+        text-transform: uppercase;
+        font-weight: lighter;
+        font-size: 0.75rem;
+        margin: 0; }
+      .courses-container .class-card .post-meta .post-title {
+        margin: 0;
+        font-size: 1rem; }
+      .courses-container .class-card .post-meta p {
+        font-size: 1rem;
+        font-family: "Titillium Web";
+        color: #2ba2dd;
+        text-transform: uppercase; }
+    @media only screen and (min-width: 800px) {
+      .courses-container .class-card {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        text-align: left;
+        -webkit-box-shadow: 0 0.5px 3px #000000;
+                box-shadow: 0 0.5px 3px #000000;
+        border-radius: 6px;
+        width: 90%;
+        height: 105px;
+        margin: 1rem auto;
+        overflow: hidden;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        margin: 4rem 0;
+        width: 100%;
+        height: 235px;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        border: 1px solid #000000; }
+        .courses-container .class-card .image-container {
+          height: 100px;
+          width: 120px; }
+        .courses-container .class-card .post-meta {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          width: 100%;
+          padding: 1rem 0 1rem 1rem; }
+          .courses-container .class-card .post-meta div {
+            overflow: hidden; }
+          .courses-container .class-card .post-meta h3,
+          .courses-container .class-card .post-meta h2 {
+            margin: 0; }
+          .courses-container .class-card .post-meta .post-data {
+            color: #333333;
+            text-transform: uppercase;
+            font-weight: 200;
+            font-size: 12px; }
+          .courses-container .class-card .post-meta .post-title {
+            font-size: 16px;
+            font-family: "Gotham"; }
+          .courses-container .class-card .post-meta p {
+            -ms-flex-item-align: end;
+                align-self: end; }
+        .courses-container .class-card .image-container {
+          width: 24%;
+          height: 100%; }
+        .courses-container .class-card .post-meta {
+          padding: 1.5rem;
+          width: 76%; }
+          .courses-container .class-card .post-meta .post-title {
+            font-size: 1.75rem; }
+          .courses-container .class-card .post-meta .class-description {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            height: 75%; }
+        .courses-container .class-card .program-subfields {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          .courses-container .class-card .program-subfields :first-child::after {
+            padding: 0 0.5rem;
+            content: '|'; }
+        .courses-container .class-card .link-container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end; }
+          .courses-container .class-card .link-container .find-classes-button {
+            color: #ffffff;
+            background-color: #2ba2dd;
+            font-family: "Gotham";
+            font-weight: bold;
+            justify-self: flex-end;
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 0.75rem 2.25rem; } }
