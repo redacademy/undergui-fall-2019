@@ -18,6 +18,7 @@ if ($classes) : ?>
     <?php foreach ($classes as $post) : // variable must be called $post (IMPORTANT) 
             ?>
         <?php setup_postdata($post); ?>
+
         <!-- website default card -->
         <div class="class-card" href="<?php echo get_post_permalink(); ?>">
 
@@ -31,8 +32,14 @@ if ($classes) : ?>
                 <a class="class-description" href="<?= get_post_permalink(); ?>">
 
                     <h3 class="post-title"><?php the_title(); ?></h3>
+
                     <div class="content-container">
-                        <?= the_field('content_left_box') ?>
+                        <?php if (have_rows('content_box_left')) : ?>
+                            <?php while (have_rows('content_box_left')) : the_row(); ?>
+                                <p><?php the_sub_field('paragraph'); ?></p>
+
+                        <?php endwhile;
+                                endif; ?>
 
                     </div>
 
