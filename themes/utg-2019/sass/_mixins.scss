@@ -22,14 +22,11 @@
 @mixin mobile-card {
   display: flex;
   text-align: left;
-  border: 2px solid lightgrey;
-  border-bottom: 3px solid lightgrey;
-  border-right: 3px solid lightgrey;
-  box-shadow: 0 1px 4px $color_black;
+  box-shadow: 0 0.5px 3px $color_black;
   border-radius: 6px;
   width: 90%;
   height: 105px;
-  margin: 0.4rem auto;
+  margin: 1rem auto;
   overflow: hidden;
   .image-container {
     height: 100px;
@@ -41,7 +38,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    padding: 0.75rem;
+    padding: 1rem 0 1rem 1rem;
     div {
       overflow: hidden;
     }
@@ -68,7 +65,6 @@
 // Desktop card
 @mixin desktop-card {
   box-shadow: 0 1px 4px $color_black;
-  border: 1px solid $color_grey;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
