@@ -3063,3 +3063,11 @@ body.home {
             font-size: 1rem;
             text-transform: uppercase;
             padding: 0.75rem 2.25rem; } }
+
+.page-find-classes .page-banner {
+  background-color: #2ba2dd;
+  height: 275px; }
+  .page-find-classes .page-banner h1 {
+    color: #ffffff; }
+  .page-find-classes .page-banner h3 {
+    color: #ffffff; }
