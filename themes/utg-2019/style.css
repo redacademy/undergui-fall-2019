@@ -3328,3 +3328,7 @@ body.home {
     .page-classes .site-main .classes-container .classes-box .teacher-image img {
       max-width: 150px;
       border-radius: 50%; }
+
+body.page-template-default .page-banner {
+  background-size: inherit !important;
+  background-position: right !important; }
