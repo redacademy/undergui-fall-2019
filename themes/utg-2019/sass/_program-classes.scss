@@ -1,9 +1,14 @@
 .program-classes {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-  padding: 2rem $site-padding;
-  line-height: 1.75;
+  overflow: hidden;
+  padding: 2rem $site-padding-mobile;
+  display: flex;
+  flex-direction: column;
+  @include media($desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 2rem $site-padding;
+  }
   p {
     font-size: 0.9rem;
   }
@@ -12,19 +17,41 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    padding: 0 2rem 2rem 0;
+    padding: 0 0 4rem 0;
+    @include media($desktop) {
+      padding: 0 2rem 2rem 0;
+    }
   }
   .chat-bubble {
-    border: 1px solid $color_grey;
-    box-shadow: 0 1px 4px $color_black;
+    box-shadow: 0 0.5px 3px $color_black;
     border-radius: 6px;
     width: 100%;
-    display: flex;
-    padding: 2rem 0 2rem 2rem;
+    padding: 4rem $site-padding-mobile;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    img {
+    @include media($desktop) {
+      padding: 2rem 0 2rem 2rem;
+    }
+  }
+  .block-man-chat-mobile {
+    position: absolute;
+    display: block;
+    width: 120px;
+    top: -18%;
+    right: -2%;
+    z-index: 999;
+    border-radius: 50%;
+    @include media($desktop) {
+      display: none;
+    }
+  }
+
+  .block-man-chat {
+    display: none;
+    @include media($desktop) {
+      display: block;
       height: 40%;
       width: 35%;
     }

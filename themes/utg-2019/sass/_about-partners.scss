@@ -36,7 +36,7 @@
     .partners-container {
       grid-template-rows: repeat(auto, 1fr);
       grid-template-columns: repeat(2, 1fr);
-      padding-top: $base__space-unit;
+      padding-top: $base__space-unit * 3;
 
       .partners-box {
         max-width: 100%;
@@ -46,7 +46,7 @@
           border: 1px solid black;
           border-radius: 10px;
           align-items: flex-start;
-          margin: $base__space-unit 0;
+          margin: 0 $base__space-unit/2;
           min-width: 150px;
           max-width: 150px;
           height: 140px;
@@ -70,7 +70,7 @@
           }
           p {
             display: block;
-            align-items: flex-end;
+            // align-items: flex-end;
           }
         }
       }

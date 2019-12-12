@@ -36,8 +36,5 @@
 		<?php endwhile;
 		else : ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
 
-</div>
-
-
-
+	<?php wp_reset_query(); ?>
 </div>

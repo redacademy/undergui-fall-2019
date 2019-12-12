@@ -8,8 +8,8 @@
 
     <div class="chat-bubble">
         <?php the_field('chat_bubble_text'); ?>
-        <img src="<?php the_field('chat_bubble_image'); ?>" alt="">
-
+        <img class="block-man-chat" src="<?php the_field('chat_bubble_image'); ?>" alt="">
+        <img class="block-man-chat-mobile" src="<?php the_field('chat_bubble_image_mobile'); ?>" alt="">
     </div>
 
 
