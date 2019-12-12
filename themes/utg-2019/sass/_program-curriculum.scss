@@ -1,32 +1,49 @@
 .program-curriculum {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
   padding: 2rem $site-padding;
-  line-height: 1.75;
+  display: flex;
+  flex-direction: column;
+  @include media($desktop) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    line-height: 1.75;
+  }
   p {
     font-size: 0.9rem;
   }
-  .classes {
+  img {
+    @include mobile-card;
+    object-fit: cover;
+    object-position: center;
+    height: 200px;
+    @include media($desktop) {
+      border-radius: $border-radius;
+      height: 400px;
+      width: 100%;
+    }
+  }
+  .curriculum {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 2rem 2rem 0;
+    @include media($desktop) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 400px;
+      padding: 1rem;
+    }
   }
-  .chat-bubble {
-    border: 1px solid $color_grey;
-    box-shadow: 0 1px 4px $color_black;
-    border-radius: 6px;
-    width: 100%;
+  .additional-info {
     display: flex;
-    padding: 2rem 0 2rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    img {
-      height: 40%;
-      width: 35%;
+    flex-direction: column;
+    @include media($desktop) {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
     }
   }
 }

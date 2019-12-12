@@ -59,7 +59,7 @@
 
 .page-banner {
   @extend .home-hero-banner;
-  height: 275px;
+  height: 200px;
 
   @include media($desktop) {
     justify-content: flex-start;
@@ -67,9 +67,25 @@
     height: 275px;
   }
   .banner-text {
-    padding: 0 7vw;
+    padding: 0 $border-radius-mobile;
+    @include media($desktop) {
+      padding: 0 $site-padding;
+    }
+
     * {
       color: $color_white;
+    }
+    .slug {
+      display: none;
+      @include media($desktop) {
+        display: block;
+      }
+    }
+    h1 {
+      font-size: 2rem;
+      @include media($desktop) {
+        font-size: 56px;
+      }
     }
   }
 }

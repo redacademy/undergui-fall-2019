@@ -82,7 +82,7 @@
 
 				<div class="page-banner" style="background:  url(<?= get_the_post_thumbnail_url(); ?>); background-size: cover; background-position: center;">
 					<div class="banner-text">
-						<p><?= $post->post_name ?></p>
+						<p class="slug"><?= $post->post_name ?></p>
 						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
 						<?php the_excerpt(); ?>
 
