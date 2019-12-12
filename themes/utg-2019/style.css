@@ -43,6 +43,18 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------
+# Mobile Card
+----------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------
+# Desktop Card
+----------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------
+# Classes Desktop Card
+----------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------
+# Classes Mobile Card
+----------------------------------------------------------------------------------------------------------------------------*/
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -1290,8 +1302,6 @@ body.home {
               min-height: 65%;
               display: block;
               overflow: hidden; }
-            body.home section.latest-community-events .latest-events-container .event-container .event-card img {
-              display: none; }
             body.home section.latest-community-events .latest-events-container .event-container .event-card .post-meta {
               border-top: 1px solid #eff1f6;
               -webkit-box-shadow: none;
@@ -2072,8 +2082,6 @@ body.home {
         min-height: 65%;
         display: block;
         overflow: hidden; }
-      .post-card img {
-        display: none; }
       .post-card .post-meta {
         border-top: 1px solid #eff1f6;
         -webkit-box-shadow: none;
@@ -2143,8 +2151,6 @@ body.home {
             min-height: 65%;
             display: block;
             overflow: hidden; }
-          .blog .community-event-container .post-container .events-card img {
-            display: none; }
           .blog .community-event-container .post-container .events-card .post-meta {
             border-top: 1px solid #eff1f6;
             -webkit-box-shadow: none;
@@ -2208,8 +2214,6 @@ body.home {
           min-height: 65%;
           display: block;
           overflow: hidden; }
-        .blog .community-event-container .events-flickity .events-flickity-item .events-card img {
-          display: none; }
         .blog .community-event-container .events-flickity .events-flickity-item .events-card .post-meta {
           border-top: 1px solid #eff1f6;
           -webkit-box-shadow: none;
@@ -2570,8 +2574,6 @@ body.home {
           min-height: 65%;
           display: block;
           overflow: hidden; }
-        .programs-container .program-card img {
-          display: none; }
         .programs-container .program-card .post-meta {
           border-top: 1px solid #eff1f6;
           -webkit-box-shadow: none;
@@ -2925,23 +2927,16 @@ body.home {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 400px;
+    height: 425px;
     width: 100%;
     overflow: hidden;
-    margin: 0; }
+    margin: 1rem 0; }
     .courses-container .class-card .image-container {
       width: 100%;
-      min-height: 65%;
+      min-height: 30%;
       display: block;
       overflow: hidden; }
-    .courses-container .class-card img {
-      display: none; }
     .courses-container .class-card .post-meta {
-      border-top: 1px solid #eff1f6;
-      -webkit-box-shadow: none;
-              box-shadow: none;
-      min-height: 35%;
-      padding: 1rem;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -2951,28 +2946,73 @@ body.home {
               flex-direction: column;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .courses-container .class-card .post-meta div {
-        max-height: 70%;
-        overflow: hidden;
-        font-family: "Titillium Web"; }
-      .courses-container .class-card .post-meta .post-title {
-        color: #333333;
-        display: block; }
+              justify-content: space-between;
+      width: 100%;
+      height: 70%;
+      padding: 1rem; }
+      .courses-container .class-card .post-meta .class-description {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        height: 70%; }
+        .courses-container .class-card .post-meta .class-description .post-title {
+          font-size: 1rem; }
+        .courses-container .class-card .post-meta .class-description .content-container {
+          overflow: hidden; }
+          .courses-container .class-card .post-meta .class-description .content-container p {
+            font-size: 0.75rem;
+            text-transform: none;
+            color: #333333; }
+      .courses-container .class-card .post-meta h3,
+      .courses-container .class-card .post-meta h2 {
+        margin: 0; }
       .courses-container .class-card .post-meta .post-data {
         color: #333333;
-        text-transform: uppercase;
-        font-weight: lighter;
-        font-size: 0.75rem;
-        margin: 0; }
+        text-transform: none;
+        font-weight: bold;
+        font-size: 12px; }
       .courses-container .class-card .post-meta .post-title {
-        margin: 0;
-        font-size: 1rem; }
+        font-size: 16px;
+        font-family: "Gotham"; }
       .courses-container .class-card .post-meta p {
+        -ms-flex-item-align: end;
+            align-self: end; }
+    .courses-container .class-card .program-subfields {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .courses-container .class-card .program-subfields :first-child::after {
+        padding: 0 0.5rem;
+        content: '|'; }
+    .courses-container .class-card .link-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .courses-container .class-card .link-container .find-classes-button {
+        z-index: 99;
+        color: #ffffff;
+        background-color: #2ba2dd;
+        font-family: "Gotham";
+        font-weight: bold;
+        justify-self: flex-end;
         font-size: 1rem;
-        font-family: "Titillium Web";
-        color: #2ba2dd;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        padding: 0.75rem 2.25rem; }
+        .courses-container .class-card .link-container .find-classes-button:hover {
+          color: #2ba2dd;
+          background-color: #ffffff;
+          border-color: #2ba2dd;
+          border: 1px solid #2ba2dd; }
     @media only screen and (min-width: 800px) {
       .courses-container .class-card {
         display: -webkit-box;
@@ -3005,6 +3045,7 @@ body.home {
               -ms-flex-pack: justify;
                   justify-content: space-between;
           width: 76%;
+          height: 100%;
           padding: 1.5rem; }
           .courses-container .class-card .post-meta .class-description {
             display: -webkit-box;
