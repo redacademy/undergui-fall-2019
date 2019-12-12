@@ -9,22 +9,6 @@ body.home {
     }
   }
 
-  button {
-    font-weight: 700;
-    text-transform: uppercase;
-    border-color: $color_blue;
-
-    &:hover {
-      p {
-        color: $color_white;
-      }
-    }
-
-    p {
-      color: $color_blue;
-    }
-  }
-
   @import 'fp-approaches';
   @import 'fp-projectshowcase';
   @import 'fp-latestevents';

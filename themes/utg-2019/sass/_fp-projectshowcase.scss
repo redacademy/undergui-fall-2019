@@ -1,15 +1,40 @@
 // Project showcase styling
 section.project-showcase {
 
-    .flickity-prev-next-button {
-      display: none;
+  .flickity-prev-next-button {
+    display: none;
+  }
+
+  @include media($desktop) {
+    .flickity-button {
+      background: transparent;
     }
 
-    @include media($desktop) {
-      .flickity-prev-next-button {
-        display: inline;
-      }
+    .flickity-prev-next-button {
+      display: inline;
     }
+  }
+
+  .flickity-page-dots {
+    bottom: -2.5rem;
+
+    @include media($desktop) {
+      bottom: -3.5rem;
+    }
+  }
+
+  /* white circles */
+  .flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: $color_white;
+  }
+
+  /* fill-in selected dot */
+  .flickity-page-dots .dot.is-selected {
+    background: $color_dark_grey;
+  }
 
 
   .project-showcase-container {
@@ -23,7 +48,7 @@ section.project-showcase {
 
 
     @include media($desktop) {
-      height: 685px;
+      height: 600px;
       justify-content: space-evenly;
     }
 
