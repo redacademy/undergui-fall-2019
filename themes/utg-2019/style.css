@@ -3109,24 +3109,211 @@ body.home {
               border: 1px solid #2ba2dd; } }
 
 .page-classes .site-main .classes-container {
-  display: grid;
-  grid-auto-rows: repeat(auto, 1fr);
   width: 100%; }
   .page-classes .site-main .classes-container article {
     display: none; }
   .page-classes .site-main .classes-container .classes-box {
+    z-index: -1;
+    -webkit-box-shadow: 0 1px 4px #000000;
+            box-shadow: 0 1px 4px #000000;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 425px;
+    width: 100%;
+    overflow: hidden;
+    margin: 1rem 0;
     border: 1px solid black;
     border-radius: 5px;
     height: 100%;
     width: 70%;
     padding: 2rem 7vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     margin: 1.5rem auto; }
+    .page-classes .site-main .classes-container .classes-box .image-container {
+      width: 100%;
+      min-height: 30%;
+      display: block;
+      overflow: hidden; }
+    .page-classes .site-main .classes-container .classes-box .post-meta {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 100%;
+      height: 70%;
+      padding: 1rem; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-description {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        height: 70%; }
+        .page-classes .site-main .classes-container .classes-box .post-meta .class-description .post-title {
+          font-size: 1rem; }
+        .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container {
+          overflow: hidden; }
+          .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container p {
+            font-size: 0.75rem;
+            text-transform: none;
+            color: #333333; }
+      .page-classes .site-main .classes-container .classes-box .post-meta h3,
+      .page-classes .site-main .classes-container .classes-box .post-meta h2 {
+        margin: 0; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .post-data {
+        color: #333333;
+        text-transform: none;
+        font-weight: bold;
+        font-size: 12px; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .post-title {
+        font-size: 16px;
+        font-family: "Gotham"; }
+      .page-classes .site-main .classes-container .classes-box .post-meta p {
+        -ms-flex-item-align: end;
+            align-self: end; }
+    .page-classes .site-main .classes-container .classes-box .program-subfields {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .page-classes .site-main .classes-container .classes-box .program-subfields :first-child::after {
+        padding: 0 0.5rem;
+        content: '|'; }
+    .page-classes .site-main .classes-container .classes-box .link-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button {
+        z-index: 99;
+        color: #ffffff;
+        background-color: #2ba2dd;
+        font-family: "Gotham";
+        font-weight: bold;
+        justify-self: flex-end;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 0.75rem 2.25rem; }
+        .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button:hover {
+          color: #2ba2dd;
+          background-color: #ffffff;
+          border-color: #2ba2dd;
+          border: 1px solid #2ba2dd; }
+    @media only screen and (min-width: 800px) {
+      .page-classes .site-main .classes-container .classes-box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        width: 100%;
+        height: 235px;
+        margin: 4rem 0;
+        overflow: hidden;
+        -webkit-box-shadow: none;
+                box-shadow: none; }
+        .page-classes .site-main .classes-container .classes-box .image-container {
+          width: 24%;
+          height: 100%; }
+        .page-classes .site-main .classes-container .classes-box .post-meta {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          width: 76%;
+          height: 100%;
+          padding: 1.5rem; }
+          .page-classes .site-main .classes-container .classes-box .post-meta .class-description {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            height: 75%; }
+            .page-classes .site-main .classes-container .classes-box .post-meta .class-description .post-title {
+              font-size: 1.75rem; }
+            .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container p {
+              text-transform: none;
+              color: #333333; }
+          .page-classes .site-main .classes-container .classes-box .post-meta h3,
+          .page-classes .site-main .classes-container .classes-box .post-meta h2 {
+            margin: 0; }
+          .page-classes .site-main .classes-container .classes-box .post-meta .post-data {
+            color: #333333;
+            text-transform: uppercase;
+            font-weight: 200;
+            font-size: 12px; }
+          .page-classes .site-main .classes-container .classes-box .post-meta .post-title {
+            font-size: 16px;
+            font-family: "Gotham"; }
+          .page-classes .site-main .classes-container .classes-box .post-meta p {
+            -ms-flex-item-align: end;
+                align-self: end; }
+        .page-classes .site-main .classes-container .classes-box .program-subfields {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          .page-classes .site-main .classes-container .classes-box .program-subfields :first-child::after {
+            padding: 0 0.5rem;
+            content: '|'; }
+        .page-classes .site-main .classes-container .classes-box .link-container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end; }
+          .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button {
+            z-index: 99;
+            color: #ffffff;
+            background-color: #2ba2dd;
+            font-family: "Gotham";
+            font-weight: bold;
+            justify-self: flex-end;
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 0.75rem 2.25rem; }
+            .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button:hover {
+              color: #2ba2dd;
+              background-color: #ffffff;
+              border-color: #2ba2dd;
+              border: 1px solid #2ba2dd; } }
     .page-classes .site-main .classes-container .classes-box .class-image {
       -webkit-box-pack: start;
           -ms-flex-pack: start;

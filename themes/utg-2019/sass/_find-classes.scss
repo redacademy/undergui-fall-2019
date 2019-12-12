@@ -2,14 +2,20 @@
 
     .site-main {
         .classes-container {
-            display: grid;
-            grid-auto-rows: repeat(auto, 1fr);
+            // display: grid;
+            // grid-auto-rows: repeat(auto, 1fr);
             width: 100%;
 
             article {
                 display: none;
             }
             .classes-box {
+                z-index: -1;
+                @include classes-mobile-card;
+                @include media($desktop) {
+                @include classes-desktop-card;
+                }
+                
                 border: 1px solid black;
                 border-radius: $border-radius;
                 height: 100%;
