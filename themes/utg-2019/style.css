@@ -1376,11 +1376,10 @@ body.home {
     width: 100px;
     border: 2px solid #2ba2dd; }
 
-.page-about .site-main .about-page-container h1 {
-  margin-left: 3rem; }
-
-.page-about .site-main div {
-  margin: 1.5rem 0.75rem; }
+.page-about .site-main .about-page-container {
+  margin: 1.5rem; }
+  .page-about .site-main .about-page-container h1 {
+    margin-left: 3rem; }
 
 .page-about .site-main ul {
   display: -webkit-box;
@@ -1399,7 +1398,8 @@ body.home {
     display: block; }
   .page-about .site-main .our-story .statement img {
     width: 100%;
-    border-radius: 10px; }
+    border-radius: 10px;
+    margin-bottom: 1.5rem; }
   .page-about .site-main .our-story .statement p {
     width: 100%;
     text-align: left;
@@ -1421,7 +1421,8 @@ body.home {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    overflow: hidden; }
+    overflow: hidden;
+    margin-bottom: 1.5rem; }
     .page-about .site-main .our-story .goals .goals-box img {
       width: 100px;
       height: 70px;
@@ -1553,12 +1554,67 @@ body.home {
   .page-about .site-main .testimonial-header-title {
     display: none; } }
 
+.page-about .site-main .testimonials-slider {
+  display: block;
+  width: 100%;
+  height: 550px; }
+  @media only screen and (min-width: 800px) {
+    .page-about .site-main .testimonials-slider {
+      display: none; } }
+  .page-about .site-main .testimonials-slider .testimonial-item {
+    margin: 0 auto;
+    height: 550px;
+    width: 100%; }
+  .page-about .site-main .testimonials-slider .flickity-viewport {
+    margin: 0 auto;
+    width: 100%; }
+  .page-about .site-main .testimonials-slider .testimonial-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Titillium Web";
+    border: 2px solid #2ba2dd;
+    -webkit-box-shadow: 5px 5px #2ba2dd;
+            box-shadow: 5px 5px #2ba2dd;
+    border-radius: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 60%;
+    height: 530px; }
+    .page-about .site-main .testimonials-slider .testimonial-box:nth-child(odd) {
+      border: 2px solid #ffcc00;
+      -webkit-box-shadow: 5px 5px #ffcc00;
+              box-shadow: 5px 5px #ffcc00;
+      border-radius: 5px; }
+    .page-about .site-main .testimonials-slider .testimonial-box .testimonial-photo {
+      margin: 1.5rem auto;
+      justify-self: center;
+      min-width: 50%;
+      min-height: 40%;
+      border-radius: 50%;
+      -o-object-position: center;
+         object-position: center; }
+    .page-about .site-main .testimonials-slider .testimonial-box .testimonial-content {
+      margin: 0.75rem; }
+    .page-about .site-main .testimonials-slider .testimonial-box .testimonial-name {
+      margin: 0; }
+    .page-about .site-main .testimonials-slider .testimonial-box .testimonial-title {
+      margin: 0;
+      padding-bottom: 1.5rem; }
+
 .page-about .site-main .testimonial-container {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.5rem;
-  padding-top: 1.5rem; }
+  display: none; }
+  @media only screen and (min-width: 800px) {
+    .page-about .site-main .testimonial-container {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1.5rem;
+      padding-top: 1.5rem; } }
   .page-about .site-main .testimonial-container .testimonial-box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1791,7 +1847,7 @@ body.home {
   .page-about .partners-container {
     grid-template-rows: repeat(auto, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 1.5rem; }
+    padding-top: 6rem; }
     .page-about .partners-container .partners-box {
       max-width: 100%; }
       .page-about .partners-container .partners-box .img-box {
@@ -1803,7 +1859,7 @@ body.home {
         -webkit-box-align: start;
             -ms-flex-align: start;
                 align-items: flex-start;
-        margin: 1.5rem 0;
+        margin: 0 0.75rem;
         min-width: 150px;
         max-width: 150px;
         height: 140px; }

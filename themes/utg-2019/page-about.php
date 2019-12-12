@@ -14,18 +14,22 @@ get_header(); ?>
 
 			<?php include get_template_directory() . "/template-parts/about-page-navigation.php"; ?>
 			
+			<!-- story -->
 			<div class="tab-pane active" id="story">
 				<?php include get_template_directory() . "/template-parts/about-page-our-story.php"; ?>
 			</div>	
 
+			<!-- testimonials -->
 			<div class="tab-pane" id="testimonials">
 				<?php include get_template_directory() . "/template-parts/about-page-testimonials.php"; ?>
 			</div>
 
+			<!-- faq -->
 			<div class="tab-pane" id="faq">
 				<?php include get_template_directory() . "/template-parts/about-page-faq.php"; ?>
 			</div>
-
+	
+			<!-- partners -->
 			<div class="tab-pane" id="partners">
 				<?php include get_template_directory() . "/template-parts/about-page-partners.php"; ?>
 			</div>
