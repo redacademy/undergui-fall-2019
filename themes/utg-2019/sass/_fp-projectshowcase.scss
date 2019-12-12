@@ -1,41 +1,57 @@
 // Project showcase styling
-.project-showcase-container {
-  height: 500px;
-  background-color: $color_blue;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 3rem;
+section.project-showcase {
 
-  @include media($desktop) {
-    height: 685px;
-    justify-content: space-evenly;
-  }
-
-
-  .showcase-header {
-    color: $color_white;
-    margin-bottom: 3rem;
-  }
-
-  .single-project-container {
-    width: 100%;
-
-    @include media($desktop) {
-      display: flex;
-      justify-content: center;
+    .flickity-prev-next-button {
+      display: none;
     }
 
-    .project-desc {
-      visibility: hidden;
-      height: 0px;
+    @include media($desktop) {
+      .flickity-prev-next-button {
+        display: inline;
+      }
+    }
+
+
+  .project-showcase-container {
+    height: 500px;
+    background-color: $color_blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 3rem;
+
+
+
+    @include media($desktop) {
+      height: 685px;
+      justify-content: space-evenly;
+    }
+
+
+    .showcase-header {
+      color: $color_white;
+      margin-bottom: 3rem;
+    }
+
+    .single-project-container {
+      width: 100%;
 
       @include media($desktop) {
-        visibility: visible;
-        font-size: $font_size_main;
-        margin-left: 4rem;
-        text-align: left;
-        width: 450px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .project-desc {
+        visibility: hidden;
+        height: 0px;
+
+        @include media($desktop) {
+          visibility: visible;
+          font-size: $font_size_main;
+          margin-left: 4rem;
+          text-align: left;
+          width: 450px;
+        }
       }
     }
   }
