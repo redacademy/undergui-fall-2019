@@ -44,7 +44,7 @@ if ($classes) : ?>
 
                 </a>
                 <div class="link-container">
-                    <a href="<?= get_site_url(); ?>/find-classes" class="find-classes-button white-btn">find classes</a>
+                    <a href="<?= get_site_url(); ?>/classes" class="find-classes-button white-btn">find classes</a>
 
                 </div>
             </div>

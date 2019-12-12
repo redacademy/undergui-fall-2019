@@ -283,7 +283,7 @@
         background-color: $color_white;
         flex-direction: column;
         transform: translateX(-50%);
-        border-radius: 5px;
+        border-radius: $border-radius;
         z-index: 99;
 
         &::before {

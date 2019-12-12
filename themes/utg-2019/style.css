@@ -1283,6 +1283,7 @@ body.home {
             height: 400px;
             width: 100%;
             overflow: hidden;
+            margin: 0;
             margin: 1rem; }
             body.home section.latest-community-events .latest-events-container .event-container .event-card .image-container {
               width: 100%;
@@ -2064,7 +2065,8 @@ body.home {
               flex-direction: column;
       height: 400px;
       width: 100%;
-      overflow: hidden; }
+      overflow: hidden;
+      margin: 0; }
       .post-card .image-container {
         width: 100%;
         min-height: 65%;
@@ -2134,7 +2136,8 @@ body.home {
                   flex-direction: column;
           height: 400px;
           width: 100%;
-          overflow: hidden; }
+          overflow: hidden;
+          margin: 0; }
           .blog .community-event-container .post-container .events-card .image-container {
             width: 100%;
             min-height: 65%;
@@ -2198,7 +2201,8 @@ body.home {
                 flex-direction: column;
         height: 400px;
         width: 100%;
-        overflow: hidden; }
+        overflow: hidden;
+        margin: 0; }
         .blog .community-event-container .events-flickity .events-flickity-item .events-card .image-container {
           width: 100%;
           min-height: 65%;
@@ -2558,6 +2562,7 @@ body.home {
         height: 400px;
         width: 100%;
         overflow: hidden;
+        margin: 0;
         height: 325px;
         margin: 0; }
         .programs-container .program-card .image-container {
@@ -2922,7 +2927,8 @@ body.home {
             flex-direction: column;
     height: 400px;
     width: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    margin: 0; }
     .courses-container .class-card .image-container {
       width: 100%;
       min-height: 65%;
