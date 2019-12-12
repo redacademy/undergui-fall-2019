@@ -39,7 +39,7 @@
         img {
           max-width: 100%;
           justify-self: flex-start;
-          border-radius: 5px;
+          border-radius: $border-radius;
           margin-bottom: $base__space-unit / 2;
           height: auto;
         }
@@ -84,7 +84,7 @@
       }
       .category {
         border: 1px solid $color_medium_blue;
-        border-radius: 5px;
+        border-radius: $border-radius;
         width: auto;
       }
 

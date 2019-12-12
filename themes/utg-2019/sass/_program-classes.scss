@@ -24,7 +24,7 @@
   }
   .chat-bubble {
     box-shadow: 0 0.5px 3px $color_black;
-    border-radius: 6px;
+    border-radius: $border-radius;
     width: 100%;
     padding: 4rem $site-padding-mobile;
     position: relative;

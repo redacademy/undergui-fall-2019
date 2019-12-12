@@ -28,12 +28,12 @@
       }
       .testimonial-box {
         display: flex;
-        margin:  0 auto;
+        margin: 0 auto;
         text-align: center;
         font-family: $font_main;
         border: 2px solid $color_blue;
         box-shadow: 5px 5px $color_blue;
-        border-radius: 5px;
+        border-radius: $border-radius;
         flex-direction: column;
         width: 60%;
         height: 530px;
@@ -41,7 +41,7 @@
         &:nth-child(odd) {
           border: 2px solid $color_yellow;
           box-shadow: 5px 5px $color_yellow;
-          border-radius: 5px;
+          border-radius: $border-radius;
         }
 
         .testimonial-photo {
@@ -68,7 +68,7 @@
 
     .testimonial-container {
       display: none;
-      
+
       @include media($desktop) {
         display: grid;
         grid-template-rows: repeat(2, 1fr);
@@ -84,7 +84,7 @@
         font-family: $font_main;
         border: 2px solid $color_blue;
         box-shadow: 5px 5px $color_blue;
-        border-radius: 5px;
+        border-radius: $border-radius;
         flex-direction: column;
         max-width: 450px;
         height: 450px;
@@ -93,7 +93,7 @@
         &:nth-child(odd) {
           border: 2px solid $color_yellow;
           box-shadow: 5px 5px $color_yellow;
-          border-radius: 5px;
+          border-radius: $border-radius;
         }
 
         .testimonial-photo {

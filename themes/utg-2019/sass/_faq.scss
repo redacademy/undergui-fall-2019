@@ -1,115 +1,114 @@
+@include media($desktop) {
+  .faq-title {
+    display: none;
+  }
+}
 
-  @include media ($desktop) {
-    .faq-title {
+.faq-container {
+  width: 88.5%;
+  margin: 0 auto;
+  @include media($desktop) {
+    padding-top: $base__space-unit;
+  }
+  .faq-item {
+    padding: 1rem 0;
+    .faq-question-container {
+      background-color: $color_white;
+      color: $color_black;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid $color_black;
+      border-radius: $border-radius;
+      padding: 1.5rem 2rem;
+      margin: 0;
+      z-index: 999;
+      .faq-question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+      }
+      h2 {
+        margin: 0;
+        padding-right: 0.5rem;
+        color: $color_yellow;
+        font-family: 'Blox', sans-serif;
+        font-weight: 100;
+        font-size: 2rem;
+        @include media($desktop) {
+          padding-right: 3rem;
+        }
+      }
+      h3 {
+        color: $color_paragraph;
+        margin: 0;
+        font-size: 1rem;
+      }
+      .down {
+        color: $color_black;
+      }
+    }
+    .up {
       display: none;
     }
-  }
-  
-  .faq-container {
-    width: 88.5%;
-    margin: 0 auto;
-    @include media($desktop) {
-    padding-top: $base__space-unit;
-    }
-    .faq-item {
-      padding: 1rem 0;
-      .faq-question-container {
-        background-color: $color_white;
-        color: $color_black;
-        width: 100%;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: 1px solid $color_black;
-        border-radius: 4px;
-        padding: 1.5rem 2rem;
+
+    .faq-answer-container {
+      display: none;
+      justify-content: flex-start;
+      align-items: flex-start;
+      background-color: $color_faq_background;
+      border: 1px solid $color_black;
+      border-radius: $border-radius;
+      margin: 0;
+      padding: 2rem 2rem 1rem 2rem;
+
+      h2 {
         margin: 0;
-        z-index: 999;
-        .faq-question {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin: 0;
-        }
-        h2 {
-          margin: 0;
-          padding-right: 0.5rem;
-          color: $color_yellow;
-          font-family: 'Blox', sans-serif;
-          font-weight: 100;
-          font-size: 2rem;
-          @include media($desktop) {
-            padding-right: 3rem;
-          }
-        }
-        h3 {
-          color: $color_paragraph;
-          margin: 0;
-          font-size: 1rem;
-        }
-        .down {
-          color: $color_black;
+        padding-right: 0.5rem;
+        color: $color_green;
+        font-family: 'Blox', sans-serif;
+        font-size: 2rem;
+        font-weight: 100;
+
+        @include media($desktop) {
+          padding-right: 3rem;
         }
       }
-      .up {
-        display: none;
-      }
-  
-      .faq-answer-container {
-        display: none;
-        justify-content: flex-start;
-        align-items: flex-start;
-        background-color: $color_faq_background;
-        border: 1px solid $color_black;
-        border-radius: 4px;
-        margin: 0;
-        padding: 2rem 2rem 1rem 2rem;
-  
-        h2 {
-          margin: 0;
-          padding-right: 0.5rem;
-          color: $color_green;
-          font-family: 'Blox', sans-serif;
-          font-size: 2rem;
-          font-weight: 100;
-  
-          @include media($desktop) {
-            padding-right: 3rem;
-          }
-        }
-  
-        .faq-answer {
-          display: flex;
-          flex-direction: column;
-          margin: 0;
-        }
-        p {
-          color: $color_paragraph;
-          margin-bottom: 1rem;
-        }
-      }
-    }
-  }
-  
-  .faq-container {
-    .faq-item {
-      .animate {
-        position: relative;
-        top: -10px;
+
+      .faq-answer {
         display: flex;
-        border-top: none;
-        z-index: 0;
+        flex-direction: column;
+        margin: 0;
       }
-      .focus {
-        background: $color_white;
-        box-shadow: 0 -1px 6px rgba($color_black, 0.5);
-      }
-      .toggle-down {
-        display: none;
-      }
-      .toggle-up {
-        display: block;
+      p {
+        color: $color_paragraph;
+        margin-bottom: 1rem;
       }
     }
   }
+}
+
+.faq-container {
+  .faq-item {
+    .animate {
+      position: relative;
+      top: -10px;
+      display: flex;
+      border-top: none;
+      z-index: 0;
+    }
+    .focus {
+      background: $color_white;
+      box-shadow: 0 -1px 6px rgba($color_black, 0.5);
+    }
+    .toggle-down {
+      display: none;
+    }
+    .toggle-up {
+      display: block;
+    }
+  }
+}
