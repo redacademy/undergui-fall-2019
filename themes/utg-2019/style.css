@@ -3403,53 +3403,50 @@ body.request-info .page-banner {
       padding: 7vw; } }
 
 @media only screen and (min-width: 800px) {
-  .post_classes-template-default .entry-header {
+  .post_classes-template-default .class-header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
     margin: 2rem 0; } }
 
-.post_classes-template-default .entry-header img {
+.post_classes-template-default .class-header .post-thumbnail {
   border-radius: 5px;
   width: 100%;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover; }
   @media only screen and (min-width: 800px) {
-    .post_classes-template-default .entry-header img {
+    .post_classes-template-default .class-header .post-thumbnail {
       height: 300px; } }
 
-.post_classes-template-default .entry-header h2 {
+.post_classes-template-default .class-header h2 {
   color: #2ba2dd; }
 
-.post_classes-template-default .entry-header .bold-data {
+.post_classes-template-default .class-header .bold-data {
   padding: 2rem 0;
   font-size: 1.75rem;
   font-weight: bold;
   color: #333333;
   border-bottom: 1px solid #333333; }
   @media only screen and (min-width: 800px) {
-    .post_classes-template-default .entry-header .bold-data {
+    .post_classes-template-default .class-header .bold-data {
       font-size: 1rem;
       font-weight: normal;
       padding: 1rem 0; } }
 
-.post_classes-template-default .entry-header .entry-meta {
-  width: 80%;
-  padding: 2rem 0; }
+.post_classes-template-default .class-header .class-data-container {
+  width: 75%; }
   @media only screen and (min-width: 800px) {
-    .post_classes-template-default .entry-header .entry-meta {
+    .post_classes-template-default .class-header .class-data-container {
       padding: 0;
       width: 100%; } }
-  .post_classes-template-default .entry-header .entry-meta img {
-    height: 16px;
-    width: 16px; }
-    @media only screen and (min-width: 800px) {
-      .post_classes-template-default .entry-header .entry-meta img {
-        height: 24px;
-        width: 24px; } }
 
-.post_classes-template-default .entry-header .class-location-contact {
+.post_classes-template-default .class-header .class-meta {
+  padding: 2rem 0; }
+  .post_classes-template-default .class-header .class-meta img {
+    margin-right: 1rem; }
+
+.post_classes-template-default .class-header .class-location-contact {
   padding-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3458,10 +3455,10 @@ body.request-info .page-banner {
       -ms-flex-pack: justify;
           justify-content: space-between; }
   @media only screen and (min-width: 800px) {
-    .post_classes-template-default .entry-header .class-location-contact {
+    .post_classes-template-default .class-header .class-location-contact {
       padding-top: 2rem; } }
 
-.post_classes-template-default .entry-header .price {
+.post_classes-template-default .class-header .price {
   font-weight: bold;
   font-size: 1.5rem; }
 
@@ -3478,7 +3475,24 @@ body.request-info .page-banner {
   display: flex; }
   .post_classes-template-default .instructor div {
     width: 50%; }
-  .post_classes-template-default .instructor img {
+    @media only screen and (min-width: 800px) {
+      .post_classes-template-default .instructor div {
+        width: 100%; } }
+    .post_classes-template-default .instructor div .instructor-image-desktop {
+      display: none; }
+      @media only screen and (min-width: 800px) {
+        .post_classes-template-default .instructor div .instructor-image-desktop {
+          display: block;
+          margin-bottom: 2rem;
+          -webkit-box-shadow: 0 1px 4px #000000;
+                  box-shadow: 0 1px 4px #000000;
+          width: 148px;
+          height: 148px;
+          border-radius: 50%;
+          -o-object-fit: cover;
+             object-fit: cover; } }
+  .post_classes-template-default .instructor .instructor-image {
+    margin: 0 auto;
     -webkit-box-shadow: 0 1px 4px #000000;
             box-shadow: 0 1px 4px #000000;
     width: 148px;
@@ -3486,9 +3500,12 @@ body.request-info .page-banner {
     border-radius: 50%;
     -o-object-fit: cover;
        object-fit: cover; }
+    @media only screen and (min-width: 800px) {
+      .post_classes-template-default .instructor .instructor-image {
+        display: none; } }
 
 @media only screen and (min-width: 800px) {
-  .post_classes-template-default .entry-content {
+  .post_classes-template-default .class-content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
