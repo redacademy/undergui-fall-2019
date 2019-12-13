@@ -693,14 +693,27 @@ object {
     border: none;
     padding: 0; }
   .site-header .nav-links {
-    display: none;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s; }
-  .site-header .toggle-menu {
+    width: 0px;
+    overflow: hidden;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
     position: absolute;
+    height: 100vh;
+    background-color: #2ba2dd;
+    z-index: 98;
+    right: 0; }
+    .site-header .nav-links .left-arrow {
+      -webkit-transition: -webkit-transform 0.5s ease-in;
+      transition: -webkit-transform 0.5s ease-in;
+      transition: transform 0.5s ease-in;
+      transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg); }
+  .site-header .toggle-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: absolute;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -715,8 +728,12 @@ object {
     z-index: 98; }
     .site-header .toggle-menu .left-arrow {
       color: #ffffff;
-      -webkit-transition-duration: all 0.5s ease-in;
-              transition-duration: all 0.5s ease-in; }
+      -webkit-transition: -webkit-transform 0.5s ease-in;
+      transition: -webkit-transform 0.5s ease-in;
+      transition: transform 0.5s ease-in;
+      transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
     .site-header .toggle-menu .main-navigation {
       text-align: left;
       border-bottom: 1px solid #ffffff; }
@@ -754,7 +771,8 @@ object {
       background-color: #ffffff;
       padding: 1rem 1.75rem;
       margin: 0 0 0 2rem;
-      border-radius: 0.25rem; }
+      border-radius: 0.25rem;
+      z-index: 1999; }
     .site-header .toggle-menu a {
       color: #ffffff; }
     .site-header .toggle-menu li {
@@ -768,11 +786,6 @@ object {
     display: none;
     height: 100vh;
     width: 100vw; }
-  .site-header .nav-links .close-left-arrow {
-    display: none; }
-  .site-header .nav-links .open-right-arrow {
-    color: #ffffff;
-    display: block; }
   .site-header li {
     font-family: "Titillium Web";
     text-transform: uppercase; }
@@ -884,12 +897,10 @@ object {
   .site-header .nav-links .nav-menu .menu-item .sub-menu {
     overflow: hidden;
     max-height: 0;
-    opacity: 0;
     background-color: #8ecaeb;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in; }
   .site-header .nav-links .nav-menu .menu-item:hover .sub-menu {
-    opacity: 1;
     max-height: calc(100% + 100px); }
 
 .site-header .nav-links .nav-menu .menu-item ul {

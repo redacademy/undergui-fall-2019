@@ -36,13 +36,24 @@
   }
 
   .nav-links {
-    display: none;
-    transition: all 0.5s;
+    width: 0px;
+    overflow: hidden;
+    transition: all .3s ease-in;
+    position: absolute;
+    height: 100vh;
+    background-color: $color_blue;
+    z-index: 98;
+    right: 0;
+
+    .left-arrow {
+      transition: transform 0.5s ease-in;
+      transform: rotate(0deg);
+    }
   }
 
   .toggle-menu {
-    position: absolute;
     display: flex;
+    position: absolute;
     flex-direction: column;
     padding: 1.75rem;
     margin: 0;
@@ -53,16 +64,12 @@
     right: 0;
     z-index: 98;
     
-
     //font awesome arrow icons
     .left-arrow {
       color: $color_white;
-      transition-duration: all 0.5s ease-in;
+      transition: transform 0.5s ease-in;
+      transform: rotate(180deg);
     }
-    // .right-arrow {
-    //   display: none;
-    //   color: $color_white;
-    // }
 
     .main-navigation {
       text-align: left;
@@ -94,6 +101,7 @@
         padding: 1rem 1.75rem;
         margin: 0 0 0 2rem;
         border-radius: 0.25rem;
+        z-index: 1999;
       }
     }
 
@@ -122,15 +130,15 @@
   // .open-menu {
 
   // }
-  .nav-links {
-    .close-left-arrow {
-      display: none;
-    }
-    .open-right-arrow {
-      color: $color_white;
-      display: block;
-    }
-  }
+  // .nav-links {
+  //   .close-left-arrow {
+  //     display: none;
+  //   }
+  //   .open-right-arrow {
+  //     color: $color_white;
+  //     display: block;
+  //   }
+  // }
 
   li {
     font-family: $font_main;
@@ -247,13 +255,11 @@
         .sub-menu {
           overflow: hidden;
           max-height: 0;
-          opacity: 0;
           background-color: $color_light_blue;
           transition: all 0.3s ease-in;
         }
         &:hover {
           .sub-menu {
-            opacity: 1;
             max-height: calc(100% + 100px);
           }
         }
