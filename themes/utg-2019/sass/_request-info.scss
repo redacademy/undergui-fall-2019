@@ -1,6 +1,25 @@
-body.request-info {
+body.page-request-info {
+  .entry-title {
+    display: none;
+  }
+  .entry-content {
+    p {
+      display: none;
+    }
+  }
+  .gform_wrapper {
+    form {
+      margin: 0 1rem;
+    }
+  }
   .page-banner {
     background-size: inherit !important;
     background-position: right !important;
-  }
+    .faq-button {
+      width: 13rem;
+      height: 2.2rem;
+      padding: 0;
+      border-color: $color-white;
+    }
+  } 
 }
