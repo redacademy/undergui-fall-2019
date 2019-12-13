@@ -99,6 +99,19 @@
 					</div>
 				</div>
 
+			<?php } elseif (has_post_thumbnail(516)) { ?>
+
+
+
+				<div class="post-banner">
+					<div class="banner-text">
+						<h1 class="post-feature-image-title"><?= get_the_title(516) ?></h1>
+						<h3><?= get_the_excerpt(516); ?></h3>
+
+					</div>
+					<?= get_the_post_thumbnail(516); ?>
+				</div>
+
 		<?php }
 		} ?>
 

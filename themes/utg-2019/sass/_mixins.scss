@@ -31,7 +31,6 @@
   margin: 1rem auto;
   overflow: hidden;
   .image-container {
-    height: 100px;
     width: 120px;
   }
 
@@ -43,6 +42,7 @@
     padding: 1rem 0 1rem 1rem;
     div {
       overflow: hidden;
+      max-height: 50%;
     }
     h3,
     h2 {

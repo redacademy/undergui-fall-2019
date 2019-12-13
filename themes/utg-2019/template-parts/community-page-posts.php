@@ -21,6 +21,7 @@
             'hide_empty'     => 1,
             'order'          => 'DESC',
             'paged'          => (get_query_var('paged')) ? get_query_var('paged') : 1,
+            'post__not_in' => array(516),
         ));
 
         if ($myposts) {
