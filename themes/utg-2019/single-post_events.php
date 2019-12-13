@@ -25,6 +25,7 @@ get_header(); ?>
 
 		<div class="meta-container">
 			<div class="date-container">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/Clock.svg" alt="time"> &nbsp;
 				<?php if( get_field('starting_date') ): ?>
 					<?php the_field("starting_date"); ?>
 				<?php endif; ?>
@@ -38,11 +39,16 @@ get_header(); ?>
 			<div class="location-container">
 				<!-- partners loop for loaction for events page -->
 				<?php if( have_rows('location') ): ?>
-				<!-- loop through the rows of data -->
-				<?php while ( have_rows('location') ) : the_row(); ?>
-
-				<div class="location-name"><?php the_sub_field('location_name'); ?></div>
-				<div class="location-address"><?php the_sub_field('location_address'); ?></div>	
+					<!-- loop through the rows of data -->
+					<?php while ( have_rows('location') ) : the_row(); ?>
+					
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/Location.svg" alt="location"> &nbsp;
+								
+				<div class="location-address">
+					<?php the_sub_field('location_name'); ?>
+					<?php the_sub_field('location_address'); ?>
+				</div>	
+				
 				<?php endwhile;
 				else :
 				// no rows found

@@ -7,6 +7,7 @@ section.project-showcase {
 
   @include media($desktop) {
     .flickity-button {
+      color: $color_white;
       background: transparent;
     }
 
@@ -16,10 +17,10 @@ section.project-showcase {
   }
 
   .flickity-page-dots {
-    bottom: -2.5rem;
+    bottom: 8rem;
 
     @include media($desktop) {
-      bottom: -3.5rem;
+      bottom: -4rem;
     }
   }
 
@@ -38,18 +39,20 @@ section.project-showcase {
 
 
   .project-showcase-container {
-    height: 500px;
+    height: 35rem;
     background-color: $color_blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 3rem;
+    padding-top: 6rem;
 
 
 
     @include media($desktop) {
       height: 600px;
       justify-content: space-evenly;
+      padding-top: 0px;
+      padding-bottom: 6rem;
     }
 
 
@@ -66,16 +69,26 @@ section.project-showcase {
         justify-content: center;
       }
 
+      img {
+        border: 4px solid $color_white;
+        border-radius: 5px;
+      }
+
       .project-desc {
+        color: $color_white;
         visibility: hidden;
-        height: 0px;
+
 
         @include media($desktop) {
           visibility: visible;
           font-size: $font_size_main;
           margin-left: 4rem;
           text-align: left;
+          align-self: center;
           width: 450px;
+          p {
+            height: 400px;
+          }
         }
       }
     }

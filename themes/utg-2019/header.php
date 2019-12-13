@@ -37,13 +37,13 @@
 
 			</a>
 
-			<div class="nav-links">
+			<div class="nav-links" id="nav-links">
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 
 					<div class="mobile-open-menu">
 						<button>
-							<i class="fas fa-chevron-right fa-2x right-arrow"></i>
+							<!-- <i class="fas fa-chevron-right fa-2x right-arrow"></i> -->
 							<i class="fas fa-chevron-left fa-2x left-arrow "></i>
 						</button>
 						<a class="mobile-info-link" href="<?= get_site_url(); ?>/request-info">REQUEST INFO</a>
@@ -86,7 +86,16 @@
 						<p class="slug"><?= $post->post_name ?></p>
 						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
 						<?php the_excerpt(); ?>
+					</div>
+				</div>
 
+			<?php } elseif (is_page('request-info') || is_singular('post_programs')) { ?>
+
+				<div class="page-banner" style="background:  url(<?= get_the_post_thumbnail_url(); ?>); background-size: cover; background-position: center;">
+					<div class="banner-text">
+						<p class="slug"><?= $post->post_name ?></p>
+						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
+						<?php the_excerpt(); ?>
 					</div>
 				</div>
 

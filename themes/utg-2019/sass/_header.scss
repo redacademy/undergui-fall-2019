@@ -52,19 +52,17 @@
     top: 0;
     right: 0;
     z-index: 98;
+    
 
     //font awesome arrow icons
     .left-arrow {
       color: $color_white;
-      transition: transform 0.3s;
-      &:hover {
-        transform: rotate(180deg);
-      }
+      transition-duration: all 0.5s ease-in;
     }
-    .right-arrow {
-      display: none;
-      color: $color_white;
-    }
+    // .right-arrow {
+    //   display: none;
+    //   color: $color_white;
+    // }
 
     .main-navigation {
       text-align: left;
