@@ -69,23 +69,25 @@ section.project-showcase {
         justify-content: center;
       }
 
-      img {
-        border: 4px solid $color_white;
-        border-radius: 5px;
+      .project-media {
+        iframe {
+          border: 4px solid $color_white;
+          border-radius: 5px;
+        }
       }
 
       .project-desc {
         color: $color_white;
         visibility: hidden;
 
-
         @include media($desktop) {
           visibility: visible;
           font-size: $font_size_main;
-          margin-left: 4rem;
+          margin-left: 2rem;
           text-align: left;
           align-self: center;
           width: 450px;
+
           p {
             height: 400px;
           }
