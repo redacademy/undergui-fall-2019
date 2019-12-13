@@ -99,17 +99,17 @@
 					</div>
 				</div>
 
-			<?php } elseif (has_post_thumbnail(516)) { ?>
+			<?php } elseif (has_post_thumbnail(522)) { ?>
 
 
 
 				<div class="post-banner">
 					<div class="banner-text">
-						<h1 class="post-feature-image-title"><?= get_the_title(516) ?></h1>
-						<h3><?= get_the_excerpt(516); ?></h3>
+						<h1 class="post-feature-image-title"><?= get_the_title(522) ?></h1>
+						<h3><?= get_the_excerpt(522); ?></h3>
 
 					</div>
-					<?= get_the_post_thumbnail(516); ?>
+					<?= get_the_post_thumbnail(522); ?>
 				</div>
 
 		<?php }
