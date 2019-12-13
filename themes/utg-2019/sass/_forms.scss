@@ -25,6 +25,8 @@ input[type='submit'] {
   @include font-size(0.75);
   line-height: 1;
   padding: 1rem 1.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
 
   &:hover {
     background-color: lighten($color_blue, 10%);

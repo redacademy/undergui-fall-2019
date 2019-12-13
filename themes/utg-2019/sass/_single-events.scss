@@ -69,10 +69,14 @@
         font-size: $font_size_main + 4px;
       }
       .location-container {
+        display: flex;
         max-width: 60%;
+        img {
+          align-self: flex-start;
+          padding-right: 5px;
+        }
         p {
           font-size: $font_size_main;
-          // font-weight: 550;
         }
       }
       @include media($desktop) {
