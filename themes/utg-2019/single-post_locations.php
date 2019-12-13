@@ -45,6 +45,7 @@ get_header(); ?>
 	<img src="<?php the_sub_field('staff_image'); ?>">
 	<?php the_sub_field('staff_name'); ?>
 	<?php the_sub_field('staff_position'); ?>
+	<?php the_sub_field('staff_statement'); ?>
 
 	<?php endwhile;
 	else :
