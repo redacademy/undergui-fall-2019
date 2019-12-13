@@ -2927,7 +2927,7 @@ body.home {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 425px;
+    height: 450px;
     width: 100%;
     overflow: hidden;
     margin: 1rem 0; }
@@ -3114,6 +3114,8 @@ body.home {
 
 .page-classes .site-main .classes-container .classes-box {
   z-index: -1;
+  padding: 0;
+  text-decoration: none;
   -webkit-box-shadow: 0 1px 4px #000000;
           box-shadow: 0 1px 4px #000000;
   border-radius: 5px;
@@ -3124,7 +3126,7 @@ body.home {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 425px;
+  height: 450px;
   width: 100%;
   overflow: hidden;
   margin: 1rem 0;
@@ -3132,11 +3134,7 @@ body.home {
   border-radius: 5px;
   max-height: 100%;
   width: 70%;
-  padding: 2rem 7vw;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  padding: 1.5rem;
   margin: 1.5rem auto; }
   .page-classes .site-main .classes-container .classes-box .image-container {
     width: 100%;
@@ -3222,7 +3220,8 @@ body.home {
         border: 1px solid #2ba2dd; }
   .page-classes .site-main .classes-container .classes-box .class-image {
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    border-radius: 5px; }
   @media only screen and (min-width: 800px) {
     .page-classes .site-main .classes-container .classes-box {
       display: -webkit-box;
@@ -3319,18 +3318,38 @@ body.home {
             border: 1px solid #2ba2dd; }
       .page-classes .site-main .classes-container .classes-box .class-image {
         max-height: 100%;
-        width: 50%; } }
+        width: 40%; } }
   .page-classes .site-main .classes-container .classes-box .post-meta {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 2rem 0; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .post-title {
-      color: #2ba2dd; }
+    padding: 2rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
     @media only screen and (min-width: 800px) {
       .page-classes .site-main .classes-container .classes-box .post-meta {
         padding: 0;
         padding-left: 1.5rem; } }
+    .page-classes .site-main .classes-container .classes-box .post-meta .class-title {
+      color: #2ba2dd;
+      font-size: 16px;
+      padding-bottom: 0.75rem; }
+      @media only screen and (min-width: 800px) {
+        .page-classes .site-main .classes-container .classes-box .post-meta .class-title {
+          font-size: 19.2px; } }
+    .page-classes .site-main .classes-container .classes-box .post-meta .class-age {
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #333333; }
+    .page-classes .site-main .classes-container .classes-box .post-meta .class-location {
+      padding-top: 0.75rem; }
+  .page-classes .site-main .classes-container .classes-box .class-price p {
+    font-weight: bold;
+    font-family: "Gotham"; }
+    @media only screen and (min-width: 800px) {
+      .page-classes .site-main .classes-container .classes-box .class-price p {
+        font-size: 19.2px; } }
 
 body.page-template-default .page-banner {
   background-size: inherit !important;

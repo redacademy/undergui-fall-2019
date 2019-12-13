@@ -6,17 +6,20 @@
       }
       .classes-box {
         z-index: -1;
+        padding: 0;
+        text-decoration: none;
 
         @include classes-mobile-card;
         .class-image {
           height: 100%;
           width: 100%;
+          border-radius: $border-radius;
         }
         @include media($desktop) {
           @include classes-desktop-card;
           .class-image {
             max-height: 100%;
-            width: 50%;
+            width: 40%;
           }
         }
 
@@ -24,29 +27,46 @@
         border-radius: $border-radius;
         max-height: 100%;
         width: 70%;
-        padding: 2rem $site-padding;
-        display: flex;
-        justify-content: space-evenly;
+        padding: $base__space-unit;
         margin: $base__space-unit auto;
 
         .post-meta {
           display: flex;
           padding: 2rem 0;
-          .post-title {
-            color: $color_blue;
-          }
+          flex-direction: column;
+
           @include media($desktop) {
             padding: 0;
             padding-left: $base__space-unit;
           }
-        }
 
-        // .teacher-image {
-        //     img {
-        //         max-width: 150px;
-        //         border-radius: 50%;
-        //     }
-        // }
+          .class-title {
+            color: $color_blue;
+            font-size: $font_size_main;
+            padding-bottom: $base__space-unit / 2;
+
+            @include media($desktop) {
+              font-size: $font_size_main * 1.2;
+            }
+          }
+          .class-age {
+            padding-bottom: $base__space-unit / 2;
+            border-bottom: 1px solid $color_paragraph;
+          }
+          .class-location {
+            padding-top: $base__space-unit / 2;
+          }
+        }
+        .class-price {
+          p {
+            font-weight: bold;
+            font-family: $font_header;
+
+            @include media($desktop) {
+              font-size: $font_size_main * 1.2;
+            }
+          }
+        }
       }
     }
   }
