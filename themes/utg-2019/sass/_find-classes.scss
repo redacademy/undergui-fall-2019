@@ -1,50 +1,53 @@
 .page-classes {
-    .site-main {
-        .classes-container {
-            @include media($desktop) {
-                padding: 0 $site-padding;
-              }
-            .classes-box {
-                // z-index: -1;
-                @include classes-mobile-card;
-                @include media($desktop) {
-                @include classes-desktop-card;
-                }
-                
-                border: 1px solid black;
-                border-radius: $border-radius;
-                height: 100%;
-                width: 70%;
-                padding: 2rem $site-padding;
-                display: flex;
-                justify-content: space-evenly;
-                margin: $base__space-unit auto;
+  .site-main {
+    .classes-container {
+      @include media($desktop) {
+        padding: 0 $site-padding;
+      }
+      .classes-box {
+        z-index: -1;
 
-                .class-image {
-                    justify-content: flex-start;
-                    width: 35%;
-                    border-radius: $border-radius;
-                }
-                .post-meta {
-                    display: flex;
-                    .post-title {
-                        color: $color_blue;
-                    }
-                    @include media($desktop) {
-                        padding: 0;
-                        padding-left: $base__space-unit;
-                    }
-                }
-
-                // .teacher-image {
-                //     img {
-                //         max-width: 150px;
-                //         border-radius: 50%;
-                //     }
-                // }
-            }
+        @include classes-mobile-card;
+        .class-image {
+          height: 100%;
+          width: 100%;
         }
-          
-    }
+        @include media($desktop) {
+          @include classes-desktop-card;
+          .class-image {
+            max-height: 100%;
+            width: 50%;
+          }
+        }
 
+        border: 1px solid black;
+        border-radius: $border-radius;
+        max-height: 100%;
+        width: 70%;
+        padding: 2rem $site-padding;
+        display: flex;
+        justify-content: space-evenly;
+        margin: $base__space-unit auto;
+
+        .post-meta {
+          display: flex;
+          padding: 2rem 0;
+          .post-title {
+            color: $color_blue;
+          }
+          @include media($desktop) {
+            padding: 0;
+            padding-left: $base__space-unit;
+          }
+        }
+
+        // .teacher-image {
+        //     img {
+        //         max-width: 150px;
+        //         border-radius: 50%;
+        //     }
+        // }
+      }
+    }
+  }
 }
