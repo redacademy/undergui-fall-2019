@@ -51,11 +51,27 @@
           }
           .class-age {
             padding-bottom: $base__space-unit / 2;
-            border-bottom: 1px solid $color_paragraph;
+            border-bottom: 1px solid $color_dark_grey;
           }
           .class-location {
+            display: flex;
+            align-items: center;
             padding-top: $base__space-unit / 2;
+            img {
+                margin-right: $base__space-unit / 4;
+            }
           }
+          .class-data {
+              padding: $base__space-unit/10 0;
+          }
+          .class-day {
+              display: flex;
+              align-items: center;
+              img {
+                  margin-right: $base__space-unit / 4;
+              }
+            }
+
         }
         .class-price {
           p {

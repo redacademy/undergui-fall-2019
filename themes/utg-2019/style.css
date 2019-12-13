@@ -3341,9 +3341,28 @@ body.home {
           font-size: 19.2px; } }
     .page-classes .site-main .classes-container .classes-box .post-meta .class-age {
       padding-bottom: 0.75rem;
-      border-bottom: 1px solid #333333; }
+      border-bottom: 1px solid #595757; }
     .page-classes .site-main .classes-container .classes-box .post-meta .class-location {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       padding-top: 0.75rem; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-location img {
+        margin-right: 0.375rem; }
+    .page-classes .site-main .classes-container .classes-box .post-meta .class-data {
+      padding: 0.15rem 0; }
+    .page-classes .site-main .classes-container .classes-box .post-meta .class-day {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-day img {
+        margin-right: 0.375rem; }
   .page-classes .site-main .classes-container .classes-box .class-price p {
     font-weight: bold;
     font-family: "Gotham"; }
