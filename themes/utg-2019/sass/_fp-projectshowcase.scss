@@ -5,7 +5,7 @@ section.project-showcase {
     display: none;
   }
 
-  @include media($desktop) {
+  @include media(900px) {
     .flickity-button {
       color: $color_white;
       background: transparent;
@@ -17,9 +17,13 @@ section.project-showcase {
   }
 
   .flickity-page-dots {
-    bottom: 8rem;
+    bottom: 3.5rem;
 
-    @include media($desktop) {
+    @include media(780px) {
+      bottom: 1rem;
+    }
+
+    @include media(900px) {
       bottom: -4rem;
     }
   }
@@ -44,11 +48,11 @@ section.project-showcase {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 6rem;
+    padding-top: 2rem;
 
 
 
-    @include media($desktop) {
+    @include media(900px) {
       height: 600px;
       justify-content: space-evenly;
       padding-top: 0px;
@@ -64,28 +68,39 @@ section.project-showcase {
     .single-project-container {
       width: 100%;
 
-      @include media($desktop) {
+      @include media(900px) {
         display: flex;
         justify-content: center;
       }
 
-      img {
-        border: 4px solid $color_white;
-        border-radius: 5px;
+      .project-media {
+        iframe {
+          max-width: 28rem;
+          border: 4px solid $color_white;
+          border-radius: 5px;
+
+          @include media(780px) {
+            max-width: 200px;
+          }
+
+          @include media($desktop) {
+            max-width: 640px;
+          }
+        }
       }
 
       .project-desc {
         color: $color_white;
         visibility: hidden;
 
-
-        @include media($desktop) {
+        @include media(900px) {
           visibility: visible;
           font-size: $font_size_main;
-          margin-left: 4rem;
+          margin-left: 2rem;
           text-align: left;
           align-self: center;
           width: 450px;
+
           p {
             height: 400px;
           }
