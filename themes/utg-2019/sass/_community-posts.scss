@@ -61,7 +61,18 @@
   @include mobile-card;
   margin: 1rem 0;
   width: 100%;
+  .post-meta {
+    div {
+      max-height: 100%;
+    }
+  }
+  .post-category {
+    display: none;
+  }
   @include media($desktop) {
     @include desktop-card;
+    .post-category {
+      display: block;
+    }
   }
 }

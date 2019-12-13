@@ -19,10 +19,16 @@
       .post-data {
         font-size: 11px;
         color: $color_white;
+        @include media($desktop) {
+          font-size: 14px;
+        }
       }
       .post-title {
         font-size: 18px;
         color: $color_white;
+        @include media($desktop) {
+          font-size: 18px;
+        }
       }
       .program-subfields {
         display: flex;
