@@ -1,13 +1,16 @@
 .blog {
   .content-area {
-    padding: 0 $site-padding;
+    padding: 0 $site-padding-mobile;
+    @include media($desktop) {
+      padding: 0 $site-padding;
+    }
   }
   .community-event-container {
     width: 100%;
 
     .post-container {
       display: none;
-      @include media($header-break) {
+      @include media($desktop) {
         .events-card {
           @include desktop-card;
         }
@@ -18,15 +21,18 @@
     .events-flickity {
       height: 400px;
       display: block;
-
+      .flickity-viewport {
+        height: 400px;
+      }
       .events-flickity-item {
         width: 100%;
-        padding: 0 15%;
+        padding: 6% 25%;
         .events-card {
           @include desktop-card;
+          height: 325px;
         }
       }
-      @include media($header-break) {
+      @include media($desktop) {
         display: none;
       }
     }
