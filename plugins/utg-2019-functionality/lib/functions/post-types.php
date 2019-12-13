@@ -261,7 +261,7 @@ function utg_locations_custom_post_type() {
 		'description'           => 'Locations for About',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor'),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array( 'category', 'post_tag', 'thumbnail' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
