@@ -411,7 +411,9 @@ input[type='submit'] {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: 1rem 1.75rem; }
+  padding: 1rem 1.75rem;
+  font-weight: bold;
+  text-transform: uppercase; }
   button:hover,
   input[type='button']:hover,
   input[type='reset']:hover,
@@ -3333,3 +3335,117 @@ body.home {
 body.page-template-default .page-banner {
   background-size: inherit !important;
   background-position: right !important; }
+
+.post_classes-template-default h2 {
+  margin: 0 0 2rem 0; }
+
+.post_classes-template-default article {
+  padding: 0.75rem; }
+  @media only screen and (min-width: 800px) {
+    .post_classes-template-default article {
+      padding: 7vw; } }
+
+@media only screen and (min-width: 800px) {
+  .post_classes-template-default .entry-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin: 2rem 0; } }
+
+.post_classes-template-default .entry-header img {
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover; }
+  @media only screen and (min-width: 800px) {
+    .post_classes-template-default .entry-header img {
+      height: 300px; } }
+
+.post_classes-template-default .entry-header h2 {
+  color: #2ba2dd; }
+
+.post_classes-template-default .entry-header .bold-data {
+  padding: 2rem 0;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #333333;
+  border-bottom: 1px solid #333333; }
+  @media only screen and (min-width: 800px) {
+    .post_classes-template-default .entry-header .bold-data {
+      font-size: 1rem;
+      font-weight: normal;
+      padding: 1rem 0; } }
+
+.post_classes-template-default .entry-header .entry-meta {
+  width: 80%;
+  padding: 2rem 0; }
+  @media only screen and (min-width: 800px) {
+    .post_classes-template-default .entry-header .entry-meta {
+      padding: 0;
+      width: 100%; } }
+  .post_classes-template-default .entry-header .entry-meta img {
+    height: 16px;
+    width: 16px; }
+    @media only screen and (min-width: 800px) {
+      .post_classes-template-default .entry-header .entry-meta img {
+        height: 24px;
+        width: 24px; } }
+
+.post_classes-template-default .entry-header .class-location-contact {
+  padding-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media only screen and (min-width: 800px) {
+    .post_classes-template-default .entry-header .class-location-contact {
+      padding-top: 2rem; } }
+
+.post_classes-template-default .entry-header .price {
+  font-weight: bold;
+  font-size: 1.5rem; }
+
+.post_classes-template-default section {
+  padding-bottom: 2rem; }
+  @media only screen and (min-width: 800px) {
+    .post_classes-template-default section {
+      width: 30%;
+      padding-top: 2rem; } }
+
+.post_classes-template-default .instructor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .post_classes-template-default .instructor div {
+    width: 50%; }
+  .post_classes-template-default .instructor img {
+    -webkit-box-shadow: 0 1px 4px #000000;
+            box-shadow: 0 1px 4px #000000;
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+@media only screen and (min-width: 800px) {
+  .post_classes-template-default .entry-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+
+.post_classes-template-default .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .post_classes-template-default .button-container button {
+    font-family: "Gotham";
+    font-size: 1rem;
+    padding: 0.75rem 3rem; }
