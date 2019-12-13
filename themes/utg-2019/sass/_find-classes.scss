@@ -1,16 +1,11 @@
 .page-classes {
-
     .site-main {
         .classes-container {
-            // display: grid;
-            // grid-auto-rows: repeat(auto, 1fr);
-            width: 100%;
-
-            article {
-                display: none;
-            }
+            @include media($desktop) {
+                padding: 0 $site-padding;
+              }
             .classes-box {
-                z-index: -1;
+                // z-index: -1;
                 @include classes-mobile-card;
                 @include media($desktop) {
                 @include classes-desktop-card;
@@ -28,20 +23,25 @@
                 .class-image {
                     justify-content: flex-start;
                     width: 35%;
-                    height: 100%;
                     border-radius: $border-radius;
                 }
-
                 .post-meta {
                     display: flex;
-                }
-
-                .teacher-image {
-                    img {
-                        max-width: 150px;
-                        border-radius: 50%;
+                    .post-title {
+                        color: $color_blue;
+                    }
+                    @include media($desktop) {
+                        padding: 0;
+                        padding-left: $base__space-unit;
                     }
                 }
+
+                // .teacher-image {
+                //     img {
+                //         max-width: 150px;
+                //         border-radius: 50%;
+                //     }
+                // }
             }
         }
           
