@@ -11,16 +11,27 @@
     @include mobile-card;
     width: 100%;
     flex-direction: row-reverse;
+    .image-container {
+      height: 100%;
+      width: 100px;
+    }
     .post-meta {
-      .post-data,
-      h3 {
+      .post-data {
+        font-size: 11px;
+        color: $color_white;
+      }
+      .post-title {
+        font-size: 18px;
         color: $color_white;
       }
       .program-subfields {
         display: flex;
+        p {
+          text-transform: none;
+        }
         :first-child {
           &::after {
-            padding: 0 0.5rem;
+            padding: 0 6px;
             content: '|';
           }
         }

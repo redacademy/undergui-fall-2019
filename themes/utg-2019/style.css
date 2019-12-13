@@ -2541,15 +2541,23 @@ body.home {
       .programs-container .program-card .post-meta p {
         -ms-flex-item-align: end;
             align-self: end; }
-    .programs-container .program-card .post-meta .post-data,
-    .programs-container .program-card .post-meta h3 {
+    .programs-container .program-card .image-container {
+      height: 100%;
+      width: 100px; }
+    .programs-container .program-card .post-meta .post-data {
+      font-size: 11px;
+      color: #ffffff; }
+    .programs-container .program-card .post-meta .post-title {
+      font-size: 18px;
       color: #ffffff; }
     .programs-container .program-card .post-meta .program-subfields {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
+      .programs-container .program-card .post-meta .program-subfields p {
+        text-transform: none; }
       .programs-container .program-card .post-meta .program-subfields :first-child::after {
-        padding: 0 0.5rem;
+        padding: 0 6px;
         content: '|'; }
     @media only screen and (min-width: 800px) {
       .programs-container .program-card {

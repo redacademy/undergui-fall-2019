@@ -20,11 +20,11 @@
 
 				<!-- dynamic post title, date, and category -->
 				<div class="post-meta">
-					<div>
-						<p class="post-data">level &nbsp;<?= the_field('level') ?></p>
-						<h3 class="post-title"><?= the_title(); ?></h3>
-						<!-- <div></div> -->
-					</div>
+
+					<p class="post-data">level &nbsp;<?= the_field('level') ?></p>
+					<h3 class="post-title"><?= the_title(); ?></h3>
+					<!-- <div></div> -->
+
 
 					<div class="program-subfields">
 						<p class="post-data">Ages &nbsp;<?= the_field('age') ?></p>
