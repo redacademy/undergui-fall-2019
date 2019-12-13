@@ -671,7 +671,7 @@ object {
   .site-header.toggle-menu::before {
     content: '';
     display: block;
-    position: absolute;
+    position: fixed;
     margin: 0;
     padding: 0;
     top: 0;
@@ -695,13 +695,21 @@ object {
   .site-header .nav-links {
     width: 0px;
     overflow: hidden;
-    -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
     position: absolute;
     height: 100vh;
     background-color: #2ba2dd;
-    z-index: 98;
-    right: 0; }
+    right: 0;
+    z-index: 98; }
+    @media only screen and (min-width: 900px) {
+      .site-header .nav-links {
+        display: none;
+        position: absolute;
+        width: 80%;
+        height: auto;
+        background-color: transparent;
+        overflow: auto; } }
     .site-header .nav-links .left-arrow {
       -webkit-transition: -webkit-transform 0.5s ease-in;
       transition: -webkit-transform 0.5s ease-in;
@@ -713,7 +721,7 @@ object {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: absolute;
+    position: fixed;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -723,7 +731,7 @@ object {
     height: 100vh;
     width: 75vw;
     background-color: #2ba2dd;
-    top: 0;
+    top: 1.5rem;
     right: 0;
     z-index: 98; }
     .site-header .toggle-menu .left-arrow {
@@ -771,8 +779,7 @@ object {
       background-color: #ffffff;
       padding: 1rem 1.75rem;
       margin: 0 0 0 2rem;
-      border-radius: 0.25rem;
-      z-index: 1999; }
+      border-radius: 0.25rem; }
     .site-header .toggle-menu a {
       color: #ffffff; }
     .site-header .toggle-menu li {
@@ -807,7 +814,11 @@ object {
         display: flex;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center; }
+                align-items: center;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        margin-right: 1.5rem; }
         .site-header .nav-links .menu {
           display: -webkit-box;
           display: -ms-flexbox;
