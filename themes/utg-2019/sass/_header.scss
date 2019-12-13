@@ -9,7 +9,7 @@
   &.toggle-menu::before {
     content: '';
     display: block;
-    position: absolute;
+    position: fixed;
     margin: 0;
     padding: 0;
     top: 0;
@@ -36,33 +36,49 @@
   }
 
   .nav-links {
-    display: none;
-    transition: all 0.5s;
+    width: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+    position: absolute;
+    height: 100vh;
+    background-color: $color_blue;
+    right: 0;
+    z-index: 98;
+
+    @include media($header-break) {
+      display: none;
+      position: absolute;
+      width: 80%;
+      height: auto;
+      background-color: transparent;
+      overflow: auto;
+    }
+
+    .left-arrow {
+      transition: transform 0.5s ease-in;
+      transform: rotate(0deg);
+    }
   }
 
   .toggle-menu {
-    position: absolute;
     display: flex;
+    position: fixed;
     flex-direction: column;
     padding: 1.75rem;
     margin: 0;
     height: 100vh;
     width: 75vw;
     background-color: $color_blue;
-    top: 0;
+    top: $base__space-unit;
     right: 0;
     z-index: 98;
-    
 
     //font awesome arrow icons
     .left-arrow {
       color: $color_white;
-      transition-duration: all 0.5s ease-in;
+      transition: transform 0.5s ease-in;
+      transform: rotate(180deg);
     }
-    // .right-arrow {
-    //   display: none;
-    //   color: $color_white;
-    // }
 
     .main-navigation {
       text-align: left;
@@ -118,19 +134,6 @@
     height: 100vh;
     width: 100vw;
   }
-  //animates menu when triggered
-  // .open-menu {
-
-  // }
-  .nav-links {
-    .close-left-arrow {
-      display: none;
-    }
-    .open-right-arrow {
-      color: $color_white;
-      display: block;
-    }
-  }
 
   li {
     font-family: $font_main;
@@ -155,6 +158,8 @@
     .nav-links {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
+      margin-right: $base__space-unit;
 
       .menu {
         display: flex;
@@ -164,7 +169,7 @@
         }
         li {
           display: block;
-          padding: 1rem 1.5rem;
+          padding: 1rem $base__space-unit;
           &:first-child {
             // padding-left: 0;
           }
@@ -247,13 +252,11 @@
         .sub-menu {
           overflow: hidden;
           max-height: 0;
-          opacity: 0;
           background-color: $color_light_blue;
           transition: all 0.3s ease-in;
         }
         &:hover {
           .sub-menu {
-            opacity: 1;
             max-height: calc(100% + 100px);
           }
         }
