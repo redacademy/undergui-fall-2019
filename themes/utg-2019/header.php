@@ -99,21 +99,18 @@
 					</div>
 				</div>
 
-			<?php } elseif (is_home()) { ?>
+			<?php } elseif (has_post_thumbnail(516)) { ?>
 
 
 
-				<!-- <div class="post-banner" style="background:  url(<?= get_the_post_thumbnail_url(); ?>); background-size: contain; background-position: right; background-repeat-x: no-repeat;"> -->
 				<div class="post-banner">
-					<!-- <p class="slug"><?= $post->post_name ?></p> -->
 					<div class="banner-text">
-						<h1 class="post-feature-image-title"><?= $post->post_name ?></h1>
-						<h3><?= get_the_excerpt(); ?></h3>
+						<h1 class="post-feature-image-title"><?= get_the_title(516) ?></h1>
+						<h3><?= get_the_excerpt(516); ?></h3>
 
 					</div>
-					<?php the_post_thumbnail(); ?>
+					<?= get_the_post_thumbnail(516); ?>
 				</div>
-				<!-- </div> -->
 
 		<?php }
 		} ?>
