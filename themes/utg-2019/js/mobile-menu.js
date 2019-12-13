@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //on click hamburger icon, opens mobile menu
   hamburgerMenu.addEventListener('click', function(e) {
     e.preventDefault();
-    closeMenuButton.style.transform = "rotate(180deg)";
+    closeMenuButton.style.transform = 'rotate(180deg)';
     closeMenuButton.classList.remove('close-left-arrow');
     // switchArrowDireciton.classList.remove('open-right-arrow');
     siteHeader.classList.add('toggle-menu');
