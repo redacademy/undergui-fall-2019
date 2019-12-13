@@ -1,50 +1,89 @@
 .page-classes {
-    .site-main {
-        .classes-container {
-            @include media($desktop) {
-                padding: 0 $site-padding;
-              }
-            .classes-box {
-                // z-index: -1;
-                @include classes-mobile-card;
-                @include media($desktop) {
-                @include classes-desktop-card;
-                }
-                
-                border: 1px solid black;
-                border-radius: $border-radius;
-                height: 100%;
-                width: 70%;
-                padding: 2rem $site-padding;
-                display: flex;
-                justify-content: space-evenly;
-                margin: $base__space-unit auto;
+  .site-main {
+    .classes-container {
+      @include media($desktop) {
+        padding: 0 $site-padding;
+      }
+      .classes-box {
+        z-index: -1;
+        padding: 0;
+        text-decoration: none;
 
-                .class-image {
-                    justify-content: flex-start;
-                    width: 35%;
-                    border-radius: $border-radius;
-                }
-                .post-meta {
-                    display: flex;
-                    .post-title {
-                        color: $color_blue;
-                    }
-                    @include media($desktop) {
-                        padding: 0;
-                        padding-left: $base__space-unit;
-                    }
-                }
-
-                // .teacher-image {
-                //     img {
-                //         max-width: 150px;
-                //         border-radius: 50%;
-                //     }
-                // }
-            }
+        @include classes-mobile-card;
+        .class-image {
+          height: 100%;
+          width: 100%;
+          border-radius: $border-radius;
         }
-          
-    }
+        @include media($desktop) {
+          @include classes-desktop-card;
+          .class-image {
+            max-height: 100%;
+            width: 40%;
+          }
+        }
 
+        border: 1px solid black;
+        border-radius: $border-radius;
+        max-height: 100%;
+        width: 70%;
+        padding: $base__space-unit;
+        margin: $base__space-unit auto;
+
+        .post-meta {
+          display: flex;
+          padding: 2rem 0;
+          flex-direction: column;
+
+          @include media($desktop) {
+            padding: 0;
+            padding-left: $base__space-unit;
+          }
+
+          .class-title {
+            color: $color_blue;
+            font-size: $font_size_main;
+            padding-bottom: $base__space-unit / 2;
+
+            @include media($desktop) {
+              font-size: $font_size_main * 1.2;
+            }
+          }
+          .class-age {
+            padding-bottom: $base__space-unit / 2;
+            border-bottom: 1px solid $color_dark_grey;
+          }
+          .class-location {
+            display: flex;
+            align-items: center;
+            padding-top: $base__space-unit / 2;
+            img {
+                margin-right: $base__space-unit / 4;
+            }
+          }
+          .class-data {
+              padding: $base__space-unit/10 0;
+          }
+          .class-day {
+              display: flex;
+              align-items: center;
+              img {
+                  margin-right: $base__space-unit / 4;
+              }
+            }
+
+        }
+        .class-price {
+          p {
+            font-weight: bold;
+            font-family: $font_header;
+
+            @include media($desktop) {
+              font-size: $font_size_main * 1.2;
+            }
+          }
+        }
+      }
+    }
+  }
 }
