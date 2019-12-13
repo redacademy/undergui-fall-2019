@@ -6,7 +6,7 @@
       color: $color_black;
     }
     margin: 0 auto;
-    @include media($header-break) {
+    @include media($desktop) {
       display: none;
     }
   }
@@ -20,7 +20,7 @@
       font-family: $font_main;
       font-weight: bold;
       font-size: 1.25rem;
-      @include media($header-break) {
+      @include media($desktop) {
         display: block;
         padding: 0 2.5rem 1rem 0;
       }
@@ -30,7 +30,7 @@
 .post-container {
   display: flex;
   flex-direction: column;
-  @include media($header-break) {
+  @include media($desktop) {
     padding-bottom: 2rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -40,7 +40,7 @@
 .button-box {
   display: none;
 
-  @include media($header-break) {
+  @include media($desktop) {
     display: block;
     width: 50%;
     text-align: center;
@@ -59,7 +59,9 @@
 
 .post-card {
   @include mobile-card;
-  @include media($header-break) {
+  margin: 1rem 0;
+  width: 100%;
+  @include media($desktop) {
     @include desktop-card;
   }
 }
