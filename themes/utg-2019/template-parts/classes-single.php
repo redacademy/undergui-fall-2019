@@ -9,45 +9,49 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="entry-header">
+    <header class="class-header">
         <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail('full'); ?>
+            <?php the_post_thumbnail('', ['class' => 'post-thumbnail attachment-full size-full']); ?>
         <?php endif; ?>
 
 
-        <div class="entry-meta">
+
+        <div class="class-meta">
             <?php the_title('<h2 class="entry-title">', '</h2>'); ?>
 
-            <span class="class-data bold-data">Ages &nbsp;<?= the_field('ages') ?></span>
+            <div class="class-data-container">
+
+                <span class="class-data bold-data">Ages &nbsp;<?= the_field('ages') ?></span>
 
 
-            <div class="class-location-contact">
-                <p class="class-data"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/Location.svg" alt=""> &nbsp;<?= the_field('location') ?></p>
-                <p class="class-data"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/phone.svg" alt=""> &nbsp;<?= the_field('phone_number') ?></p>
+                <div class="class-location-contact">
+                    <p class="class-data"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/Location.svg" alt=""><?= the_field('location') ?></p>
+                    <p class="class-data"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/phone.svg" alt=""><?= the_field('phone_number') ?></p>
 
+                </div>
+
+                <p class="class-data">
+                    <!-- <i class="far fa-calendar-alt"></i> -->
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/Calendar.svg" alt=""><?= the_field('day') ?>
+                    from <?= the_field('start_date') ?> &#45; <?= the_field('end_date') ?>
+                </p>
+
+                <?php while (have_rows('time')) : the_row() ?>
+
+                    <p class="class-data"> <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/clock.svg" alt=""><?php the_sub_field('start_time') ?> &#45; <?php the_sub_field('end_time') ?></p>
+
+                <?php endwhile; ?>
+
+
+
+                <p class="class-data price">&#36; &nbsp;<?= the_field('price') ?>.00</p>
             </div>
-
-            <p class="class-data">
-                <!-- <i class="far fa-calendar-alt"></i> -->
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/Location.svg" alt=""><?= the_field('day') ?>
-                from <?= the_field('start_date') ?> &#45; <?= the_field('end_date') ?>
-            </p>
-
-            <?php while (have_rows('time')) : the_row() ?>
-
-                <p class="class-data"> <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/clock.svg" alt="">&nbsp;<?php the_sub_field('start_time') ?> &#45; <?php the_sub_field('end_time') ?></p>
-
-            <?php endwhile; ?>
-
-
-
-            <p class="class-data price">&#36; &nbsp;<?= the_field('price') ?>.00</p>
 
         </div>
 
     </header><!-- .entry-header -->
 
-    <div class="entry-content">
+    <div class="class-content">
 
 
 
@@ -82,10 +86,12 @@
         <section class="instructor">
             <div>
                 <h2 class="class-data"><?= the_field('the_tile_of_instructor') ?></h2>
+                <img class="instructor-image-desktop" src="<?= the_field('image_of_instructor') ?>" alt="image of instructor">
+
                 <p class="class-data"><?= the_field('extra_details') ?></p>
 
             </div>
-            <img src="<?= the_field('image_of_instructor') ?>" alt="image of instructor">
+            <img class="instructor-image" src="<?= the_field('image_of_instructor') ?>" alt="image of instructor">
 
         </section>
         <?php the_content(); ?>
@@ -99,7 +105,7 @@
 
     </div><!-- .entry-content -->
     <div class="button-container">
-        <a href="<?php site_url(); ?>/registration"><button>enroll now</button></a>
+        <a href="<?= site_url('/register/'); ?>"><button>enroll now</button></a>
 
     </div>
 

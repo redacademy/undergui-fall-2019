@@ -11,7 +11,7 @@ section.testimonials-container {
       display: none;
     }
 
-    @include media($desktop) {
+    @include media(900px) {
       .flickity-button {
         background: transparent;
       }
@@ -53,7 +53,7 @@ section.testimonials-container {
     align-items: center;
     width: 100%;
 
-    @include media($desktop) {
+    @include media(900px) {
       flex-direction: row;
       justify-content: center;
     }
@@ -66,7 +66,7 @@ section.testimonials-container {
     border-radius: 120px;
     margin-bottom: 2rem;
 
-    @include media($desktop) {
+    @include media(900px) {
       order: 2;
       margin-left: 5rem;
     }
@@ -77,7 +77,7 @@ section.testimonials-container {
     width: 22rem;
     line-height: 1.2rem;
 
-    @include media($desktop) {
+    @include media(900px) {
       width: 35rem;
 
       p {

@@ -14,50 +14,26 @@
 
 	<div class="projects-wrapper" data-flickity='{}'>
 
-		<div class="single-project-container">
-			<img src="https://picsum.photos/id/237/400/300" />
-			<p class="project-desc">
-				Lorem ipsum dolor amet post-ironic snackwave whatever,
-				af fashion axe marfa copper mug vegan chillwave.
-				Direct trade meditation etsy neutra kogi mumblecore kitsch hella.
-				Wolf ethical butcher lo-fi scenester cardigan air plant helvetica
-				pok pok hammock shaman. Viral actually subway tile gluten-free.
-				Lumbersexual fixie tofu, mustache palo santo readymade flexitarian
-				tumblr chicharrones master cleanse microdosing echo park biodiesel
-				90's sriracha. Quinoa sartorial cronut pickled enamel pin banh mi
-				lyft mustache, tumblr crucifix selvage sriracha la croix jianbing bushwick.
-			</p>
-		</div>
+		<!-- entering loop -->
+		<?php if (have_rows('showcases')) : ?>
 
-		<div class="single-project-container">
-			<img src="https://picsum.photos/id/238/400/300" />
-			<p class="project-desc">
-				Lorem ipsum dolor amet post-ironic snackwave whatever,
-				af fashion axe marfa copper mug vegan chillwave.
-				Direct trade meditation etsy neutra kogi mumblecore kitsch hella.
-				Wolf ethical butcher lo-fi scenester cardigan air plant helvetica
-				pok pok hammock shaman. Viral actually subway tile gluten-free.
-				Lumbersexual fixie tofu, mustache palo santo readymade flexitarian
-				tumblr chicharrones master cleanse microdosing echo park biodiesel
-				90's sriracha. Quinoa sartorial cronut pickled enamel pin banh mi
-				lyft mustache, tumblr crucifix selvage sriracha la croix jianbing bushwick.
-			</p>
-		</div>
+			<?php while (have_rows('showcases')) : the_row(); ?>
 
-		<div class="single-project-container">
-			<img src="https://picsum.photos/id/239/400/300" />
-			<p class="project-desc">
-				Lorem ipsum dolor amet post-ironic snackwave whatever,
-				af fashion axe marfa copper mug vegan chillwave.
-				Direct trade meditation etsy neutra kogi mumblecore kitsch hella.
-				Wolf ethical butcher lo-fi scenester cardigan air plant helvetica
-				pok pok hammock shaman. Viral actually subway tile gluten-free.
-				Lumbersexual fixie tofu, mustache palo santo readymade flexitarian
-				tumblr chicharrones master cleanse microdosing echo park biodiesel
-				90's sriracha. Quinoa sartorial cronut pickled enamel pin banh mi
-				lyft mustache, tumblr crucifix selvage sriracha la croix jianbing bushwick.
-			</p>
-		</div>
+				<!-- display sub field of showcase -->
+				<div class="single-project-container">
+					<!-- image url -->
+					<div class="project-media"><?php the_sub_field('showcase_media'); ?></div>
+					<!-- project description -->
+					<p class="project-desc"><?php the_sub_field('showcase_paragraph'); ?></p>
+				</div>
 
+		<?php endwhile;
+
+		else :
+
+		// no rows found
+
+		endif; ?>
+		<!-- exit loop -->
 	</div>
 </div>
