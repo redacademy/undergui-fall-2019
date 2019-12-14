@@ -3716,16 +3716,18 @@ body.page-request-info .page-banner, body.page-request-info .post-banner {
       text-transform: none;
       font-weight: lighter;
       font-size: 0.875rem; }
-  .location-card .button-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    .location-card .button-container a {
-      border: 1px solid #2ba2dd;
-      padding: 0.5rem 2.5rem; }
+    .location-card .post-meta .button-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      overflow: visible;
+      max-height: 100%; }
+      .location-card .post-meta .button-container a {
+        border: 1px solid #2ba2dd;
+        padding: 0.5rem 2.5rem; }
 
 .selector-container {
   padding: 2rem 7vw;

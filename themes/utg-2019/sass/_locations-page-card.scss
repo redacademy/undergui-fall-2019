@@ -29,13 +29,15 @@
       font-weight: lighter;
       font-size: 0.875rem;
     }
-  }
-  .button-container {
-    display: flex;
-    justify-content: center;
-    a {
-      border: 1px solid $color_blue;
-      padding: 0.5rem 2.5rem;
+    .button-container {
+      display: flex;
+      justify-content: center;
+      overflow: visible;
+      max-height: 100%;
+      a {
+        border: 1px solid $color_blue;
+        padding: 0.5rem 2.5rem;
+      }
     }
   }
 }
