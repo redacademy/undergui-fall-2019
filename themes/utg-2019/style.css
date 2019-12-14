@@ -699,9 +699,10 @@ object {
   .site-header .nav-links {
     width: 0px;
     overflow: hidden;
-    -webkit-transition: width 0.3s ease-in;
-    transition: width 0.3s ease-in;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
     position: absolute;
+    margin: 0;
     height: 100vh;
     background-color: #2ba2dd;
     right: 0;
@@ -714,10 +715,10 @@ object {
         background-color: transparent;
         overflow: unset; } }
     .site-header .nav-links .left-arrow {
-      -webkit-transition: -webkit-transform 0.5s ease-in;
-      transition: -webkit-transform 0.5s ease-in;
-      transition: transform 0.5s ease-in;
-      transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+      -webkit-transition: -webkit-transform 0.5s ease-in-out;
+      transition: -webkit-transform 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
       -webkit-transform: rotate(0deg);
               transform: rotate(0deg); }
   .site-header .toggle-menu {

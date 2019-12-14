@@ -38,8 +38,9 @@
   .nav-links {
     width: 0px;
     overflow: hidden;
-    transition: width 0.3s ease-in;
+    transition: width 0.3s ease-in-out;
     position: absolute;
+    margin: 0;
     height: 100vh;
     background-color: $color_blue;
     right: 0;
@@ -54,7 +55,7 @@
     }
 
     .left-arrow {
-      transition: transform 0.5s ease-in;
+      transition: transform 0.5s ease-in-out;
       transform: rotate(0deg);
     }
   }
