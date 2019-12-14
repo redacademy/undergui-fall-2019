@@ -694,6 +694,7 @@ object {
     padding: 0; }
   .site-header .nav-links {
     width: 0px;
+    overflow: hidden;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
     position: absolute;

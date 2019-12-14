@@ -37,13 +37,14 @@
 
   .nav-links {
     width: 0px;
-    // overflow: hidden;
+    overflow: hidden;
     transition: all 0.3s ease-in;
     position: absolute;
     height: 100vh;
     background-color: $color_blue;
     right: 0;
     z-index: 98;
+    // opacity: 0;
 
     @include media($header-break) {
       // display: none;
@@ -250,7 +251,6 @@
         text-decoration: none;
 
         .sub-menu {
-          // overflow: hidden;
           max-height: 0;
           background-color: $color_light_blue;
           transition: all 0.3s ease-in;
@@ -272,10 +272,7 @@
             .sub-menu { 
               overflow:unset;
               display: block;
-              // max-height: 300px;
-              // height: 300px;
-              opacity: 1;
-              
+              opacity: 1;             
             }
           }
         }
