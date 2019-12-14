@@ -735,7 +735,7 @@ object {
     height: 100vh;
     width: 75vw;
     background-color: #2ba2dd;
-    top: 1.5rem;
+    top: 0;
     right: 0;
     z-index: 98; }
     .site-header .toggle-menu .left-arrow {
