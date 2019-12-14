@@ -26,6 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if(event.target.href !== undefined){
       document.getElementById(event.target.href.split('#')[1]).className +=
       ' active';
-    } 
+    }
   }
 });

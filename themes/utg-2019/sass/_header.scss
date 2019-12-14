@@ -37,7 +37,7 @@
 
   .nav-links {
     width: 0px;
-    overflow: hidden;
+    // overflow: hidden;
     transition: all 0.3s ease-in;
     position: absolute;
     height: 100vh;
@@ -46,12 +46,12 @@
     z-index: 98;
 
     @include media($header-break) {
-      display: none;
+      // display: none;
       position: absolute;
       width: 80%;
       height: auto;
       background-color: transparent;
-      overflow: auto;
+      overflow: unset;
     }
 
     .left-arrow {
@@ -250,7 +250,7 @@
         text-decoration: none;
 
         .sub-menu {
-          overflow: hidden;
+          // overflow: hidden;
           max-height: 0;
           background-color: $color_light_blue;
           transition: all 0.3s ease-in;
@@ -258,6 +258,25 @@
         &:hover {
           .sub-menu {
             max-height: calc(100% + 100px);
+          }
+        }
+
+        &-has-children {
+          overflow: hidden;
+          .sub-menu { 
+            opacity: 0;
+            transition: .5s;
+          }
+          &:hover {
+            overflow: unset;
+            .sub-menu { 
+              overflow:unset;
+              display: block;
+              // max-height: 300px;
+              // height: 300px;
+              opacity: 1;
+              
+            }
           }
         }
       }

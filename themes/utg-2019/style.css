@@ -694,7 +694,6 @@ object {
     padding: 0; }
   .site-header .nav-links {
     width: 0px;
-    overflow: hidden;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
     position: absolute;
@@ -704,12 +703,11 @@ object {
     z-index: 98; }
     @media only screen and (min-width: 900px) {
       .site-header .nav-links {
-        display: none;
         position: absolute;
         width: 80%;
         height: auto;
         background-color: transparent;
-        overflow: auto; } }
+        overflow: unset; } }
     .site-header .nav-links .left-arrow {
       -webkit-transition: -webkit-transform 0.5s ease-in;
       transition: -webkit-transform 0.5s ease-in;
@@ -906,13 +904,24 @@ object {
   font-size: 18px;
   text-decoration: none; }
   .site-header .nav-links .nav-menu .menu-item .sub-menu {
-    overflow: hidden;
     max-height: 0;
     background-color: #8ecaeb;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in; }
   .site-header .nav-links .nav-menu .menu-item:hover .sub-menu {
     max-height: calc(100% + 100px); }
+  .site-header .nav-links .nav-menu .menu-item-has-children {
+    overflow: hidden; }
+    .site-header .nav-links .nav-menu .menu-item-has-children .sub-menu {
+      opacity: 0;
+      -webkit-transition: .5s;
+      transition: .5s; }
+    .site-header .nav-links .nav-menu .menu-item-has-children:hover {
+      overflow: unset; }
+      .site-header .nav-links .nav-menu .menu-item-has-children:hover .sub-menu {
+        overflow: unset;
+        display: block;
+        opacity: 1; }
 
 .site-header .nav-links .nav-menu .menu-item ul {
   max-height: 0; }
@@ -1118,7 +1127,7 @@ body.home {
   text-align: center; }
   body.home h2 {
     font-size: 34px; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 800px) {
       body.home h2 {
         font-size: 48px; } }
   body.home .approaches-container {
@@ -1212,6 +1221,9 @@ body.home {
           max-width: 28rem;
           border: 4px solid #ffffff;
           border-radius: 5px; }
+          @media only screen and (min-width: 780px) {
+            body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
+              max-width: 200px; } }
           @media only screen and (min-width: 800px) {
             body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
               max-width: 640px; } }
