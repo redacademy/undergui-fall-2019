@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const hamburgerMenu = document.querySelector('.mobile-menu');
   const navLinks = document.querySelector('.nav-links');
-  // const mainMenu = document.querySelector('#nav-links')
   const siteHeader = document.querySelector('.site-header');
   const closeMenuButton = document.querySelector('.left-arrow');
 
