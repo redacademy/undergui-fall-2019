@@ -44,14 +44,15 @@
     background-color: $color_blue;
     right: 0;
     z-index: 98;
+    // opacity: 0;
 
     @include media($header-break) {
-      display: none;
+      // display: none;
       position: absolute;
       width: 80%;
       height: auto;
       background-color: transparent;
-      overflow: auto;
+      overflow: unset;
     }
 
     .left-arrow {
@@ -250,7 +251,6 @@
         text-decoration: none;
 
         .sub-menu {
-          overflow: hidden;
           max-height: 0;
           background-color: $color_light_blue;
           transition: all 0.3s ease-in;
@@ -258,6 +258,22 @@
         &:hover {
           .sub-menu {
             max-height: calc(100% + 100px);
+          }
+        }
+
+        &-has-children {
+          overflow: hidden;
+          .sub-menu { 
+            opacity: 0;
+            transition: .5s;
+          }
+          &:hover {
+            overflow: unset;
+            .sub-menu { 
+              overflow:unset;
+              display: block;
+              opacity: 1;             
+            }
           }
         }
       }

@@ -708,12 +708,11 @@ object {
     z-index: 98; }
     @media only screen and (min-width: 900px) {
       .site-header .nav-links {
-        display: none;
         position: absolute;
         width: 80%;
         height: auto;
         background-color: transparent;
-        overflow: auto; } }
+        overflow: unset; } }
     .site-header .nav-links .left-arrow {
       -webkit-transition: -webkit-transform 0.5s ease-in;
       transition: -webkit-transform 0.5s ease-in;
@@ -910,13 +909,24 @@ object {
   font-size: 18px;
   text-decoration: none; }
   .site-header .nav-links .nav-menu .menu-item .sub-menu {
-    overflow: hidden;
     max-height: 0;
     background-color: #8ecaeb;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in; }
   .site-header .nav-links .nav-menu .menu-item:hover .sub-menu {
     max-height: calc(100% + 100px); }
+  .site-header .nav-links .nav-menu .menu-item-has-children {
+    overflow: hidden; }
+    .site-header .nav-links .nav-menu .menu-item-has-children .sub-menu {
+      opacity: 0;
+      -webkit-transition: .5s;
+      transition: .5s; }
+    .site-header .nav-links .nav-menu .menu-item-has-children:hover {
+      overflow: unset; }
+      .site-header .nav-links .nav-menu .menu-item-has-children:hover .sub-menu {
+        overflow: unset;
+        display: block;
+        opacity: 1; }
 
 .site-header .nav-links .nav-menu .menu-item ul {
   max-height: 0; }
