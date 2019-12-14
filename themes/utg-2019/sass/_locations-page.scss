@@ -1,0 +1,13 @@
+.selector-container {
+  padding: 2rem $site-padding;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+  h4 {
+    margin: 0;
+  }
+  select {
+    width: 100%;
+  }
+}

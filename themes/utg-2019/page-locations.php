@@ -12,8 +12,30 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 
+
+
+		<form class="selector-container">
+			<div>
+				<h4>Country</h4>
+				<select name="country" id=""></select>
+
+			</div>
+			<div>
+				<h4>Province</h4>
+				<select name="province" id=""></select>
+
+			</div>
+			<div>
+				<h4>City</h4>
+				<select name="city" id=""></select>
+
+			</div>
+
+		</form>
+
+
 		<?php include get_template_directory() . "/template-parts/locations-page-location-cards.php"; ?>
-		
+
 
 	</main><!-- #main -->
 </div><!-- #primary -->
