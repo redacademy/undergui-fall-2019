@@ -15,6 +15,8 @@
       datatype: 'JSON'
     })
       .done(function(data) {
+        // console.log(data);
+
         $.each(data, function appendContent(data, arrayItem) {
           // grabs date from rest API
           let newDate = new Date(arrayItem.date);
@@ -59,6 +61,19 @@
                 </div>
         </a>`);
         });
+
+        if (data.length < 8) {
+          console.log(data.length);
+          $('.show-more-posts').remove();
+        } else {
+          if ($('.show-more-posts').length) {
+            return;
+          } else {
+            $('.button-box').append(
+              '<button class="white-btn show-more-posts">SHOW MORE</button>'
+            );
+          }
+        }
       })
       .fail(function() {
         $('.community-posts').append(

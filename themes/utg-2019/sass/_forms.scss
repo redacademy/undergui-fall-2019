@@ -27,6 +27,7 @@ input[type='submit'] {
   padding: 1rem 1.75rem;
   font-weight: bold;
   text-transform: uppercase;
+  font-family: $font_header;
 
   &:hover {
     background-color: lighten($color_blue, 10%);
@@ -45,6 +46,9 @@ input[type='submit'] {
   @include font-size(0.75);
   line-height: 1;
   padding: 1rem 1.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: $font_header;
 
   &:hover {
     color: $color_white;
