@@ -705,11 +705,11 @@ object {
     margin: 0;
     height: 100vh;
     background-color: #2ba2dd;
+    top: 0;
     right: 0;
     z-index: 98; }
     @media only screen and (min-width: 900px) {
       .site-header .nav-links {
-        display: none;
         position: absolute;
         height: auto;
         background-color: transparent;

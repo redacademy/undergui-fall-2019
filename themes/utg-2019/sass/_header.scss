@@ -43,11 +43,11 @@
     margin: 0;
     height: 100vh;
     background-color: $color_blue;
+    top: 0;
     right: 0;
     z-index: 98;
 
     @include media($header-break) {
-      display: none;
       position: absolute;
       height: auto;
       background-color: transparent;
