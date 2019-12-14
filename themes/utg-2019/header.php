@@ -78,6 +78,16 @@
 					</div>
 				</div>
 
+			<?php } elseif (is_page('request-info')) { ?>
+
+				<div class="page-banner" style="background:  url(<?= get_the_post_thumbnail_url(); ?>); background-size: cover; background-position: center;">
+					<div class="banner-text">
+						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
+						<?php the_excerpt(); ?>
+					</div>
+					<input type="button" class="faq-button" onclick="location.href='<?= get_home_url() . '/about/#faq' ?>';" value="check out faq" />
+				</div>
+
 			<?php } elseif (is_page() || is_singular('post_programs')) { ?>
 
 				<div class="page-banner" style="background:  url(<?= get_the_post_thumbnail_url(); ?>); background-size: cover; background-position: center;">
@@ -88,19 +98,8 @@
 					</div>
 				</div>
 
-			<?php } elseif (is_page('request-info') || is_singular('post_programs')) { ?>
-
-				<div class="page-banner" style="background:  url(<?= get_the_post_thumbnail_url(); ?>); background-size: cover; background-position: center;">
-					<div class="banner-text">
-						<p class="slug"><?= $post->post_name ?></p>
-						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
-						<?php the_excerpt(); ?>
-					</div>
-				</div>
 
 			<?php } elseif (has_post_thumbnail(522)) { ?>
-
-
 
 				<div class="post-banner">
 					<div class="banner-text">
