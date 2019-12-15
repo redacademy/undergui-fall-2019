@@ -672,11 +672,6 @@ object {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.125rem 0.75rem; }
-  @media only screen and (min-width: 900px) {
-    .site-header {
-      position: relative; }
-      .site-header img {
-        display: block; } }
   .site-header.toggle-menu::before {
     content: '';
     display: block;
@@ -2753,7 +2748,8 @@ body.home {
         height: 520px;
         width: 100%; } }
   .home-hero-banner .home-hero-text, .page-banner .home-hero-text, .post-banner .home-hero-text {
-    position: absolute;
+    -ms-flex-item-align: center;
+        align-self: center;
     color: #ffffff;
     z-index: 1;
     text-align: center;
@@ -2779,12 +2775,13 @@ body.home {
     border-color: #2ba2dd;
     color: #2ba2dd;
     background: #ffffff;
-    font-size: 16px;
-    padding: 0.75rem 1rem; }
+    font-size: 14px;
+    padding: 0.75rem 1rem;
+    border: none; }
     @media only screen and (min-width: 800px) {
       .home-hero-banner input[type='button'], .page-banner input[type='button'], .post-banner input[type='button'] {
-        font-size: 18px;
-        padding: 0.75rem 2rem; } }
+        font-size: 16px;
+        padding: 1.25rem 2.75rem; } }
     .home-hero-banner input[type='button']:hover, .page-banner input[type='button']:hover, .post-banner input[type='button']:hover {
       color: #ffffff;
       background: #2ba2dd; }
