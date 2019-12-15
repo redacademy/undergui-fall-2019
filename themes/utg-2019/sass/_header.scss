@@ -43,7 +43,6 @@
     margin: 0;
     height: 100vh;
     background-color: $color_blue;
-    // top: 0;
     right: 0;
     z-index: 98;
 
@@ -66,12 +65,12 @@
     flex-direction: column;
     padding: 1.75rem;
     margin: 0;
+    top: 0;
+    right: 0;
     height: 100vh;
     width: 75vw;
     background-color: $color_blue;
-    top: 0;
-    right: 0;
-    z-index: 98;
+    z-index: 1000;
 
     //font awesome arrow icons
     .left-arrow {
@@ -214,6 +213,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-weight: bold;
     font-size: 1rem;
     color: $color_white;

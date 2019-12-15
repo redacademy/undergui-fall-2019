@@ -672,6 +672,11 @@ object {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.125rem 0.75rem; }
+  @media only screen and (min-width: 900px) {
+    .site-header {
+      position: relative; }
+      .site-header img {
+        display: block; } }
   .site-header.toggle-menu::before {
     content: '';
     display: block;
@@ -731,12 +736,12 @@ object {
             flex-direction: column;
     padding: 1.75rem;
     margin: 0;
+    top: 0;
+    right: 0;
     height: 100vh;
     width: 75vw;
     background-color: #2ba2dd;
-    top: 0;
-    right: 0;
-    z-index: 98; }
+    z-index: 1000; }
     .site-header .toggle-menu .left-arrow {
       color: #ffffff;
       -webkit-transition: -webkit-transform 0.5s ease-in;
@@ -877,6 +882,7 @@ object {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
+      text-align: center;
       font-weight: bold;
       font-size: 1rem;
       color: #ffffff;
