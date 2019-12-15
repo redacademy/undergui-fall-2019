@@ -16,9 +16,12 @@ body.page-request-info {
     background-size: inherit !important;
     background-position: right !important;
     .faq-button {
+      justify-content: unset;
+      align-self: center;
+      margin-top: 1.5rem;
       width: 13rem;
       height: 2.2rem;
-      padding: 0;
+      padding: 0.6rem;
       border-color: $color-white;
     }
   } 
