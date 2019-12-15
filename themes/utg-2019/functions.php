@@ -120,6 +120,8 @@ function utg_scripts()
 	wp_enqueue_script('utg-mobile-menu', get_template_directory_uri() . '/build/js/mobile-menu.min.js', array(), '', true);
 	//Posts category ajax funtionality  
 	wp_enqueue_script('utg-post-category-ajax', get_template_directory_uri() . '/build/js/post-category-ajax.min.js', array('jquery'), '', true);
+	// Grab post ID and pull into Registration page
+	wp_enqueue_script('utg-find-classes-registration', get_template_directory_uri() . '/build/js/find-classes-registration.min.js', array('jquery'), '', true);
 	//FAQ container toggles
 	wp_enqueue_script('utg-faq-toggle', get_template_directory_uri() . '/build/js/faq-toggle.min.js', array(), '', true);
 	//Tabbed content scripts
@@ -135,21 +137,23 @@ function utg_scripts()
 	$localized_scripts = array(
 		'rest_url' => esc_url_raw(rest_url()),
 		'home_url' => home_url(),
+		'site_url' => site_url(),
+
 	);
 
 	wp_localize_script('utg-post-category-ajax', 'utg_vars', $localized_scripts);
-	}
-	add_action('wp_enqueue_scripts', 'utg_scripts');
+}
+add_action('wp_enqueue_scripts', 'utg_scripts');
 
-	/**
-	 * Custom template tags for this theme.
-	 */
-	require get_template_directory() . '/inc/template-tags.php';
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
 
-	/**
-	 * Custom functions that act independently of the theme templates.
-	 */
-	require get_template_directory() . '/inc/extras.php';
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/inc/extras.php';
 
 
 	/*

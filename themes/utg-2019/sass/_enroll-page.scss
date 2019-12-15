@@ -1,0 +1,61 @@
+.enroll-page {
+  h3,
+  h4 {
+    margin: 0;
+  }
+  padding: 0 $site-padding-mobile;
+  display: flex;
+  @include media($desktop) {
+    padding: 0 $site-padding;
+  }
+
+  .classes-box {
+    @include media($desktop) {
+      @include desktop-card;
+      width: 40%;
+      height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      * {
+        color: $color_paragraph;
+      }
+    }
+    .class-header {
+      background-color: $color_yellow;
+      height: 25%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      position: relative;
+      padding: 2rem;
+    }
+    .class-img {
+      height: 202px;
+      width: 281px;
+      object-fit: contain;
+      position: absolute;
+      right: 5%;
+      top: 10%;
+    }
+
+    .post-meta {
+      border: none;
+      height: 60%;
+      padding: 1.5rem;
+      .post-data-header {
+        height: 40%;
+        border-bottom: 1px solid $color_grey;
+      }
+
+      p {
+        margin: 0.5rem 0;
+        text-transform: none;
+        color: $color_paragraph;
+        img {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}

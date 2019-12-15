@@ -1,4 +1,5 @@
 <?php
+
 /**
  * POST TYPES
  *
@@ -8,7 +9,8 @@
 // Add your custom post types here...
 
 // Register Custom Post Type
-function utg_testimonials_custom_post_type() {
+function utg_testimonials_custom_post_type()
+{
 
 	$labels = array(
 		'name'                  => 'Testimonials',
@@ -43,8 +45,8 @@ function utg_testimonials_custom_post_type() {
 		'label'                 => 'Testimonial',
 		'description'           => 'Testimonials for About',
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'supports'              => array('title', 'editor'),
+		'taxonomies'            => array('category', 'post_tag'),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -58,11 +60,11 @@ function utg_testimonials_custom_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'post_testimonials', $args );
-
+	register_post_type('post_testimonials', $args);
 }
 // Register Custom Post Type
-function utg_events_custom_post_type() {
+function utg_events_custom_post_type()
+{
 
 	$labels = array(
 		'name'                  => 'Events',
@@ -97,8 +99,8 @@ function utg_events_custom_post_type() {
 		'label'                 => 'Event',
 		'description'           => 'Events for About',
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'supports'              => array('title', 'editor'),
+		'taxonomies'            => array('category', 'post_tag'),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -112,12 +114,12 @@ function utg_events_custom_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'post_events', $args );
-
+	register_post_type('post_events', $args);
 }
 
 // Register Custom Post Type
-function utg_programs_custom_post_type() {
+function utg_programs_custom_post_type()
+{
 
 	$labels = array(
 		'name'                  => 'Programs',
@@ -152,7 +154,7 @@ function utg_programs_custom_post_type() {
 		'label'                 => 'Program',
 		'description'           => 'Programs for About',
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'thumbnail'),
+		'supports'              => array('title', 'thumbnail'),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -166,12 +168,12 @@ function utg_programs_custom_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'post_programs', $args );
-
+	register_post_type('post_programs', $args);
 }
 
 // Register Custom Post Type
-function utg_classes_custom_post_type() {
+function utg_classes_custom_post_type()
+{
 
 	$labels = array(
 		'name'                  => 'Classes',
@@ -206,7 +208,7 @@ function utg_classes_custom_post_type() {
 		'label'                 => 'Class',
 		'description'           => 'Classes for About',
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'thumbnail'),
+		'supports'              => array('title', 'thumbnail'),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -219,13 +221,14 @@ function utg_classes_custom_post_type() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'show_in_rest' 			=> true,
 	);
-	register_post_type( 'post_classes', $args );
-
+	register_post_type('post_classes', $args);
 }
 
 // Register Custom Post Type
-function utg_locations_custom_post_type() {
+function utg_locations_custom_post_type()
+{
 
 	$labels = array(
 		'name'                  => 'Locations',
@@ -260,8 +263,8 @@ function utg_locations_custom_post_type() {
 		'label'                 => 'Location',
 		'description'           => 'Locations for About',
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail'),
-		'taxonomies'            => array( 'category', 'post_tag'),
+		'supports'              => array('title', 'editor', 'thumbnail'),
+		'taxonomies'            => array('category', 'post_tag'),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -275,13 +278,11 @@ function utg_locations_custom_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'post_locations', $args );
-
+	register_post_type('post_locations', $args);
 }
 
-add_action( 'init', 'utg_testimonials_custom_post_type', 0 );
-add_action( 'init', 'utg_events_custom_post_type', 0 );
-add_action( 'init', 'utg_programs_custom_post_type', 0 );
-add_action( 'init', 'utg_classes_custom_post_type', 0 );
-add_action( 'init', 'utg_locations_custom_post_type', 0 );
-
+add_action('init', 'utg_testimonials_custom_post_type', 0);
+add_action('init', 'utg_events_custom_post_type', 0);
+add_action('init', 'utg_programs_custom_post_type', 0);
+add_action('init', 'utg_classes_custom_post_type', 0);
+add_action('init', 'utg_locations_custom_post_type', 0);
