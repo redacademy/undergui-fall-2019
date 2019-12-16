@@ -663,7 +663,7 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 .site-header {
-  position: relative;
+  position: fixed;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -671,7 +671,18 @@ object {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.125rem 0.75rem; }
+  background-color: rgba(234, 246, 250, 0.7);
+  padding: 0.5rem 0.75rem;
+  z-index: 2; }
+  .site-header img {
+    display: none; }
+  @media only screen and (min-width: 900px) {
+    .site-header {
+      position: relative;
+      background-color: transparent;
+      padding: 0.125rem 0.75rem; }
+      .site-header img {
+        display: block; } }
   .site-header.toggle-menu::before {
     content: '';
     display: block;

@@ -1,9 +1,24 @@
 .site-header {
-  position: relative;
+  position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0.125rem 0.75rem;
+  background-color: hsla(195, 62%, 95%, 0.7);
+  padding: 0.5rem 0.75rem;
+  z-index: 2;
+
+  img {
+    display: none;
+  }
+  @include media($header-break) {
+    position: relative;
+    background-color: transparent;
+    padding: 0.125rem 0.75rem;
+
+    img {
+      display: block;
+    }
+  }
 
   // add shaded background when mobile menu opens
   &.toggle-menu::before {
