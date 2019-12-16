@@ -1,24 +1,14 @@
 .site-header {
-  position: fixed;
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: hsla(195, 62%, 95%, 0.7);
   padding: 0.5rem 0.75rem;
   z-index: 2;
 
-  img {
-    // display: none;
-  }
-
   @include media($header-break) {
-    position: relative;
     background-color: transparent;
     padding: 0.125rem 0.75rem;
-
-    img {
-      display: block;
-    }
   }
 
   // add shaded background when mobile menu opens
@@ -57,10 +47,10 @@
     transition: width 0.3s ease-in-out;
     position: absolute;
     margin: 0;
-    height: 100vh;
+    height: 10000vh;
     background-color: $color_blue;
     right: 0;
-    z-index: 98;
+    z-index: 1000;
 
     @include media($header-break) {
       position: absolute;
@@ -83,10 +73,10 @@
     margin: 0;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 10000vh;
     width: 75vw;
     background-color: $color_blue;
-    z-index: 1000;
+    z-index: 10000;
 
     //font awesome arrow icons
     .left-arrow {
@@ -200,7 +190,12 @@
 
 .mobile-menu {
   .fa-bars:before {
-    background-color: hsla(195, 62%, 95%, 0.7);
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    background-color: white;
+    padding: $base__space-unit / 3;
+    border-radius: $border-radius;
   }
 }
 

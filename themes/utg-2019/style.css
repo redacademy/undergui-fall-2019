@@ -663,7 +663,7 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 .site-header {
-  position: fixed;
+  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -671,16 +671,12 @@ object {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: rgba(234, 246, 250, 0.7);
   padding: 0.5rem 0.75rem;
   z-index: 2; }
   @media only screen and (min-width: 900px) {
     .site-header {
-      position: relative;
       background-color: transparent;
-      padding: 0.125rem 0.75rem; }
-      .site-header img {
-        display: block; } }
+      padding: 0.125rem 0.75rem; } }
   .site-header.toggle-menu::before {
     content: '';
     display: block;
@@ -712,10 +708,10 @@ object {
     transition: width 0.3s ease-in-out;
     position: absolute;
     margin: 0;
-    height: 100vh;
+    height: 10000vh;
     background-color: #2ba2dd;
     right: 0;
-    z-index: 98; }
+    z-index: 1000; }
     @media only screen and (min-width: 900px) {
       .site-header .nav-links {
         position: absolute;
@@ -742,10 +738,10 @@ object {
     margin: 0;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 10000vh;
     width: 75vw;
     background-color: #2ba2dd;
-    z-index: 1000; }
+    z-index: 10000; }
     .site-header .toggle-menu .left-arrow {
       color: #ffffff;
       -webkit-transition: -webkit-transform 0.5s ease-in;
@@ -845,7 +841,12 @@ object {
               border-right: 1px solid #000000; } }
 
 .mobile-menu .fa-bars:before {
-  background-color: rgba(234, 246, 250, 0.7); }
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 5px; }
 
 .mobile-open-menu {
   padding-bottom: 2.5rem;
@@ -2916,11 +2917,13 @@ body.home {
     width: 120px;
     top: -18%;
     right: -2%;
-    z-index: 999;
+    z-index: 9;
     border-radius: 50%; }
     @media only screen and (min-width: 800px) {
       .program-classes .block-man-chat-mobile {
         display: none; } }
+  .program-classes .hide-block-man {
+    z-index: -1; }
   .program-classes .block-man-chat {
     display: none; }
     @media only screen and (min-width: 800px) {
