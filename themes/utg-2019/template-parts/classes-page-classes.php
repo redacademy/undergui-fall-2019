@@ -4,7 +4,7 @@
 	$args = array(
 		'order' => 'ASC',
 		'post_type' => 'post_classes',
-		'posts_per_page' => 100
+		'posts_per_page' => -1
 	);
 	$classes = new WP_Query($args);
 	?>
@@ -30,14 +30,6 @@
             <div class="class-price">
                 <p>$&nbsp;<?= the_field('price') ?></p>
             </div>
-            <!-- <p class="class-data">Phone Number &nbsp;<?= the_field('phone_number') ?></p> -->
-            <!-- <p class="class-data">Prerequisites &nbsp;<?= the_field('prerequisite') ?></p> -->
-            <!-- <p class="class-data">Content Box Left &nbsp;<?= the_sub_field('content_box_left') ?></p> -->
-            <!-- <p class="class-data">Content Box Right &nbsp;<?= the_sub_field('content_box_right') ?></p> -->
-            <!-- <p class="class-data">The Tile of Instructor &nbsp;<?= the_field('the_tile_of_instructor') ?></p> -->
-            <!-- <p class="teacher-image">Image of Instructor &nbsp;<img src="<?= the_field('image_of_instructor') ?>" alt="image of instructor"></p> -->
-            <!-- <p class="class-data">Extr Details &nbsp;<?= the_field('extra_details') ?></p> -->
-            <!-- <div></div> -->
         </a>
     <?php endwhile;
     else : ?> <p>Sorry, there are no classes to display</p> <?php endif; ?>

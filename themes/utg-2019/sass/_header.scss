@@ -8,8 +8,9 @@
   z-index: 2;
 
   img {
-    display: none;
+    // display: none;
   }
+
   @include media($header-break) {
     position: relative;
     background-color: transparent;
@@ -197,11 +198,18 @@
   }
 }
 
+.mobile-menu {
+  .fa-bars:before {
+    background-color: hsla(195, 62%, 95%, 0.7);
+  }
+}
+
 .mobile-open-menu {
   padding-bottom: 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   @include media($header-break) {
     display: none;
   }
