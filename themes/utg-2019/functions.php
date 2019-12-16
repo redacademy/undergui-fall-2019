@@ -122,6 +122,8 @@ function utg_scripts()
 	wp_enqueue_script('utg-post-category-ajax', get_template_directory_uri() . '/build/js/post-category-ajax.min.js', array('jquery'), '', true);
 	// Grab post ID and pull into Registration page
 	wp_enqueue_script('utg-find-classes-registration', get_template_directory_uri() . '/build/js/find-classes-registration.min.js', array('jquery'), '', true);
+	// Filters post_classes by different taxonomies
+	wp_enqueue_script('utg-find-classes-filter', get_template_directory_uri() . '/build/js/find-classes-filter.min.js', array('jquery'), '', true);
 	//FAQ container toggles
 	wp_enqueue_script('utg-faq-toggle', get_template_directory_uri() . '/build/js/faq-toggle.min.js', array(), '', true);
 	//Tabbed content scripts
