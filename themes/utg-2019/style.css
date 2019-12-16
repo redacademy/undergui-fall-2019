@@ -674,8 +674,6 @@ object {
   background-color: rgba(234, 246, 250, 0.7);
   padding: 0.5rem 0.75rem;
   z-index: 2; }
-  .site-header img {
-    display: none; }
   @media only screen and (min-width: 900px) {
     .site-header {
       position: relative;
@@ -845,6 +843,9 @@ object {
             .site-header .nav-links .menu li:last-child {
               padding-right: 4rem;
               border-right: 1px solid #000000; } }
+
+.mobile-menu .fa-bars:before {
+  background-color: rgba(234, 246, 250, 0.7); }
 
 .mobile-open-menu {
   padding-bottom: 2.5rem;
