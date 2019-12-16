@@ -84,7 +84,7 @@ function custom_levels_taxonomy() {
 add_action( 'init', 'custom_levels_taxonomy', 0 );
 
 // Register Custom Taxonomy age for classes
-function custom_age_taxonomy() {
+function custom_ages_taxonomy() {
 
 	$labels = array(
 		'name'                       => _x( 'Ages', 'Taxonomy General Name', 'text_domain' ),
@@ -120,9 +120,9 @@ function custom_age_taxonomy() {
 	register_taxonomy( 'age', array( 'post_classes' ), $args );
 
 }
-add_action( 'init', 'custom_age_taxonomy', 0 );
+add_action( 'init', 'custom_ages_taxonomy', 0 );
 
-// Register Custom Taxonomy age for classes
+// Register Custom Taxonomy days for classes
 function custom_day_taxonomy() {
 
 	$labels = array(
@@ -159,10 +159,10 @@ function custom_day_taxonomy() {
 	register_taxonomy( 'day', array( 'post_classes' ), $args );
 
 }
-add_action( 'init', 'custom_time_taxonomy', 0 );
+add_action( 'init', 'custom_day_taxonomy', 0 );
 
-// Register Custom Taxonomy age for classes
-function custom_age_taxonomy() {
+// Register Custom Taxonomy time for classes
+function custom_time_taxonomy() {
 
 	$labels = array(
 		'name'                       => _x( 'Times', 'Taxonomy General Name', 'text_domain' ),
