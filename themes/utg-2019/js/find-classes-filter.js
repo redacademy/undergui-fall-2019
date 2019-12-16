@@ -8,10 +8,10 @@
 
     let classInput = $('#class-search').val();
     let locationInput = $('#location-search').val();
-    let semesterInput = $('#semester option:selected').text();
-    let dayInput = $('#day option:selected').text();
-    let ageInput = $('#age option:selected').text();
-    let timeInput = $('#time option:selected').text();
+    let semesterInput = $('#semester ').val();
+    let dayInput = $('#day ').val();
+    let ageInput = $('#age ').val();
+    let timeInput = $('#time ').val();
 
     console.log(classInput);
     console.log(locationInput);
