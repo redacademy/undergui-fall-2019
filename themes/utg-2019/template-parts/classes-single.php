@@ -105,7 +105,7 @@
 
     </div><!-- .entry-content -->
     <div class="button-container">
-        <a href="<?= site_url('/register/'); ?>"><button>enroll now</button></a>
+        <a href="<?= site_url('/register/'); ?>"><button class="enroll-button">enroll now</button></a>
 
     </div>
 

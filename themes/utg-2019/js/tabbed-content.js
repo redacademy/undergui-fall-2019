@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function onTabClick(event) {
     let activeTabs = document.querySelectorAll('.active');
-    event.preventDefault();
 
     // deactivate existing active tab and panel
     activeTabs.forEach(function(tab) {
-      if (event.target.className === 'nav') {
-        return false;
-      }
+
+      if (event.target.className === 'nav'){
+      return false;
+    }
       tab.className = tab.className.replace('active', '');
     });
     
