@@ -3568,24 +3568,27 @@ body.home {
   bottom: 0;
   padding: 0.875rem; }
 
-body.page-request-info .page-banner, body.page-request-info .post-banner {
-  background-size: inherit !important;
-  background-position: right !important; }
-  body.page-request-info .page-banner .banner-text h1, body.page-request-info .post-banner .banner-text h1 {
-    margin-top: 0;
-    margin-bottom: 1rem; }
-  body.page-request-info .page-banner .faq-button, body.page-request-info .post-banner .faq-button {
-    -ms-flex-item-align: center;
-        align-self: center;
-    margin-top: 1.5rem;
-    width: 13rem;
-    height: 2.2rem;
-    padding: 0.5rem;
-    border: 1px solid #ffffff; }
-    @media only screen and (min-width: 800px) {
-      body.page-request-info .page-banner .faq-button, body.page-request-info .post-banner .faq-button {
-        -ms-flex-item-align: unset;
-            align-self: unset; } }
+@media only screen and (max-width: 510px) {
+  body.page-request-info .page-banner, body.page-request-info .post-banner {
+    background-size: inherit !important;
+    background-position: right !important; } }
+
+body.page-request-info .page-banner .banner-text h1, body.page-request-info .post-banner .banner-text h1 {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+body.page-request-info .page-banner .faq-button, body.page-request-info .post-banner .faq-button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 1.5rem;
+  width: 13rem;
+  height: 2.2rem;
+  padding: 0.5rem;
+  border: 1px solid #ffffff; }
+  @media only screen and (min-width: 800px) {
+    body.page-request-info .page-banner .faq-button, body.page-request-info .post-banner .faq-button {
+      -ms-flex-item-align: unset;
+          align-self: unset; } }
 
 body.page-request-info .entry-title {
   display: none; }

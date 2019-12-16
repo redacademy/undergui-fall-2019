@@ -1,8 +1,11 @@
 body.page-request-info {
 
   .page-banner {
+
+    @include max-media(510px) {
     background-size: inherit !important;
     background-position: right !important;
+    }
 
     .banner-text{
       h1 {
