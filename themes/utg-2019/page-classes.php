@@ -12,6 +12,7 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 
+
 		<section class="search-section">
 
 
@@ -57,7 +58,7 @@ get_header(); ?>
 					<h4>Semester</h4>
 				</label>
 				<select name="semester" id="semester">
-					<option disabled selected value="today">Select a semester</option>
+					<option selected value="">Select a semester</option>
 					<option value="today">summer</option>
 					<option value="today">yesterday</option>
 
@@ -70,9 +71,16 @@ get_header(); ?>
 					<h4>Day</h4>
 				</label>
 				<select name="day" id="day">
-					<option disabled selected value="today">Select a day</option>
-					<option value="today">today</option>
-					<option value="today">yesterday</option>
+					<option selected value="">Select a day</option>
+
+					<?php $terms = get_terms('day', array(
+						'orderby' => 'id',
+						'hide_empty' => false
+					));
+					foreach ($terms as $term) : ?>
+
+						<option value="<?php echo $term->name ?>"><?php echo $term->name ?></option>
+					<?php endforeach; ?>
 
 
 				</select>
@@ -84,9 +92,17 @@ get_header(); ?>
 					<h4>Age</h4>
 				</label>
 				<select name="age" id="age">
-					<option disabled selected value="today">Select an age</option>
-					<option value="69">69</option>
-					<option value="69">420</option>
+					<option selected value="">Select an age</option>
+
+					<?php $terms = get_terms('age', array(
+						'orderby' => 'id',
+						'hide_empty' => false
+					));
+					foreach ($terms as $term) : ?>
+
+						<option value="<?php echo $term->name ?>"><?php echo $term->name ?></option>
+					<?php endforeach; ?>
+
 
 				</select>
 
@@ -97,9 +113,16 @@ get_header(); ?>
 					<h4>Time</h4>
 				</label>
 				<select name="time" id="time">
-					<option disabled selected value="today">Select a time</option>
-					<option value="69">noon</option>
-					<option value="69">420</option>
+					<option selected value="">Select a time</option>
+
+					<?php $terms = get_terms('time', array(
+						'orderby' => 'id',
+						'hide_empty' => false
+					));
+					foreach ($terms as $term) : ?>
+
+						<option value="<?php echo $term->name ?>"><?php echo $term->name ?></option>
+					<?php endforeach; ?>
 
 				</select>
 

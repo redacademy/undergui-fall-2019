@@ -674,8 +674,6 @@ object {
   background-color: rgba(234, 246, 250, 0.7);
   padding: 0.5rem 0.75rem;
   z-index: 2; }
-  .site-header img {
-    display: none; }
   @media only screen and (min-width: 900px) {
     .site-header {
       position: relative;
@@ -845,6 +843,9 @@ object {
             .site-header .nav-links .menu li:last-child {
               padding-right: 4rem;
               border-right: 1px solid #000000; } }
+
+.mobile-menu .fa-bars:before {
+  background-color: rgba(234, 246, 250, 0.7); }
 
 .mobile-open-menu {
   padding-bottom: 2.5rem;
@@ -3520,14 +3521,14 @@ body.home {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   padding: 2rem 0.75rem; }
   @media only screen and (min-width: 800px) {
     .search-section {
       display: grid;
       grid-template-rows: repeat(1, 1fr);
       grid-template-columns: repeat(6, 1fr);
-      grid-gap: 2rem;
+      grid-gap: 1rem;
       padding: 2rem 7vw; } }
   .search-section fieldset {
     margin: 0;
@@ -3567,29 +3568,95 @@ body.home {
   bottom: 0;
   padding: 0.875rem; }
 
+@media only screen and (max-width: 510px) {
+  body.page-request-info .page-banner, body.page-request-info .post-banner {
+    background-size: inherit !important;
+    background-position: right !important; } }
+
+body.page-request-info .page-banner .banner-text h1, body.page-request-info .post-banner .banner-text h1 {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+body.page-request-info .page-banner .faq-button, body.page-request-info .post-banner .faq-button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 1.5rem;
+  width: 13rem;
+  height: 2.2rem;
+  padding: 0.5rem;
+  border: 1px solid #ffffff; }
+  @media only screen and (min-width: 800px) {
+    body.page-request-info .page-banner .faq-button, body.page-request-info .post-banner .faq-button {
+      -ms-flex-item-align: unset;
+          align-self: unset; } }
+
 body.page-request-info .entry-title {
+  display: none; }
+
+body.page-request-info .entry-content .gform_title {
   display: none; }
 
 body.page-request-info .entry-content p {
   display: none; }
 
+@media only screen and (min-width: 800px) {
+  body.page-request-info .gform_body {
+    width: 80%;
+    margin: 0 auto; }
+    body.page-request-info .gform_body #field_1_21,
+    body.page-request-info .gform_body #field_1_20,
+    body.page-request-info .gform_body #field_1_22 {
+      grid-column-start: 1;
+      grid-column-end: 3; }
+    body.page-request-info .gform_body #field_1_21 {
+      grid-row-start: 1;
+      grid-row-end: 2; }
+    body.page-request-info .gform_body #field_1_20 {
+      grid-row-start: 4;
+      grid-row-end: 5; }
+    body.page-request-info .gform_body #field_1_22 {
+      grid-row-start: 7;
+      grid-row-end: 8; }
+    body.page-request-info .gform_body ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      body.page-request-info .gform_body ul li {
+        grid-template-rows: 1fr 1fr; }
+      body.page-request-info .gform_body ul li.gfield.gsection {
+        margin: 0; }
+    body.page-request-info .gform_body input.medium,
+    body.page-request-info .gform_body select {
+      width: 100% !important; } }
+
+body.page-request-info .gform_wrapper input#gform_submit_button_1 {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 11rem;
+  line-height: 0.5; }
+  body.page-request-info .gform_wrapper input#gform_submit_button_1:hover {
+    color: #2ba2dd;
+    background-color: #ffffff; }
+  body.page-request-info .gform_wrapper input#gform_submit_button_1:active, body.page-request-info .gform_wrapper input#gform_submit_button_1:focus {
+    background-color: #1d84b8; }
+
+body.page-request-info .gform_wrapper .gfield_label {
+  font-family: "Titillium Web";
+  font-size: 14px; }
+
 body.page-request-info .gform_wrapper form {
   margin: 0 1rem; }
 
-body.page-request-info .page-banner, body.page-request-info .post-banner {
-  background-size: inherit !important;
-  background-position: right !important; }
-  body.page-request-info .page-banner .faq-button, body.page-request-info .post-banner .faq-button {
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -ms-flex-item-align: center;
-        align-self: center;
-    margin-top: 1.5rem;
-    width: 13rem;
-    height: 2.2rem;
-    padding: 0.6rem;
-    border-color: #ffffff; }
+body.page-request-info .gform_wrapper .gsection {
+  border: 0px; }
+
+body.page-request-info .gform_wrapper .gform_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .post_classes-template-default h2 {
   margin: 0 0 2rem 0; }

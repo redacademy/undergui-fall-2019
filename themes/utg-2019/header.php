@@ -84,8 +84,8 @@
 					<div class="banner-text">
 						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
 						<?php the_excerpt(); ?>
+						<input type="button" class="faq-button" onclick="location.href='<?= get_home_url() . '/about/#faq' ?>';" value="check out faq" />
 					</div>
-					<input type="button" class="faq-button" onclick="location.href='<?= get_home_url() . '/about/#faq' ?>';" value="check out faq" />
 				</div>
 
 			<?php } elseif (is_page() || is_singular('post_programs')) { ?>
