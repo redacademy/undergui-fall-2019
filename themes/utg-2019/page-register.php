@@ -72,13 +72,12 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-
-
 </div>
 
 <?php endwhile; // End of the loop. 
 	?>
 <?php endif ?>
+<?php gravity_form(2); ?>
 
 </main><!-- #main -->
 </div><!-- #primary -->
