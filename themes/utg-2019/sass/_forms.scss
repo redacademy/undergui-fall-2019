@@ -70,12 +70,12 @@ input[type='url'],
 input[type='password'],
 input[type='search'],
 textarea {
-  color: $color_grey;
+  color: $color_paragraph;
   border: 1px solid #ccc;
   border-radius: $border-radius;
 
   &:focus {
-    color: #111;
+    color: $color_black;
   }
 }
 
@@ -84,7 +84,7 @@ input[type='email'],
 input[type='url'],
 input[type='password'],
 input[type='search'] {
-  padding: 3px;
+  padding: 1rem;
 }
 
 textarea {
