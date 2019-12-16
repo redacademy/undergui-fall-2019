@@ -3509,11 +3509,69 @@ body.home {
 body.page-request-info .entry-title {
   display: none; }
 
+body.page-request-info .entry-content .gform_title {
+  display: none; }
+
 body.page-request-info .entry-content p {
   display: none; }
 
+@media only screen and (min-width: 800px) {
+  body.page-request-info .gform_body {
+    width: 80%;
+    margin: 0 auto; }
+    body.page-request-info .gform_body #field_1_21,
+    body.page-request-info .gform_body #field_1_20,
+    body.page-request-info .gform_body #field_1_22 {
+      grid-column-start: 1;
+      grid-column-end: 3; }
+    body.page-request-info .gform_body #field_1_21 {
+      grid-row-start: 1;
+      grid-row-end: 2; }
+    body.page-request-info .gform_body #field_1_20 {
+      grid-row-start: 4;
+      grid-row-end: 5; }
+    body.page-request-info .gform_body #field_1_22 {
+      grid-row-start: 7;
+      grid-row-end: 8; }
+    body.page-request-info .gform_body ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      body.page-request-info .gform_body ul li {
+        grid-template-rows: 1fr 1fr; }
+      body.page-request-info .gform_body ul li.gfield.gsection {
+        margin: 0; }
+    body.page-request-info .gform_body input.medium {
+      width: 100% !important; } }
+
+body.page-request-info .gform_wrapper input#gform_submit_button_1 {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 11rem;
+  line-height: 0.5; }
+  body.page-request-info .gform_wrapper input#gform_submit_button_1:hover {
+    color: #2ba2dd;
+    background-color: #ffffff; }
+  body.page-request-info .gform_wrapper input#gform_submit_button_1:active, body.page-request-info .gform_wrapper input#gform_submit_button_1:focus {
+    background-color: #1d84b8; }
+
+body.page-request-info .gform_wrapper .gfield_label {
+  font-family: "Titillium Web";
+  font-size: 14px; }
+
 body.page-request-info .gform_wrapper form {
   margin: 0 1rem; }
+
+body.page-request-info .gform_wrapper .gsection {
+  border: 0px; }
+
+body.page-request-info .gform_wrapper .gform_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 body.page-request-info .page-banner, body.page-request-info .post-banner {
   background-size: inherit !important;
