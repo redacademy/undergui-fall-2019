@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  function onLoad(e) {
+  function onLoad() {
     let urlTag = window.location.hash;
     let loadTabs = document.querySelectorAll('.active');
 
