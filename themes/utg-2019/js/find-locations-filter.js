@@ -72,9 +72,6 @@
           );
         } else {
           $.each(data, function appendContent(data, arrayItem) {
-            console.log(data);
-            console.log(arrayItem);
-
             postContainer.append(`
           <div class="location-card" >
 
