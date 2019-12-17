@@ -1,25 +1,31 @@
 <?php
-
 /**
- * The template for displaying all pages.
+ * The template for displaying under construction page (not found).
+ *
  *
  * @package utg_Theme
  */
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-	<main id="main" class="site-main" role="main">
+			<section class="under-contstruction">
 
-		<?php while (have_posts()) : the_post(); ?>
+				<header class="banner-under-construction">
+					
+					<img src="<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/404-background-image.png"/>
 
-			<?php get_template_part('template-parts/content', 'page'); ?>
+					<p class="under-construction-text">Under Construction</p>
+					
+					<!-- <a class="home-btn-404" href="#">Go Back Home</a> -->
 
-		<?php endwhile; // End of the loop. 
-		?>
+				</header>
 
-	</main><!-- #main -->
-</div><!-- #primary -->
+			</section>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
 <?php get_footer(); ?>
