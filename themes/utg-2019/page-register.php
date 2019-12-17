@@ -37,49 +37,51 @@ get_header(); ?>
 		<section class="enroll-form">
 
 		</section>
-		<?php if ($the_class->have_posts()) : while ($the_class->have_posts()) : $the_class->the_post(); ?>
 
-				<div class="classes-box" href="<?php echo get_post_permalink(); ?>" style="background: <?= the_field('background_color'); ?> ">
+		<section class="class-card-container">
+			<?php if ($the_class->have_posts()) : while ($the_class->have_posts()) : $the_class->the_post(); ?>
 
-
-					<div class="class-header">
-						<!-- dynamic post title, date, and category -->
-						<?php the_post_thumbnail('full', array('class' => 'class-img')); ?>
-						<!-- dynamic post image for card -->
-					</div>
-
-					<div class="post-meta">
+					<div class="classes-box" href="<?php echo get_post_permalink(); ?>" style="background: <?= the_field('background_color'); ?> ">
 
 
-						<div class="post-data-header">
-							<h3 class="class-title"><?= the_title(); ?></h3>
-							<h4 class="class-age">Age &nbsp;<?= the_field('ages') ?></h4>
-							<h4>$&nbsp;<?= the_field('price') ?></h4>
-
+						<div class="class-header">
+							<!-- dynamic post title, date, and category -->
+							<?php the_post_thumbnail('full', array('class' => 'class-img')); ?>
+							<!-- dynamic post image for card -->
 						</div>
 
+						<div class="post-meta">
 
 
-						<div class="post-data">
+							<div class="post-data-header">
+								<h3 class="class-title"><?= the_title(); ?></h3>
+								<h4 class="class-age">Age &nbsp;<?= the_field('ages') ?></h4>
+								<h4>$&nbsp;<?= the_field('price') ?></h4>
 
-							<p class="class-location"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/Location.svg" alt="location"><?= the_field('location') ?></p>
-							<p class="class-data">
-								<!-- <i class="far fa-calendar-alt"></i> -->
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/Calendar.svg" alt=""><?= the_field('day') ?>
-								from <?= the_field('start_date') ?> &#45; <?= the_field('end_date') ?>
-							</p>
-							<p class="class-day"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/Clock.svg" alt="time"><?= the_field('time') ?></p>
+							</div>
+
+
+
+							<div class="post-data">
+
+								<p class="class-location"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/Location.svg" alt="location"><?= the_field('location') ?></p>
+								<p class="class-data">
+									<!-- <i class="far fa-calendar-alt"></i> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/Calendar.svg" alt=""><?= the_field('day') ?>
+									from <?= the_field('start_date') ?> &#45; <?= the_field('end_date') ?>
+								</p>
+								<p class="class-day"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/Clock.svg" alt="time"><?= the_field('time') ?></p>
+							</div>
 						</div>
 					</div>
-				</div>
-
-
 </div>
 
 <?php endwhile; // End of the loop. 
 	?>
 <?php endif ?>
 <?php wp_reset_query(); ?>
+<?php gravity_form(2); ?>
+</section>
 
 </main><!-- #main -->
 </div><!-- #primary -->

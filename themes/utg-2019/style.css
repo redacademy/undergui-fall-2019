@@ -106,13 +106,6 @@ b,
 strong {
   font-weight: bold; }
 
-dfn {
-  font-style: italic; }
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
 mark {
   background: #ff0;
   color: #000; }
@@ -169,6 +162,9 @@ textarea {
 button {
   overflow: visible; }
 
+button:focus {
+  outline: 0; }
+
 button,
 select {
   text-transform: none; }
@@ -187,7 +183,8 @@ html input[disabled] {
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
-  padding: 0; }
+  padding: 0;
+  outline: 0; }
 
 input {
   line-height: normal; }
@@ -212,9 +209,10 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  outline: 0; }
+
+div {
+  outline: 0; }
 
 legend {
   border: 0;
@@ -663,7 +661,7 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 .site-header {
-  position: fixed;
+  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -671,16 +669,12 @@ object {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: rgba(234, 246, 250, 0.7);
   padding: 0.5rem 0.75rem;
   z-index: 2; }
   @media only screen and (min-width: 900px) {
     .site-header {
-      position: relative;
       background-color: transparent;
-      padding: 0.125rem 0.75rem; }
-      .site-header img {
-        display: block; } }
+      padding: 0.125rem 0.75rem; } }
   .site-header.toggle-menu::before {
     content: '';
     display: block;
@@ -712,14 +706,16 @@ object {
     transition: width 0.3s ease-in-out;
     position: absolute;
     margin: 0;
-    height: 100vh;
+    height: 10000vh;
     background-color: #2ba2dd;
     right: 0;
-    z-index: 98; }
+    top: 0;
+    z-index: 20; }
     @media only screen and (min-width: 900px) {
       .site-header .nav-links {
         position: absolute;
         height: auto;
+        top: auto;
         background-color: transparent;
         overflow: unset; } }
     .site-header .nav-links .left-arrow {
@@ -742,10 +738,10 @@ object {
     margin: 0;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 10000vh;
     width: 75vw;
     background-color: #2ba2dd;
-    z-index: 1000; }
+    z-index: 20; }
     .site-header .toggle-menu .left-arrow {
       color: #ffffff;
       -webkit-transition: -webkit-transform 0.5s ease-in;
@@ -845,7 +841,12 @@ object {
               border-right: 1px solid #000000; } }
 
 .mobile-menu .fa-bars:before {
-  background-color: rgba(234, 246, 250, 0.7); }
+  position: fixed;
+  top: 15px;
+  right: 10px;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 5px; }
 
 .mobile-open-menu {
   padding-bottom: 2.5rem;
@@ -2916,11 +2917,13 @@ body.home {
     width: 120px;
     top: -18%;
     right: -2%;
-    z-index: 999;
+    z-index: 1;
     border-radius: 50%; }
     @media only screen and (min-width: 800px) {
       .program-classes .block-man-chat-mobile {
         display: none; } }
+  .program-classes .hide-block-man {
+    z-index: -1; }
   .program-classes .block-man-chat {
     display: none; }
     @media only screen and (min-width: 800px) {
@@ -2943,7 +2946,9 @@ body.home {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 3rem;
-      line-height: 1.75; } }
+      line-height: 1.75; }
+      .program-curriculum div h4 {
+        margin-top: 0; } }
   .program-curriculum p {
     font-size: 0.9rem; }
   .program-curriculum img {
@@ -3537,6 +3542,28 @@ body.home {
     height: 50px;
     width: 100%; }
 
+@media only screen and (max-width: 510px) {
+  body.page-request-info .page-banner, body.page-request-info .post-banner {
+    background-size: inherit !important;
+    background-position: right !important; } }
+
+body.page-request-info .page-banner .banner-text h1, body.page-request-info .post-banner .banner-text h1 {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+body.page-request-info .page-banner .faq-button, body.page-request-info .post-banner .faq-button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 1.5rem;
+  width: 13rem;
+  height: 2.2rem;
+  padding: 0.5rem;
+  border: 1px solid #ffffff; }
+  @media only screen and (min-width: 800px) {
+    body.page-request-info .page-banner .faq-button, body.page-request-info .post-banner .faq-button {
+      -ms-flex-item-align: unset;
+          align-self: unset; } }
+
 body.page-request-info .entry-title {
   display: none; }
 
@@ -3571,7 +3598,8 @@ body.page-request-info .entry-content p {
         grid-template-rows: 1fr 1fr; }
       body.page-request-info .gform_body ul li.gfield.gsection {
         margin: 0; }
-    body.page-request-info .gform_body input.medium {
+    body.page-request-info .gform_body input.medium,
+    body.page-request-info .gform_body select {
       width: 100% !important; } }
 
 body.page-request-info .gform_wrapper input#gform_submit_button_1 {
@@ -3603,21 +3631,6 @@ body.page-request-info .gform_wrapper .gform_footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-
-body.page-request-info .page-banner, body.page-request-info .post-banner {
-  background-size: inherit !important;
-  background-position: right !important; }
-  body.page-request-info .page-banner .faq-button, body.page-request-info .post-banner .faq-button {
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -ms-flex-item-align: center;
-        align-self: center;
-    margin-top: 1.5rem;
-    width: 13rem;
-    height: 2.2rem;
-    padding: 0.6rem;
-    border-color: #ffffff; }
 
 .post_classes-template-default h2 {
   margin: 0 0 2rem 0; }
@@ -3965,40 +3978,15 @@ body.page-request-info .page-banner, body.page-request-info .post-banner {
   @media only screen and (min-width: 800px) {
     .enroll-page {
       padding: 0 7vw; } }
-  @media only screen and (min-width: 800px) {
-    .enroll-page .classes-box {
-      -webkit-box-shadow: 0 1px 4px #000000;
-              box-shadow: 0 1px 4px #000000;
-      border-radius: 5px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      height: 400px;
-      width: 100%;
-      overflow: hidden;
-      margin: 0;
-      width: 40%;
-      height: 520px;
-      display: flex;
-      flex-direction: column;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .enroll-page .classes-box .image-container {
-        width: 100%;
-        min-height: 65%;
-        display: block;
-        overflow: hidden; }
-      .enroll-page .classes-box .post-meta {
-        border-top: 1px solid #eff1f6;
-        -webkit-box-shadow: none;
-                box-shadow: none;
-        min-height: 35%;
-        padding: 1rem;
+  .enroll-page .classes-box {
+    -ms-flex-item-align: center;
+        align-self: center;
+    border: 1px solid #eff1f6; }
+    @media only screen and (min-width: 800px) {
+      .enroll-page .classes-box {
+        -webkit-box-shadow: 0 1px 4px #000000;
+                box-shadow: 0 1px 4px #000000;
+        border-radius: 5px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -4006,64 +3994,130 @@ body.page-request-info .page-banner, body.page-request-info .post-banner {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
+        height: 400px;
+        width: 100%;
+        overflow: hidden;
+        margin: 0;
+        width: 40%;
+        height: 520px;
+        display: flex;
+        flex-direction: column;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
-                justify-content: space-between; }
-        .enroll-page .classes-box .post-meta div {
-          max-height: 70%;
-          overflow: hidden;
-          font-family: "Titillium Web"; }
-        .enroll-page .classes-box .post-meta .post-title {
-          color: #333333;
-          display: block; }
-        .enroll-page .classes-box .post-meta .post-data {
-          color: #333333;
-          text-transform: uppercase;
-          font-weight: lighter;
-          font-size: 0.75rem;
-          margin: 0; }
-        .enroll-page .classes-box .post-meta .post-title {
+                justify-content: space-between;
+        border: 0px; }
+        .enroll-page .classes-box .image-container {
+          width: 100%;
+          min-height: 65%;
+          display: block;
+          overflow: hidden; }
+        .enroll-page .classes-box .post-meta {
+          border-top: 1px solid #eff1f6;
+          -webkit-box-shadow: none;
+                  box-shadow: none;
+          min-height: 35%;
+          padding: 1rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
+          .enroll-page .classes-box .post-meta div {
+            max-height: 70%;
+            overflow: hidden;
+            font-family: "Titillium Web"; }
+          .enroll-page .classes-box .post-meta .post-title {
+            color: #333333;
+            display: block; }
+          .enroll-page .classes-box .post-meta .post-data {
+            color: #333333;
+            text-transform: uppercase;
+            font-weight: lighter;
+            font-size: 0.75rem;
+            margin: 0; }
+          .enroll-page .classes-box .post-meta .post-title {
+            margin: 0;
+            font-size: 1rem; }
+          .enroll-page .classes-box .post-meta p {
+            font-size: 1rem;
+            font-family: "Titillium Web";
+            color: #2ba2dd;
+            text-transform: uppercase; }
+        .enroll-page .classes-box * {
+          color: #333333; } }
+    .enroll-page .classes-box .class-header {
+      background-color: #ffcc00;
+      height: 25%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      position: relative;
+      padding: 2rem; }
+    .enroll-page .classes-box .class-img {
+      height: 202px;
+      width: 281px;
+      -o-object-fit: contain;
+         object-fit: contain;
+      position: absolute;
+      right: 5%;
+      top: 10%;
+      display: none; }
+      @media only screen and (min-width: 800px) {
+        .enroll-page .classes-box .class-img {
+          display: inline; } }
+    .enroll-page .classes-box .post-meta {
+      border: none;
+      margin: 0 1rem; }
+      @media only screen and (min-width: 800px) {
+        .enroll-page .classes-box .post-meta {
           margin: 0;
-          font-size: 1rem; }
-        .enroll-page .classes-box .post-meta p {
-          font-size: 1rem;
-          font-family: "Titillium Web";
-          color: #2ba2dd;
-          text-transform: uppercase; }
-      .enroll-page .classes-box * {
-        color: #333333; } }
-  .enroll-page .classes-box .class-header {
-    background-color: #ffcc00;
-    height: 25%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    position: relative;
-    padding: 2rem; }
-  .enroll-page .classes-box .class-img {
-    height: 202px;
-    width: 281px;
-    -o-object-fit: contain;
-       object-fit: contain;
-    position: absolute;
-    right: 5%;
-    top: 10%; }
-  .enroll-page .classes-box .post-meta {
-    border: none;
-    height: 60%;
-    padding: 1.5rem; }
-    .enroll-page .classes-box .post-meta .post-data-header {
-      height: 40%;
-      border-bottom: 1px solid #eff1f6; }
-    .enroll-page .classes-box .post-meta p {
-      margin: 0.5rem 0;
-      text-transform: none;
-      color: #333333; }
-      .enroll-page .classes-box .post-meta p img {
-        margin-right: 0.5rem; }
+          padding: 1.5rem;
+          height: 60%; } }
+      .enroll-page .classes-box .post-meta .post-data-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        height: 40%;
+        border-bottom: 1px solid #eff1f6;
+        font-size: 18px; }
+        @media only screen and (min-width: 800px) {
+          .enroll-page .classes-box .post-meta .post-data-header {
+            display: inline; } }
+        .enroll-page .classes-box .post-meta .post-data-header .class-title {
+          position: absolute;
+          -webkit-transform: translate(0 -2.6rem);
+                  transform: translate(0 -2.6rem); }
+          @media only screen and (min-width: 800px) {
+            .enroll-page .classes-box .post-meta .post-data-header .class-title {
+              position: relative;
+              -webkit-transform: translate(0 0);
+                      transform: translate(0 0); } }
+      .enroll-page .classes-box .post-meta p {
+        margin: 0.5rem 0;
+        text-transform: none;
+        color: #333333; }
+        .enroll-page .classes-box .post-meta p img {
+          margin-right: 0.5rem; }
+
+body.page-register .enroll-page {
+  display: block; }
+
+body.page-register .gform_title {
+  display: none; }
+
+body.page-register .gform_wrapper {
+  margin: 1rem; }

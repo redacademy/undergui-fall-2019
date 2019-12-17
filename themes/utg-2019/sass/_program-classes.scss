@@ -41,11 +41,14 @@
     width: 120px;
     top: -18%;
     right: -2%;
-    z-index: 999;
+    z-index: 1;
     border-radius: 50%;
     @include media($desktop) {
       display: none;
     }
+  }
+  .hide-block-man {
+    z-index: -1;
   }
 
   .block-man-chat {

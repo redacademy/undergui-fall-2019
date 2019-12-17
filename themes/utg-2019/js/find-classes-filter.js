@@ -1,44 +1,89 @@
 (function($) {
-  $('.search-submit').on('click', function(event) {
-    event.preventDefault();
-  });
+  //   $('.search-submit').on('click', function(event) {
+  //     event.preventDefault();
+  //   });
 
   $('#filter-classes').on('click', function(event) {
     event.preventDefault();
 
     let classInput = $('#class').val();
     let locationInput = $('#location').val();
-    let semesterInput = $('#semester ').val();
-    let dayInput = $('#day ').val();
-    let ageInput = $('#age ').val();
-    let timeInput = $('#time ').val();
+    let semesterInput = $('#semester').val();
+    let dayInput = $('#day').val();
+    let ageInput = $('#age').val();
+    let timeInput = $('#time').val();
 
     const postContainer = $('.classes-container');
     let filterPostUrl = utg_vars.rest_url + 'wp/v2/post_classes?';
 
+    console.log(filterPostUrl.length);
+
+    if (
+      classInput === '' &&
+      locationInput === '' &&
+      semesterInput === '' &&
+      dayInput === '' &&
+      ageInput === '' &&
+      timeInput === ''
+    ) {
+      if ($('.please-make-a-selection').length) {
+        return;
+      } else {
+        console.log('what the shit');
+        postContainer.prepend(
+          '<h2 class="please-make-a-selection">Please make a selection.<h2>'
+        );
+        return;
+      }
+    }
+
     postContainer.empty();
 
     if (classInput.length) {
-      filterPostUrl += 'filter[language]=' + classInput;
+      if (filterPostUrl.includes('filter')) {
+        filterPostUrl += '&filter[language]=' + classInput;
+      } else {
+        filterPostUrl += 'filter[language]=' + classInput;
+      }
     }
-
+    console.log(filterPostUrl.length);
     if (locationInput.length) {
-      filterPostUrl += 'filter[location]=' + locationInput;
+      if (filterPostUrl.includes('filter')) {
+        filterPostUrl += '&filter[location]=' + locationInput;
+      } else {
+        filterPostUrl += 'filter[location]=' + locationInput;
+      }
     }
     if (semesterInput.length) {
-      filterPostUrl += 'filter[semester]=' + semesterInput;
+      if (filterPostUrl.includes('filter')) {
+        filterPostUrl += '&filter[semester]=' + semesterInput;
+      } else {
+        filterPostUrl += 'filter[semester]=' + semesterInput;
+      }
     }
 
     if (dayInput.length) {
-      filterPostUrl += '&filter[day]=' + dayInput;
+      if (filterPostUrl.includes('filter')) {
+        filterPostUrl += '&filter[day]=' + dayInput;
+      } else {
+        filterPostUrl += 'filter[day]=' + dayInput;
+      }
     }
 
     if (ageInput.length) {
-      filterPostUrl += '&filer[age]=' + ageInput;
+      if (filterPostUrl.includes('filter')) {
+        filterPostUrl += '&filter[age]=' + ageInput;
+      } else {
+        filterPostUrl += 'filter[age]=' + ageInput;
+      }
     }
 
     if (timeInput.length) {
-      filterPostUrl += '&filter[time]=' + timeInput;
+      if (filterPostUrl.includes('filter')) {
+        filterPostUrl += '&filter[time]=' + timeInput;
+      } else {
+        filterPostUrl += 'filter[time]=' + timeInput;
+      }
     }
 
     console.log(filterPostUrl);
@@ -58,7 +103,10 @@
       .done(function(data) {
         console.log(data);
 
+        let counter = 0;
         $.each(data, function appendContent(data, arrayItem) {
+          counter++;
+
           // grabs date from rest API
           let newDate = new Date(arrayItem.date);
 
@@ -117,6 +165,11 @@
     </a>
 `);
         });
+        if (counter < 2) {
+          postContainer.prepend('<h2>' + counter + ' Class</h2>');
+        } else {
+          postContainer.prepend('<h2>' + counter + ' Classes</h2>');
+        }
       })
       .fail(function(error) {
         alert('There has been an error!' + error);
