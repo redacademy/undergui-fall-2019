@@ -15,8 +15,6 @@
       datatype: 'JSON'
     })
       .done(function(data) {
-        // console.log(data);
-
         $.each(data, function appendContent(data, arrayItem) {
           // grabs date from rest API
           let newDate = new Date(arrayItem.date);
@@ -63,7 +61,6 @@
         });
 
         if (data.length < 8) {
-          console.log(data.length);
           $('.show-more-posts').remove();
         } else {
           if ($('.show-more-posts').length) {

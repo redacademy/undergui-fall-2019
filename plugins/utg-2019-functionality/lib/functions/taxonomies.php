@@ -1,4 +1,5 @@
 <?php
+
 /**
  * TAXONOMIES
  *
@@ -10,24 +11,25 @@
 // Register Custom Taxonomy
 
 // Register Taxonomy Program Taxonomy
-function create_programtaxonomy_tax() {
+function create_programtaxonomy_tax()
+{
 
 	$labels = array(
-		'name'              => _x( 'Program Taxonomies', 'taxonomy general name', 'textdomain' ),
-		'singular_name'     => _x( 'Program Taxonomy', 'taxonomy singular name', 'textdomain' ),
-		'search_items'      => __( 'Search Program Taxonomies', 'textdomain' ),
-		'all_items'         => __( 'All Program Taxonomies', 'textdomain' ),
-		'parent_item'       => __( 'Parent Program Taxonomy', 'textdomain' ),
-		'parent_item_colon' => __( 'Parent Program Taxonomy:', 'textdomain' ),
-		'edit_item'         => __( 'Edit Program Taxonomy', 'textdomain' ),
-		'update_item'       => __( 'Update Program Taxonomy', 'textdomain' ),
-		'add_new_item'      => __( 'Add New Program Taxonomy', 'textdomain' ),
-		'new_item_name'     => __( 'New Program Taxonomy Name', 'textdomain' ),
-		'menu_name'         => __( 'Program Taxonomy', 'textdomain' ),
+		'name'              => _x('Program Taxonomies', 'taxonomy general name', 'textdomain'),
+		'singular_name'     => _x('Program Taxonomy', 'taxonomy singular name', 'textdomain'),
+		'search_items'      => __('Search Program Taxonomies', 'textdomain'),
+		'all_items'         => __('All Program Taxonomies', 'textdomain'),
+		'parent_item'       => __('Parent Program Taxonomy', 'textdomain'),
+		'parent_item_colon' => __('Parent Program Taxonomy:', 'textdomain'),
+		'edit_item'         => __('Edit Program Taxonomy', 'textdomain'),
+		'update_item'       => __('Update Program Taxonomy', 'textdomain'),
+		'add_new_item'      => __('Add New Program Taxonomy', 'textdomain'),
+		'new_item_name'     => __('New Program Taxonomy Name', 'textdomain'),
+		'menu_name'         => __('Program Taxonomy', 'textdomain'),
 	);
 	$args = array(
 		'labels' => $labels,
-		'description' => __( '', 'textdomain' ),
+		'description' => __('', 'textdomain'),
 		'hierarchical' => true,
 		'public' => true,
 		'publicly_queryable' => true,
@@ -39,35 +41,35 @@ function create_programtaxonomy_tax() {
 		'show_admin_column' => false,
 		'show_in_rest' => true,
 	);
-	register_taxonomy( 'programtaxonomy', array('post_programs'), $args );
-
+	register_taxonomy('programtaxonomy', array('post_programs'), $args);
 }
-add_action( 'init', 'create_programtaxonomy_tax' );
+add_action('init', 'create_programtaxonomy_tax');
 
 // Register Custom Taxonomy Level for classes
-function custom_levels_taxonomy() {
+function custom_levels_taxonomy()
+{
 
 	$labels = array(
-		'name'                       => _x( 'Levels', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Level', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Level Taxonomy', 'text_domain' ),
-		'all_items'                  => __( 'All Items', 'text_domain' ),
-		'parent_item'                => __( 'Parent Item', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
-		'new_item_name'              => __( 'New Item Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Item', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Item', 'text_domain' ),
-		'update_item'                => __( 'Update Item', 'text_domain' ),
-		'view_item'                  => __( 'View Item', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular Items', 'text_domain' ),
-		'search_items'               => __( 'Search Items', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' ),
-		'no_terms'                   => __( 'No items', 'text_domain' ),
-		'items_list'                 => __( 'Items list', 'text_domain' ),
-		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
+		'name'                       => _x('Levels', 'Taxonomy General Name', 'text_domain'),
+		'singular_name'              => _x('Level', 'Taxonomy Singular Name', 'text_domain'),
+		'menu_name'                  => __('Level Taxonomy', 'text_domain'),
+		'all_items'                  => __('All Items', 'text_domain'),
+		'parent_item'                => __('Parent Item', 'text_domain'),
+		'parent_item_colon'          => __('Parent Item:', 'text_domain'),
+		'new_item_name'              => __('New Item Name', 'text_domain'),
+		'add_new_item'               => __('Add New Item', 'text_domain'),
+		'edit_item'                  => __('Edit Item', 'text_domain'),
+		'update_item'                => __('Update Item', 'text_domain'),
+		'view_item'                  => __('View Item', 'text_domain'),
+		'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
+		'add_or_remove_items'        => __('Add or remove items', 'text_domain'),
+		'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
+		'popular_items'              => __('Popular Items', 'text_domain'),
+		'search_items'               => __('Search Items', 'text_domain'),
+		'not_found'                  => __('Not Found', 'text_domain'),
+		'no_terms'                   => __('No items', 'text_domain'),
+		'items_list'                 => __('Items list', 'text_domain'),
+		'items_list_navigation'      => __('Items list navigation', 'text_domain'),
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -77,36 +79,38 @@ function custom_levels_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'level', array( 'post_classes' ), $args );
+		'show_in_rest' => true,
 
+	);
+	register_taxonomy('level', array('post_classes'), $args);
 }
-add_action( 'init', 'custom_levels_taxonomy', 0 );
+add_action('init', 'custom_levels_taxonomy', 0);
 
 // Register Custom Taxonomy age for classes
-function custom_ages_taxonomy() {
+function custom_ages_taxonomy()
+{
 
 	$labels = array(
-		'name'                       => _x( 'Ages', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Age', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Age Taxonomy', 'text_domain' ),
-		'all_items'                  => __( 'All Items', 'text_domain' ),
-		'parent_item'                => __( 'Parent Item', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
-		'new_item_name'              => __( 'New Item Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Item', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Item', 'text_domain' ),
-		'update_item'                => __( 'Update Item', 'text_domain' ),
-		'view_item'                  => __( 'View Item', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular Items', 'text_domain' ),
-		'search_items'               => __( 'Search Items', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' ),
-		'no_terms'                   => __( 'No items', 'text_domain' ),
-		'items_list'                 => __( 'Items list', 'text_domain' ),
-		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
+		'name'                       => _x('Ages', 'Taxonomy General Name', 'text_domain'),
+		'singular_name'              => _x('Age', 'Taxonomy Singular Name', 'text_domain'),
+		'menu_name'                  => __('Age Taxonomy', 'text_domain'),
+		'all_items'                  => __('All Items', 'text_domain'),
+		'parent_item'                => __('Parent Item', 'text_domain'),
+		'parent_item_colon'          => __('Parent Item:', 'text_domain'),
+		'new_item_name'              => __('New Item Name', 'text_domain'),
+		'add_new_item'               => __('Add New Item', 'text_domain'),
+		'edit_item'                  => __('Edit Item', 'text_domain'),
+		'update_item'                => __('Update Item', 'text_domain'),
+		'view_item'                  => __('View Item', 'text_domain'),
+		'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
+		'add_or_remove_items'        => __('Add or remove items', 'text_domain'),
+		'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
+		'popular_items'              => __('Popular Items', 'text_domain'),
+		'search_items'               => __('Search Items', 'text_domain'),
+		'not_found'                  => __('Not Found', 'text_domain'),
+		'no_terms'                   => __('No items', 'text_domain'),
+		'items_list'                 => __('Items list', 'text_domain'),
+		'items_list_navigation'      => __('Items list navigation', 'text_domain'),
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -116,13 +120,15 @@ function custom_ages_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'age', array( 'post_classes' ), $args );
+		'show_in_rest' => true,
 
+	);
+	register_taxonomy('age', array('post_classes'), $args);
 }
-add_action( 'init', 'custom_ages_taxonomy', 0 );
+add_action('init', 'custom_ages_taxonomy', 0);
 
 // Register Custom Taxonomy days for classes
+<<<<<<< HEAD
 function custom_weekday_taxonomy() {
 
 	$labels = array(
@@ -146,6 +152,32 @@ function custom_weekday_taxonomy() {
 		'no_terms'                   => __( 'No items', 'text_domain' ),
 		'items_list'                 => __( 'Items list', 'text_domain' ),
 		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
+=======
+function custom_day_taxonomy()
+{
+
+	$labels = array(
+		'name'                       => _x('Days', 'Taxonomy General Name', 'text_domain'),
+		'singular_name'              => _x('Day', 'Taxonomy Singular Name', 'text_domain'),
+		'menu_name'                  => __('Day Taxonomy', 'text_domain'),
+		'all_items'                  => __('All Items', 'text_domain'),
+		'parent_item'                => __('Parent Item', 'text_domain'),
+		'parent_item_colon'          => __('Parent Item:', 'text_domain'),
+		'new_item_name'              => __('New Item Name', 'text_domain'),
+		'add_new_item'               => __('Add New Item', 'text_domain'),
+		'edit_item'                  => __('Edit Item', 'text_domain'),
+		'update_item'                => __('Update Item', 'text_domain'),
+		'view_item'                  => __('View Item', 'text_domain'),
+		'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
+		'add_or_remove_items'        => __('Add or remove items', 'text_domain'),
+		'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
+		'popular_items'              => __('Popular Items', 'text_domain'),
+		'search_items'               => __('Search Items', 'text_domain'),
+		'not_found'                  => __('Not Found', 'text_domain'),
+		'no_terms'                   => __('No items', 'text_domain'),
+		'items_list'                 => __('Items list', 'text_domain'),
+		'items_list_navigation'      => __('Items list navigation', 'text_domain'),
+>>>>>>> 40700e175803d22b4d2d4b8a928dc10fcf61e8ec
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -155,36 +187,47 @@ function custom_weekday_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
+<<<<<<< HEAD
 	);
 	register_taxonomy( 'weekday', array( 'post_classes' ), $args );
+=======
+		'show_in_rest' => true,
+>>>>>>> 40700e175803d22b4d2d4b8a928dc10fcf61e8ec
 
+	);
+	register_taxonomy('day', array('post_classes'), $args);
 }
+<<<<<<< HEAD
 add_action( 'init', 'custom_weekday_taxonomy', 0 );
+=======
+add_action('init', 'custom_day_taxonomy', 0);
+>>>>>>> 40700e175803d22b4d2d4b8a928dc10fcf61e8ec
 
 // Register Custom Taxonomy time for classes
-function custom_time_taxonomy() {
+function custom_time_taxonomy()
+{
 
 	$labels = array(
-		'name'                       => _x( 'Times', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Time', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Time Taxonomy', 'text_domain' ),
-		'all_items'                  => __( 'All Items', 'text_domain' ),
-		'parent_item'                => __( 'Parent Item', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
-		'new_item_name'              => __( 'New Item Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Item', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Item', 'text_domain' ),
-		'update_item'                => __( 'Update Item', 'text_domain' ),
-		'view_item'                  => __( 'View Item', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular Items', 'text_domain' ),
-		'search_items'               => __( 'Search Items', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' ),
-		'no_terms'                   => __( 'No items', 'text_domain' ),
-		'items_list'                 => __( 'Items list', 'text_domain' ),
-		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
+		'name'                       => _x('Times', 'Taxonomy General Name', 'text_domain'),
+		'singular_name'              => _x('Time', 'Taxonomy Singular Name', 'text_domain'),
+		'menu_name'                  => __('Time Taxonomy', 'text_domain'),
+		'all_items'                  => __('All Items', 'text_domain'),
+		'parent_item'                => __('Parent Item', 'text_domain'),
+		'parent_item_colon'          => __('Parent Item:', 'text_domain'),
+		'new_item_name'              => __('New Item Name', 'text_domain'),
+		'add_new_item'               => __('Add New Item', 'text_domain'),
+		'edit_item'                  => __('Edit Item', 'text_domain'),
+		'update_item'                => __('Update Item', 'text_domain'),
+		'view_item'                  => __('View Item', 'text_domain'),
+		'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
+		'add_or_remove_items'        => __('Add or remove items', 'text_domain'),
+		'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
+		'popular_items'              => __('Popular Items', 'text_domain'),
+		'search_items'               => __('Search Items', 'text_domain'),
+		'not_found'                  => __('Not Found', 'text_domain'),
+		'no_terms'                   => __('No items', 'text_domain'),
+		'items_list'                 => __('Items list', 'text_domain'),
+		'items_list_navigation'      => __('Items list navigation', 'text_domain'),
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -194,36 +237,38 @@ function custom_time_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'time', array( 'post_classes' ), $args );
+		'show_in_rest' => true,
 
+	);
+	register_taxonomy('time', array('post_classes'), $args);
 }
-add_action( 'init', 'custom_time_taxonomy', 0 );
+add_action('init', 'custom_time_taxonomy', 0);
 
 // Register Custom Taxonomy semester for classes
-function custom_semester_taxonomy() {
+function custom_semester_taxonomy()
+{
 
 	$labels = array(
-		'name'                       => _x( 'Semesters', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Semester', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Semester Taxonomy', 'text_domain' ),
-		'all_items'                  => __( 'All Items', 'text_domain' ),
-		'parent_item'                => __( 'Parent Item', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
-		'new_item_name'              => __( 'New Item Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Item', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Item', 'text_domain' ),
-		'update_item'                => __( 'Update Item', 'text_domain' ),
-		'view_item'                  => __( 'View Item', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular Items', 'text_domain' ),
-		'search_items'               => __( 'Search Items', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' ),
-		'no_terms'                   => __( 'No items', 'text_domain' ),
-		'items_list'                 => __( 'Items list', 'text_domain' ),
-		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
+		'name'                       => _x('Semesters', 'Taxonomy General Name', 'text_domain'),
+		'singular_name'              => _x('Semester', 'Taxonomy Singular Name', 'text_domain'),
+		'menu_name'                  => __('Semester Taxonomy', 'text_domain'),
+		'all_items'                  => __('All Items', 'text_domain'),
+		'parent_item'                => __('Parent Item', 'text_domain'),
+		'parent_item_colon'          => __('Parent Item:', 'text_domain'),
+		'new_item_name'              => __('New Item Name', 'text_domain'),
+		'add_new_item'               => __('Add New Item', 'text_domain'),
+		'edit_item'                  => __('Edit Item', 'text_domain'),
+		'update_item'                => __('Update Item', 'text_domain'),
+		'view_item'                  => __('View Item', 'text_domain'),
+		'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
+		'add_or_remove_items'        => __('Add or remove items', 'text_domain'),
+		'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
+		'popular_items'              => __('Popular Items', 'text_domain'),
+		'search_items'               => __('Search Items', 'text_domain'),
+		'not_found'                  => __('Not Found', 'text_domain'),
+		'no_terms'                   => __('No items', 'text_domain'),
+		'items_list'                 => __('Items list', 'text_domain'),
+		'items_list_navigation'      => __('Items list navigation', 'text_domain'),
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -233,36 +278,38 @@ function custom_semester_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'semester', array( 'post_classes' ), $args );
+		'show_in_rest' => true,
 
+	);
+	register_taxonomy('semester', array('post_classes'), $args);
 }
-add_action( 'init', 'custom_semester_taxonomy', 0 );
+add_action('init', 'custom_semester_taxonomy', 0);
 
 // Register Custom Taxonomy semester for classes
-function custom_language_taxonomy() {
+function custom_language_taxonomy()
+{
 
 	$labels = array(
-		'name'                       => _x( 'Languages', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Language', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Language Taxonomy', 'text_domain' ),
-		'all_items'                  => __( 'All Items', 'text_domain' ),
-		'parent_item'                => __( 'Parent Item', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
-		'new_item_name'              => __( 'New Item Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Item', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Item', 'text_domain' ),
-		'update_item'                => __( 'Update Item', 'text_domain' ),
-		'view_item'                  => __( 'View Item', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular Items', 'text_domain' ),
-		'search_items'               => __( 'Search Items', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' ),
-		'no_terms'                   => __( 'No items', 'text_domain' ),
-		'items_list'                 => __( 'Items list', 'text_domain' ),
-		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
+		'name'                       => _x('Languages', 'Taxonomy General Name', 'text_domain'),
+		'singular_name'              => _x('Language', 'Taxonomy Singular Name', 'text_domain'),
+		'menu_name'                  => __('Language Taxonomy', 'text_domain'),
+		'all_items'                  => __('All Items', 'text_domain'),
+		'parent_item'                => __('Parent Item', 'text_domain'),
+		'parent_item_colon'          => __('Parent Item:', 'text_domain'),
+		'new_item_name'              => __('New Item Name', 'text_domain'),
+		'add_new_item'               => __('Add New Item', 'text_domain'),
+		'edit_item'                  => __('Edit Item', 'text_domain'),
+		'update_item'                => __('Update Item', 'text_domain'),
+		'view_item'                  => __('View Item', 'text_domain'),
+		'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
+		'add_or_remove_items'        => __('Add or remove items', 'text_domain'),
+		'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
+		'popular_items'              => __('Popular Items', 'text_domain'),
+		'search_items'               => __('Search Items', 'text_domain'),
+		'not_found'                  => __('Not Found', 'text_domain'),
+		'no_terms'                   => __('No items', 'text_domain'),
+		'items_list'                 => __('Items list', 'text_domain'),
+		'items_list_navigation'      => __('Items list navigation', 'text_domain'),
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -272,36 +319,38 @@ function custom_language_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'language', array( 'post_classes' ), $args );
+		'show_in_rest' => true,
 
+	);
+	register_taxonomy('language', array('post_classes'), $args);
 }
-add_action( 'init', 'custom_language_taxonomy', 0 );
+add_action('init', 'custom_language_taxonomy', 0);
 
 // Register Custom Taxonomy semester for classes
-function custom_location_taxonomy() {
+function custom_location_taxonomy()
+{
 
 	$labels = array(
-		'name'                       => _x( 'Locations', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Location', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Location Taxonomy', 'text_domain' ),
-		'all_items'                  => __( 'All Items', 'text_domain' ),
-		'parent_item'                => __( 'Parent Item', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
-		'new_item_name'              => __( 'New Item Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Item', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Item', 'text_domain' ),
-		'update_item'                => __( 'Update Item', 'text_domain' ),
-		'view_item'                  => __( 'View Item', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular Items', 'text_domain' ),
-		'search_items'               => __( 'Search Items', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' ),
-		'no_terms'                   => __( 'No items', 'text_domain' ),
-		'items_list'                 => __( 'Items list', 'text_domain' ),
-		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
+		'name'                       => _x('Locations', 'Taxonomy General Name', 'text_domain'),
+		'singular_name'              => _x('Location', 'Taxonomy Singular Name', 'text_domain'),
+		'menu_name'                  => __('Location Taxonomy', 'text_domain'),
+		'all_items'                  => __('All Items', 'text_domain'),
+		'parent_item'                => __('Parent Item', 'text_domain'),
+		'parent_item_colon'          => __('Parent Item:', 'text_domain'),
+		'new_item_name'              => __('New Item Name', 'text_domain'),
+		'add_new_item'               => __('Add New Item', 'text_domain'),
+		'edit_item'                  => __('Edit Item', 'text_domain'),
+		'update_item'                => __('Update Item', 'text_domain'),
+		'view_item'                  => __('View Item', 'text_domain'),
+		'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
+		'add_or_remove_items'        => __('Add or remove items', 'text_domain'),
+		'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
+		'popular_items'              => __('Popular Items', 'text_domain'),
+		'search_items'               => __('Search Items', 'text_domain'),
+		'not_found'                  => __('Not Found', 'text_domain'),
+		'no_terms'                   => __('No items', 'text_domain'),
+		'items_list'                 => __('Items list', 'text_domain'),
+		'items_list_navigation'      => __('Items list navigation', 'text_domain'),
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -311,8 +360,9 @@ function custom_location_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'location', array( 'post_classes' ), $args );
+		'show_in_rest' => true,
 
+	);
+	register_taxonomy('location', array('post_classes'), $args);
 }
-add_action( 'init', 'custom_location_taxonomy', 0 );
+add_action('init', 'custom_location_taxonomy', 0);

@@ -140,6 +140,7 @@ function utg_scripts()
 		'rest_url' => esc_url_raw(rest_url()),
 		'home_url' => home_url(),
 		'site_url' => site_url(),
+		'stylesheet_url' => get_template_directory_uri(),
 
 	);
 
@@ -158,7 +159,7 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 
-	/*
+/*
 	*	use to shorten big titles to fix titles breaking site cards
 	*	takes two parameters, what follows the shortened title and an integer 
 	*	that counts the amount of words in the new title
