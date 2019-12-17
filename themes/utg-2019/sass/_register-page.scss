@@ -1,4 +1,13 @@
 body.page-register {
+  .site-content {
+    display: grid;
+  }
+  .gf_progressbar_wrapper {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
   .enroll-page {
     display: block;
   }
@@ -7,5 +16,18 @@ body.page-register {
   }
   .gform_wrapper {
     margin: 1rem;
+    input#gform_submit_button_2 {
+      margin: auto;
+    }
+    .gsection {
+      border: 0px;
+    }
+    .gfield_label {
+      font-size: $font_size_main - 1;
+      font-family: $font__main;
+    }
+    .gform_footer {
+      display: flex;
+    }
   }
 }
