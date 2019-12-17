@@ -98,12 +98,17 @@
     })
       .done(function(data) {
         postContainer.empty();
-
         let counter = 0;
-        $.each(data, function appendContent(data, arrayItem) {
-          counter++;
 
-          postContainer.append(`
+        if (data.length == 0) {
+          postContainer.append(
+            `<h2>Sorry, there are no classes with these options.</h2>`
+          );
+        } else {
+          $.each(data, function appendContent(data, arrayItem) {
+            counter++;
+
+            postContainer.append(`
                   <a class="classes-box" href="${arrayItem.link}">
 
                   <div class="class-image" style="background: url('${arrayItem._embedded['wp:featuredmedia']['0'].source_url}'); background-size: cover; background-position: center;">
@@ -125,7 +130,8 @@
               </div>
               </a>
           `);
-        });
+          });
+        }
         if (counter < 1) {
           postContainer.prepend('<h2>' + counter + ' Classes</h2>');
         } else if (counter < 2) {

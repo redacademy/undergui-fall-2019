@@ -7,14 +7,11 @@
     let provinceInput = $('#province').val();
     let cityInput = $('#city').val();
 
-    console.log(countryInput);
-    console.log(provinceInput);
-    console.log(cityInput);
-    //class card container
+    //class card and ajax container
     const postContainer = $('.locations-container');
     const ajaxContainer = $('.locations-ajax-container');
     //ajax url
-    let filterPostUrl = utg_vars.rest_url + 'wp/v2/post_classes?';
+    let filterPostUrl = utg_vars.rest_url + 'wp/v2/post_locations?';
 
     //checks if user has made any selections for filtering
     if (countryInput === '' && provinceInput === '' && cityInput === '') {
@@ -69,35 +66,46 @@
         postContainer.empty();
         ajaxContainer.empty();
 
-        $.each(data, function appendContent(data, arrayItem) {
-          postContainer.append(`
-                  <a class='classes-box' href='${arrayItem.link}'>
+        if (data.length == 0) {
+          postContainer.append(
+            `<h2>Sorry, there are no schools at this location.</h2>`
+          );
+        } else {
+          $.each(data, function appendContent(data, arrayItem) {
+            console.log(data);
+            console.log(arrayItem);
 
-                  <div class='class-image' style='background: url('${arrayItem._embedded['wp:featuredmedia']['0'].source_url}'); background-size: cover; background-position: center;'>
-                  </div>
+            postContainer.append(`
+          <div class="location-card" >
 
-              
-
-                  <div class='post-meta'>
-                      <h3 class='class-title'>${arrayItem.title.rendered}</h3>
-                      <p class='class-age'>Age &nbsp;${arrayItem.acf.ages}</p>
-                      <p class='class-location'><img src='${utg_vars.stylesheet_url}/assets/icons/Location.svg' alt='location'> &nbsp;${arrayItem.acf.location}</p>
-                      <p class='class-data '><img src='${utg_vars.stylesheet_url}/assets/icons/Calendar.svg' alt=''>
-                      From: &nbsp;${arrayItem.acf.start_date} To: &nbsp;${arrayItem.acf.end_date}</p>
-                      <p class='class-data'> <img src='${utg_vars.stylesheet_url}/assets/icons/clock.svg' alt=''>${arrayItem.acf.time[0].end_time} &#45; ${arrayItem.acf.time[0].start_time}</p>
-
-                  </div>
-                  <div class='class-price'> 
-                  <p>$&nbsp;${arrayItem.acf.price}</p>
-              </div>
-              </a>
+          <!-- dynamic post image for card -->
+  
+          <div class="image-container" style="background:  url('${arrayItem._embedded['wp:featuredmedia']['0'].source_url}'); background-size: cover; background-position: center;">
+          </div>
+  
+          <!-- dynamic post title, date, and category -->
+          <div class="post-meta">
+  
+            <h3 class="post-title">${arrayItem.title.rendered}</h3>
+  
+           <p>${arrayItem.content.rendered}</p>
+  
+            <div class="button-container">
+              <a href="${arrayItem.link}" class="white-btn">more info</a>
+  
+            </div>
+          </div>
+        </div>
           `);
-        });
+          });
+        }
       })
       .fail(function(error) {
         if ($('.error-message').length) {
           return;
         } else {
+          ajaxContainer.empty();
+
           postContainer.prepend(
             `<h2 class='error-message'>There seems to have been an error - code ${error.status}<h2>`
           );
