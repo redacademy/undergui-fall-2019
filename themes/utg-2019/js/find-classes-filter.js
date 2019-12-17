@@ -2,6 +2,7 @@
   $('#filter-classes').on('click', function(event) {
     event.preventDefault();
 
+    //all selector values
     let classInput = $('#class').val();
     let locationInput = $('#location').val();
     let semesterInput = $('#semester').val();
@@ -9,9 +10,11 @@
     let ageInput = $('#age').val();
     let timeInput = $('#time').val();
 
+    //class card container
     const postContainer = $('.classes-container');
+
+    //ajax url
     let filterPostUrl = utg_vars.rest_url + 'wp/v2/post_classes?';
-    let filterACFUrl = utg_vars.rest_url + 'acf/v3/post_classes?';
 
     //checks if user has made any selections for filtering
     if (
@@ -76,53 +79,6 @@
         filterPostUrl += '&filter[time]=' + timeInput;
       } else {
         filterPostUrl += 'filter[time]=' + timeInput;
-      }
-    }
-
-    //checks every input for a value for ACF AJAX, then checks if there is an exsisting filter and adds &
-    if (classInput.length) {
-      if (filterACFUrl.includes('filter')) {
-        filterACFUrl += '&filter[language]=' + classInput;
-      } else {
-        filterACFUrl += 'filter[language]=' + classInput;
-      }
-    }
-    if (locationInput.length) {
-      if (filterACFUrl.includes('filter')) {
-        filterACFUrl += '&filter[location]=' + locationInput;
-      } else {
-        filterACFUrl += 'filter[location]=' + locationInput;
-      }
-    }
-    if (semesterInput.length) {
-      if (filterACFUrl.includes('filter')) {
-        filterACFUrl += '&filter[semester]=' + semesterInput;
-      } else {
-        filterACFUrl += 'filter[semester]=' + semesterInput;
-      }
-    }
-
-    if (dayInput.length) {
-      if (filterACFUrl.includes('filter')) {
-        filterACFUrl += '&filter[day]=' + dayInput;
-      } else {
-        filterACFUrl += 'filter[day]=' + dayInput;
-      }
-    }
-
-    if (ageInput.length) {
-      if (filterACFUrl.includes('filter')) {
-        filterACFUrl += '&filter[age]=' + ageInput;
-      } else {
-        filterACFUrl += 'filter[age]=' + ageInput;
-      }
-    }
-
-    if (timeInput.length) {
-      if (filterACFUrl.includes('filter')) {
-        filterACFUrl += '&filter[time]=' + timeInput;
-      } else {
-        filterACFUrl += 'filter[time]=' + timeInput;
       }
     }
 
