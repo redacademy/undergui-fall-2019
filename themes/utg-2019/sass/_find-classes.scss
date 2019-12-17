@@ -2,12 +2,13 @@
   h2 {
     padding: 0 $site-padding-mobile;
     @include media($desktop) {
-      padding: 0 $site-padding;
+      padding: 0;
     }
   }
   h3 {
     margin: 0;
   }
+
   .site-main {
     .classes-container {
       @include media($desktop) {
@@ -72,7 +73,9 @@
             }
           }
           .class-data {
-            padding: $base__space-unit/10 0;
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
           }
           .class-day {
             display: flex;

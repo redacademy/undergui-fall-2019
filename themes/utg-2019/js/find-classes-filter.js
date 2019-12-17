@@ -82,15 +82,18 @@
       }
     }
 
+    filterPostUrl += '&_embed&per_page=99';
+    console.log(filterPostUrl);
     // Grab json data and append data to correct dom elements
     $.ajax({
       type: 'GET',
-      url: filterPostUrl + '&_embed',
+      url: filterPostUrl,
       datatype: 'JSON'
     })
       .done(function(data) {
         postContainer.empty();
 
+        console.log(data);
         let counter = 0;
         $.each(data, function appendContent(data, arrayItem) {
           counter++;
@@ -106,7 +109,7 @@
                   <div class="post-meta">
                       <h3 class="class-title">${arrayItem.title.rendered}</h3>
                       <p class="class-age">Age &nbsp;${arrayItem.acf.ages}</p>
-                      <p class="class-location"><img src="${utg_vars.stylesheet_url}/assets/icons/Location.svg" alt="location"> &nbsp;${arrayItem.acf.locations}</p>
+                      <p class="class-location"><img src="${utg_vars.stylesheet_url}/assets/icons/Location.svg" alt="location"> &nbsp;${arrayItem.acf.location}</p>
                       <p class="class-data "><img src="${utg_vars.stylesheet_url}/assets/icons/Calendar.svg" alt="">
                       From: &nbsp;${arrayItem.acf.start_date} To: &nbsp;${arrayItem.acf.end_date}</p>
                       <p class="class-data"> <img src="${utg_vars.stylesheet_url}/assets/icons/clock.svg" alt="">${arrayItem.acf.time[0].end_time} &#45; ${arrayItem.acf.time[0].start_time}</p>
@@ -125,7 +128,14 @@
         }
       })
       .fail(function(error) {
-        alert('There has been an error!' + error);
+        if ($('.error-message').length) {
+          return;
+        } else {
+          postContainer.prepend(
+            `<h2 class="error-message">There seems to have been an error - code ${error.status}<h2>`
+          );
+          return;
+        }
       });
   });
 })(jQuery);
