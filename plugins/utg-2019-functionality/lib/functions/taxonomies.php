@@ -79,7 +79,7 @@ function custom_levels_taxonomy()
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-		'show_in_rest' => true,
+		'show_in_rest' 				 => true,
 
 	);
 	register_taxonomy('level', array('post_classes'), $args);
@@ -120,7 +120,7 @@ function custom_ages_taxonomy()
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-		'show_in_rest' => true,
+		'show_in_rest' 				 => true,
 
 	);
 	register_taxonomy('age', array('post_classes'), $args);
@@ -128,7 +128,7 @@ function custom_ages_taxonomy()
 add_action('init', 'custom_ages_taxonomy', 0);
 
 // Register Custom Taxonomy days for classes
-<<<<<<< HEAD
+
 function custom_weekday_taxonomy() {
 
 	$labels = array(
@@ -152,32 +152,6 @@ function custom_weekday_taxonomy() {
 		'no_terms'                   => __( 'No items', 'text_domain' ),
 		'items_list'                 => __( 'Items list', 'text_domain' ),
 		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
-=======
-function custom_day_taxonomy()
-{
-
-	$labels = array(
-		'name'                       => _x('Days', 'Taxonomy General Name', 'text_domain'),
-		'singular_name'              => _x('Day', 'Taxonomy Singular Name', 'text_domain'),
-		'menu_name'                  => __('Day Taxonomy', 'text_domain'),
-		'all_items'                  => __('All Items', 'text_domain'),
-		'parent_item'                => __('Parent Item', 'text_domain'),
-		'parent_item_colon'          => __('Parent Item:', 'text_domain'),
-		'new_item_name'              => __('New Item Name', 'text_domain'),
-		'add_new_item'               => __('Add New Item', 'text_domain'),
-		'edit_item'                  => __('Edit Item', 'text_domain'),
-		'update_item'                => __('Update Item', 'text_domain'),
-		'view_item'                  => __('View Item', 'text_domain'),
-		'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
-		'add_or_remove_items'        => __('Add or remove items', 'text_domain'),
-		'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
-		'popular_items'              => __('Popular Items', 'text_domain'),
-		'search_items'               => __('Search Items', 'text_domain'),
-		'not_found'                  => __('Not Found', 'text_domain'),
-		'no_terms'                   => __('No items', 'text_domain'),
-		'items_list'                 => __('Items list', 'text_domain'),
-		'items_list_navigation'      => __('Items list navigation', 'text_domain'),
->>>>>>> 40700e175803d22b4d2d4b8a928dc10fcf61e8ec
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -187,21 +161,13 @@ function custom_day_taxonomy()
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-<<<<<<< HEAD
-	);
-	register_taxonomy( 'weekday', array( 'post_classes' ), $args );
-=======
-		'show_in_rest' => true,
->>>>>>> 40700e175803d22b4d2d4b8a928dc10fcf61e8ec
+		'show_in_rest' 				 => true,
 
 	);
-	register_taxonomy('day', array('post_classes'), $args);
+	register_taxonomy( 'weekday', array( 'post_classes' ), $args );
+
 }
-<<<<<<< HEAD
 add_action( 'init', 'custom_weekday_taxonomy', 0 );
-=======
-add_action('init', 'custom_day_taxonomy', 0);
->>>>>>> 40700e175803d22b4d2d4b8a928dc10fcf61e8ec
 
 // Register Custom Taxonomy time for classes
 function custom_time_taxonomy()
