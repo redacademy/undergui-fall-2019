@@ -1,4 +1,12 @@
 body.page-register {
+  .page-banner {
+    padding: 0 $site-padding-mobil;
+  }
+
+  @include media($desktop) {
+    padding: 0 $site-padding;
+  }
+
   .content-area {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -18,7 +26,12 @@ body.page-register {
 }
 
 .gform_wrapper {
-  margin: 1rem;
+  padding: 0 $site-padding-mobil;
+
+  @include media($desktop) {
+    padding: 0 $site-padding;
+  }
+
 
   input#gform_submit_button_2 {
     margin: auto;

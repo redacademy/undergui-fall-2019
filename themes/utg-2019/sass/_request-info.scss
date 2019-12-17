@@ -7,9 +7,8 @@ body.page-request-info {
     }
 
     .banner-text {
-      h1 {
-        margin-top: 0;
-        margin-bottom: 1rem;
+      @include media($desktop) {
+        h1 {}
       }
     }
 
@@ -44,70 +43,72 @@ body.page-request-info {
 
   .gform_body {
 
+    padding: 0 $site-padding-mobil;
+
     @include media($desktop) {
-      width: 80%;
-      margin: 0 auto;
+      padding: 0 $site-padding;
+    }
 
-      #field_1_21,
-      #field_1_20,
-      #field_1_22 {
-        grid-column-start: 1;
-        grid-column-end: 3;
+    #field_1_21,
+    #field_1_20,
+    #field_1_22 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    #field_1_21 {
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+    #field_1_20 {
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+
+    #field_1_22 {
+      grid-row-start: 7;
+      grid-row-end: 8;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      li {
+        grid-template-rows: 1fr 1fr;
       }
 
-      #field_1_21 {
-        grid-row-start: 1;
-        grid-row-end: 2;
+      li.gfield.gsection {
+        margin: 0;
       }
+    }
 
-      #field_1_20 {
-        grid-row-start: 4;
-        grid-row-end: 5;
-      }
-
-      #field_1_22 {
-        grid-row-start: 7;
-        grid-row-end: 8;
-      }
-
-      ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        li {
-          grid-template-rows: 1fr 1fr;
-        }
-
-        li.gfield.gsection {
-          margin: 0;
-        }
-      }
-
-      input.medium,
-      select {
-        width: 100% !important;
-      }
+    input.medium,
+    select {
+      width: 100% !important;
     }
   }
+}
 
-  .gform_wrapper {
+.gform_wrapper {
 
-    .gfield_label {
-      font-family: $font__main;
-      font-size: 14px;
-    }
-
-    form {
-      margin: 0 1rem;
-    }
-
-    .gsection {
-      border: 0px;
-    }
-
-    .gform_footer {
-      display: flex;
-      flex-direction: column;
-    }
+  .gfield_label {
+    font-family: $font__main;
+    font-size: 14px;
   }
+
+  form {
+    margin: 0 1rem;
+  }
+
+  .gsection {
+    border: 0px;
+  }
+
+  .gform_footer {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
