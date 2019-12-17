@@ -4,7 +4,13 @@
   $category.on('click', function(event) {
     event.preventDefault();
 
-    $('.community-posts').empty();
+    const postContainer = $('.community-posts');
+    const gifContainer = $('.gif-container');
+
+    postContainer.empty();
+    gifContainer.append(
+      `<img class="loading-gif" src="${utg_vars.stylesheet_url}/assets/location-gif-slow.gif">`
+    );
     let catId = event.target.id;
     let filteredID = catId.replace('cat-', '');
 
@@ -15,7 +21,8 @@
       datatype: 'JSON'
     })
       .done(function(data) {
-        // console.log(data);
+        postContainer.empty();
+        gifContainer.empty();
 
         $.each(data, function appendContent(data, arrayItem) {
           // grabs date from rest API
@@ -63,7 +70,6 @@
         });
 
         if (data.length < 8) {
-          console.log(data.length);
           $('.show-more-posts').remove();
         } else {
           if ($('.show-more-posts').length) {

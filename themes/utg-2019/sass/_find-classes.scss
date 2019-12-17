@@ -1,7 +1,14 @@
 .page-classes {
+  h2 {
+    padding: 0 $site-padding-mobile;
+    @include media($desktop) {
+      padding: 0;
+    }
+  }
   h3 {
     margin: 0;
   }
+
   .site-main {
     .classes-container {
       @include media($desktop) {
@@ -66,7 +73,9 @@
             }
           }
           .class-data {
-            padding: $base__space-unit/10 0;
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
           }
           .class-day {
             display: flex;
@@ -118,41 +127,18 @@
     padding: 2rem $site-padding;
   }
 
-  fieldset {
-    margin: 0;
-    padding: 0;
-    border: none;
-    display: flex;
-    flex-direction: column;
-  }
-
   h4 {
     font-family: $font_header;
     margin: 0.75rem 0;
   }
 
   select {
-    height: 50%;
+    height: 50px;
     width: 100%;
   }
 }
-.search-form {
-  .search-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-  }
-  .search-field {
-    width: 100%;
-  }
-  .search-submit {
-    position: absolute;
-    border: none;
-    background: none;
-    color: $color_paragraph;
-    padding: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0.875rem;
-  }
+.loading-gif {
+  margin: 4rem auto;
+  display: flex;
+  height: 13rem;
 }

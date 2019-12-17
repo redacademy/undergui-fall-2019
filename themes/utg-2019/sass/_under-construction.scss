@@ -1,6 +1,6 @@
-.error404 {
+.page {
   .site-main {
-    .banner-404 {
+    .under-construction-banner {
       overflow: hidden;
       height: 500px;
       display: flex;
@@ -11,20 +11,29 @@
       @include media($desktop) {
         height: 600px;
       }
-      
+
+      h1 {
+        font-family: 'Blox';
+        color: $color_white;
+        font-size: $font_size_main * 2.1;
+        font-weight: 100;
+
+        @include media($desktop) {
+            font-size: $font_size_main * 5;
+        }
+      }
+
       .home-button {
         color: $color_blue;
         background: $color_white;
         width: auto;
-        transform: translateY(50px);
 
         @include media($desktop) {
-          font-size: $font_size_main;
-          transform: translateY(105px);
+            font-size: $font_size_main;
         }
         &:hover {
-          background: $color_grey;
-          border: 1px solid white;
+            background: $color_grey;
+            border: 1px solid white;
         }
       }
     }

@@ -1,6 +1,7 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * The template for displaying under construction page (not found).
+ *
  *
  * @package utg_Theme
  */
@@ -10,20 +11,17 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+			<section class="under-contstruction">
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+				<header class="banner-under-construction">
+					
+					<img src="<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/404-background-image.png"/>
+					
+					<!-- <a class="home-btn-404" href="#">Go Back Home</a> -->
 
-			<?php the_post_navigation(); ?>
+				</header>
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
-		<?php endwhile; // End of the loop. ?>
+			</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

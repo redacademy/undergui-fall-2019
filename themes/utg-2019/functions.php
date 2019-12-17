@@ -124,6 +124,8 @@ function utg_scripts()
 	wp_enqueue_script('utg-find-classes-registration', get_template_directory_uri() . '/build/js/find-classes-registration.min.js', array('jquery'), '', true);
 	// Filters post_classes by different taxonomies
 	wp_enqueue_script('utg-find-classes-filter', get_template_directory_uri() . '/build/js/find-classes-filter.min.js', array('jquery'), '', true);
+	// Filters locations by different taxonomies
+	wp_enqueue_script('utg-find-locations-filter', get_template_directory_uri() . '/build/js/find-locations-filter.min.js', array('jquery'), '', true);
 	//FAQ container toggles
 	wp_enqueue_script('utg-faq-toggle', get_template_directory_uri() . '/build/js/faq-toggle.min.js', array(), '', true);
 	//Tabbed content scripts
@@ -140,6 +142,7 @@ function utg_scripts()
 		'rest_url' => esc_url_raw(rest_url()),
 		'home_url' => home_url(),
 		'site_url' => site_url(),
+		'stylesheet_url' => get_template_directory_uri(),
 
 	);
 
@@ -158,7 +161,7 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 
-	/*
+/*
 	*	use to shorten big titles to fix titles breaking site cards
 	*	takes two parameters, what follows the shortened title and an integer 
 	*	that counts the amount of words in the new title
