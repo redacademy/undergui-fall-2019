@@ -91,21 +91,6 @@ body.page-request-info {
   }
 
   .gform_wrapper {
-    input#gform_submit_button_1 {
-      align-self: center;
-      width: 11rem;
-      line-height: 0.5;
-
-      &:hover {
-        color: $color_blue;
-        background-color: $color_white;
-      }
-
-      &:active,
-      &:focus {
-        background-color: darken($color_blue, 10%);
-      }
-    }
 
     .gfield_label {
       font-family: $font__main;
