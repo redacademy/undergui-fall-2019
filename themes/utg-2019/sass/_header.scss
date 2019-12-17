@@ -50,11 +50,14 @@
     height: 10000vh;
     background-color: $color_blue;
     right: 0;
-    z-index: 1000;
+    top: 0;
+    z-index: 20;
+    
 
     @include media($header-break) {
       position: absolute;
       height: auto;
+      top: auto;
       background-color: transparent;
       overflow: unset;
     }
@@ -76,7 +79,7 @@
     height: 10000vh;
     width: 75vw;
     background-color: $color_blue;
-    z-index: 10000;
+    z-index: 20;
 
     //font awesome arrow icons
     .left-arrow {
@@ -175,9 +178,7 @@
         li {
           display: block;
           padding: 1rem $base__space-unit;
-          &:first-child {
-            // padding-left: 0;
-          }
+
           &:last-child {
             padding-right: 4rem;
             border-right: 1px solid $color_black;
@@ -191,8 +192,8 @@
 .mobile-menu {
   .fa-bars:before {
     position: fixed;
-    top: 5px;
-    right: 5px;
+    top: 15px;
+    right: 10px;
     background-color: white;
     padding: $base__space-unit / 3;
     border-radius: $border-radius;

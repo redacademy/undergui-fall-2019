@@ -106,13 +106,6 @@ b,
 strong {
   font-weight: bold; }
 
-dfn {
-  font-style: italic; }
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
 mark {
   background: #ff0;
   color: #000; }
@@ -169,6 +162,9 @@ textarea {
 button {
   overflow: visible; }
 
+button:focus {
+  outline: 0; }
+
 button,
 select {
   text-transform: none; }
@@ -187,7 +183,8 @@ html input[disabled] {
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
-  padding: 0; }
+  padding: 0;
+  outline: 0; }
 
 input {
   line-height: normal; }
@@ -212,9 +209,10 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  outline: 0; }
+
+div {
+  outline: 0; }
 
 legend {
   border: 0;
@@ -711,11 +709,13 @@ object {
     height: 10000vh;
     background-color: #2ba2dd;
     right: 0;
-    z-index: 1000; }
+    top: 0;
+    z-index: 20; }
     @media only screen and (min-width: 900px) {
       .site-header .nav-links {
         position: absolute;
         height: auto;
+        top: auto;
         background-color: transparent;
         overflow: unset; } }
     .site-header .nav-links .left-arrow {
@@ -741,7 +741,7 @@ object {
     height: 10000vh;
     width: 75vw;
     background-color: #2ba2dd;
-    z-index: 10000; }
+    z-index: 20; }
     .site-header .toggle-menu .left-arrow {
       color: #ffffff;
       -webkit-transition: -webkit-transform 0.5s ease-in;
@@ -842,8 +842,8 @@ object {
 
 .mobile-menu .fa-bars:before {
   position: fixed;
-  top: 5px;
-  right: 5px;
+  top: 15px;
+  right: 10px;
   background-color: white;
   padding: 0.5rem;
   border-radius: 5px; }
@@ -2917,7 +2917,7 @@ body.home {
     width: 120px;
     top: -18%;
     right: -2%;
-    z-index: 9;
+    z-index: 1;
     border-radius: 50%; }
     @media only screen and (min-width: 800px) {
       .program-classes .block-man-chat-mobile {
@@ -2946,7 +2946,9 @@ body.home {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 3rem;
-      line-height: 1.75; } }
+      line-height: 1.75; }
+      .program-curriculum div h4 {
+        margin-top: 0; } }
   .program-curriculum p {
     font-size: 0.9rem; }
   .program-curriculum img {
