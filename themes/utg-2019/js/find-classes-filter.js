@@ -6,7 +6,7 @@
     let classInput = $('#class').val();
     let locationInput = $('#location').val();
     let semesterInput = $('#semester').val();
-    let dayInput = $('#day').val();
+    let weekdayInput = $('#weekday').val();
     let ageInput = $('#age').val();
     let timeInput = $('#time').val();
 
@@ -21,7 +21,7 @@
       classInput === '' &&
       locationInput === '' &&
       semesterInput === '' &&
-      dayInput === '' &&
+      weekdayInput === '' &&
       ageInput === '' &&
       timeInput === ''
     ) {
@@ -33,6 +33,11 @@
         );
         return;
       }
+    } else {
+      postContainer.empty();
+      postContainer.append(
+        `<img class="loading-gif" src="${utg_vars.stylesheet_url}/assets/location-gif-slow.gif">`
+      );
     }
 
     //checks every input for a value, then checks if there is an exsisting filter and adds &
@@ -58,11 +63,11 @@
       }
     }
 
-    if (dayInput.length) {
+    if (weekdayInput.length) {
       if (filterPostUrl.includes('filter')) {
-        filterPostUrl += '&filter[day]=' + dayInput;
+        filterPostUrl += '&filter[weekday]=' + weekdayInput;
       } else {
-        filterPostUrl += 'filter[day]=' + dayInput;
+        filterPostUrl += 'filter[weekday]=' + weekdayInput;
       }
     }
 
@@ -82,8 +87,9 @@
       }
     }
 
+    //updated url with embedded info and adds up to 99 posts
     filterPostUrl += '&_embed&per_page=99';
-    console.log(filterPostUrl);
+
     // Grab json data and append data to correct dom elements
     $.ajax({
       type: 'GET',
@@ -93,7 +99,6 @@
       .done(function(data) {
         postContainer.empty();
 
-        console.log(data);
         let counter = 0;
         $.each(data, function appendContent(data, arrayItem) {
           counter++;
@@ -121,7 +126,9 @@
               </a>
           `);
         });
-        if (counter < 2) {
+        if (counter < 1) {
+          postContainer.prepend('<h2>' + counter + ' Classes</h2>');
+        } else if (counter < 2) {
           postContainer.prepend('<h2>' + counter + ' Class</h2>');
         } else {
           postContainer.prepend('<h2>' + counter + ' Classes</h2>');

@@ -137,23 +137,8 @@
     width: 100%;
   }
 }
-// .search-form {
-//   .search-container {
-//     position: relative;
-//     width: 100%;
-//     display: flex;
-//   }
-//   .search-field {
-//     width: 100%;
-//   }
-//   .search-submit {
-//     position: absolute;
-//     border: none;
-//     background: none;
-//     color: $color_paragraph;
-//     padding: 0;
-//     right: 0;
-//     bottom: 0;
-//     padding: 0.875rem;
-//   }
-// }
+.loading-gif {
+  margin: 0 auto;
+  display: flex;
+  height: 13rem;
+}

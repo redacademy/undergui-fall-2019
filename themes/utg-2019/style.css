@@ -2214,6 +2214,9 @@ body.home {
       .post-card .post-category {
         display: block; } }
 
+.gif-container {
+  padding: 2rem 0; }
+
 .blog .content-area {
   padding: 0 0.75rem; }
   @media only screen and (min-width: 800px) {
@@ -3568,6 +3571,13 @@ body.home {
   .search-section select {
     height: 50px;
     width: 100%; }
+
+.loading-gif {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 13rem; }
 
 @media only screen and (max-width: 510px) {
   body.page-request-info .page-banner, body.page-request-info .post-banner {
