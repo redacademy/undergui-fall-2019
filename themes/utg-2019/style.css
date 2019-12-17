@@ -3530,43 +3530,12 @@ body.home {
       grid-template-columns: repeat(6, 1fr);
       grid-gap: 1rem;
       padding: 2rem 7vw; } }
-  .search-section fieldset {
-    margin: 0;
-    padding: 0;
-    border: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
   .search-section h4 {
     font-family: "Gotham";
     margin: 0.75rem 0; }
   .search-section select {
-    height: 50%;
+    height: 50px;
     width: 100%; }
-
-.search-form .search-container {
-  position: relative;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.search-form .search-field {
-  width: 100%; }
-
-.search-form .search-submit {
-  position: absolute;
-  border: none;
-  background: none;
-  color: #333333;
-  padding: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.875rem; }
 
 body.page-request-info .entry-title {
   display: none; }

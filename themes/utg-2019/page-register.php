@@ -79,6 +79,7 @@ get_header(); ?>
 <?php endwhile; // End of the loop. 
 	?>
 <?php endif ?>
+<?php wp_reset_query(); ?>
 
 </main><!-- #main -->
 </div><!-- #primary -->

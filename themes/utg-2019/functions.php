@@ -158,7 +158,7 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 
-	/*
+/*
 	*	use to shorten big titles to fix titles breaking site cards
 	*	takes two parameters, what follows the shortened title and an integer 
 	*	that counts the amount of words in the new title

@@ -16,7 +16,7 @@ get_header(); ?>
 		<section class="search-section">
 
 
-			<form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
+			<!-- <form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
 				<fieldset>
 					<label for="class-search">
 						<h4>Class</h4>
@@ -50,8 +50,40 @@ get_header(); ?>
 
 					</div>
 				</fieldset>
-			</form>
+			</form> -->
 
+			<form action="" method="get">
+
+				<label for="class">
+					<h4>Class</h4>
+				</label>
+				<select name="class" id="class">
+					<option selected value="">Select a Class</option>
+					<?php $terms = get_terms('language', array(
+						'orderby' => 'id',
+						'hide_empty' => false
+					));
+					foreach ($terms as $term) : ?>
+						<option value="<?php echo $term->slug ?>"><?php echo $term->name ?></option>
+					<?php endforeach; ?>
+				</select>
+			</form>
+			<form action="" method="get">
+
+				<label for="location">
+					<h4>Location</h4>
+				</label>
+				<select name="location" id="location">
+					<option selected value="">Select a location</option>
+					<?php $terms = get_terms('location', array(
+						'orderby' => 'id',
+						'hide_empty' => false
+					));
+					foreach ($terms as $term) : ?>
+						<option value="<?php echo $term->slug ?>"><?php echo $term->name ?></option>
+					<?php endforeach; ?>
+				</select>
+			</form>
 			<form action="" method="get">
 
 				<label for="semester">
@@ -59,10 +91,13 @@ get_header(); ?>
 				</label>
 				<select name="semester" id="semester">
 					<option selected value="">Select a semester</option>
-					<option value="today">summer</option>
-					<option value="today">yesterday</option>
-
-
+					<?php $terms = get_terms('semester', array(
+						'orderby' => 'id',
+						'hide_empty' => false
+					));
+					foreach ($terms as $term) : ?>
+						<option value="<?php echo $term->slug ?>"><?php echo $term->name ?></option>
+					<?php endforeach; ?>
 				</select>
 			</form>
 			<form action="" method="get">
@@ -79,10 +114,8 @@ get_header(); ?>
 					));
 					foreach ($terms as $term) : ?>
 
-						<option value="<?php echo $term->name ?>"><?php echo $term->name ?></option>
+						<option value="<?php echo $term->slug ?>"><?php echo $term->name ?></option>
 					<?php endforeach; ?>
-
-
 				</select>
 			</form>
 
@@ -100,10 +133,8 @@ get_header(); ?>
 					));
 					foreach ($terms as $term) : ?>
 
-						<option value="<?php echo $term->name ?>"><?php echo $term->name ?></option>
+						<option value="<?php echo $term->slug ?>"><?php echo $term->name ?></option>
 					<?php endforeach; ?>
-
-
 				</select>
 
 			</form>
@@ -121,7 +152,7 @@ get_header(); ?>
 					));
 					foreach ($terms as $term) : ?>
 
-						<option value="<?php echo $term->name ?>"><?php echo $term->name ?></option>
+						<option value="<?php echo $term->slug ?>"><?php echo $term->name ?></option>
 					<?php endforeach; ?>
 
 				</select>
