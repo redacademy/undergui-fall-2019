@@ -240,12 +240,12 @@ function custom_semester_taxonomy() {
 add_action( 'init', 'custom_semester_taxonomy', 0 );
 
 // Register Custom Taxonomy semester for classes
-function custom_comp_language_taxonomy() {
+function custom_language_taxonomy() {
 
 	$labels = array(
-		'name'                       => _x( 'Computer Languages', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Computer Language', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Computer Language Taxonomy', 'text_domain' ),
+		'name'                       => _x( 'Languages', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Language', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Language Taxonomy', 'text_domain' ),
 		'all_items'                  => __( 'All Items', 'text_domain' ),
 		'parent_item'                => __( 'Parent Item', 'text_domain' ),
 		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
@@ -273,10 +273,10 @@ function custom_comp_language_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'computer language', array( 'post_classes' ), $args );
+	register_taxonomy( 'language', array( 'post_classes' ), $args );
 
 }
-add_action( 'init', 'custom_comp_language_taxonomy', 0 );
+add_action( 'init', 'custom_language_taxonomy', 0 );
 
 // Register Custom Taxonomy semester for classes
 function custom_location_taxonomy() {
