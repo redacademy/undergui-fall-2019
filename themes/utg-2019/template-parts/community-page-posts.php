@@ -56,6 +56,9 @@
 
     </div>
 
+    <div class="gif-container">
+
+    </div>
     <div class="button-box">
         <button class="white-btn show-more-posts">SHOW MORE</button>
     </div>

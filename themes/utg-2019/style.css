@@ -2214,6 +2214,9 @@ body.home {
       .post-card .post-category {
         display: block; } }
 
+.gif-container {
+  padding: 2rem 0; }
+
 .blog .content-area {
   padding: 0 0.75rem; }
   @media only screen and (min-width: 800px) {
@@ -3269,7 +3272,7 @@ body.home {
   padding: 0 0.75rem; }
   @media only screen and (min-width: 800px) {
     .page-classes h2 {
-      padding: 0 7vw; } }
+      padding: 0; } }
 
 .page-classes h3 {
   margin: 0; }
@@ -3520,7 +3523,13 @@ body.home {
       .page-classes .site-main .classes-container .classes-box .post-meta .class-location img {
         margin-right: 0.375rem; }
     .page-classes .site-main .classes-container .classes-box .post-meta .class-data {
-      padding: 0.15rem 0; }
+      padding: 0.5rem 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
     .page-classes .site-main .classes-container .classes-box .post-meta .class-day {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -3562,6 +3571,13 @@ body.home {
   .search-section select {
     height: 50px;
     width: 100%; }
+
+.loading-gif {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 13rem; }
 
 @media only screen and (max-width: 510px) {
   body.page-request-info .page-banner, body.page-request-info .post-banner {
@@ -3685,6 +3701,14 @@ body.page-request-info .gform_wrapper .gform_footer {
 
 .post_classes-template-default .class-header .class-data-container {
   width: 75%; }
+  .post_classes-template-default .class-header .class-data-container p {
+    padding: 0.5rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   @media only screen and (min-width: 800px) {
     .post_classes-template-default .class-header .class-data-container {
       padding: 0;
@@ -4151,3 +4175,28 @@ body.page-register .gform_wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+
+.page .banner-under-construction {
+  overflow: hidden;
+  height: 280px; }
+  @media only screen and (min-width: 800px) {
+    .page .banner-under-construction {
+      height: 600px; } }
+  .page .banner-under-construction img {
+    width: 100%;
+    height: 100%;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover; }
+    @media only screen and (min-width: 800px) {
+      .page .banner-under-construction img {
+        -o-object-fit: cover;
+           object-fit: cover;
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2); } }
+  .page .banner-under-construction .home-btn-404 {
+    color: #2ba2dd;
+    background: #ffffff;
+    width: 100px;
+    border: 2px solid #2ba2dd; }

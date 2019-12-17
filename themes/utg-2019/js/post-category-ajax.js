@@ -4,7 +4,13 @@
   $category.on('click', function(event) {
     event.preventDefault();
 
-    $('.community-posts').empty();
+    const postContainer = $('.community-posts');
+    const gifContainer = $('.gif-container');
+
+    postContainer.empty();
+    gifContainer.append(
+      `<img class="loading-gif" src="${utg_vars.stylesheet_url}/assets/location-gif-slow.gif">`
+    );
     let catId = event.target.id;
     let filteredID = catId.replace('cat-', '');
 
@@ -15,6 +21,9 @@
       datatype: 'JSON'
     })
       .done(function(data) {
+        postContainer.empty();
+        gifContainer.empty();
+
         $.each(data, function appendContent(data, arrayItem) {
           // grabs date from rest API
           let newDate = new Date(arrayItem.date);
