@@ -29,7 +29,7 @@
         return;
       } else {
         postContainer.prepend(
-          '<h2 class="please-make-a-selection">Please make a selection.<h2>'
+          '<h2 class="please-make-a-selection">Please make a selection.</h2>'
         );
         return;
       }

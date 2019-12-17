@@ -5,9 +5,11 @@
   grid-gap: 1rem;
 
   h4 {
-    margin: 0;
+    font-family: $font_header;
+    margin: 0.75rem 0;
   }
   select {
+    height: 50px;
     width: 100%;
   }
 }
@@ -17,5 +19,15 @@
   button {
     width: 192px;
     font-size: 1rem;
+  }
+}
+
+.locations-ajax-container {
+  padding: 2rem $site-padding-mobile;
+  @include media($desktop) {
+    padding: 2rem $site-padding;
+  }
+  h2 {
+    margin: 0;
   }
 }

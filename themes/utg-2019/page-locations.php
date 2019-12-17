@@ -22,9 +22,9 @@ get_header(); ?>
 				<label for="country">
 					<h4>Country</h4>
 				</label>
-				<select name="country" id="class">
-					<option selected value="">Select a Class</option>
-					<?php $terms = get_terms('language', array(
+				<select name="country" id="country">
+					<option selected value="">Select a country</option>
+					<?php $terms = get_terms('country', array(
 						'orderby' => 'id',
 						'hide_empty' => false
 					));
@@ -36,11 +36,11 @@ get_header(); ?>
 			<form action="" method="get">
 
 				<label for="province">
-					<h4>Province/Region</h4>
+					<h4>Province/Region/District</h4>
 				</label>
-				<select name="province" id="class">
-					<option selected value="">Select a Class</option>
-					<?php $terms = get_terms('language', array(
+				<select name="province" id="province">
+					<option selected value="">Select a province/region/district</option>
+					<?php $terms = get_terms('province', array(
 						'orderby' => 'id',
 						'hide_empty' => false
 					));
@@ -54,9 +54,9 @@ get_header(); ?>
 				<label for="city">
 					<h4>City</h4>
 				</label>
-				<select name="city" id="class">
-					<option selected value="">Select a Class</option>
-					<?php $terms = get_terms('language', array(
+				<select name="city" id="city">
+					<option selected value="">Select a city</option>
+					<?php $terms = get_terms('city', array(
 						'orderby' => 'id',
 						'hide_empty' => false
 					));
@@ -71,6 +71,10 @@ get_header(); ?>
 
 		<div class="locations-button-container">
 			<button id="filter-locations">search</button>
+
+		</div>
+
+		<div class="locations-ajax-container">
 
 		</div>
 
