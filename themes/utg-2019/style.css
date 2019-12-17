@@ -3573,7 +3573,7 @@ body.home {
     width: 100%; }
 
 .loading-gif {
-  margin: 0 auto;
+  margin: 4rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3891,6 +3891,9 @@ body.page-request-info .gform_wrapper .gform_footer {
       .location-card .post-meta .button-container a {
         border: 1px solid #2ba2dd;
         padding: 0.5rem 2.5rem; }
+  .location-card .button-container button {
+    width: 192px;
+    font-size: 1rem; }
 
 .selector-container {
   padding: 2rem 7vw;
@@ -3901,6 +3904,16 @@ body.page-request-info .gform_wrapper .gform_footer {
     margin: 0; }
   .selector-container select {
     width: 100%; }
+
+.locations-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .locations-button-container button {
+    width: 192px;
+    font-size: 1rem; }
 
 .location-single {
   padding: 2rem 0.75rem; }

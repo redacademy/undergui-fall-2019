@@ -11,3 +11,11 @@
     width: 100%;
   }
 }
+.locations-button-container {
+  display: flex;
+  justify-content: space-around;
+  button {
+    width: 192px;
+    font-size: 1rem;
+  }
+}
