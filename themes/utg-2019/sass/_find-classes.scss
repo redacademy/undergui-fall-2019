@@ -1,4 +1,10 @@
 .page-classes {
+  h2 {
+    padding: 0 $site-padding-mobile;
+    @include media($desktop) {
+      padding: 0 $site-padding;
+    }
+  }
   h3 {
     margin: 0;
   }

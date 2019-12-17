@@ -1,8 +1,4 @@
 (function($) {
-  //   $('.search-submit').on('click', function(event) {
-  //     event.preventDefault();
-  //   });
-
   $('#filter-classes').on('click', function(event) {
     event.preventDefault();
 
@@ -15,9 +11,9 @@
 
     const postContainer = $('.classes-container');
     let filterPostUrl = utg_vars.rest_url + 'wp/v2/post_classes?';
+    let filterACFUrl = utg_vars.rest_url + 'acf/v3/post_classes?';
 
-    console.log(filterPostUrl.length);
-
+    //checks if user has made any selections for filtering
     if (
       classInput === '' &&
       locationInput === '' &&
@@ -29,7 +25,6 @@
       if ($('.please-make-a-selection').length) {
         return;
       } else {
-        console.log('what the shit');
         postContainer.prepend(
           '<h2 class="please-make-a-selection">Please make a selection.<h2>'
         );
@@ -37,8 +32,7 @@
       }
     }
 
-    postContainer.empty();
-
+    //checks every input for a value, then checks if there is an exsisting filter and adds &
     if (classInput.length) {
       if (filterPostUrl.includes('filter')) {
         filterPostUrl += '&filter[language]=' + classInput;
@@ -46,7 +40,6 @@
         filterPostUrl += 'filter[language]=' + classInput;
       }
     }
-    console.log(filterPostUrl.length);
     if (locationInput.length) {
       if (filterPostUrl.includes('filter')) {
         filterPostUrl += '&filter[location]=' + locationInput;
@@ -86,84 +79,88 @@
       }
     }
 
-    console.log(filterPostUrl);
+    //checks every input for a value for ACF AJAX, then checks if there is an exsisting filter and adds &
+    if (classInput.length) {
+      if (filterACFUrl.includes('filter')) {
+        filterACFUrl += '&filter[language]=' + classInput;
+      } else {
+        filterACFUrl += 'filter[language]=' + classInput;
+      }
+    }
+    if (locationInput.length) {
+      if (filterACFUrl.includes('filter')) {
+        filterACFUrl += '&filter[location]=' + locationInput;
+      } else {
+        filterACFUrl += 'filter[location]=' + locationInput;
+      }
+    }
+    if (semesterInput.length) {
+      if (filterACFUrl.includes('filter')) {
+        filterACFUrl += '&filter[semester]=' + semesterInput;
+      } else {
+        filterACFUrl += 'filter[semester]=' + semesterInput;
+      }
+    }
 
-    console.log(classInput);
-    console.log(locationInput);
-    console.log(semesterInput);
-    console.log(dayInput);
-    console.log(ageInput);
-    console.log(timeInput);
+    if (dayInput.length) {
+      if (filterACFUrl.includes('filter')) {
+        filterACFUrl += '&filter[day]=' + dayInput;
+      } else {
+        filterACFUrl += 'filter[day]=' + dayInput;
+      }
+    }
 
+    if (ageInput.length) {
+      if (filterACFUrl.includes('filter')) {
+        filterACFUrl += '&filter[age]=' + ageInput;
+      } else {
+        filterACFUrl += 'filter[age]=' + ageInput;
+      }
+    }
+
+    if (timeInput.length) {
+      if (filterACFUrl.includes('filter')) {
+        filterACFUrl += '&filter[time]=' + timeInput;
+      } else {
+        filterACFUrl += 'filter[time]=' + timeInput;
+      }
+    }
+
+    // Grab json data and append data to correct dom elements
     $.ajax({
       type: 'GET',
       url: filterPostUrl + '&_embed',
       datatype: 'JSON'
     })
       .done(function(data) {
-        console.log(data);
+        postContainer.empty();
 
         let counter = 0;
         $.each(data, function appendContent(data, arrayItem) {
           counter++;
 
-          // grabs date from rest API
-          let newDate = new Date(arrayItem.date);
-
-          // create an array to use month number as an index
-          const months = [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-            'July',
-            'August',
-            'September',
-            'October',
-            'November',
-            'December'
-          ];
-
-          // grab month from rest API and use as index to grab month name
-          let monthIndex = newDate.getMonth();
-          let monthName = months[monthIndex];
-
-          let newYear = newDate.getFullYear();
-          let newDay = newDate.getDate();
-
-          // reformat date to follow style guide
-          let newDateFormat = `${monthName} ${newDay}, ${newYear}`;
-
-          console.log(newDateFormat);
           postContainer.append(`
-        <a class="classes-box" href="${arrayItem.link}">
+                  <a class="classes-box" href="${arrayItem.link}">
 
-        <!-- dynamic post image for card -->
-        <div class="class-image" style="background: url('${arrayItem._embedded['wp:featuredmedia']['0'].source_url}'); background-size: cover; background-position: center;">
-        </div>
+                  <div class="class-image" style="background: url('${arrayItem._embedded['wp:featuredmedia']['0'].source_url}'); background-size: cover; background-position: center;">
+                  </div>
 
-        <!-- dynamic post title, date, and category -->
-        <div class="post-meta">
-            <h3 class="class-title">${arrayItem.title.rendered}</h3>
-            <p class="class-age">Age &nbsp;<?= the_field('ages') ?></p>
-            <p class="class-location"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/Location.svg" alt="location"> &nbsp;<?= the_field('location') ?></p>
-            <p class="class-data">From: &nbsp;<?= the_field('start_date') ?></p>
-            <p class="class-data">To: &nbsp;<?= the_field('end_date') ?></p>
-            <?php while (have_rows('time')) : the_row() ?>
+              
 
-                <p class="class-data"> <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/clock.svg" alt=""><?php the_sub_field('start_time') ?> &#45; <?php the_sub_field('end_time') ?></p>
+                  <div class="post-meta">
+                      <h3 class="class-title">${arrayItem.title.rendered}</h3>
+                      <p class="class-age">Age &nbsp;${arrayItem.acf.ages}</p>
+                      <p class="class-location"><img src="${utg_vars.stylesheet_url}/assets/icons/Location.svg" alt="location"> &nbsp;${arrayItem.acf.locations}</p>
+                      <p class="class-data "><img src="${utg_vars.stylesheet_url}/assets/icons/Calendar.svg" alt="">
+                      From: &nbsp;${arrayItem.acf.start_date} To: &nbsp;${arrayItem.acf.end_date}</p>
+                      <p class="class-data"> <img src="${utg_vars.stylesheet_url}/assets/icons/clock.svg" alt="">${arrayItem.acf.time[0].end_time} &#45; ${arrayItem.acf.time[0].start_time}</p>
 
-            <?php endwhile; ?>
-        </div>
-
-        <div class="class-price">
-            <p>$&nbsp;<?= the_field('price') ?></p>
-        </div>
-
-    </a>
-`);
+                  </div>
+                  <div class="class-price"> 
+                  <p>$&nbsp;${arrayItem.acf.price}</p>
+              </div>
+              </a>
+          `);
         });
         if (counter < 2) {
           postContainer.prepend('<h2>' + counter + ' Class</h2>');

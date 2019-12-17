@@ -140,6 +140,7 @@ function utg_scripts()
 		'rest_url' => esc_url_raw(rest_url()),
 		'home_url' => home_url(),
 		'site_url' => site_url(),
+		'stylesheet_url' => get_template_directory_uri(),
 
 	);
 

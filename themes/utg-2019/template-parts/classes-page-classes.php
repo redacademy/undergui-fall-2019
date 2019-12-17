@@ -27,14 +27,14 @@
                     <h3 class="class-title"><?= the_title(); ?></h3>
                     <p class="class-age">Age &nbsp;<?= the_field('ages') ?></p>
                     <p class="class-location"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/Location.svg" alt="location"> &nbsp;<?= the_field('location') ?></p>
-                    
-                    <p class="class-data">
+
+                    <p class="class-data date">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/Calendar.svg" alt="">
                         From: &nbsp;<?= the_field('start_date') ?> &nbsp; To: &nbsp;<?= the_field('end_date') ?>
                     </p>
 
                     <?php while (have_rows('time')) : the_row() ?>
-                        <p class="class-data"> <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/clock.svg" alt=""><?php the_sub_field('start_time') ?> &#45; <?php the_sub_field('end_time') ?></p>
+                        <p class="class-data time"> <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/clock.svg" alt=""><?php the_sub_field('start_time') ?> &#45; <?php the_sub_field('end_time') ?></p>
                     <?php endwhile; ?>
                 </div>
 

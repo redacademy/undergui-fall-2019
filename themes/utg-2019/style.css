@@ -3265,6 +3265,12 @@ body.home {
               border-color: #2ba2dd;
               border: 1px solid #2ba2dd; } }
 
+.page-classes h2 {
+  padding: 0 0.75rem; }
+  @media only screen and (min-width: 800px) {
+    .page-classes h2 {
+      padding: 0 7vw; } }
+
 .page-classes h3 {
   margin: 0; }
 
