@@ -21,7 +21,7 @@ body.page-request-info {
       padding: 0.5rem;
       border: 1px solid $color_white;
 
-      @include media($desktop) {
+      @include media($tablet) {
         align-self: unset;
       }
     }
@@ -44,7 +44,7 @@ body.page-request-info {
 
   .gform_body {
 
-    @include media($desktop) {
+    @include media($tablet) {
       width: 80%;
       margin: 0 auto;
 

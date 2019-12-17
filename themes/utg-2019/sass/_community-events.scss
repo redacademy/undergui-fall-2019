@@ -1,7 +1,7 @@
 .blog {
   .content-area {
     padding: 0 $site-padding-mobile;
-    @include media($desktop) {
+    @include media($tablet) {
       padding: 0 $site-padding;
     }
   }
@@ -10,7 +10,7 @@
 
     .post-container {
       display: none;
-      @include media($desktop) {
+      @include media($tablet) {
         .events-card {
           @include desktop-card;
         }
@@ -32,7 +32,7 @@
           height: 325px;
         }
       }
-      @include media($desktop) {
+      @include media($tablet) {
         display: none;
       }
     }

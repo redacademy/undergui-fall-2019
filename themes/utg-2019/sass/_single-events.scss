@@ -6,7 +6,7 @@
     padding: $base__space-unit $base__space-unit/2;
     width: 100%;
 
-    @include media($desktop) {
+    @include media($tablet) {
       width: 100%;
       flex-direction: row;
       padding: $base__space-unit * 2;
@@ -17,14 +17,14 @@
       flex-direction: column;
       max-width: 100%;
 
-      @include media($desktop) {
+      @include media($tablet) {
         max-width: 64%;
         padding-right: $base__space-unit;
       }
     }
 
     .header-content-container {
-      @include media($desktop) {
+      @include media($tablet) {
         padding-bottom: $base__space-unit;
         border-bottom: 2px solid $color_paragraph;
         h2 {
@@ -44,7 +44,7 @@
         margin-bottom: $base__space-unit / 2;
       }
 
-      @include media($desktop) {
+      @include media($tablet) {
         display: flex;
         flex-direction: column;
         justify-self: flex-start;
@@ -79,7 +79,7 @@
           font-size: $font_size_main;
         }
       }
-      @include media($desktop) {
+      @include media($tablet) {
       }
     }
   }

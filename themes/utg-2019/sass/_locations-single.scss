@@ -1,6 +1,6 @@
 .location-single {
   padding: 2rem $site-padding-mobile;
-  @include media($desktop) {
+  @include media($tablet) {
     padding: 2rem $site-padding;
   }
 
@@ -36,7 +36,7 @@
 }
 
 .staff-container {
-  @include media($desktop) {
+  @include media($tablet) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem 7rem;

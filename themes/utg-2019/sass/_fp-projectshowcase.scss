@@ -83,7 +83,7 @@ section.project-showcase {
             max-width: 200px;
           }
 
-          @include media($desktop) {
+          @include media($tablet) {
             max-width: 640px;
           }
         }

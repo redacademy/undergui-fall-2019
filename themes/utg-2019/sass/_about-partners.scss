@@ -28,7 +28,7 @@
     }
   }
 
-  @include media($desktop) {
+  @include media($tablet) {
 
     .partners-title {
       display: none;
