@@ -4176,31 +4176,26 @@ body.page-request-info .gform_wrapper .gform_footer {
         .enroll-page .classes-box .post-meta p img {
           margin-right: 0.5rem; }
 
-body.page-register .site-content {
-  display: grid; }
+body.page-register .content-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
 
-body.page-register .gf_progressbar_wrapper {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 3; }
-
-body.page-register .enroll-page {
+.enroll-page {
   display: block; }
 
-body.page-register .gform_title {
+.gform_title {
   display: none; }
 
-body.page-register .gform_wrapper {
+.gform_wrapper {
   margin: 1rem; }
-  body.page-register .gform_wrapper input#gform_submit_button_2 {
+  .gform_wrapper input#gform_submit_button_2 {
     margin: auto; }
-  body.page-register .gform_wrapper .gsection {
+  .gform_wrapper .gsection {
     border: 0px; }
-  body.page-register .gform_wrapper .gfield_label {
+  .gform_wrapper .gfield_label {
     font-size: 15px;
     font-family: "Titillium Web"; }
-  body.page-register .gform_wrapper .gform_footer {
+  .gform_wrapper .gform_footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
