@@ -6,9 +6,9 @@ $args = array(
 );
 $the_locations = new WP_Query($args);
 ?>
-<?php if ($the_locations->have_posts()) : while ($the_locations->have_posts()) : $the_locations->the_post(); ?>
+<section class="locations-container">
+	<?php if ($the_locations->have_posts()) : while ($the_locations->have_posts()) : $the_locations->the_post(); ?>
 
-		<section class="locations-container">
 
 			<div class="location-card" href="">
 
@@ -28,16 +28,14 @@ $the_locations = new WP_Query($args);
 						<a href="<?php the_permalink() ?>" class="white-btn">more info</a>
 
 					</div>
-
 				</div>
-
 			</div>
 
-		</section>
 
 
 
-	<?php endwhile;
-	else : ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+		<?php endwhile;
+		else : ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
 
+</section>
 <?php wp_reset_query(); ?>

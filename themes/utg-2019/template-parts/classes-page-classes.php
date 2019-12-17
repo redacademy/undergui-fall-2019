@@ -26,7 +26,7 @@
                 <div class="post-meta">
                     <h3 class="class-title"><?= the_title(); ?></h3>
                     <p class="class-age">Age &nbsp;<?= the_field('ages') ?></p>
-                    <p class="class-location"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/Location.svg" alt="location"> &nbsp;<?= the_field('location') ?></p>
+                    <p class="class-location"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/Location.svg" alt="location"><?= the_field('location') ?></p>
 
                     <p class="class-data date">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/Calendar.svg" alt="">

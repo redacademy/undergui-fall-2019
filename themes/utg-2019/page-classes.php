@@ -14,44 +14,6 @@ get_header(); ?>
 
 
 		<section class="search-section">
-
-
-			<!-- <form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
-				<fieldset>
-					<label for="class-search">
-						<h4>Class</h4>
-					</label>
-					<div class="search-container">
-						<input type="search" class="search-field" id="class-search" placeholder="SEARCH ..." value="<?php echo esc_attr(get_search_query()); ?>" name="s" title="Search for:" />
-						<button class="search-submit">
-							<span class="icon-search" aria-hidden="true">
-								<i class="fa fa-search fa-2x"></i>
-							</span>
-							<span class="screen-reader-text"><?php echo esc_html('Search'); ?></span>
-						</button>
-
-					</div>
-				</fieldset>
-			</form>
-
-			<form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
-				<fieldset>
-					<label for="location-search">
-						<h4>Location</h4>
-					</label>
-					<div class="search-container">
-						<input type="search" class="search-field" id="location-search" placeholder="SEARCH ..." value="<?php echo esc_attr(get_search_query()); ?>" name="s" title="Search for:" />
-						<button class="search-submit">
-							<span class="icon-search" aria-hidden="true">
-								<i class="fa fa-search fa-2x"></i>
-							</span>
-							<span class="screen-reader-text"><?php echo esc_html('Search'); ?></span>
-						</button>
-
-					</div>
-				</fieldset>
-			</form> -->
-
 			<form action="" method="get">
 
 				<label for="class">
@@ -102,13 +64,13 @@ get_header(); ?>
 			</form>
 			<form action="" method="get">
 
-				<label for="day">
+				<label for="weekday">
 					<h4>Day</h4>
 				</label>
-				<select name="day" id="day">
-					<option selected value="">Select a day</option>
+				<select name="weekday" id="weekday">
+					<option selected value="">Select a weekday</option>
 
-					<?php $terms = get_terms('day', array(
+					<?php $terms = get_terms('weekday', array(
 						'orderby' => 'id',
 						'hide_empty' => false
 					));

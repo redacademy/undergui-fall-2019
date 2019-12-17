@@ -2223,6 +2223,9 @@ body.home {
       .post-card .post-category {
         display: block; } }
 
+.gif-container {
+  padding: 2rem 0; }
+
 .blog .content-area {
   padding: 0 0.75rem; }
   @media only screen and (min-width: 800px) {
@@ -3278,7 +3281,7 @@ body.home {
   padding: 0 0.75rem; }
   @media only screen and (min-width: 800px) {
     .page-classes h2 {
-      padding: 0 7vw; } }
+      padding: 0; } }
 
 .page-classes h3 {
   margin: 0; }
@@ -3529,7 +3532,13 @@ body.home {
       .page-classes .site-main .classes-container .classes-box .post-meta .class-location img {
         margin-right: 0.375rem; }
     .page-classes .site-main .classes-container .classes-box .post-meta .class-data {
-      padding: 0.15rem 0; }
+      padding: 0.5rem 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
     .page-classes .site-main .classes-container .classes-box .post-meta .class-day {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -3571,6 +3580,13 @@ body.home {
   .search-section select {
     height: 50px;
     width: 100%; }
+
+.loading-gif {
+  margin: 4rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 13rem; }
 
 @media only screen and (max-width: 510px) {
   body.page-request-info .page-banner, body.page-request-info .post-banner {
@@ -3694,6 +3710,14 @@ body.page-request-info .gform_wrapper .gform_footer {
 
 .post_classes-template-default .class-header .class-data-container {
   width: 75%; }
+  .post_classes-template-default .class-header .class-data-container p {
+    padding: 0.5rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   @media only screen and (min-width: 800px) {
     .post_classes-template-default .class-header .class-data-container {
       padding: 0;
@@ -3883,9 +3907,29 @@ body.page-request-info .gform_wrapper .gform_footer {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem; }
   .selector-container h4 {
-    margin: 0; }
+    font-family: "Gotham";
+    margin: 0.75rem 0; }
   .selector-container select {
+    height: 50px;
     width: 100%; }
+
+.locations-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .locations-button-container button {
+    width: 192px;
+    font-size: 1rem; }
+
+.locations-ajax-container {
+  padding: 2rem 0.75rem; }
+  @media only screen and (min-width: 800px) {
+    .locations-ajax-container {
+      padding: 2rem 7vw; } }
+  .locations-ajax-container h2 {
+    margin: 0; }
 
 .location-single {
   padding: 2rem 0.75rem; }
