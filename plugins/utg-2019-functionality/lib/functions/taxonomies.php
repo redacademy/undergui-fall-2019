@@ -123,12 +123,12 @@ function custom_ages_taxonomy() {
 add_action( 'init', 'custom_ages_taxonomy', 0 );
 
 // Register Custom Taxonomy days for classes
-function custom_day_taxonomy() {
+function custom_weekday_taxonomy() {
 
 	$labels = array(
-		'name'                       => _x( 'Days', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Day', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Day Taxonomy', 'text_domain' ),
+		'name'                       => _x( 'Weekdays', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Weekday', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Weekday Taxonomy', 'text_domain' ),
 		'all_items'                  => __( 'All Items', 'text_domain' ),
 		'parent_item'                => __( 'Parent Item', 'text_domain' ),
 		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
@@ -156,10 +156,10 @@ function custom_day_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'day', array( 'post_classes' ), $args );
+	register_taxonomy( 'weekday', array( 'post_classes' ), $args );
 
 }
-add_action( 'init', 'custom_day_taxonomy', 0 );
+add_action( 'init', 'custom_weekday_taxonomy', 0 );
 
 // Register Custom Taxonomy time for classes
 function custom_time_taxonomy() {
