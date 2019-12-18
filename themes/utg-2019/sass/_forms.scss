@@ -30,11 +30,18 @@ input[type='submit'] {
   font-family: $font_header;
 
   &:hover {
-    background-color: lighten($color_blue, 10%);
+    background-color: $color_white;
+    color: $color_blue;
+    border-color: $color_blue;
   }
 
   &:active,
   &:focus {
+    color: $color_white;
+    background-color: darken($color_blue, 10%);
+  }
+
+  &:visited {
     background-color: darken($color_blue, 10%);
   }
 }
