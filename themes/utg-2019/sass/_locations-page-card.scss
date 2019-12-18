@@ -2,11 +2,14 @@
   padding: 2rem $site-padding;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 2rem;
 
+  @include media($tablet){
+    grid-template-columns: repeat(2, 1fr);
+  }
   @include media($desktop){
     grid-template-columns: repeat(4, 1fr);
-
+    grid-gap: 1rem;
   }
 }
 

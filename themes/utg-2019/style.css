@@ -714,7 +714,7 @@ object {
     padding: 0;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 1000vh;
     width: 100vw;
     z-index: 9;
     background-color: rgba(0, 0, 0, 0.5); }
@@ -737,7 +737,7 @@ object {
     transition: width 0.3s ease-in-out;
     position: absolute;
     margin: 0;
-    height: 10000vh;
+    height: 1000vh;
     background-color: #2ba2dd;
     right: 0;
     top: 0;
@@ -769,7 +769,7 @@ object {
     margin: 0;
     top: 0;
     right: 0;
-    height: 10000vh;
+    height: 1000vh;
     width: 75vw;
     background-color: #2ba2dd;
     z-index: 20; }
@@ -857,7 +857,11 @@ object {
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end;
-        margin-right: 1.5rem; }
+        margin-right: 0.75rem; } }
+    @media only screen and (min-width: 900px) and (min-width: 1000px) {
+      .site-header .nav-links {
+        margin-right: 7vw; } }
+  @media only screen and (min-width: 900px) {
         .site-header .nav-links .menu {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -878,6 +882,9 @@ object {
   top: 15px;
   right: 10px;
   background-color: white;
+  border: 1px solid #eff1f6;
+  -webkit-box-shadow: 0 8px 6px -6px #333333;
+          box-shadow: 0 8px 6px -6px #333333;
   padding: 0.5rem;
   border-radius: 5px; }
 
@@ -3937,10 +3944,14 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
   padding: 2rem 7vw;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1rem; }
+  grid-gap: 2rem; }
+  @media only screen and (min-width: 800px) {
+    .locations-container {
+      grid-template-columns: repeat(2, 1fr); } }
   @media only screen and (min-width: 1000px) {
     .locations-container {
-      grid-template-columns: repeat(4, 1fr); } }
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem; } }
 
 .location-card {
   -webkit-box-shadow: 0 1px 4px #000000;
