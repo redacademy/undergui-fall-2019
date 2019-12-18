@@ -166,6 +166,7 @@
   }
 }
 
+// about page banner
 .page-banner-about {
   @extend .page-banner-no-image;
   background-color: $color_white;
@@ -178,5 +179,39 @@
       justify-content: space-between;
       max-width: 100%;
     }
+  }
+}
+
+//single locations banner
+.page-banner-locations {
+  @extend .page-banner-no-image;
+  padding: 0 $site-padding-mobile;
+  height: 344px;
+  @include media($tablet) {
+    padding: 0 $site-padding;
+  }
+  .banner-text {
+    padding: 0;
+    p,
+    h1 {
+      width: 50%;
+    }
+    .button-container {
+      margin: 0 auto;
+      width: 201px;
+    }
+    @include media($tablet) {
+      p,
+      h1 {
+        width: 100%;
+      }
+    }
+  }
+  iframe {
+    display: none;
+    @include media($tablet) {
+      display: block;
+    }
+    height: 200px !important;
   }
 }

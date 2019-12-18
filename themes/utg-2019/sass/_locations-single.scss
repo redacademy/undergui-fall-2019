@@ -8,6 +8,14 @@
   h4 {
     margin: 0;
   }
+  iframe {
+    display: block;
+    padding: 0 $site-padding-mobile;
+    width: 100% !important;
+    @include media($tablet) {
+      display: none;
+    }
+  }
 }
 
 .location-learning-space {
