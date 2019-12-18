@@ -136,3 +136,47 @@
     object-fit: contain;
   }
 }
+
+//on pages with no featured image
+
+.page-banner-no-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  background-color: $color_blue;
+  @include media($tablet) {
+    height: 275px;
+  }
+  .banner-text {
+    padding: 0 $site-padding-mobile;
+    .page-feature-image-title {
+      color: $color_white;
+    }
+    p {
+      color: $color_white;
+      font-family: $font_header;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    @include media($tablet) {
+      padding: 0 $site-padding;
+    }
+  }
+}
+
+.page-banner-about {
+  @extend .page-banner-no-image;
+  background-color: $color_white;
+  .banner-text {
+    width: 100%;
+    .page-feature-image-title {
+      color: $color_paragraph;
+    }
+    .nav {
+      justify-content: space-between;
+      max-width: 100%;
+    }
+  }
+}

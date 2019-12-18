@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages.
  *
@@ -12,12 +13,11 @@ get_header(); ?>
 
 		<div class="about-page-container">
 
-			<?php include get_template_directory() . "/template-parts/about-page-navigation.php"; ?>
-			
+
 			<!-- story -->
 			<div class="tab-pane active" id="story">
 				<?php include get_template_directory() . "/template-parts/about-page-our-story.php"; ?>
-			</div>	
+			</div>
 
 			<!-- testimonials -->
 			<div class="tab-pane" id="testimonials">
@@ -28,7 +28,7 @@ get_header(); ?>
 			<div class="tab-pane" id="faq">
 				<?php include get_template_directory() . "/template-parts/about-page-faq.php"; ?>
 			</div>
-	
+
 			<!-- partners -->
 			<div class="tab-pane" id="partners">
 				<?php include get_template_directory() . "/template-parts/about-page-partners.php"; ?>

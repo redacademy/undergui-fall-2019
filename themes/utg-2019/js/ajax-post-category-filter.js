@@ -66,7 +66,6 @@
       .done(function(data) {
         postContainer.empty();
         gifContainer.empty();
-        console.log($showMore);
         if (showMoreCondition === 0) {
           $showMore.removeClass('hide');
         }
