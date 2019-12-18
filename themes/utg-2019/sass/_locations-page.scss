@@ -24,7 +24,7 @@
 
 .locations-ajax-container {
   padding: 2rem $site-padding-mobile;
-  @include media($desktop) {
+  @include media($tablet) {
     padding: 2rem $site-padding;
   }
   h2 {

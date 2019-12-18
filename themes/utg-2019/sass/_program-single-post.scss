@@ -1,13 +1,13 @@
 .courses-container {
   padding: 0 $site-padding-mobile;
 
-  @include media($desktop) {
+  @include media($tablet) {
     padding: 0 $site-padding;
   }
   .class-card {
     z-index: -1;
     @include classes-mobile-card;
-    @include media($desktop) {
+    @include media($tablet) {
       @include classes-desktop-card;
     }
   }

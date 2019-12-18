@@ -14,11 +14,8 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 
-				<header class="banner-404">
-					<img src="<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/404jpg-eda.jpg"/>
-					
-					<a class="home-btn-404" href="#">Go Back Home</a>
-
+				<header class="banner-404" style="background: url('<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/404jpg-eda.jpg'); background-size: cover; background-position: center;">
+					<input type="button" class="home-button" onclick="location.href='<?= get_home_url() ?>';" value="go back home" />
 				</header>
 
 			</section>

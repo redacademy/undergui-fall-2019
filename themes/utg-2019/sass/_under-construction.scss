@@ -1,29 +1,41 @@
 .page {
-    .banner-under-construction {
+  .site-main {
+    .under-construction-banner {
       overflow: hidden;
-      height: 280px;
-  
-      @include media($desktop) {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @include media($tablet) {
         height: 600px;
       }
-  
-      img {
-        width: 100%;
-        height: 100%;
-        object-position: center;
-        object-fit: cover;
-        @include media($desktop) {
-          object-fit: cover;
-          transform: scale(1.2);
+
+      h1 {
+        font-family: 'Blox';
+        color: $color_white;
+        font-size: $font_size_main * 2.1;
+        font-weight: 100;
+
+        @include media($tablet) {
+            font-size: $font_size_main * 5;
         }
       }
-  
-      .home-btn-404 {
+
+      .home-button {
         color: $color_blue;
         background: $color_white;
-        width: 100px;
-        border: 2px solid $color_blue;
+        width: auto;
+
+        @include media($tablet) {
+            font-size: $font_size_main;
+        }
+        &:hover {
+            background: $color_grey;
+            border: 1px solid white;
+        }
       }
     }
   }
-  
+}

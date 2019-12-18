@@ -1,33 +1,50 @@
 body.page-register {
-  .site-content {
+  .page-banner {
+    padding: 0 $site-padding-mobile;
+  }
+
+  @include media($desktop) {
+    padding: 0 $site-padding;
+  }
+
+  .content-area {
     display: grid;
+    grid-template-columns: 1fr 1fr;
   }
-  .gf_progressbar_wrapper {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 3;
+}
+
+// .gf_progressbar_wrapper {}
+
+.enroll-page {
+  display: block;
+}
+
+.gform_title {
+  display: none;
+}
+
+.gform_wrapper {
+  padding: 0 $site-padding-mobile;
+
+  @include media($desktop) {
+    padding: 0 $site-padding;
   }
-  .enroll-page {
-    display: block;
+
+
+  input#gform_submit_button_2 {
+    margin: auto;
   }
-  .gform_title {
-    display: none;
+
+  .gsection {
+    border: 0px;
   }
-  .gform_wrapper {
-    margin: 1rem;
-    input#gform_submit_button_2 {
-      margin: auto;
-    }
-    .gsection {
-      border: 0px;
-    }
-    .gfield_label {
-      font-size: $font_size_main - 1;
-      font-family: $font__main;
-    }
-    .gform_footer {
-      display: flex;
-    }
+
+  .gfield_label {
+    font-size: $font_size_main - 1;
+    font-family: $font__main;
+  }
+
+  .gform_footer {
+    display: flex;
   }
 }
