@@ -65,9 +65,9 @@
 
 		</header><!-- #masthead -->
 
-		<!-- Check if on these single post types -->
+		<!-- Check if on these single post types or error page -->
 		<?php
-		if (is_singular('post_events') || is_singular('post') || is_singular('post_classes')) {
+		if (is_singular('post_events') || is_singular('post') || is_singular('post_classes') || is_404()) {
 			return;
 			// check if the page has a page Thumbnail assigned to it.
 		} elseif (has_post_thumbnail()) { ?>
@@ -76,7 +76,7 @@
 
 				<div class=" home-hero-banner" style="background: linear-gradient(rgba(22, 27, 56,0.5),rgba(22, 27, 56,0.5)),url(<?= get_the_post_thumbnail_url(); ?>) ; background-size: cover; background-position: center;">
 					<div class="home-hero-text">
-						<?php the_excerpt(); ?>
+						<p><?php the_field('sub_text'); ?></p>
 						<input type="button" onclick="location.href='<?= get_site_url() . '/programs' ?>';" value="view our programs" />
 					</div>
 				</div>
@@ -87,21 +87,22 @@
 					<div class="banner-text">
 
 						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
-						<?php the_excerpt(); ?>
+						<p><?php the_field('sub_text'); ?></p>
+
 						<input type="button" class="faq-button" onclick="location.href='<?= get_home_url() . '/about/#faq' ?>';" value="check out faq" />
 					</div>
 				</div>
 
 
 
-			<?php } elseif (is_page() || is_singular('post_programs')) { ?>
+			<?php } elseif (is_page() ||  is_singular('post_programs')) { ?>
 
 				<div class="page-banner" style="background:  url(<?= get_the_post_thumbnail_url(); ?>); background-size: cover; background-position: center;">
 					<div class="banner-text">
 
 						<p class="slug"><?= $post->post_name ?></p>
 						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
-						<?php the_excerpt(); ?>
+						<p><?php the_field('sub_text'); ?></p>
 					</div>
 				</div>
 
@@ -110,7 +111,7 @@
 				<div class="page-banner-locations">
 					<div class="banner-text">
 						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
-						<?php the_excerpt(); ?>
+						<p><?php the_field('sub_text'); ?></p>
 						<div class="button-container">
 							<button class="white-btn" onclick="location.href='<?= get_site_url() . '/programs' ?>';"> view our programs </button>
 
@@ -154,7 +155,7 @@
 			<div class="page-banner-no-image">
 				<div class="banner-text">
 					<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
-					<?php the_excerpt(); ?>
+					<p><?php the_field('sub_text'); ?></p>
 				</div>
 			</div>
 

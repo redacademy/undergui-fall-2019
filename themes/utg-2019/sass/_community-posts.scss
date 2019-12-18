@@ -1,94 +1,101 @@
-.community-blog-container {
-  padding: 3vw 0 10vw 0;
+.blog {
+  .community-blog-container {
+    padding: 3vw 0 10vw 0;
 
-  .search-pagination {
-    a {
-      color: $color_black;
-    }
-    margin: 0 auto;
-    @include media($tablet) {
-      display: none;
-    }
-  }
-
-  .category-container {
-    padding-top: 2rem;
-    display: flex;
-    a {
-      display: none;
-      color: $color_paragraph;
-      font-family: $font_main;
-      font-weight: bold;
-      font-size: 1.25rem;
+    .search-pagination {
+      a {
+        color: $color_black;
+      }
+      margin: 0 auto;
       @include media($tablet) {
-        display: block;
-        padding: 0 2.5rem 1rem 0;
+        display: none;
+      }
+    }
+
+    .category-container {
+      padding-top: 2rem;
+      display: flex;
+      a {
+        display: none;
+        color: $color_paragraph;
+        font-family: $font_main;
+        font-weight: bold;
+        font-size: 1.25rem;
+        @include media($tablet) {
+          display: block;
+          padding: 0 2.5rem 1rem 0;
+        }
       }
     }
   }
-}
-.post-container {
-  display: flex;
-  flex-direction: column;
+  .post-container {
+    display: flex;
+    flex-direction: column;
 
-  @include media($tablet) {
-    padding-bottom: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-  }
-  @include media($desktop) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
-  }
-}
-.button-box {
-  padding: 2rem 0;
-  display: none;
-
-  @include media($tablet) {
-    display: block;
-    width: 50%;
-    text-align: center;
-    margin: 0 auto;
-    .white-btn {
-      padding: 0.75rem 2.5rem;
-      font-weight: bold;
-      font-size: 1rem;
-      border: 1px solid $color_blue;
-      border-color: $color_blue;
-      border-radius: $border-radius;
-      font-family: $font_header;
+    @include media($tablet) {
+      padding-bottom: 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+    }
+    @include media($desktop) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
     }
   }
-
-  .hide {
-    display: none;
-  }
-}
-
-.post-card {
-  @include mobile-card;
-  margin: 1rem 0;
-  width: 100%;
-  .post-meta {
-    div {
-      max-height: 100%;
-    }
-  }
-  .post-category {
-    display: none;
-  }
-  @include media($tablet) {
-    @include desktop-card;
-    .post-category {
-      display: block;
-    }
-  }
-}
-
-.gif-container {
-  img {
+  .button-box {
     padding: 2rem 0;
+    display: none;
+
+    @include media($tablet) {
+      display: block;
+      width: 50%;
+      text-align: center;
+      margin: 0 auto;
+      .white-btn {
+        padding: 0.75rem 2.5rem;
+        font-weight: bold;
+        font-size: 1rem;
+        border: 1px solid $color_blue;
+        border-color: $color_blue;
+        border-radius: $border-radius;
+        font-family: $font_header;
+      }
+    }
+    .hide {
+      display: none;
+    }
+  }
+  .no-more-posts-container {
+    margin: 0 auto;
+    display: none;
+  }
+  .no-more-posts {
+    display: block;
+  }
+  .post-card {
+    @include mobile-card;
+    margin: 1rem 0;
+    width: 100%;
+    .post-meta {
+      div {
+        max-height: 100%;
+      }
+    }
+    .post-category {
+      display: none;
+    }
+    @include media($tablet) {
+      @include desktop-card;
+      .post-category {
+        display: block;
+      }
+    }
+  }
+
+  .gif-container {
+    img {
+      padding: 2rem 0;
+    }
   }
 }

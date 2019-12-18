@@ -57,7 +57,9 @@
     </div>
 
     <div class="gif-container">
-
+    </div>
+    <div class="no-more-posts-container">
+        <h2>Sorry, there are no more posts!</h2>
     </div>
     <div class="button-box">
         <button class="white-btn show-more-posts">SHOW MORE</button>

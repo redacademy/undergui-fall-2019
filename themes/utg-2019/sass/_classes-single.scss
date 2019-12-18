@@ -5,7 +5,7 @@
   article {
     padding: $site-padding-mobile;
     @include media($tablet) {
-      padding: $site-padding;
+      padding: 0 $site-padding 2rem;
     }
   }
   .class-header {
