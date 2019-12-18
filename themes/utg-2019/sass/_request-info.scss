@@ -1,15 +1,10 @@
 body.page-request-info {
 
+
   .page-banner {
     @include max-media(510px) {
       background-size: inherit !important;
       background-position: right !important;
-    }
-
-    .banner-text {
-      @include media($desktop) {
-        h1 {}
-      }
     }
 
     .faq-button {
@@ -42,8 +37,6 @@ body.page-request-info {
 
 
   .gform_body {
-
-    padding: 0 $site-padding-mobil;
 
     @include media($desktop) {
       padding: 0 $site-padding;
@@ -89,26 +82,27 @@ body.page-request-info {
       width: 100% !important;
     }
   }
-}
 
-.gform_wrapper {
 
-  .gfield_label {
-    font-family: $font__main;
-    font-size: 14px;
+  .gform_wrapper {
+
+    .gfield_label {
+      font-family: $font__main;
+      font-size: 14px;
+    }
+
+    form {
+      margin: 0 1rem;
+    }
+
+    .gsection {
+      border-bottom: 0px !important;
+    }
+
+    .gform_footer {
+      display: flex;
+      flex-direction: column;
+    }
+
   }
-
-  form {
-    margin: 0 1rem;
-  }
-
-  .gsection {
-    border: 0px;
-  }
-
-  .gform_footer {
-    display: flex;
-    flex-direction: column;
-  }
-
 }

@@ -7,6 +7,7 @@ section.testimonials-container {
   justify-content: space-evenly;
 
   .testimonials-slider {
+    max-width: 1280px;
     .flickity-prev-next-button {
       display: none;
     }
