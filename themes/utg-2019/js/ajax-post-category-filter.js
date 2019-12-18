@@ -1,18 +1,18 @@
 (function($) {
   const $category = $('.category-link');
   const $showMore = $('.show-more-posts');
+  const postContainer = $('.community-posts');
+  const gifContainer = $('.gif-container');
 
   let ajaxURL = '';
   let postCount = 4;
+  let showMoreCondition = 1;
 
   // filters posts by categories
   $category.on('click', function(event) {
     event.preventDefault();
 
     postCount = 4;
-
-    const postContainer = $('.community-posts');
-    const gifContainer = $('.gif-container');
 
     let catId = event.target.id;
     let filteredID = catId.replace('cat-', '');
@@ -36,8 +36,14 @@
     postCount += 4;
 
     if (ajaxURL === '') {
+      gifContainer.append(
+        `<img class="loading-gif" src="${utg_vars.stylesheet_url}/assets/location-gif-slow.gif">`
+      );
       appendAjax();
     } else {
+      gifContainer.append(
+        `<img class="loading-gif" src="${utg_vars.stylesheet_url}/assets/location-gif-slow.gif">`
+      );
       appendAjax(ajaxURL);
     }
   });
@@ -51,8 +57,6 @@
   ) {
     ajaxURL += '&_embed&exclude=522&per_page=' + postCount;
 
-    const postContainer = $('.community-posts');
-    const gifContainer = $('.gif-container');
     $.ajax({
       type: 'GET',
       url: ajaxURL,
@@ -62,6 +66,10 @@
       .done(function(data) {
         postContainer.empty();
         gifContainer.empty();
+        console.log($showMore);
+        if (showMoreCondition === 0) {
+          $showMore.removeClass('hide');
+        }
 
         // counts how many posts get appended
         let numPostsFetched = data.length;
@@ -115,17 +123,12 @@
         if (
           numPostsFetched === utg_vars.max_num - 1 ||
           numPostsFetched % 2 ||
-          numPostsFetched < 4
+          numPostsFetched < 4 ||
+          numPostsFetched < postCount
         ) {
-          $showMore.remove();
-        } else {
-          if ($showMore.length) {
-            return;
-          } else {
-            $('.button-box').append(
-              '<button class="white-btn show-more-posts">SHOW MORE</button>'
-            );
-          }
+          $showMore.addClass('hide');
+          showMoreCondition = 0;
+          $('.button-box').append('<h2>Sorry, there are no more posts!</h2>');
         }
       })
       .fail(function() {
