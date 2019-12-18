@@ -36,12 +36,20 @@
 }
 
 .staff-container {
-  @include media($desktop) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 3rem;
-    padding: 2rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 3rem;
+  padding: 2rem 0;
+
+  @include media($tablet) {
+    grid-template-columns: repeat(2, 1fr);
   }
+
+  @include media($header_break) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .staff-card {
     display: flex;
     flex-direction: column;
