@@ -166,6 +166,7 @@
   }
 }
 
+// about page banner
 .page-banner-about {
   @extend .page-banner-no-image;
   background-color: $color_white;
@@ -181,14 +182,13 @@
   }
 }
 
+//single locations banner
 .page-banner-locations {
   @extend .page-banner-no-image;
   padding: 0 $site-padding-mobile;
   height: 344px;
-  // flex-direction: column;
   @include media($tablet) {
     padding: 0 $site-padding;
-    // flex-direction: row;
   }
   .banner-text {
     padding: 0;
