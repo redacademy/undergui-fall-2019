@@ -137,12 +137,16 @@ function utg_scripts()
 		wp_enqueue_script('comment-reply');
 	}
 
+	$PostCount = wp_count_posts($type = 'post', $perm = 'readable');
+	$publishedPostCount = $PostCount->publish;
+
 	//localized script to access DB with JS
 	$localized_scripts = array(
-		'rest_url' => esc_url_raw(rest_url()),
-		'home_url' => home_url(),
-		'site_url' => site_url(),
+		'rest_url' 		 => esc_url_raw(rest_url()),
+		'home_url' 		 => home_url(),
+		'site_url'		 => site_url(),
 		'stylesheet_url' => get_template_directory_uri(),
+		'max_num'  		 =>  $publishedPostCount,
 
 	);
 
