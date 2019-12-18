@@ -1262,16 +1262,18 @@ body.home {
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center; } }
-        body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
-          max-width: 28rem;
-          border: 4px solid #ffffff;
-          border-radius: 5px; }
-          @media only screen and (min-width: 780px) {
-            body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
-              max-width: 200px; } }
-          @media only screen and (min-width: 800px) {
-            body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
-              max-width: 640px; } }
+        body.home section.project-showcase .project-showcase-container .single-project-container .project-media {
+          pointer-events: none; }
+          body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
+            max-width: 26rem;
+            border: 4px solid #ffffff;
+            border-radius: 5px; }
+            @media only screen and (min-width: 780px) {
+              body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
+                max-width: 200px; } }
+            @media only screen and (min-width: 800px) {
+              body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
+                max-width: 640px; } }
         body.home section.project-showcase .project-showcase-container .single-project-container .project-desc {
           color: #ffffff;
           visibility: hidden; }
