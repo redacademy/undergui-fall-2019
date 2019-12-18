@@ -30,7 +30,7 @@
 
                     <p class="class-data date">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/Calendar.svg" alt="">
-                        From: &nbsp;<?= the_field('start_date') ?> &nbsp; To: &nbsp;<?= the_field('end_date') ?>
+                        &nbsp;<?= the_field('start_date') ?>&nbsp; To: &nbsp;<?= the_field('end_date') ?>
                     </p>
 
                     <?php while (have_rows('time')) : the_row() ?>
