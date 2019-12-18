@@ -185,6 +185,7 @@
 //single locations banner
 .page-banner-locations {
   @extend .page-banner-no-image;
+  background-color: $color_green;
   padding: 0 $site-padding-mobile;
   height: 344px;
   @include media($tablet) {
@@ -206,6 +207,9 @@
     .button-container {
       margin: 0 auto;
       width: 201px;
+      @include media($tablet) {
+        margin: 0;
+      }
     }
     @include media($tablet) {
       height: 304px;
