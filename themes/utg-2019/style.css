@@ -371,6 +371,10 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+body {
+  max-width: 3000px;
+  margin: 0 auto; }
+
 *,
 *:before,
 *:after {
@@ -511,7 +515,7 @@ a {
   a:hover, a:focus, a:active {
     text-decoration: underline; }
   a:focus {
-    outline: thin dotted; }
+    outline: 0; }
   a:hover, a:active {
     outline: 0; }
 
@@ -865,7 +869,9 @@ object {
             padding: 1rem 1.5rem; }
             .site-header .nav-links .menu li:last-child {
               padding-right: 4rem;
-              border-right: 1px solid #000000; } }
+              border-right: 1px solid #000000; }
+          .site-header .nav-links .menu .current-menu-item a {
+            text-decoration: underline; } }
 
 .mobile-menu .fa-bars:before {
   position: fixed;
