@@ -34,23 +34,10 @@
   $showMore.on('click', function(e) {
     e.preventDefault();
     postCount += 4;
-    // // console.log(ajaxURL);
-    // if (ajaxURL === '') {
-
-    //   // console.log('default ajax url' + ajaxURL);
-    //   console.log(postCount);
-    //   appendAjax(ajaxURL);
-    // } else {
-    //   ajaxURL +=
-    //   appendAjax(ajaxURL);
-    //   console.log(postCount);
-    //   console.log(ajaxURL);
-    // }
 
     if (ajaxURL === '') {
       appendAjax();
     } else {
-      console.log(ajaxURL);
       appendAjax(ajaxURL);
     }
   });
@@ -78,7 +65,6 @@
 
         // counts how many posts get appended
         let numPostsFetched = data.length;
-        console.log('num of posts' + numPostsFetched);
 
         $.each(data, function appendContent(data, arrayItem) {
           // grabs date from rest API
@@ -124,8 +110,6 @@
                     </div>
             </a>`);
         });
-
-        // console.log(utg_vars.max_num);
 
         // checks how many community posts in total and subtracts 1 for the banner post
         if (
