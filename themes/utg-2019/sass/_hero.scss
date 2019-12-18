@@ -189,11 +189,18 @@
   height: 344px;
   @include media($tablet) {
     padding: 0 $site-padding;
+    height: 479px;
   }
   .banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 0;
+    height: 80%;
+    width: 100%;
     p,
     h1 {
+      margin: 0;
       width: 50%;
     }
     .button-container {
@@ -201,17 +208,24 @@
       width: 201px;
     }
     @include media($tablet) {
+      height: 304px;
+      width: 50%;
       p,
       h1 {
-        width: 100%;
+        width: 80%;
+      }
+      p {
+        font-size: 1.5rem;
       }
     }
   }
+
   iframe {
     display: none;
     @include media($tablet) {
       display: block;
+      height: 304px !important;
+      width: 608px !important;
     }
-    height: 200px !important;
   }
 }

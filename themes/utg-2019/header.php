@@ -109,7 +109,6 @@
 
 				<div class="page-banner-locations">
 					<div class="banner-text">
-						<p class="slug"><?= $post->post_name ?></p>
 						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
 						<?php the_excerpt(); ?>
 						<div class="button-container">

@@ -2953,25 +2953,45 @@ body.home {
   height: 344px; }
   @media only screen and (min-width: 800px) {
     .page-banner-locations {
-      padding: 0 7vw; } }
+      padding: 0 7vw;
+      height: 479px; } }
   .page-banner-locations .banner-text {
-    padding: 0; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
+    height: 80%;
+    width: 100%; }
     .page-banner-locations .banner-text p,
     .page-banner-locations .banner-text h1 {
+      margin: 0;
       width: 50%; }
     .page-banner-locations .banner-text .button-container {
       margin: 0 auto;
       width: 201px; }
     @media only screen and (min-width: 800px) {
-      .page-banner-locations .banner-text p,
-      .page-banner-locations .banner-text h1 {
-        width: 100%; } }
+      .page-banner-locations .banner-text {
+        height: 304px;
+        width: 50%; }
+        .page-banner-locations .banner-text p,
+        .page-banner-locations .banner-text h1 {
+          width: 80%; }
+        .page-banner-locations .banner-text p {
+          font-size: 1.5rem; } }
   .page-banner-locations iframe {
-    display: none;
-    height: 200px !important; }
+    display: none; }
     @media only screen and (min-width: 800px) {
       .page-banner-locations iframe {
-        display: block; } }
+        display: block;
+        height: 304px !important;
+        width: 608px !important; } }
 
 .program-classes {
   overflow: hidden;
@@ -4027,6 +4047,15 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
     @media only screen and (min-width: 800px) {
       .location-single iframe {
         display: none; } }
+  .location-single .button-container {
+    padding: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .location-single .button-container button {
+      width: 400px; }
 
 .location-learning-space {
   display: -webkit-box;
@@ -4124,16 +4153,6 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
             align-items: center; }
     .community-container .community-container-header h2 {
       margin: 1.5rem 0; }
-
-.button-container {
-  padding: 2rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
-  .button-container button {
-    width: 400px; }
 
 .enroll-page {
   padding: 0 0.75rem;

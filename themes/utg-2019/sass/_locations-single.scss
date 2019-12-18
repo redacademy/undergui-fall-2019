@@ -16,6 +16,14 @@
       display: none;
     }
   }
+  .button-container {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+    button {
+      width: 400px;
+    }
+  }
 }
 
 .location-learning-space {
@@ -110,14 +118,5 @@
     h2 {
       margin: $base__space-unit 0;
     }
-  }
-}
-
-.button-container {
-  padding: 2rem 0;
-  display: flex;
-  justify-content: space-around;
-  button {
-    width: 400px;
   }
 }
