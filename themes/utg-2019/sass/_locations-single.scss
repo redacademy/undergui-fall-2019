@@ -36,12 +36,19 @@
 }
 
 .staff-container {
-  @include media($desktop) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem 7rem;
-    padding: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 3rem;
+  padding: 2rem 0;
+
+  @include media($tablet) {
+    grid-template-columns: repeat(2, 1fr);
   }
+
+  @include media($header_break) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .staff-card {
     display: flex;
     flex-direction: column;
@@ -67,7 +74,21 @@
       display: block;
     }
     .statement {
+      border: 1px solid black;
       display: none;
+      z-index: 10;
+      border-radius: $border-radius;
+      width: auto;
+    }
+    &:focus {
+      .statement {
+        margin-top: $base__space-unit;
+        padding: $base__space-unit / 2;
+        display: block;
+        background-color: $color_grey;
+        z-index: 10;
+        width: auto;
+      }
     }
   }
 }
@@ -78,6 +99,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    h2 {
+      margin: $base__space-unit 0;
+    }
   }
 }
 

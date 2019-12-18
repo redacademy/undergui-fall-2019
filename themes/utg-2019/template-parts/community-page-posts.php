@@ -17,7 +17,7 @@
         global $post;
 
         $myposts = get_posts(array(
-            'posts_per_page' => 8,
+            'posts_per_page' => 4,
             'hide_empty'     => 1,
             'order'          => 'DESC',
             'paged'          => (get_query_var('paged')) ? get_query_var('paged') : 1,

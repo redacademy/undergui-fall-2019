@@ -9,7 +9,7 @@
       border-bottom: 2px solid black;
       margin: 0 auto;
 
-      @include media($desktop) {
+      @include media($tablet) {
         width: 90%;
         flex-direction: row;
         padding: $base__space-unit * 2 0;
@@ -24,7 +24,7 @@
           padding-bottom: $base__space-unit / 2;
         }
 
-        @include media($desktop) {
+        @include media($tablet) {
           flex-direction: column;
           max-width: 64%;
           padding-right: $base__space-unit;
@@ -44,7 +44,7 @@
           height: auto;
         }
 
-        @include media($desktop) {
+        @include media($tablet) {
           display: flex;
           flex-direction: column;
           justify-self: flex-start;
@@ -88,7 +88,7 @@
         width: auto;
       }
 
-      @include media($desktop) {
+      @include media($tablet) {
         justify-content: flex-end;
       }
     }
@@ -114,7 +114,7 @@
           }
         }
       }
-      @include media($desktop) {
+      @include media($tablet) {
         display: flex;
         justify-content: flex-start;
         flex-shrink: 0;

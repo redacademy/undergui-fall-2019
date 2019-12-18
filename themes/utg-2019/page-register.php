@@ -34,8 +34,12 @@ get_header(); ?>
 		);
 		$the_class = new WP_Query($args);
 		?>
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 7673965f4d5c3510de24088292b1dc9eb4eab886
 
+		<div class=form-wrapper>
 		<section class="class-card-container">
 			<?php if ($the_class->have_posts()) : while ($the_class->have_posts()) : $the_class->the_post(); ?>
 
@@ -72,18 +76,21 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-</div>
 
 <?php endwhile; // End of the loop. 
 	?>
 <?php endif ?>
 <?php wp_reset_query(); ?>
 </section>
+<<<<<<< HEAD
 <section class="enroll-form">
 <?php gravity_form(2); ?>
 
 		</section>
 
+=======
+	</div>
+>>>>>>> 7673965f4d5c3510de24088292b1dc9eb4eab886
 </main><!-- #main -->
 </div><!-- #primary -->
 

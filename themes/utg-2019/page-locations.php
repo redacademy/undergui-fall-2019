@@ -14,25 +14,69 @@ get_header(); ?>
 
 
 
-		<form class="selector-container">
-			<div>
-				<h4>Country</h4>
-				<select name="country" id=""></select>
+		<div class="selector-container">
 
-			</div>
-			<div>
-				<h4>Province</h4>
-				<select name="province" id=""></select>
 
-			</div>
-			<div>
-				<h4>City</h4>
-				<select name="city" id=""></select>
+			<form action="" method="get">
 
-			</div>
+				<label for="country">
+					<h4>Country</h4>
+				</label>
+				<select name="country" id="country">
+					<option selected value="">Select a country</option>
+					<?php $terms = get_terms('country', array(
+						'orderby' => 'id',
+						'hide_empty' => false
+					));
+					foreach ($terms as $term) : ?>
+						<option value="<?php echo $term->slug ?>"><?php echo $term->name ?></option>
+					<?php endforeach; ?>
+				</select>
+			</form>
+			<form action="" method="get">
 
-		</form>
+				<label for="province">
+					<h4>Province/Region/District</h4>
+				</label>
+				<select name="province" id="province">
+					<option selected value="">Select a province/region/district</option>
+					<?php $terms = get_terms('province', array(
+						'orderby' => 'id',
+						'hide_empty' => false
+					));
+					foreach ($terms as $term) : ?>
+						<option value="<?php echo $term->slug ?>"><?php echo $term->name ?></option>
+					<?php endforeach; ?>
+				</select>
+			</form>
+			<form action="" method="get">
 
+				<label for="city">
+					<h4>City</h4>
+				</label>
+				<select name="city" id="city">
+					<option selected value="">Select a city</option>
+					<?php $terms = get_terms('city', array(
+						'orderby' => 'id',
+						'hide_empty' => false
+					));
+					foreach ($terms as $term) : ?>
+						<option value="<?php echo $term->slug ?>"><?php echo $term->name ?></option>
+					<?php endforeach; ?>
+				</select>
+			</form>
+
+
+		</div>
+
+		<div class="locations-button-container">
+			<button id="filter-locations">search</button>
+
+		</div>
+
+		<div class="locations-ajax-container">
+
+		</div>
 
 		<?php include get_template_directory() . "/template-parts/locations-page-location-cards.php"; ?>
 

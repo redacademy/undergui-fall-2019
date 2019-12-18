@@ -5,14 +5,14 @@
   }
   padding: 0 $site-padding-mobile;
   display: flex;
-  @include media($desktop) {
+  @include media($tablet) {
     padding: 0 $site-padding;
   }
 
   .classes-box {
     align-self: center;
     border: 1px solid $color_grey;
-    @include media($desktop) {
+    @include media($tablet) {
       @include desktop-card;
       width: 40%;
       height: 520px;
@@ -41,7 +41,7 @@
       right: 5%;
       top: 10%;
       display: none;
-      @include media($desktop) {
+      @include media($tablet) {
         display: inline;
       }
     }
@@ -49,7 +49,7 @@
     .post-meta {
       border: none;
       margin: 0 1rem;
-      @include media($desktop) {
+      @include media($tablet) {
         margin: 0;
         padding: 1.5rem;
         height: 60%;
@@ -60,13 +60,13 @@
         height: 40%;
         border-bottom: 1px solid $color_grey;
         font-size: $font_size_main + 2;
-        @include media($desktop) {
+        @include media($tablet) {
           display: inline;
         }
         .class-title {
           position: absolute;
           transform: translate(0 -2.6rem);
-          @include media($desktop) {
+          @include media($tablet) {
             position: relative;
             transform: translate(0 0);
           }

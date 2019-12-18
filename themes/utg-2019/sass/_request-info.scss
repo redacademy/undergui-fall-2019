@@ -1,16 +1,10 @@
 body.page-request-info {
 
+
   .page-banner {
     @include max-media(510px) {
       background-size: inherit !important;
       background-position: right !important;
-    }
-
-    .banner-text {
-      h1 {
-        margin-top: 0;
-        margin-bottom: 1rem;
-      }
     }
 
     .faq-button {
@@ -21,7 +15,7 @@ body.page-request-info {
       padding: 0.5rem;
       border: 1px solid $color_white;
 
-      @include media($desktop) {
+      @include media($tablet) {
         align-self: unset;
       }
     }
@@ -44,9 +38,16 @@ body.page-request-info {
 
   .gform_body {
 
-    @include media($desktop) {
+    @include media($tablet) {
       width: 80%;
       margin: 0 auto;
+
+      #field_1_21,
+      #field_1_20,
+      #field_1_22 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
 
       #field_1_21,
       #field_1_20,
@@ -88,26 +89,28 @@ body.page-request-info {
         width: 100% !important;
       }
     }
-  }
 
-  .gform_wrapper {
 
-    .gfield_label {
-      font-family: $font__main;
-      font-size: 14px;
-    }
+    .gform_wrapper {
 
-    form {
-      margin: 0 1rem;
-    }
+      .gfield_label {
+        font-family: $font__main;
+        font-size: 14px;
+      }
 
-    .gsection {
-      border: 0px;
-    }
+      form {
+        margin: 0 1rem;
+      }
 
-    .gform_footer {
-      display: flex;
-      flex-direction: column;
+      .gsection {
+        border-bottom: 0px !important;
+      }
+
+      .gform_footer {
+        display: flex;
+        flex-direction: column;
+      }
+
     }
   }
 }

@@ -91,7 +91,7 @@
       }
     }
 
-    @include media($desktop) {
+    @include media($tablet) {
 
       .our-story {
         padding-top: $base__space-unit;

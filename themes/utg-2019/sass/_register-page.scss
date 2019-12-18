@@ -1,33 +1,83 @@
 body.page-register {
-  .site-content {
-    display: grid;
+
+  .gform_page {
+    display: flex;
+    flex-direction: column;
   }
-  .gf_progressbar_wrapper {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 3;
+
+  .gform_page_fields {
+    display: flex;
   }
-  .enroll-page {
-    display: block;
+
+  .class-card-container {
+    @include media($desktop) {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .classes-box {
+      @include media($desktop) {
+        height: 30rem;
+        margin-bottom: 20rem;
+      }
+    }
   }
+
+  .ginput_container {
+    @include media($desktop) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .gform_page_fields {
+      input.medium {
+        width: 10rem;
+        @include media($desktop) {
+          width: 20rem;
+      }
+    }
+  }
+
+  .gform_body {
+    margin: 1rem;
+  }
+
+  .gf_progressbar_wrapper,
   .gform_title {
     display: none;
   }
+
+  .enroll-page {
+    display: block;
+  }
+
   .gform_wrapper {
-    margin: 1rem;
-    input#gform_submit_button_2 {
-      margin: auto;
-    }
+
     .gsection {
       border: 0px;
     }
+
     .gfield_label {
       font-size: $font_size_main - 1;
       font-family: $font__main;
     }
-    .gform_footer {
+
+    .gform_page_footer {
       display: flex;
+      border: 0px;
+      align-items: flex-end;
+
+      input#gform_next_button_2_15 {
+        margin: auto;
+
+        @include media($desktop) {
+          margin: 0;
+        }
+      }
+    }
+
+    #input_2_13_1 {
+      width: 19.5rem;
     }
   }
 }
