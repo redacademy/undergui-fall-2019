@@ -36,7 +36,6 @@
 }
 
 .staff-container {
-
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 3rem;
@@ -100,6 +99,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    h2 {
+      margin: $base__space-unit 0;
+    }
   }
 }
 
