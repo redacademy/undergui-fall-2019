@@ -2092,6 +2092,10 @@ body.home {
     .post-container {
       padding-bottom: 2rem;
       display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem; } }
+  @media only screen and (min-width: 1000px) {
+    .post-container {
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 1rem; } }
 
@@ -4035,6 +4039,8 @@ body.page-request-info .gform_wrapper .gform_footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .community-container .community-container-header h2 {
+      margin: 1.5rem 0; }
 
 .button-container {
   padding: 2rem 0;
