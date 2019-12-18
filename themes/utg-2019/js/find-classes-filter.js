@@ -15,7 +15,6 @@
 
     //ajax url
     let filterPostUrl = utg_vars.rest_url + 'wp/v2/post_classes?';
-    let postCount = 4;
 
     //checks if user has made any selections for filtering
     if (
@@ -89,7 +88,7 @@
     }
 
     //updated url with embedded info and adds up to 99 posts
-    filterPostUrl += '&_embed&per_page=' + postCount;
+    filterPostUrl += '&_embed&per_page=99';
 
     // Grab json data and append data to correct dom elements
     $.ajax({
@@ -133,7 +132,6 @@
           `);
           });
         }
-        postCount += 4;
 
         if (counter < 1) {
           postContainer.prepend('<h2>' + counter + ' Classes</h2>');
