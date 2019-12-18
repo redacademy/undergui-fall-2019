@@ -65,9 +65,11 @@
 
 		</header><!-- #masthead -->
 
-		<?php // check if the page has a page Thumbnail assigned to it.
+		<!-- Check if on these single post types -->
+		<?php
 		if (is_singular('post_events') || is_singular('post') || is_singular('post_classes')) {
 			return;
+			// check if the page has a page Thumbnail assigned to it.
 		} elseif (has_post_thumbnail()) { ?>
 
 			<?php if (is_page('home')) { ?>
@@ -76,7 +78,6 @@
 					<div class="home-hero-text">
 						<?php the_excerpt(); ?>
 						<input type="button" onclick="location.href='<?= get_site_url() . '/programs' ?>';" value="view our programs" />
-						<!-- <button class="view-programs-btn white-btn">view our programs</button> -->
 					</div>
 				</div>
 
@@ -103,10 +104,26 @@
 						<?php the_excerpt(); ?>
 					</div>
 				</div>
-			<?php } elseif (has_post_thumbnail(522) || is_singular('post_events')) { ?>
+
+			<?php } elseif (is_singular('post_locations')) { ?>
+
+				<div class="page-banner-locations">
+					<div class="banner-text">
+						<p class="slug"><?= $post->post_name ?></p>
+						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
+						<?php the_excerpt(); ?>
+						<div class="button-container">
+							<button class="white-btn" onclick="location.href='<?= get_site_url() . '/programs' ?>';"> view our programs </button>
+
+						</div>
+
+					</div>
+					<?php the_field('google_map'); ?>
+				</div>
+
+			<?php } elseif (has_post_thumbnail(522)) { ?>
 				<div class="post-banner">
 					<div class="banner-text">
-
 						<h1 class="post-feature-image-title"><?= get_the_title(522) ?></h1>
 						<h3><?= get_the_excerpt(522); ?></h3>
 
