@@ -14,7 +14,6 @@ body.page-register {
       display: flex;
       justify-content: space-evenly;
     }
-
     .classes-box {
       @include media($desktop) {
         height: 30rem;

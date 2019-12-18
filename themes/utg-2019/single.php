@@ -13,13 +13,11 @@ get_header(); ?>
 
 			<section class="under-contstruction">
 
-				<header class="banner-under-construction">
-					
-					<img src="<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/404-background-image.png"/>
-					
-					<!-- <a class="home-btn-404" href="#">Go Back Home</a> -->
-
+				<header class="under-construction-banner" style="background: url('<?= get_stylesheet_directory_uri(); ?>/assets/illustrations/404-background-image.png'); background-size: cover; background-position: center;">
+					<h1 class="under-construction-text">under construction</h1>
+					<input type="button" class="home-button" onclick="location.href='<?= get_home_url() ?>';" value="go back home" />
 				</header>
+				<!-- </header> -->
 
 			</section>
 

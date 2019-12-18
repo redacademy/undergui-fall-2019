@@ -17,7 +17,7 @@
     }
   }
 
-  @include media($desktop) {
+  @include media($tablet) {
     .nav {
       display: flex;
       justify-content: space-around;

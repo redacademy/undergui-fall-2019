@@ -2097,6 +2097,10 @@ body.home {
     .post-container {
       padding-bottom: 2rem;
       display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem; } }
+  @media only screen and (min-width: 1000px) {
+    .post-container {
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 1rem; } }
 
@@ -3622,49 +3626,49 @@ body.page-request-info .entry-content p {
 
 @media only screen and (min-width: 800px) {
   body.page-request-info .gform_body {
-    padding: 0 7vw; } }
+    width: 80%;
+    margin: 0 auto; }
+    body.page-request-info .gform_body #field_1_21,
+    body.page-request-info .gform_body #field_1_20,
+    body.page-request-info .gform_body #field_1_22 {
+      grid-column-start: 1;
+      grid-column-end: 3; }
+    body.page-request-info .gform_body #field_1_21,
+    body.page-request-info .gform_body #field_1_20,
+    body.page-request-info .gform_body #field_1_22 {
+      grid-column-start: 1;
+      grid-column-end: 3; }
+    body.page-request-info .gform_body #field_1_21 {
+      grid-row-start: 1;
+      grid-row-end: 2; }
+    body.page-request-info .gform_body #field_1_20 {
+      grid-row-start: 4;
+      grid-row-end: 5; }
+    body.page-request-info .gform_body #field_1_22 {
+      grid-row-start: 7;
+      grid-row-end: 8; }
+    body.page-request-info .gform_body ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      body.page-request-info .gform_body ul li {
+        grid-template-rows: 1fr 1fr; }
+      body.page-request-info .gform_body ul li.gfield.gsection {
+        margin: 0; }
+    body.page-request-info .gform_body input.medium,
+    body.page-request-info .gform_body select {
+      width: 100% !important; } }
 
-body.page-request-info .gform_body #field_1_21,
-body.page-request-info .gform_body #field_1_20,
-body.page-request-info .gform_body #field_1_22 {
-  grid-column-start: 1;
-  grid-column-end: 3; }
-
-body.page-request-info .gform_body #field_1_21 {
-  grid-row-start: 1;
-  grid-row-end: 2; }
-
-body.page-request-info .gform_body #field_1_20 {
-  grid-row-start: 4;
-  grid-row-end: 5; }
-
-body.page-request-info .gform_body #field_1_22 {
-  grid-row-start: 7;
-  grid-row-end: 8; }
-
-body.page-request-info .gform_body ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr; }
-  body.page-request-info .gform_body ul li {
-    grid-template-rows: 1fr 1fr; }
-  body.page-request-info .gform_body ul li.gfield.gsection {
-    margin: 0; }
-
-body.page-request-info .gform_body input.medium,
-body.page-request-info .gform_body select {
-  width: 100% !important; }
-
-body.page-request-info .gform_wrapper .gfield_label {
+body.page-request-info .gform_body .gform_wrapper .gfield_label {
   font-family: "Titillium Web";
   font-size: 14px; }
 
-body.page-request-info .gform_wrapper form {
+body.page-request-info .gform_body .gform_wrapper form {
   margin: 0 1rem; }
 
-body.page-request-info .gform_wrapper .gsection {
+body.page-request-info .gform_body .gform_wrapper .gsection {
   border-bottom: 0px !important; }
 
-body.page-request-info .gform_wrapper .gform_footer {
+body.page-request-info .gform_body .gform_wrapper .gform_footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3939,7 +3943,7 @@ body.page-request-info .gform_wrapper .gform_footer {
 
 .location-single {
   padding: 2rem 0.75rem; }
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 1000px) {
     .location-single {
       padding: 2rem 7vw; } }
   .location-single h2,
@@ -3974,44 +3978,59 @@ body.page-request-info .gform_wrapper .gform_footer {
 .location-staff-members {
   padding: 2rem 0; }
 
-@media only screen and (min-width: 800px) {
-  .staff-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem 7rem;
-    padding: 2rem 0; } }
-
-.staff-container .staff-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: none;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  text-transform: none; }
-  .staff-container .staff-card img {
-    height: 11rem;
-    border-radius: 50%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center; }
-  .staff-container .staff-card h2 {
-    font-size: 1.125rem;
-    margin: 0.5rem 0; }
-  .staff-container .staff-card p {
-    font-weight: normal;
-    display: block; }
-  .staff-container .staff-card .statement {
-    display: none; }
+.staff-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 3rem;
+  padding: 2rem 0; }
+  @media only screen and (min-width: 800px) {
+    .staff-container {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (min-width: 900px) {
+    .staff-container {
+      grid-template-columns: repeat(3, 1fr); } }
+  .staff-container .staff-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    text-transform: none; }
+    .staff-container .staff-card img {
+      height: 11rem;
+      border-radius: 50%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center;
+         object-position: center; }
+    .staff-container .staff-card h2 {
+      font-size: 1.125rem;
+      margin: 0.5rem 0; }
+    .staff-container .staff-card p {
+      font-weight: normal;
+      display: block; }
+    .staff-container .staff-card .statement {
+      border: 1px solid black;
+      display: none;
+      z-index: 10;
+      border-radius: 5px;
+      width: auto; }
+    .staff-container .staff-card:focus .statement {
+      margin-top: 1.5rem;
+      padding: 0.75rem;
+      display: block;
+      background-color: #eff1f6;
+      z-index: 10;
+      width: auto; }
 
 .community-container {
   padding: 2rem 0; }
@@ -4025,6 +4044,8 @@ body.page-request-info .gform_wrapper .gform_footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .community-container .community-container-header h2 {
+      margin: 1.5rem 0; }
 
 .button-container {
   padding: 2rem 0;
@@ -4196,7 +4217,7 @@ body.page-register .gform_page_fields {
   display: -ms-flexbox;
   display: flex; }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
   body.page-register .class-card-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4205,12 +4226,12 @@ body.page-register .gform_page_fields {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly; } }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
   body.page-register .class-card-container .classes-box {
     height: 30rem;
     margin-bottom: 20rem; } }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
   body.page-register .ginput_container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4222,7 +4243,7 @@ body.page-register .gform_page_fields {
 
 body.page-register .gform_page_fields input.medium {
   width: 10rem; }
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 1000px) {
     body.page-register .gform_page_fields input.medium {
       width: 20rem; } }
 
@@ -4253,7 +4274,7 @@ body.page-register .gform_wrapper .gform_page_footer {
           align-items: flex-end; }
   body.page-register .gform_wrapper .gform_page_footer input#gform_next_button_2_15 {
     margin: auto; }
-    @media only screen and (min-width: 800px) {
+    @media only screen and (min-width: 1000px) {
       body.page-register .gform_wrapper .gform_page_footer input#gform_next_button_2_15 {
         margin: 0; } }
 

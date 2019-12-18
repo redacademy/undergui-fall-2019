@@ -11,7 +11,7 @@ section.latest-community-events {
     font-size: $font_size_main;
     padding: 0.75rem 1rem;
 
-    @include media($desktop) {
+    @include media($tablet) {
       font-size: $font_size_main + 2px;
       padding: 0.75rem 2rem;
       margin: 2rem;

@@ -4,7 +4,7 @@ body.home {
   h2 {
     font-size: $font_size_h2 + 6px;
 
-    @include media($desktop) {
+    @include media($tablet) {
       font-size: $font_size_h2 + 20px;
     }
   }

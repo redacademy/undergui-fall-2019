@@ -1,7 +1,7 @@
 .programs-container {
   padding: 0 $site-padding-mobile;
 
-  @include media($desktop) {
+  @include media($tablet) {
     padding: 0 $site-padding;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -19,14 +19,14 @@
       .post-data {
         font-size: 11px;
         color: $color_white;
-        @include media($desktop) {
+        @include media($tablet) {
           font-size: 14px;
         }
       }
       .post-title {
         font-size: 18px;
         color: $color_white;
-        @include media($desktop) {
+        @include media($tablet) {
           font-size: 18px;
         }
       }
@@ -43,7 +43,7 @@
         }
       }
     }
-    @include media($desktop) {
+    @include media($tablet) {
       background: none !important;
       @include desktop-card;
       height: 325px;

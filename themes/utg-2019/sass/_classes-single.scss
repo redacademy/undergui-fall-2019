@@ -4,12 +4,12 @@
   }
   article {
     padding: $site-padding-mobile;
-    @include media($desktop) {
+    @include media($tablet) {
       padding: $site-padding;
     }
   }
   .class-header {
-    @include media($desktop) {
+    @include media($tablet) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 2rem;
@@ -20,7 +20,7 @@
       width: 100%;
       height: 200px;
       object-fit: cover;
-      @include media($desktop) {
+      @include media($tablet) {
         height: 300px;
       }
     }
@@ -35,7 +35,7 @@
       color: $color_paragraph;
       border-bottom: 1px solid $color_paragraph;
 
-      @include media($desktop) {
+      @include media($tablet) {
         font-size: 1rem;
         font-weight: normal;
         padding: 1rem 0;
@@ -48,7 +48,7 @@
         align-items: center;
       }
       width: 75%;
-      @include media($desktop) {
+      @include media($tablet) {
         padding: 0;
         width: 100%;
       }
@@ -64,7 +64,7 @@
       padding-top: 4rem;
       display: flex;
       justify-content: space-between;
-      @include media($desktop) {
+      @include media($tablet) {
         padding-top: 2rem;
       }
     }
@@ -76,7 +76,7 @@
 
   section {
     padding-bottom: 2rem;
-    @include media($desktop) {
+    @include media($tablet) {
       width: 30%;
       padding-top: 2rem;
     }
@@ -86,12 +86,12 @@
     display: flex;
     div {
       width: 50%;
-      @include media($desktop) {
+      @include media($tablet) {
         width: 100%;
       }
       .instructor-image-desktop {
         display: none;
-        @include media($desktop) {
+        @include media($tablet) {
           display: block;
           margin-bottom: 2rem;
           box-shadow: 0 1px 4px $color_black;
@@ -109,13 +109,13 @@
       height: 148px;
       border-radius: 50%;
       object-fit: cover;
-      @include media($desktop) {
+      @include media($tablet) {
         display: none;
       }
     }
   }
   .class-content {
-    @include media($desktop) {
+    @include media($tablet) {
       display: flex;
       justify-content: space-between;
     }
