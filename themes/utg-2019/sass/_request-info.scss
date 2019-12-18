@@ -43,7 +43,6 @@ body.page-request-info {
 
   .gform_body {
 
-<<<<<<< HEAD
     @include media($tablet) {
       width: 80%;
       margin: 0 auto;
@@ -54,13 +53,6 @@ body.page-request-info {
         grid-column-start: 1;
         grid-column-end: 3;
       }
-=======
-    padding: 0 $site-padding-mobil;
-
-    @include media($desktop) {
-      padding: 0 $site-padding;
-    }
->>>>>>> 86cf6dcbb8c34fd3103ccadcd2bcba07ce055c06
 
     #field_1_21,
     #field_1_20,
@@ -124,4 +116,5 @@ body.page-request-info {
     flex-direction: column;
   }
 
+}
 }

@@ -3593,10 +3593,6 @@ body.home {
     background-size: inherit !important;
     background-position: right !important; } }
 
-body.page-request-info .page-banner .banner-text h1, body.page-request-info .post-banner .banner-text h1 {
-  margin-top: 0;
-  margin-bottom: 1rem; }
-
 body.page-request-info .page-banner .faq-button, body.page-request-info .post-banner .faq-button {
   -ms-flex-item-align: center;
       align-self: center;
@@ -3623,6 +3619,11 @@ body.page-request-info .entry-content p {
   body.page-request-info .gform_body {
     width: 80%;
     margin: 0 auto; }
+    body.page-request-info .gform_body #field_1_21,
+    body.page-request-info .gform_body #field_1_20,
+    body.page-request-info .gform_body #field_1_22 {
+      grid-column-start: 1;
+      grid-column-end: 3; }
     body.page-request-info .gform_body #field_1_21,
     body.page-request-info .gform_body #field_1_20,
     body.page-request-info .gform_body #field_1_22 {
@@ -3933,7 +3934,7 @@ body.page-request-info .gform_wrapper .gform_footer {
 
 .location-single {
   padding: 2rem 0.75rem; }
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 1000px) {
     .location-single {
       padding: 2rem 7vw; } }
   .location-single h2,
@@ -3968,11 +3969,11 @@ body.page-request-info .gform_wrapper .gform_footer {
 .location-staff-members {
   padding: 2rem 0; }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
   .staff-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem 7rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
     padding: 2rem 0; } }
 
 .staff-container .staff-card {
@@ -4005,7 +4006,18 @@ body.page-request-info .gform_wrapper .gform_footer {
     font-weight: normal;
     display: block; }
   .staff-container .staff-card .statement {
-    display: none; }
+    border: 1px solid black;
+    display: none;
+    z-index: 10;
+    border-radius: 5px;
+    width: auto; }
+  .staff-container .staff-card:focus .statement {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    display: block;
+    background-color: #eff1f6;
+    z-index: 10;
+    width: auto; }
 
 .community-container {
   padding: 2rem 0; }
@@ -4176,6 +4188,13 @@ body.page-request-info .gform_wrapper .gform_footer {
         .enroll-page .classes-box .post-meta p img {
           margin-right: 0.5rem; }
 
+body.page-register .page-banner, body.page-register .post-banner {
+  padding: 0 0.75rem; }
+
+@media only screen and (min-width: 1000px) {
+  body.page-register {
+    padding: 0 7vw; } }
+
 body.page-register .content-area {
   display: grid;
   grid-template-columns: 1fr 1fr; }
@@ -4187,7 +4206,10 @@ body.page-register .content-area {
   display: none; }
 
 .gform_wrapper {
-  margin: 1rem; }
+  padding: 0 0.75rem; }
+  @media only screen and (min-width: 1000px) {
+    .gform_wrapper {
+      padding: 0 7vw; } }
   .gform_wrapper input#gform_submit_button_2 {
     margin: auto; }
   .gform_wrapper .gsection {

@@ -54,16 +54,21 @@ get_header(); ?>
 
 						<?php if (have_rows('staff')) : ?>
 							<?php while (have_rows('staff')) : the_row(); ?>
+								
 								<button class="staff-card">
 									<div>
 										<img src="<?php the_sub_field('staff_image'); ?>">
 										<h2><?php the_sub_field('staff_name'); ?></h2>
 										<p><?php the_sub_field('staff_position'); ?></p>
-
+									</div>	
+										
+									<div class="statement">
+										<p><?php the_sub_field('staff_statement'); ?></p>
 									</div>
 
-									<p class="statement"><?php the_sub_field('staff_statement'); ?></p>
+
 								</button>
+
 
 						<?php endwhile;
 							else :

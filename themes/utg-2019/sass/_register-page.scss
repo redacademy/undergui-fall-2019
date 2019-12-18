@@ -1,6 +1,6 @@
 body.page-register {
   .page-banner {
-    padding: 0 $site-padding-mobil;
+    padding: 0 $site-padding-mobile;
   }
 
   @include media($desktop) {
@@ -10,9 +10,7 @@ body.page-register {
   .content-area {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
   }
-
 }
 
 // .gf_progressbar_wrapper {}
@@ -26,7 +24,7 @@ body.page-register {
 }
 
 .gform_wrapper {
-  padding: 0 $site-padding-mobil;
+  padding: 0 $site-padding-mobile;
 
   @include media($desktop) {
     padding: 0 $site-padding;
