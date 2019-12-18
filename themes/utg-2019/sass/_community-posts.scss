@@ -38,6 +38,7 @@
   }
 }
 .button-box {
+  padding: 2rem 0;
   display: none;
 
   @include media($tablet) {
@@ -54,6 +55,10 @@
       border-radius: $border-radius;
       font-family: $font_header;
     }
+  }
+
+  .hide {
+    display: none;
   }
 }
 
@@ -78,5 +83,7 @@
 }
 
 .gif-container {
-  padding: 2rem 0;
+  img {
+    padding: 2rem 0;
+  }
 }

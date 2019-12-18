@@ -2096,6 +2096,7 @@ body.home {
       grid-gap: 1rem; } }
 
 .button-box {
+  padding: 2rem 0;
   display: none; }
   @media only screen and (min-width: 800px) {
     .button-box {
@@ -2111,6 +2112,8 @@ body.home {
         border-color: #2ba2dd;
         border-radius: 5px;
         font-family: "Gotham"; } }
+  .button-box .hide {
+    display: none; }
 
 .post-card {
   display: -webkit-box;
@@ -2223,7 +2226,7 @@ body.home {
       .post-card .post-category {
         display: block; } }
 
-.gif-container {
+.gif-container img {
   padding: 2rem 0; }
 
 .blog .content-area {
