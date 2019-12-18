@@ -99,10 +99,6 @@
 
     .slug {
       display: none;
-
-      @include media($tablet) {
-        display: block;
-      }
     }
 
     h1 {

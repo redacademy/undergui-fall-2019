@@ -2868,9 +2868,6 @@ body.home {
       color: #ffffff; }
     .page-banner .banner-text .slug, .post-banner .banner-text .slug {
       display: none; }
-      @media only screen and (min-width: 800px) {
-        .page-banner .banner-text .slug, .post-banner .banner-text .slug {
-          display: block; } }
     .page-banner .banner-text h1, .post-banner .banner-text h1 {
       font-size: 2rem; }
       @media only screen and (min-width: 800px) {
