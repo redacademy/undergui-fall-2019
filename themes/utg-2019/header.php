@@ -66,7 +66,9 @@
 		</header><!-- #masthead -->
 
 		<?php // check if the page has a page Thumbnail assigned to it.
-		if (has_post_thumbnail()) { ?>
+		if (is_singular('post_events') || is_singular('post') || is_singular('post_classes')) {
+			return;
+		} elseif (has_post_thumbnail()) { ?>
 
 			<?php if (is_page('home')) { ?>
 
@@ -82,27 +84,29 @@
 
 				<div class="page-banner" style="background:  url(<?= get_the_post_thumbnail_url(); ?>); background-size: cover; background-position: center;">
 					<div class="banner-text">
+
 						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
 						<?php the_excerpt(); ?>
 						<input type="button" class="faq-button" onclick="location.href='<?= get_home_url() . '/about/#faq' ?>';" value="check out faq" />
 					</div>
 				</div>
 
+
+
 			<?php } elseif (is_page() || is_singular('post_programs')) { ?>
 
 				<div class="page-banner" style="background:  url(<?= get_the_post_thumbnail_url(); ?>); background-size: cover; background-position: center;">
 					<div class="banner-text">
+
 						<p class="slug"><?= $post->post_name ?></p>
 						<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
 						<?php the_excerpt(); ?>
 					</div>
 				</div>
-
-
-			<?php } elseif (has_post_thumbnail(522)) { ?>
-
+			<?php } elseif (has_post_thumbnail(522) || is_singular('post_events')) { ?>
 				<div class="post-banner">
 					<div class="banner-text">
+
 						<h1 class="post-feature-image-title"><?= get_the_title(522) ?></h1>
 						<h3><?= get_the_excerpt(522); ?></h3>
 
@@ -110,7 +114,33 @@
 					<?= get_the_post_thumbnail(522); ?>
 				</div>
 
-		<?php }
-		} ?>
 
+
+
+
+			<?php }
+			} elseif (is_page('about')) { ?>
+
+
+
+			<div class="page-banner-about">
+				<div class="banner-text">
+					<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
+					<?php include get_template_directory() . "/template-parts/about-page-navigation.php"; ?>
+
+				</div>
+			</div>
+
+		<?php } else { ?>
+
+
+
+			<div class="page-banner-no-image">
+				<div class="banner-text">
+					<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
+					<?php the_excerpt(); ?>
+				</div>
+			</div>
+
+		<?php } ?>
 		<div id="content" class="site-content">
