@@ -417,7 +417,9 @@ input[type='submit'] {
   input[type='button']:hover,
   input[type='reset']:hover,
   input[type='submit']:hover {
-    background-color: #57b5e4; }
+    background-color: #ffffff;
+    color: #2ba2dd;
+    border-color: #2ba2dd; }
   button:active, button:focus,
   input[type='button']:active,
   input[type='button']:focus,
@@ -425,6 +427,12 @@ input[type='submit'] {
   input[type='reset']:focus,
   input[type='submit']:active,
   input[type='submit']:focus {
+    color: #ffffff;
+    background-color: #1d84b8; }
+  button:visited,
+  input[type='button']:visited,
+  input[type='reset']:visited,
+  input[type='submit']:visited {
     background-color: #1d84b8; }
 
 .white-btn {
@@ -1262,16 +1270,18 @@ body.home {
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center; } }
-        body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
-          max-width: 28rem;
-          border: 4px solid #ffffff;
-          border-radius: 5px; }
-          @media only screen and (min-width: 780px) {
-            body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
-              max-width: 200px; } }
-          @media only screen and (min-width: 800px) {
-            body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
-              max-width: 640px; } }
+        body.home section.project-showcase .project-showcase-container .single-project-container .project-media {
+          pointer-events: none; }
+          body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
+            max-width: 26rem;
+            border: 4px solid #ffffff;
+            border-radius: 5px; }
+            @media only screen and (min-width: 780px) {
+              body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
+                max-width: 200px; } }
+            @media only screen and (min-width: 800px) {
+              body.home section.project-showcase .project-showcase-container .single-project-container .project-media iframe {
+                max-width: 640px; } }
         body.home section.project-showcase .project-showcase-container .single-project-container .project-desc {
           color: #ffffff;
           visibility: hidden; }

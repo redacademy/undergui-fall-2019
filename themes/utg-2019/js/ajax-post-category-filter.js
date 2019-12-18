@@ -123,21 +123,12 @@
         if (
           numPostsFetched === utg_vars.max_num - 1 ||
           numPostsFetched % 2 ||
-          numPostsFetched < 4
+          numPostsFetched < 4 ||
+          numPostsFetched < postCount
         ) {
           $showMore.addClass('hide');
           showMoreCondition = 0;
-        } else {
-          // if (showMoreCondition === 0) {
-          //   $showMore.remove('hide');
-          // }
-          // if ($showMore.length) {
-          //   return;
-          // } else {
-          //   $('.button-box').append(
-          //     '<button class="white-btn show-more-posts">SHOW MORE</button>'
-          //   );
-          // }
+          $('.button-box').append('<h2>Sorry, there are no more posts!</h2>');
         }
       })
       .fail(function() {
