@@ -11,6 +11,7 @@
 // Register Custom Taxonomy
 
 // Register Taxonomy Program Taxonomy
+
 function create_programtaxonomy_tax()
 {
 
@@ -46,6 +47,7 @@ function create_programtaxonomy_tax()
 add_action('init', 'create_programtaxonomy_tax');
 
 // Register Custom Taxonomy Level for classes
+
 function custom_levels_taxonomy()
 {
 
@@ -87,6 +89,7 @@ function custom_levels_taxonomy()
 add_action('init', 'custom_levels_taxonomy', 0);
 
 // Register Custom Taxonomy age for classes
+
 function custom_ages_taxonomy()
 {
 
@@ -170,6 +173,7 @@ function custom_weekday_taxonomy() {
 add_action( 'init', 'custom_weekday_taxonomy', 0 );
 
 // Register Custom Taxonomy time for classes
+
 function custom_time_taxonomy()
 {
 
@@ -211,6 +215,7 @@ function custom_time_taxonomy()
 add_action('init', 'custom_time_taxonomy', 0);
 
 // Register Custom Taxonomy semester for classes
+
 function custom_semester_taxonomy()
 {
 
@@ -252,6 +257,7 @@ function custom_semester_taxonomy()
 add_action('init', 'custom_semester_taxonomy', 0);
 
 // Register Custom Taxonomy semester for classes
+
 function custom_language_taxonomy()
 {
 
@@ -293,6 +299,7 @@ function custom_language_taxonomy()
 add_action('init', 'custom_language_taxonomy', 0);
 
 // Register Custom Taxonomy semester for classes
+
 function custom_location_taxonomy()
 {
 
@@ -334,6 +341,7 @@ function custom_location_taxonomy()
 add_action('init', 'custom_location_taxonomy', 0);
 
 // Register Custom Taxonomy country for locations
+
 function custom_country_taxonomy()
 {
 
@@ -375,6 +383,7 @@ function custom_country_taxonomy()
 add_action('init', 'custom_country_taxonomy', 0);
 
 // Register Custom Taxonomy provinces for location
+
 function custom_province_taxonomy()
 {
 
@@ -416,6 +425,7 @@ function custom_province_taxonomy()
 add_action('init', 'custom_province_taxonomy', 0);
 
 // Register Custom Taxonomy city for locations
+
 function custom_city_taxonomy()
 {
 

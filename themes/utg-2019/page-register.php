@@ -34,9 +34,7 @@ get_header(); ?>
 		);
 		$the_class = new WP_Query($args);
 		?>
-		<section class="enroll-form">
-
-		</section>
+		
 
 		<section class="class-card-container">
 			<?php if ($the_class->have_posts()) : while ($the_class->have_posts()) : $the_class->the_post(); ?>
@@ -80,8 +78,11 @@ get_header(); ?>
 	?>
 <?php endif ?>
 <?php wp_reset_query(); ?>
-<?php gravity_form(2); ?>
 </section>
+<section class="enroll-form">
+<?php gravity_form(2); ?>
+
+		</section>
 
 </main><!-- #main -->
 </div><!-- #primary -->
