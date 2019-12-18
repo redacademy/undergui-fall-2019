@@ -19,7 +19,7 @@
         return;
       } else {
         ajaxContainer.prepend(
-          `<h2 class='please-make-a-selection'>Please make a selection.</h2>`
+          '<h2 class="please-make-a-selection">Please make a selection.</h2>'
         );
         return;
       }
@@ -66,9 +66,9 @@
         postContainer.empty();
         ajaxContainer.empty();
 
-        if (data.length == 0) {
+        if (data.length === 0) {
           postContainer.append(
-            `<h2>Sorry, there are no schools at this location.</h2>`
+            '<h2>Sorry, there are no schools at this location.</h2>'
           );
         } else {
           $.each(data, function appendContent(data, arrayItem) {

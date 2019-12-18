@@ -118,14 +118,8 @@ function utg_scripts()
 	wp_enqueue_script('utg-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);
 	//Mobile menu control
 	wp_enqueue_script('utg-mobile-menu', get_template_directory_uri() . '/build/js/mobile-menu.min.js', array(), '', true);
-	//Posts category ajax funtionality  
-	wp_enqueue_script('utg-post-category-ajax', get_template_directory_uri() . '/build/js/post-category-ajax.min.js', array('jquery'), '', true);
 	// Grab post ID and pull into Registration page
 	wp_enqueue_script('utg-find-classes-registration', get_template_directory_uri() . '/build/js/find-classes-registration.min.js', array('jquery'), '', true);
-	// Filters post_classes by different taxonomies
-	wp_enqueue_script('utg-find-classes-filter', get_template_directory_uri() . '/build/js/find-classes-filter.min.js', array('jquery'), '', true);
-	// Filters locations by different taxonomies
-	wp_enqueue_script('utg-find-locations-filter', get_template_directory_uri() . '/build/js/find-locations-filter.min.js', array('jquery'), '', true);
 	//FAQ container toggles
 	wp_enqueue_script('utg-faq-toggle', get_template_directory_uri() . '/build/js/faq-toggle.min.js', array(), '', true);
 	//Tabbed content scripts
@@ -133,16 +127,32 @@ function utg_scripts()
 	//Flickity CDN scripts
 	wp_enqueue_script('utg-flickity-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), '', true);
 
+
+	//Ajax methods
+
+
+	//Posts category ajax funtionality  
+	wp_enqueue_script('utg-ajax-post-category', get_template_directory_uri() . '/build/js/ajax-post-category-filter.min.js', array('jquery'), '', true);
+	// Filters post_classes by different taxonomies
+	wp_enqueue_script('utg-ajax-find-classes', get_template_directory_uri() . '/build/js/ajax-find-classes-filter.min.js', array('jquery'), '', true);
+	// Filters locations by different taxonomies
+	wp_enqueue_script('utg-ajax-find-locations', get_template_directory_uri() . '/build/js/ajax-find-locations-filter.min.js', array('jquery'), '', true);
+
+
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
 
+	$PostCount = wp_count_posts($type = 'post', $perm = 'readable');
+	$publishedPostCount = $PostCount->publish;
+
 	//localized script to access DB with JS
 	$localized_scripts = array(
-		'rest_url' => esc_url_raw(rest_url()),
-		'home_url' => home_url(),
-		'site_url' => site_url(),
+		'rest_url' 		 => esc_url_raw(rest_url()),
+		'home_url' 		 => home_url(),
+		'site_url'		 => site_url(),
 		'stylesheet_url' => get_template_directory_uri(),
+		'max_num'  		 =>  $publishedPostCount,
 
 	);
 

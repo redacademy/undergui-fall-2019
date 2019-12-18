@@ -100,9 +100,9 @@
         postContainer.empty();
         let counter = 0;
 
-        if (data.length == 0) {
+        if (data.length === 0) {
           postContainer.append(
-            `<h2>Sorry, there are no classes with these options.</h2>`
+            '<h2>Sorry, there are no classes with these options.</h2>'
           );
         } else {
           $.each(data, function appendContent(data, arrayItem) {
@@ -132,6 +132,7 @@
           `);
           });
         }
+
         if (counter < 1) {
           postContainer.prepend('<h2>' + counter + ' Classes</h2>');
         } else if (counter < 2) {
