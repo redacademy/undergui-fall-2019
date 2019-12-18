@@ -2955,6 +2955,7 @@ body.home {
       max-width: 100%; }
 
 .page-banner-locations {
+  background-color: #00a362;
   padding: 0 0.75rem;
   height: 344px; }
   @media only screen and (min-width: 800px) {
@@ -2982,6 +2983,9 @@ body.home {
     .page-banner-locations .banner-text .button-container {
       margin: 0 auto;
       width: 201px; }
+      @media only screen and (min-width: 800px) {
+        .page-banner-locations .banner-text .button-container {
+          margin: 0; } }
     @media only screen and (min-width: 800px) {
       .page-banner-locations .banner-text {
         height: 304px;
