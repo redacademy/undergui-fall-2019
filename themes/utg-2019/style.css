@@ -3865,7 +3865,7 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
       width: 100%; } }
 
 .post_classes-template-default .class-header .class-meta {
-  padding: 2rem 0; }
+  padding: 0 0 2rem 0; }
   .post_classes-template-default .class-header .class-meta img {
     margin-right: 1rem; }
 
