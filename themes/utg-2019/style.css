@@ -3431,7 +3431,6 @@ body.home {
     .page-classes .site-main .classes-container {
       padding: 0 7vw; } }
   .page-classes .site-main .classes-container .classes-box {
-    z-index: -1;
     padding: 0;
     text-decoration: none;
     -webkit-box-shadow: 0 1px 4px #000000;
