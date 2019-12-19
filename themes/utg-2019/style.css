@@ -459,21 +459,26 @@ input[type='submit'] {
 
 input#gform_submit_button_1,
 input#gform_submit_button_2,
-input#gform_next_button_2_15 {
+input#gform_next_button_2_15,
+input#gform_previous_button_2 {
   -ms-flex-item-align: center;
       align-self: center;
   width: 11rem;
-  line-height: 0.5; }
+  line-height: 0.5;
+  margin-bottom: 0; }
   input#gform_submit_button_1:hover,
   input#gform_submit_button_2:hover,
-  input#gform_next_button_2_15:hover {
+  input#gform_next_button_2_15:hover,
+  input#gform_previous_button_2:hover {
     color: #2ba2dd;
     background-color: #ffffff; }
   input#gform_submit_button_1:active, input#gform_submit_button_1:focus,
   input#gform_submit_button_2:active,
   input#gform_submit_button_2:focus,
   input#gform_next_button_2_15:active,
-  input#gform_next_button_2_15:focus {
+  input#gform_next_button_2_15:focus,
+  input#gform_previous_button_2:active,
+  input#gform_previous_button_2:focus {
     background-color: #1d84b8; }
 
 /* Fields */
@@ -4349,6 +4354,10 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
         .enroll-page .classes-box .post-meta p img {
           margin-right: 0.5rem; }
 
+@media only screen and (min-width: 1000px) {
+  body.page-register .form-wrapper {
+    margin: 0 5rem; } }
+
 body.page-register .gform_page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4358,40 +4367,31 @@ body.page-register .gform_page {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-body.page-register .gform_page_fields {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
 @media only screen and (min-width: 1000px) {
   body.page-register .class-card-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly; } }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center; } }
 
-@media only screen and (min-width: 1000px) {
-  body.page-register .class-card-container .classes-box {
-    height: 30rem;
-    margin-bottom: 20rem; } }
-
-@media only screen and (min-width: 1000px) {
-  body.page-register .ginput_container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; } }
-
-body.page-register .gform_page_fields input.medium {
-  width: 10rem; }
+body.page-register .class-card-container .classes-box {
+  -webkit-box-shadow: 0 0.5px 3px #000000;
+          box-shadow: 0 0.5px 3px #000000;
+  margin: 0 1rem;
+  position: relative; }
   @media only screen and (min-width: 1000px) {
-    body.page-register .gform_page_fields input.medium {
-      width: 20rem; } }
+    body.page-register .class-card-container .classes-box {
+      height: 29rem;
+      width: 28rem;
+      grid-column-start: 2;
+      margin-bottom: 8rem; } }
+  @media only screen and (min-width: 1000px) {
+    body.page-register .class-card-container .classes-box .post-meta {
+      padding-top: 2rem; } }
+
+@media only screen and (min-width: 1000px) {
+  body.page-register .gform_page_fields input.medium {
+    width: 20rem; } }
 
 body.page-register .gform_body {
   margin: 1rem; }
@@ -4403,6 +4403,11 @@ body.page-register .gform_title {
 body.page-register .enroll-page {
   display: block; }
 
+@media only screen and (min-width: 1000px) {
+  body.page-register .gform_wrapper {
+    grid-column-start: 1;
+    grid-row-start: 1; } }
+
 body.page-register .gform_wrapper .gsection {
   border: 0px; }
 
@@ -4410,22 +4415,43 @@ body.page-register .gform_wrapper .gfield_label {
   font-size: 15px;
   font-family: "Titillium Web"; }
 
+body.page-register .gform_wrapper #input_2_17 {
+  width: 6.5rem; }
+
+body.page-register .gform_wrapper #input_2_13_4 {
+  width: 11.8rem; }
+
 body.page-register .gform_wrapper .gform_page_footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 0px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end; }
+  border: 0px; }
   body.page-register .gform_wrapper .gform_page_footer input#gform_next_button_2_15 {
     margin: auto; }
     @media only screen and (min-width: 1000px) {
       body.page-register .gform_wrapper .gform_page_footer input#gform_next_button_2_15 {
-        margin: 0; } }
+        -webkit-transform: translate(15rem, 0);
+                transform: translate(15rem, 0); } }
 
-body.page-register .gform_wrapper #input_2_13_1 {
-  width: 19.5rem; }
+body.page-register .gform_wrapper #gform_page_2_2 {
+  max-width: 30rem; }
+  body.page-register .gform_wrapper #gform_page_2_2 .gform_page_footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media only screen and (min-width: 1000px) {
+      body.page-register .gform_wrapper #gform_page_2_2 .gform_page_footer {
+        width: 57rem;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly; } }
+
+@media only screen and (min-width: 1000px) {
+  body.page-register #input_2_13_1 {
+    max-width: 26.8rem; } }
+
+body.page-register #input_2_5 {
+  max-width: 30rem; }
 
 .page .site-main .under-construction-banner {
   overflow: hidden;
