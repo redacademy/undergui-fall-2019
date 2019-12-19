@@ -15,13 +15,8 @@ get_header(); ?>
 
 			<?php while (have_posts()) : the_post(); ?>
 
-				<!-- Grabing the post title -->
-				<?php the_title(); ?>
-				<!--grabing the post address in content box -->
-				<?php the_content(); ?>
-				<!-- Getting the map-->
+
 				<?php the_field('google_map'); ?>
-				<!-- header for learning space-->
 
 
 				<section class="location-learning-space">
@@ -54,14 +49,14 @@ get_header(); ?>
 
 						<?php if (have_rows('staff')) : ?>
 							<?php while (have_rows('staff')) : the_row(); ?>
-								
+
 								<button class="staff-card">
 									<div>
 										<img src="<?php the_sub_field('staff_image'); ?>">
 										<h2><?php the_sub_field('staff_name'); ?></h2>
 										<p><?php the_sub_field('staff_position'); ?></p>
-									</div>	
-										
+									</div>
+
 									<div class="statement">
 										<p><?php the_sub_field('staff_statement'); ?></p>
 									</div>

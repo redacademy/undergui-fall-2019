@@ -14,7 +14,7 @@ a {
     text-decoration: underline;
   }
   &:focus {
-    outline: thin dotted;
+    outline: 0;
   }
   &:hover,
   &:active {

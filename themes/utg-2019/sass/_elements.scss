@@ -6,6 +6,11 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  max-width: 3000px;
+  margin: 0 auto;
+}
+
 *,
 *:before,
 *:after {

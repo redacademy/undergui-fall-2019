@@ -371,6 +371,10 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+body {
+  max-width: 3000px;
+  margin: 0 auto; }
+
 *,
 *:before,
 *:after {
@@ -516,7 +520,7 @@ a {
   a:hover, a:focus, a:active {
     text-decoration: underline; }
   a:focus {
-    outline: thin dotted; }
+    outline: 0; }
   a:hover, a:active {
     outline: 0; }
 
@@ -715,7 +719,7 @@ object {
     padding: 0;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 1000vh;
     width: 100vw;
     z-index: 9;
     background-color: rgba(0, 0, 0, 0.5); }
@@ -738,7 +742,7 @@ object {
     transition: width 0.3s ease-in-out;
     position: absolute;
     margin: 0;
-    height: 10000vh;
+    height: 1000vh;
     background-color: #2ba2dd;
     right: 0;
     top: 0;
@@ -770,7 +774,7 @@ object {
     margin: 0;
     top: 0;
     right: 0;
-    height: 10000vh;
+    height: 1000vh;
     width: 75vw;
     background-color: #2ba2dd;
     z-index: 20; }
@@ -858,7 +862,11 @@ object {
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end;
-        margin-right: 1.5rem; }
+        margin-right: 0.75rem; } }
+    @media only screen and (min-width: 900px) and (min-width: 1000px) {
+      .site-header .nav-links {
+        margin-right: 7vw; } }
+  @media only screen and (min-width: 900px) {
         .site-header .nav-links .menu {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -870,13 +878,18 @@ object {
             padding: 1rem 1.5rem; }
             .site-header .nav-links .menu li:last-child {
               padding-right: 4rem;
-              border-right: 1px solid #000000; } }
+              border-right: 1px solid #000000; }
+          .site-header .nav-links .menu .current-menu-item a {
+            text-decoration: underline; } }
 
 .mobile-menu .fa-bars:before {
   position: fixed;
   top: 15px;
   right: 10px;
   background-color: white;
+  border: 1px solid #eff1f6;
+  -webkit-box-shadow: 0 8px 6px -6px #333333;
+          box-shadow: 0 8px 6px -6px #333333;
   padding: 0.5rem;
   border-radius: 5px; }
 
@@ -2873,9 +2886,6 @@ body.home {
       color: #ffffff; }
     .page-banner .banner-text .slug, .post-banner .banner-text .slug {
       display: none; }
-      @media only screen and (min-width: 800px) {
-        .page-banner .banner-text .slug, .post-banner .banner-text .slug {
-          display: block; } }
     .page-banner .banner-text h1, .post-banner .banner-text h1 {
       font-size: 2rem; }
       @media only screen and (min-width: 800px) {
@@ -2911,6 +2921,99 @@ body.home {
     width: 25%;
     -o-object-fit: contain;
        object-fit: contain; }
+
+.page-banner-no-image, .page-banner-about, .page-banner-locations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  background-color: #2ba2dd; }
+  @media only screen and (min-width: 800px) {
+    .page-banner-no-image, .page-banner-about, .page-banner-locations {
+      height: 275px; } }
+  .page-banner-no-image .banner-text, .page-banner-about .banner-text, .page-banner-locations .banner-text {
+    padding: 0 0.75rem; }
+    .page-banner-no-image .banner-text .page-feature-image-title, .page-banner-about .banner-text .page-feature-image-title, .page-banner-locations .banner-text .page-feature-image-title {
+      color: #ffffff; }
+    .page-banner-no-image .banner-text p, .page-banner-about .banner-text p, .page-banner-locations .banner-text p {
+      color: #ffffff;
+      font-family: "Gotham";
+      font-weight: bold;
+      font-size: 1rem; }
+    @media only screen and (min-width: 800px) {
+      .page-banner-no-image .banner-text, .page-banner-about .banner-text, .page-banner-locations .banner-text {
+        padding: 0 7vw; } }
+
+.page-banner-about {
+  background-color: #ffffff; }
+  .page-banner-about .banner-text {
+    width: 100%; }
+    .page-banner-about .banner-text .page-feature-image-title {
+      color: #333333; }
+    .page-banner-about .banner-text .nav {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      max-width: 100%; }
+
+.page-banner-locations {
+  background-color: #00a362;
+  padding: 0 0.75rem;
+  height: 344px; }
+  @media only screen and (min-width: 800px) {
+    .page-banner-locations {
+      padding: 0 7vw;
+      height: 479px; } }
+  .page-banner-locations .banner-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
+    height: 80%;
+    width: 100%; }
+    .page-banner-locations .banner-text p,
+    .page-banner-locations .banner-text h1 {
+      margin: 0;
+      width: 50%; }
+    .page-banner-locations .banner-text .button-container {
+      margin: 0 auto;
+      width: 201px; }
+      @media only screen and (min-width: 800px) {
+        .page-banner-locations .banner-text .button-container {
+          margin: 0; } }
+    @media only screen and (min-width: 800px) {
+      .page-banner-locations .banner-text {
+        height: 304px;
+        width: 50%; }
+        .page-banner-locations .banner-text p,
+        .page-banner-locations .banner-text h1 {
+          width: 80%; }
+        .page-banner-locations .banner-text p {
+          font-size: 1.5rem; } }
+  .page-banner-locations iframe {
+    display: none; }
+    @media only screen and (min-width: 800px) {
+      .page-banner-locations iframe {
+        display: block;
+        height: 304px !important;
+        width: 608px !important; } }
 
 .program-classes {
   overflow: hidden;
@@ -3313,40 +3416,24 @@ body.home {
 .page-classes h3 {
   margin: 0; }
 
-@media only screen and (min-width: 800px) {
-  .page-classes .site-main .classes-container {
-    padding: 0 7vw; } }
-
-.page-classes .site-main .classes-container .classes-box {
-  z-index: -1;
-  padding: 0;
-  text-decoration: none;
-  -webkit-box-shadow: 0 1px 4px #000000;
-          box-shadow: 0 1px 4px #000000;
-  border-radius: 5px;
+.page-classes .site-main .classes-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  height: 450px;
-  width: 100%;
-  overflow: hidden;
-  margin: 1rem 0;
-  border: 1px solid black;
-  border-radius: 5px;
-  max-height: 100%;
-  width: 70%;
-  padding: 1.5rem;
-  margin: 1.5rem auto; }
-  .page-classes .site-main .classes-container .classes-box .image-container {
-    width: 100%;
-    min-height: 30%;
-    display: block;
-    overflow: hidden; }
-  .page-classes .site-main .classes-container .classes-box .post-meta {
+          flex-direction: column; }
+  @media only screen and (min-width: 800px) {
+    .page-classes .site-main .classes-container {
+      padding: 0 7vw; } }
+  .page-classes .site-main .classes-container .classes-box {
+    z-index: -1;
+    padding: 0;
+    text-decoration: none;
+    -webkit-box-shadow: 0 1px 4px #000000;
+            box-shadow: 0 1px 4px #000000;
+    border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3354,13 +3441,23 @@ body.home {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    height: 450px;
     width: 100%;
-    height: 70%;
-    padding: 1rem; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-description {
+    overflow: hidden;
+    margin: 1rem 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    max-height: 100%;
+    width: 80%;
+    max-width: 1000px;
+    padding: 1.5rem;
+    margin: 1.5rem auto; }
+    .page-classes .site-main .classes-container .classes-box .image-container {
+      width: 100%;
+      min-height: 30%;
+      display: block;
+      overflow: hidden; }
+    .page-classes .site-main .classes-container .classes-box .post-meta {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -3371,84 +3468,10 @@ body.home {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      height: 70%; }
-      .page-classes .site-main .classes-container .classes-box .post-meta .class-description .post-title {
-        font-size: 1rem; }
-      .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container {
-        overflow: hidden; }
-        .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container p {
-          font-size: 0.75rem;
-          text-transform: none;
-          color: #333333; }
-    .page-classes .site-main .classes-container .classes-box .post-meta h3,
-    .page-classes .site-main .classes-container .classes-box .post-meta h2 {
-      margin: 0; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .post-data {
-      color: #333333;
-      text-transform: none;
-      font-weight: bold;
-      font-size: 12px; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .post-title {
-      font-size: 16px;
-      font-family: "Gotham"; }
-    .page-classes .site-main .classes-container .classes-box .post-meta p {
-      -ms-flex-item-align: end;
-          align-self: end; }
-  .page-classes .site-main .classes-container .classes-box .program-subfields {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    .page-classes .site-main .classes-container .classes-box .program-subfields :first-child::after {
-      padding: 0 0.5rem;
-      content: '|'; }
-  .page-classes .site-main .classes-container .classes-box .link-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button {
-      z-index: 99;
-      color: #ffffff;
-      background-color: #2ba2dd;
-      font-family: "Gotham";
-      font-weight: bold;
-      justify-self: flex-end;
-      font-size: 1rem;
-      text-transform: uppercase;
-      padding: 0.75rem 2.25rem; }
-      .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button:hover {
-        color: #2ba2dd;
-        background-color: #ffffff;
-        border-color: #2ba2dd;
-        border: 1px solid #2ba2dd; }
-  .page-classes .site-main .classes-container .classes-box .class-image {
-    height: 100%;
-    width: 100%;
-    border-radius: 5px; }
-  @media only screen and (min-width: 800px) {
-    .page-classes .site-main .classes-container .classes-box {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      border-radius: 5px;
-      border: 1px solid #000000;
       width: 100%;
-      height: 235px;
-      margin: 4rem 0;
-      overflow: hidden;
-      -webkit-box-shadow: none;
-              box-shadow: none;
-      margin: 0 0 4rem 0; }
-      .page-classes .site-main .classes-container .classes-box .image-container {
-        width: 24%;
-        height: 100%; }
-      .page-classes .site-main .classes-container .classes-box .post-meta {
+      height: 70%;
+      padding: 1rem; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-description {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -3459,10 +3482,86 @@ body.home {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-        width: 76%;
-        height: 100%;
-        padding: 1.5rem; }
-        .page-classes .site-main .classes-container .classes-box .post-meta .class-description {
+        height: 70%; }
+        .page-classes .site-main .classes-container .classes-box .post-meta .class-description .post-title {
+          font-size: 1rem; }
+        .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container {
+          overflow: hidden; }
+          .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container p {
+            font-size: 0.75rem;
+            text-transform: none;
+            color: #333333; }
+      .page-classes .site-main .classes-container .classes-box .post-meta h3,
+      .page-classes .site-main .classes-container .classes-box .post-meta h2 {
+        margin: 0; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .post-data {
+        color: #333333;
+        text-transform: none;
+        font-weight: bold;
+        font-size: 12px; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .post-title {
+        font-size: 16px;
+        font-family: "Gotham"; }
+      .page-classes .site-main .classes-container .classes-box .post-meta p {
+        -ms-flex-item-align: end;
+            align-self: end; }
+    .page-classes .site-main .classes-container .classes-box .program-subfields {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .page-classes .site-main .classes-container .classes-box .program-subfields :first-child::after {
+        padding: 0 0.5rem;
+        content: '|'; }
+    .page-classes .site-main .classes-container .classes-box .link-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button {
+        z-index: 99;
+        color: #ffffff;
+        background-color: #2ba2dd;
+        font-family: "Gotham";
+        font-weight: bold;
+        justify-self: flex-end;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 0.75rem 2.25rem; }
+        .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button:hover {
+          color: #2ba2dd;
+          background-color: #ffffff;
+          border-color: #2ba2dd;
+          border: 1px solid #2ba2dd; }
+    .page-classes .site-main .classes-container .classes-box .class-image {
+      height: 100%;
+      width: 100%;
+      border-radius: 5px;
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%; }
+    @media only screen and (min-width: 800px) {
+      .page-classes .site-main .classes-container .classes-box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        width: 100%;
+        height: 235px;
+        margin: 4rem 0;
+        overflow: hidden;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        margin: 0 0 4rem 0; }
+        .page-classes .site-main .classes-container .classes-box .image-container {
+          width: 24%;
+          height: 100%; }
+        .page-classes .site-main .classes-container .classes-box .post-meta {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -3473,120 +3572,132 @@ body.home {
           -webkit-box-pack: justify;
               -ms-flex-pack: justify;
                   justify-content: space-between;
-          height: 75%; }
-          .page-classes .site-main .classes-container .classes-box .post-meta .class-description .post-title {
-            font-size: 1.75rem; }
-          .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container p {
-            text-transform: none;
-            color: #333333; }
-        .page-classes .site-main .classes-container .classes-box .post-meta h3,
-        .page-classes .site-main .classes-container .classes-box .post-meta h2 {
-          margin: 0; }
-        .page-classes .site-main .classes-container .classes-box .post-meta .post-data {
-          color: #333333;
-          text-transform: uppercase;
-          font-weight: 200;
-          font-size: 12px; }
-        .page-classes .site-main .classes-container .classes-box .post-meta .post-title {
-          font-size: 16px;
-          font-family: "Gotham"; }
-        .page-classes .site-main .classes-container .classes-box .post-meta p {
-          -ms-flex-item-align: end;
-              align-self: end; }
-      .page-classes .site-main .classes-container .classes-box .program-subfields {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; }
-        .page-classes .site-main .classes-container .classes-box .program-subfields :first-child::after {
-          padding: 0 0.5rem;
-          content: '|'; }
-      .page-classes .site-main .classes-container .classes-box .link-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: flex-end; }
-        .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button {
-          z-index: 99;
-          color: #ffffff;
-          background-color: #2ba2dd;
-          font-family: "Gotham";
-          font-weight: bold;
-          justify-self: flex-end;
-          font-size: 1rem;
-          text-transform: uppercase;
-          padding: 0.75rem 2.25rem; }
-          .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button:hover {
-            color: #2ba2dd;
-            background-color: #ffffff;
-            border-color: #2ba2dd;
-            border: 1px solid #2ba2dd; }
-      .page-classes .site-main .classes-container .classes-box .class-image {
-        max-height: 100%;
-        width: 40%; } }
-  .page-classes .site-main .classes-container .classes-box .post-meta {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 2rem 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    @media only screen and (min-width: 800px) {
-      .page-classes .site-main .classes-container .classes-box .post-meta {
-        padding: 0;
-        padding-left: 1.5rem; } }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-title {
-      color: #2ba2dd;
-      font-size: 16px;
-      padding-bottom: 0.75rem; }
+          width: 76%;
+          height: 100%;
+          padding: 1.5rem; }
+          .page-classes .site-main .classes-container .classes-box .post-meta .class-description {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            height: 75%; }
+            .page-classes .site-main .classes-container .classes-box .post-meta .class-description .post-title {
+              font-size: 1.75rem; }
+            .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container p {
+              text-transform: none;
+              color: #333333; }
+          .page-classes .site-main .classes-container .classes-box .post-meta h3,
+          .page-classes .site-main .classes-container .classes-box .post-meta h2 {
+            margin: 0; }
+          .page-classes .site-main .classes-container .classes-box .post-meta .post-data {
+            color: #333333;
+            text-transform: uppercase;
+            font-weight: 200;
+            font-size: 12px; }
+          .page-classes .site-main .classes-container .classes-box .post-meta .post-title {
+            font-size: 16px;
+            font-family: "Gotham"; }
+          .page-classes .site-main .classes-container .classes-box .post-meta p {
+            -ms-flex-item-align: end;
+                align-self: end; }
+        .page-classes .site-main .classes-container .classes-box .program-subfields {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          .page-classes .site-main .classes-container .classes-box .program-subfields :first-child::after {
+            padding: 0 0.5rem;
+            content: '|'; }
+        .page-classes .site-main .classes-container .classes-box .link-container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end; }
+          .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button {
+            z-index: 99;
+            color: #ffffff;
+            background-color: #2ba2dd;
+            font-family: "Gotham";
+            font-weight: bold;
+            justify-self: flex-end;
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 0.75rem 2.25rem; }
+            .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button:hover {
+              color: #2ba2dd;
+              background-color: #ffffff;
+              border-color: #2ba2dd;
+              border: 1px solid #2ba2dd; }
+        .page-classes .site-main .classes-container .classes-box .class-image {
+          max-height: 100%;
+          width: 40%; } }
+    .page-classes .site-main .classes-container .classes-box .post-meta {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 3.5vw 0;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
       @media only screen and (min-width: 800px) {
-        .page-classes .site-main .classes-container .classes-box .post-meta .class-title {
+        .page-classes .site-main .classes-container .classes-box .post-meta {
+          padding: 0;
+          padding-left: 1.5rem; } }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-title {
+        color: #2ba2dd;
+        font-size: 16px;
+        padding-bottom: 0.75rem; }
+        @media only screen and (min-width: 800px) {
+          .page-classes .site-main .classes-container .classes-box .post-meta .class-title {
+            font-size: 19.2px; } }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-age {
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid #595757; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-location {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding-top: 0.75rem; }
+        .page-classes .site-main .classes-container .classes-box .post-meta .class-location img {
+          margin-right: 0.375rem; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-data {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-day {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .page-classes .site-main .classes-container .classes-box .post-meta .class-day img {
+          margin-right: 0.375rem; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-data img {
+        margin-right: 0.375rem; }
+    .page-classes .site-main .classes-container .classes-box .class-price p {
+      font-weight: bold;
+      font-family: "Gotham"; }
+      @media only screen and (min-width: 800px) {
+        .page-classes .site-main .classes-container .classes-box .class-price p {
           font-size: 19.2px; } }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-age {
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid #595757; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-location {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      padding-top: 0.75rem; }
-      .page-classes .site-main .classes-container .classes-box .post-meta .class-location img {
-        margin-right: 0.375rem; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-data {
-      padding: 0.5rem 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-day {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      .page-classes .site-main .classes-container .classes-box .post-meta .class-day img {
-        margin-right: 0.375rem; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-data img {
-      margin-right: 0.375rem; }
-  .page-classes .site-main .classes-container .classes-box .class-price p {
-    font-weight: bold;
-    font-family: "Gotham"; }
-    @media only screen and (min-width: 800px) {
-      .page-classes .site-main .classes-container .classes-box .class-price p {
-        font-size: 19.2px; } }
 
-.page-classes .button-container button {
-  width: 192px;
-  font-size: 1rem; }
+.page-classes .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto; }
+  .page-classes .button-container button {
+    width: 192px;
+    font-size: 1rem; }
 
 .search-section {
   display: grid;
@@ -3837,8 +3948,15 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
 .locations-container {
   padding: 2rem 7vw;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem; }
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem; }
+  @media only screen and (min-width: 800px) {
+    .locations-container {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (min-width: 1000px) {
+    .locations-container {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem; } }
 
 .location-card {
   -webkit-box-shadow: 0 1px 4px #000000;
@@ -3857,8 +3975,9 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
   margin: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  height: 385px;
-  width: 296px; }
+  height: 400px;
+  width: 300px;
+  margin: 0 auto; }
   .location-card .image-container {
     width: 100%;
     min-height: 65%;
@@ -3967,6 +4086,22 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
   .location-single h2,
   .location-single h4 {
     margin: 0; }
+  .location-single iframe {
+    display: block;
+    padding: 0 0.75rem;
+    width: 100% !important; }
+    @media only screen and (min-width: 800px) {
+      .location-single iframe {
+        display: none; } }
+  .location-single .button-container {
+    padding: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .location-single .button-container button {
+      width: 400px; }
 
 .location-learning-space {
   display: -webkit-box;
@@ -4041,7 +4176,8 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
       display: none;
       z-index: 10;
       border-radius: 5px;
-      width: auto; }
+      width: auto;
+      text-align: left; }
     .staff-container .staff-card:focus .statement {
       margin-top: 1.5rem;
       padding: 0.75rem;
@@ -4064,16 +4200,6 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
             align-items: center; }
     .community-container .community-container-header h2 {
       margin: 1.5rem 0; }
-
-.button-container {
-  padding: 2rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
-  .button-container button {
-    width: 400px; }
 
 .enroll-page {
   padding: 0 0.75rem;
