@@ -48,10 +48,6 @@ get_header(); ?>
 				</div>
 
 				<div id="step3" class="progress-step">
-					Step Three
-				</div>
-
-				<div id="step4" class="progress-step">
 					Complete
 				</div>
 			</div>
