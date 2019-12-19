@@ -4709,3 +4709,9 @@ body.page-register .progress-step {
     .page .site-main .under-construction-banner .home-button:hover {
       background: #eff1f6;
       border: 1px solid white; }
+
+.page .site-content {
+  margin: 0.75rem; }
+  @media only screen and (min-width: 1000px) {
+    .page .site-content {
+      margin: 7vw; } }

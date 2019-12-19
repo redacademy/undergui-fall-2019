@@ -1,0 +1,8 @@
+.page {
+    .site-content {
+        margin: $site-padding-mobile;
+        @include media($desktop) {
+            margin: $site-padding;
+        }
+    }
+}
