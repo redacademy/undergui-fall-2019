@@ -71,10 +71,12 @@ input[type='submit'] {
 
 input#gform_submit_button_1,
 input#gform_submit_button_2,
-input#gform_next_button_2_15 {
+input#gform_next_button_2_15,
+input#gform_previous_button_2 {
   align-self: center;
   width: 11rem;
   line-height: 0.5;
+  margin-bottom: 0;
 
   &:hover {
     color: $color_blue;

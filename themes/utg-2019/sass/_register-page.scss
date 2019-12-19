@@ -1,39 +1,47 @@
 body.page-register {
+  .form-wrapper {
+    @include media($desktop) {
+      margin: 0 5rem;
+    }
+  }
 
   .gform_page {
     display: flex;
     flex-direction: column;
   }
 
-  .gform_page_fields {
-    display: flex;
-  }
-
   .class-card-container {
     @include media($desktop) {
-      display: flex;
-      justify-content: space-evenly;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      justify-items: center;
     }
+
     .classes-box {
+      box-shadow: 0 0.5px 3px $color_black;
+      margin: 0 1rem;
+      position: relative;
+
       @include media($desktop) {
-        height: 30rem;
-        margin-bottom: 20rem;
+        height: 29rem;
+        width: 28rem;
+        grid-column-start: 2;
+        margin-bottom: 8rem;
+      }
+
+      .post-meta {
+        @include media($desktop) {
+          padding-top: 2rem;
+        }
       }
     }
   }
 
-  .ginput_container {
-    @include media($desktop) {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
   .gform_page_fields {
-      input.medium {
-        width: 10rem;
-        @include media($desktop) {
-          width: 20rem;
+    input.medium {
+      @include media($desktop) {
+        width: 20rem;
       }
     }
   }
@@ -52,6 +60,10 @@ body.page-register {
   }
 
   .gform_wrapper {
+    @include media($desktop) {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
 
     .gsection {
       border: 0px;
@@ -62,22 +74,50 @@ body.page-register {
       font-family: $font__main;
     }
 
+    #input_2_17 {
+      width: 6.5rem;
+    }
+
+    #input_2_13_4 {
+      width: 11.8rem;
+    }
+
     .gform_page_footer {
       display: flex;
       border: 0px;
-      align-items: flex-end;
 
       input#gform_next_button_2_15 {
         margin: auto;
 
-        @include media($desktop) {
-          margin: 0;
+        @include media($desktop) {  
+          transform: translate(15rem, 0);
         }
       }
     }
 
-    #input_2_13_1 {
-      width: 19.5rem;
+    #gform_page_2_2 {
+      max-width: 30rem;
+
+      .gform_page_footer {
+        display: flex;
+        @include media($desktop) {
+          width: 57rem;
+          justify-content: space-evenly;
+        }
+      }
     }
+    .gform_page_footer {
+      
+    }
+  }
+
+  #input_2_13_1 {
+    @include media($desktop) {
+      max-width: 26.8rem;
+    }
+  }
+
+  #input_2_5 {
+    max-width: 30rem;
   }
 }
