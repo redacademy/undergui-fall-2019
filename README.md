@@ -1,6 +1,6 @@
 # Under the GUI
 
-This is the third project in the RED Academy Web Dev program. A custom WordPress theme for Inhabitent - an online camping store and blog.
+This is the final project in the RED Academy Web Dev program. A custom WordPress theme for Under The GUI Academy, a childrens after-school coding academy and real life client of RED Academy.
 
 ![Preview Image](https://raw.githubusercontent.com/redacademy/undergui-fall-2019/master/themes/utg-2019/assets/utg-mockup.png?token=ANHOTVFMLXNGDWYGR2BXORK6AURMO)
 
