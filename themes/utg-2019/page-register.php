@@ -16,7 +16,6 @@ get_header(); ?>
 		<!-- Consider refactor from query string to restful by changing param $pc to inline ID -->
 		<?php
 		if (isset($_GET['pc'])) {
-			// var_dump($_GET);
 			$pc = $_GET['pc'];
 			$pcClean = substr($pc, 5);
 		} else {
@@ -35,8 +34,28 @@ get_header(); ?>
 		$the_class = new WP_Query($args);
 		?>
 
-
 		<div class=form-wrapper>
+			<div class="progress">
+
+				<div class="progress-track"></div>
+
+				<div id="step1" class="progress-step">
+					Step One
+				</div>
+
+				<div id="step2" class="progress-step">
+					Step Two
+				</div>
+
+				<div id="step3" class="progress-step">
+					Step Three
+				</div>
+
+				<div id="step4" class="progress-step">
+					Complete
+				</div>
+			</div>
+
 			<section class="class-card-container">
 				<?php if ($the_class->have_posts()) : while ($the_class->have_posts()) : $the_class->the_post(); ?>
 
@@ -75,16 +94,13 @@ get_header(); ?>
 						</div>
 
 					<?php endwhile; // End of the loop. 
-						?>
+					?>
 				<?php endif ?>
 				<?php wp_reset_query(); ?>
 			</section>
-			<section class="enroll-form">
-				<?php gravity_form(2); ?>
-
-			</section>
-
+			<?php gravity_form(2); ?>
 		</div>
+
 	</main><!-- #main -->
 </div><!-- #primary -->
 
