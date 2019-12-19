@@ -908,6 +908,12 @@ object {
     .mobile-open-menu {
       display: none; } }
 
+.logged-in .mobile-open-menu {
+  padding-top: 46px; }
+
+.logged-in .site-header .mobile-menu .fa-bars::before {
+  top: 61px; }
+
 .menu-nav-menu-container {
   display: none; }
   @media only screen and (min-width: 900px) {
