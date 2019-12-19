@@ -222,6 +222,23 @@
   }
 }
 
+// compensate for wordpress admin bar
+.logged-in {
+  .mobile-open-menu {
+    padding-top: 46px;
+  }
+
+  .site-header {
+    .mobile-menu {
+      .fa-bars {
+        &::before {
+          top: 61px;
+        }
+      }
+    }
+  }
+}
+
 .menu-nav-menu-container {
   display: none;
   @include media($header-break) {
@@ -292,16 +309,16 @@
 
         &-has-children {
           overflow: hidden;
-          .sub-menu { 
+          .sub-menu {
             opacity: 0;
             transition: all 0.3s ease-in;
           }
           &:hover {
             overflow: unset;
-            .sub-menu { 
-              overflow:unset;
+            .sub-menu {
+              overflow: unset;
               display: block;
-              opacity: 1;             
+              opacity: 1;
             }
           }
         }
