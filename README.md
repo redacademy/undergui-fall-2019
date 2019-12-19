@@ -2,7 +2,7 @@
 
 This is the third project in the RED Academy Web Dev program. A custom WordPress theme for Inhabitent - an online camping store and blog.
 
-![Preview Image](https://raw.githubusercontent.com/redacademy/undergui-fall-2019/master/themes/utg-2019/assets/utg-mockup.png)
+![Preview Image](https://raw.githubusercontent.com/redacademy/undergui-fall-2019/master/themes/utg-2019/assets/utg-mockup.png?token=ANHOTVFMLXNGDWYGR2BXORK6AURMO)
 
 Image by <a href="https://pixabay.com/users/Tumisu-148124/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=492184">Tumisu</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=492184">Pixabay</a>
 
