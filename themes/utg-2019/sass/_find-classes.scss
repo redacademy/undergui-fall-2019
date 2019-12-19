@@ -13,6 +13,11 @@
     .classes-container {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      h2 {
+        width: 100%;
+        max-width: 1000px;
+      }
       @include media($tablet) {
         padding: 0 $site-padding;
       }
@@ -47,7 +52,7 @@
 
         .post-meta {
           display: flex;
-          padding: $site-padding/2 0;
+          padding: $site-padding / 2 0;
           flex-direction: column;
 
           @include media($tablet) {
