@@ -3,6 +3,7 @@
   const $showMore = $('.show-more-posts');
   const postContainer = $('.community-posts');
   const gifContainer = $('.gif-container');
+  const noMorePostContainer = $('.no-more-posts-container');
 
   let ajaxURL = '';
   let postCount = 4;
@@ -11,9 +12,12 @@
   // filters posts by categories
   $category.on('click', function(event) {
     event.preventDefault();
+    noMorePostContainer.removeClass('no-more-posts');
 
+    // always starts a new category with max post count of 4
     postCount = 4;
 
+    // grabs categeory ID and removes cat- to use ID in ajax url query
     let catId = event.target.id;
     let filteredID = catId.replace('cat-', '');
 
@@ -35,6 +39,7 @@
     e.preventDefault();
     postCount += 4;
 
+    // if user doesn't choose a category, uses a default ajax url, else uses the current category ajax url
     if (ajaxURL === '') {
       gifContainer.append(
         `<img class="loading-gif" src="${utg_vars.stylesheet_url}/assets/location-gif-slow.gif">`
@@ -55,6 +60,7 @@
       postCount +
       '&exclude=522'
   ) {
+    //either default or category ajax url plus post count
     ajaxURL += '&_embed&exclude=522&per_page=' + postCount;
 
     $.ajax({
@@ -68,6 +74,7 @@
         gifContainer.empty();
         if (showMoreCondition === 0) {
           $showMore.removeClass('hide');
+          showMoreCondition = 1;
         }
 
         // counts how many posts get appended
@@ -127,7 +134,7 @@
         ) {
           $showMore.addClass('hide');
           showMoreCondition = 0;
-          $('.button-box').append('<h2>Sorry, there are no more posts!</h2>');
+          noMorePostContainer.addClass('no-more-posts');
         }
       })
       .fail(function() {

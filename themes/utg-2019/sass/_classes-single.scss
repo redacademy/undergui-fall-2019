@@ -5,7 +5,7 @@
   article {
     padding: $site-padding-mobile;
     @include media($tablet) {
-      padding: $site-padding;
+      padding: 0 $site-padding 2rem;
     }
   }
   .class-header {
@@ -54,7 +54,7 @@
       }
     }
     .class-meta {
-      padding: 2rem 0;
+      padding: 0 0 2rem 0;
 
       img {
         margin-right: 1rem;

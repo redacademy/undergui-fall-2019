@@ -85,7 +85,7 @@
   
             <h3 class="post-title">${arrayItem.title.rendered}</h3>
   
-           <p>${arrayItem.content.rendered}</p>
+           <p>${arrayItem.acf.sub_text}</p>
   
             <div class="button-container">
               <a href="${arrayItem.link}" class="white-btn">more info</a>

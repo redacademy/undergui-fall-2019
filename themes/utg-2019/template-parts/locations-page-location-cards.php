@@ -22,7 +22,7 @@ $the_locations = new WP_Query($args);
 
 					<h3 class="post-title"> <?php the_title(); ?></h3>
 
-					<?php the_content(); ?>
+					<?php the_field('sub_text') ?>
 
 					<div class="button-container">
 						<a href="<?php the_permalink() ?>" class="white-btn">more info</a>
