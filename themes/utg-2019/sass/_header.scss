@@ -20,7 +20,7 @@
     padding: 0;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 1000vh;
     width: 100vw;
     z-index: 9;
     background-color: rgba($color_black, 0.5);
@@ -47,7 +47,7 @@
     transition: width 0.3s ease-in-out;
     position: absolute;
     margin: 0;
-    height: 10000vh;
+    height: 1000vh;
     background-color: $color_blue;
     right: 0;
     top: 0;
@@ -75,7 +75,7 @@
     margin: 0;
     top: 0;
     right: 0;
-    height: 10000vh;
+    height: 1000vh;
     width: 75vw;
     background-color: $color_blue;
     z-index: 20;
@@ -166,7 +166,11 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      margin-right: $base__space-unit;
+      margin-right: $site-padding-mobile;
+
+      @include media($desktop) {
+        margin-right: $site-padding;
+      }
 
       .menu {
         display: flex;
@@ -200,6 +204,8 @@
     top: 15px;
     right: 10px;
     background-color: white;
+    border: 1px solid $color-grey;
+    box-shadow: 0 8px 6px -6px $color_paragraph;
     padding: $base__space-unit / 3;
     border-radius: $border-radius;
   }
