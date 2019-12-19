@@ -89,7 +89,7 @@ body.page-register {
       input#gform_next_button_2_15 {
         margin: auto;
 
-        @include media($desktop) {  
+        @include media($desktop) {
           transform: translate(15rem, 0);
         }
       }
@@ -100,14 +100,12 @@ body.page-register {
 
       .gform_page_footer {
         display: flex;
+
         @include media($desktop) {
           width: 57rem;
           justify-content: space-evenly;
         }
       }
-    }
-    .gform_page_footer {
-      
     }
   }
 
