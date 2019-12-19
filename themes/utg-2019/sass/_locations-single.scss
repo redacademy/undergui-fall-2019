@@ -112,12 +112,26 @@
 
 .community-container {
   padding: 2rem 0;
+
+  .community-posts {
+    @include media($tablet) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+    }
+  }
   .community-container-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     h2 {
       margin: $base__space-unit 0;
+    }
+  }
+  .post-card {
+    @include mobile-card;
+    @include media($tablet) {
+      @include desktop-card;
     }
   }
 }
