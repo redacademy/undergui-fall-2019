@@ -908,6 +908,12 @@ object {
     .mobile-open-menu {
       display: none; } }
 
+.logged-in .mobile-open-menu {
+  padding-top: 46px; }
+
+.logged-in .site-header .mobile-menu .fa-bars::before {
+  top: 61px; }
+
 .menu-nav-menu-container {
   display: none; }
   @media only screen and (min-width: 900px) {
@@ -4198,6 +4204,11 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
 
 .community-container {
   padding: 2rem 0; }
+  @media only screen and (min-width: 800px) {
+    .community-container .community-posts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem; } }
   .community-container .community-container-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4210,6 +4221,108 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
             align-items: center; }
     .community-container .community-container-header h2 {
       margin: 1.5rem 0; }
+  .community-container .post-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    -webkit-box-shadow: 0 0.5px 3px #000000;
+            box-shadow: 0 0.5px 3px #000000;
+    border-radius: 5px;
+    width: 90%;
+    height: 105px;
+    margin: 1rem auto;
+    overflow: hidden; }
+    .community-container .post-card .image-container {
+      width: 120px; }
+    .community-container .post-card .post-meta {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 100%;
+      padding: 1rem 0 1rem 1rem; }
+      .community-container .post-card .post-meta div {
+        overflow: hidden;
+        max-height: 50%; }
+      .community-container .post-card .post-meta h3,
+      .community-container .post-card .post-meta h2 {
+        margin: 0; }
+      .community-container .post-card .post-meta .post-data {
+        color: #333333;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 12px; }
+      .community-container .post-card .post-meta .post-title {
+        font-size: 16px;
+        font-family: "Gotham"; }
+      .community-container .post-card .post-meta p {
+        -ms-flex-item-align: end;
+            align-self: end; }
+    @media only screen and (min-width: 800px) {
+      .community-container .post-card {
+        -webkit-box-shadow: 0 1px 4px #000000;
+                box-shadow: 0 1px 4px #000000;
+        border-radius: 5px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        height: 400px;
+        width: 100%;
+        overflow: hidden;
+        margin: 0; }
+        .community-container .post-card .image-container {
+          width: 100%;
+          min-height: 65%;
+          display: block;
+          overflow: hidden; }
+        .community-container .post-card .post-meta {
+          border-top: 1px solid #eff1f6;
+          -webkit-box-shadow: none;
+                  box-shadow: none;
+          min-height: 35%;
+          padding: 1rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
+          .community-container .post-card .post-meta div {
+            max-height: 70%;
+            overflow: hidden;
+            font-family: "Titillium Web"; }
+          .community-container .post-card .post-meta .post-title {
+            color: #333333;
+            display: block; }
+          .community-container .post-card .post-meta .post-data {
+            color: #333333;
+            text-transform: uppercase;
+            font-weight: lighter;
+            font-size: 0.75rem;
+            margin: 0; }
+          .community-container .post-card .post-meta .post-title {
+            margin: 0;
+            font-size: 1rem; }
+          .community-container .post-card .post-meta p {
+            font-size: 1rem;
+            font-family: "Titillium Web";
+            color: #2ba2dd;
+            text-transform: uppercase; } }
 
 .enroll-page {
   padding: 0 0.75rem;
