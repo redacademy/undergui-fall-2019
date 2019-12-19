@@ -3411,40 +3411,24 @@ body.home {
 .page-classes h3 {
   margin: 0; }
 
-@media only screen and (min-width: 800px) {
-  .page-classes .site-main .classes-container {
-    padding: 0 7vw; } }
-
-.page-classes .site-main .classes-container .classes-box {
-  z-index: -1;
-  padding: 0;
-  text-decoration: none;
-  -webkit-box-shadow: 0 1px 4px #000000;
-          box-shadow: 0 1px 4px #000000;
-  border-radius: 5px;
+.page-classes .site-main .classes-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  height: 450px;
-  width: 100%;
-  overflow: hidden;
-  margin: 1rem 0;
-  border: 1px solid black;
-  border-radius: 5px;
-  max-height: 100%;
-  width: 80%;
-  padding: 1.5rem;
-  margin: 1.5rem auto; }
-  .page-classes .site-main .classes-container .classes-box .image-container {
-    width: 100%;
-    min-height: 30%;
-    display: block;
-    overflow: hidden; }
-  .page-classes .site-main .classes-container .classes-box .post-meta {
+          flex-direction: column; }
+  @media only screen and (min-width: 800px) {
+    .page-classes .site-main .classes-container {
+      padding: 0 7vw; } }
+  .page-classes .site-main .classes-container .classes-box {
+    z-index: -1;
+    padding: 0;
+    text-decoration: none;
+    -webkit-box-shadow: 0 1px 4px #000000;
+            box-shadow: 0 1px 4px #000000;
+    border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3452,13 +3436,23 @@ body.home {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    height: 450px;
     width: 100%;
-    height: 70%;
-    padding: 1rem; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-description {
+    overflow: hidden;
+    margin: 1rem 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    max-height: 100%;
+    width: 80%;
+    max-width: 1000px;
+    padding: 1.5rem;
+    margin: 1.5rem auto; }
+    .page-classes .site-main .classes-container .classes-box .image-container {
+      width: 100%;
+      min-height: 30%;
+      display: block;
+      overflow: hidden; }
+    .page-classes .site-main .classes-container .classes-box .post-meta {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -3469,86 +3463,10 @@ body.home {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      height: 70%; }
-      .page-classes .site-main .classes-container .classes-box .post-meta .class-description .post-title {
-        font-size: 1rem; }
-      .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container {
-        overflow: hidden; }
-        .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container p {
-          font-size: 0.75rem;
-          text-transform: none;
-          color: #333333; }
-    .page-classes .site-main .classes-container .classes-box .post-meta h3,
-    .page-classes .site-main .classes-container .classes-box .post-meta h2 {
-      margin: 0; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .post-data {
-      color: #333333;
-      text-transform: none;
-      font-weight: bold;
-      font-size: 12px; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .post-title {
-      font-size: 16px;
-      font-family: "Gotham"; }
-    .page-classes .site-main .classes-container .classes-box .post-meta p {
-      -ms-flex-item-align: end;
-          align-self: end; }
-  .page-classes .site-main .classes-container .classes-box .program-subfields {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    .page-classes .site-main .classes-container .classes-box .program-subfields :first-child::after {
-      padding: 0 0.5rem;
-      content: '|'; }
-  .page-classes .site-main .classes-container .classes-box .link-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button {
-      z-index: 99;
-      color: #ffffff;
-      background-color: #2ba2dd;
-      font-family: "Gotham";
-      font-weight: bold;
-      justify-self: flex-end;
-      font-size: 1rem;
-      text-transform: uppercase;
-      padding: 0.75rem 2.25rem; }
-      .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button:hover {
-        color: #2ba2dd;
-        background-color: #ffffff;
-        border-color: #2ba2dd;
-        border: 1px solid #2ba2dd; }
-  .page-classes .site-main .classes-container .classes-box .class-image {
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%; }
-  @media only screen and (min-width: 800px) {
-    .page-classes .site-main .classes-container .classes-box {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      border-radius: 5px;
-      border: 1px solid #000000;
       width: 100%;
-      height: 235px;
-      margin: 4rem 0;
-      overflow: hidden;
-      -webkit-box-shadow: none;
-              box-shadow: none;
-      margin: 0 0 4rem 0; }
-      .page-classes .site-main .classes-container .classes-box .image-container {
-        width: 24%;
-        height: 100%; }
-      .page-classes .site-main .classes-container .classes-box .post-meta {
+      height: 70%;
+      padding: 1rem; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-description {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -3559,10 +3477,86 @@ body.home {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-        width: 76%;
-        height: 100%;
-        padding: 1.5rem; }
-        .page-classes .site-main .classes-container .classes-box .post-meta .class-description {
+        height: 70%; }
+        .page-classes .site-main .classes-container .classes-box .post-meta .class-description .post-title {
+          font-size: 1rem; }
+        .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container {
+          overflow: hidden; }
+          .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container p {
+            font-size: 0.75rem;
+            text-transform: none;
+            color: #333333; }
+      .page-classes .site-main .classes-container .classes-box .post-meta h3,
+      .page-classes .site-main .classes-container .classes-box .post-meta h2 {
+        margin: 0; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .post-data {
+        color: #333333;
+        text-transform: none;
+        font-weight: bold;
+        font-size: 12px; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .post-title {
+        font-size: 16px;
+        font-family: "Gotham"; }
+      .page-classes .site-main .classes-container .classes-box .post-meta p {
+        -ms-flex-item-align: end;
+            align-self: end; }
+    .page-classes .site-main .classes-container .classes-box .program-subfields {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .page-classes .site-main .classes-container .classes-box .program-subfields :first-child::after {
+        padding: 0 0.5rem;
+        content: '|'; }
+    .page-classes .site-main .classes-container .classes-box .link-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button {
+        z-index: 99;
+        color: #ffffff;
+        background-color: #2ba2dd;
+        font-family: "Gotham";
+        font-weight: bold;
+        justify-self: flex-end;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 0.75rem 2.25rem; }
+        .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button:hover {
+          color: #2ba2dd;
+          background-color: #ffffff;
+          border-color: #2ba2dd;
+          border: 1px solid #2ba2dd; }
+    .page-classes .site-main .classes-container .classes-box .class-image {
+      height: 100%;
+      width: 100%;
+      border-radius: 5px;
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%; }
+    @media only screen and (min-width: 800px) {
+      .page-classes .site-main .classes-container .classes-box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        width: 100%;
+        height: 235px;
+        margin: 4rem 0;
+        overflow: hidden;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        margin: 0 0 4rem 0; }
+        .page-classes .site-main .classes-container .classes-box .image-container {
+          width: 24%;
+          height: 100%; }
+        .page-classes .site-main .classes-container .classes-box .post-meta {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -3573,106 +3567,120 @@ body.home {
           -webkit-box-pack: justify;
               -ms-flex-pack: justify;
                   justify-content: space-between;
-          height: 75%; }
-          .page-classes .site-main .classes-container .classes-box .post-meta .class-description .post-title {
-            font-size: 1.75rem; }
-          .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container p {
-            text-transform: none;
-            color: #333333; }
-        .page-classes .site-main .classes-container .classes-box .post-meta h3,
-        .page-classes .site-main .classes-container .classes-box .post-meta h2 {
-          margin: 0; }
-        .page-classes .site-main .classes-container .classes-box .post-meta .post-data {
-          color: #333333;
-          text-transform: uppercase;
-          font-weight: 200;
-          font-size: 12px; }
-        .page-classes .site-main .classes-container .classes-box .post-meta .post-title {
-          font-size: 16px;
-          font-family: "Gotham"; }
-        .page-classes .site-main .classes-container .classes-box .post-meta p {
-          -ms-flex-item-align: end;
-              align-self: end; }
-      .page-classes .site-main .classes-container .classes-box .program-subfields {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; }
-        .page-classes .site-main .classes-container .classes-box .program-subfields :first-child::after {
-          padding: 0 0.5rem;
-          content: '|'; }
-      .page-classes .site-main .classes-container .classes-box .link-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: flex-end; }
-        .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button {
-          z-index: 99;
-          color: #ffffff;
-          background-color: #2ba2dd;
-          font-family: "Gotham";
-          font-weight: bold;
-          justify-self: flex-end;
-          font-size: 1rem;
-          text-transform: uppercase;
-          padding: 0.75rem 2.25rem; }
-          .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button:hover {
-            color: #2ba2dd;
-            background-color: #ffffff;
-            border-color: #2ba2dd;
-            border: 1px solid #2ba2dd; }
-      .page-classes .site-main .classes-container .classes-box .class-image {
-        max-height: 100%;
-        width: 40%; } }
-  .page-classes .site-main .classes-container .classes-box .post-meta {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 3.5vw 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    @media only screen and (min-width: 800px) {
-      .page-classes .site-main .classes-container .classes-box .post-meta {
-        padding: 0;
-        padding-left: 1.5rem; } }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-title {
-      color: #2ba2dd;
-      font-size: 16px;
-      padding-bottom: 0.75rem; }
+          width: 76%;
+          height: 100%;
+          padding: 1.5rem; }
+          .page-classes .site-main .classes-container .classes-box .post-meta .class-description {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            height: 75%; }
+            .page-classes .site-main .classes-container .classes-box .post-meta .class-description .post-title {
+              font-size: 1.75rem; }
+            .page-classes .site-main .classes-container .classes-box .post-meta .class-description .content-container p {
+              text-transform: none;
+              color: #333333; }
+          .page-classes .site-main .classes-container .classes-box .post-meta h3,
+          .page-classes .site-main .classes-container .classes-box .post-meta h2 {
+            margin: 0; }
+          .page-classes .site-main .classes-container .classes-box .post-meta .post-data {
+            color: #333333;
+            text-transform: uppercase;
+            font-weight: 200;
+            font-size: 12px; }
+          .page-classes .site-main .classes-container .classes-box .post-meta .post-title {
+            font-size: 16px;
+            font-family: "Gotham"; }
+          .page-classes .site-main .classes-container .classes-box .post-meta p {
+            -ms-flex-item-align: end;
+                align-self: end; }
+        .page-classes .site-main .classes-container .classes-box .program-subfields {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          .page-classes .site-main .classes-container .classes-box .program-subfields :first-child::after {
+            padding: 0 0.5rem;
+            content: '|'; }
+        .page-classes .site-main .classes-container .classes-box .link-container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end; }
+          .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button {
+            z-index: 99;
+            color: #ffffff;
+            background-color: #2ba2dd;
+            font-family: "Gotham";
+            font-weight: bold;
+            justify-self: flex-end;
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 0.75rem 2.25rem; }
+            .page-classes .site-main .classes-container .classes-box .link-container .find-classes-button:hover {
+              color: #2ba2dd;
+              background-color: #ffffff;
+              border-color: #2ba2dd;
+              border: 1px solid #2ba2dd; }
+        .page-classes .site-main .classes-container .classes-box .class-image {
+          max-height: 100%;
+          width: 40%; } }
+    .page-classes .site-main .classes-container .classes-box .post-meta {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 3.5vw 0;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
       @media only screen and (min-width: 800px) {
-        .page-classes .site-main .classes-container .classes-box .post-meta .class-title {
+        .page-classes .site-main .classes-container .classes-box .post-meta {
+          padding: 0;
+          padding-left: 1.5rem; } }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-title {
+        color: #2ba2dd;
+        font-size: 16px;
+        padding-bottom: 0.75rem; }
+        @media only screen and (min-width: 800px) {
+          .page-classes .site-main .classes-container .classes-box .post-meta .class-title {
+            font-size: 19.2px; } }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-age {
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid #595757; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-location {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding-top: 0.75rem; }
+        .page-classes .site-main .classes-container .classes-box .post-meta .class-location img {
+          margin-right: 0.375rem; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-data {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-day {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .page-classes .site-main .classes-container .classes-box .post-meta .class-day img {
+          margin-right: 0.375rem; }
+      .page-classes .site-main .classes-container .classes-box .post-meta .class-data img {
+        margin-right: 0.375rem; }
+    .page-classes .site-main .classes-container .classes-box .class-price p {
+      font-weight: bold;
+      font-family: "Gotham"; }
+      @media only screen and (min-width: 800px) {
+        .page-classes .site-main .classes-container .classes-box .class-price p {
           font-size: 19.2px; } }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-age {
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid #595757; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-location {
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      padding-top: 0.75rem; }
-      .page-classes .site-main .classes-container .classes-box .post-meta .class-location img {
-        margin-right: 0.375rem; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-data {
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-day {
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      .page-classes .site-main .classes-container .classes-box .post-meta .class-day img {
-        margin-right: 0.375rem; }
-    .page-classes .site-main .classes-container .classes-box .post-meta .class-data img {
-      margin-right: 0.375rem; }
-  .page-classes .site-main .classes-container .classes-box .class-price p {
-    font-weight: bold;
-    font-family: "Gotham"; }
-    @media only screen and (min-width: 800px) {
-      .page-classes .site-main .classes-container .classes-box .class-price p {
-        font-size: 19.2px; } }
 
 .page-classes .button-container {
   display: -webkit-box;
@@ -3933,8 +3941,11 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
 .locations-container {
   padding: 2rem 7vw;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 1rem; }
+  @media only screen and (min-width: 1000px) {
+    .locations-container {
+      grid-template-columns: repeat(4, 1fr); } }
 
 .location-card {
   -webkit-box-shadow: 0 1px 4px #000000;
@@ -3953,8 +3964,9 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
   margin: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  height: 385px;
-  width: 296px; }
+  height: 400px;
+  width: 300px;
+  margin: 0 auto; }
   .location-card .image-container {
     width: 100%;
     min-height: 65%;
@@ -4153,7 +4165,8 @@ body.page-request-info .gform_body .gform_wrapper .gform_footer {
       display: none;
       z-index: 10;
       border-radius: 5px;
-      width: auto; }
+      width: auto;
+      text-align: left; }
     .staff-container .staff-card:focus .statement {
       margin-top: 1.5rem;
       padding: 0.75rem;

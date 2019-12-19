@@ -11,6 +11,8 @@
 
   .site-main {
     .classes-container {
+      display: flex;
+      flex-direction: column;
       @include media($tablet) {
         padding: 0 $site-padding;
       }
@@ -39,6 +41,7 @@
         border-radius: $border-radius;
         max-height: 100%;
         width: 80%;
+        max-width: 1000px;
         padding: $base__space-unit;
         margin: $base__space-unit auto;
 
