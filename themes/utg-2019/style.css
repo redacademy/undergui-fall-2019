@@ -3809,7 +3809,7 @@ body.page-request-info .gform_body .gform_wrapper form {
 body.page-request-info .gform_body .gform_wrapper .gsection {
   border-bottom: 0px !important; }
 
-body.page-request-info .gform_body .gform_wrapper .gform_footer {
+body.page-request-info .gform_footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4562,7 +4562,8 @@ body.page-register .progress {
   display: flex;
   justify-self: center;
   grid-column-start: 1;
-  grid-column-end: 3; }
+  grid-column-end: 3;
+  margin: 2rem 0; }
   @media only screen and (min-width: 1000px) {
     body.page-register .progress {
       width: 75%; } }
@@ -4583,7 +4584,7 @@ body.page-register .progress-step {
   body.page-register .progress-step:last-child:after {
     display: none; }
   body.page-register .progress-step:before {
-    content: "\f00c";
+    content: '\f00c';
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4596,7 +4597,7 @@ body.page-register .progress-step {
     border-radius: 100%;
     color: #ffffff; }
   body.page-register .progress-step:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 6px;
     left: 50%;

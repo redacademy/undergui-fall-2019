@@ -1,5 +1,4 @@
 body.page-register {
-
   .form-wrapper {
     @include media($desktop) {
       margin: 3rem 10rem;
@@ -57,7 +56,8 @@ body.page-register {
     margin: 1rem;
 
     .gform_page_2_1 {
-      @include media($desktop) {}
+      @include media($desktop) {
+      }
     }
   }
 
@@ -115,8 +115,7 @@ body.page-register {
     }
   }
 
-
-  // Progress bar 
+  // Progress bar
 
   .progress {
     position: relative;
@@ -124,7 +123,7 @@ body.page-register {
     justify-self: center;
     grid-column-start: 1;
     grid-column-end: 3;
-
+    margin: 2rem 0;
     @include media($desktop) {
       width: 75%;
     }
@@ -153,7 +152,7 @@ body.page-register {
 
     // Step's circle in default state
     &:before {
-      content: "\f00c";
+      content: '\f00c';
       display: flex;
       margin: 0 auto;
       margin-bottom: 10px;
@@ -167,7 +166,7 @@ body.page-register {
 
     // Step's progress bar in default state
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: 6px;
       left: 50%;

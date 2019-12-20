@@ -1,6 +1,4 @@
 body.page-request-info {
-
-
   .page-banner {
     @include max-media(510px) {
       background-size: inherit !important;
@@ -35,9 +33,7 @@ body.page-request-info {
     }
   }
 
-
   .gform_body {
-
     @include media($tablet) {
       width: 80%;
       margin: 0 auto;
@@ -90,9 +86,7 @@ body.page-request-info {
       }
     }
 
-
     .gform_wrapper {
-
       .gfield_label {
         font-family: $font__main;
         font-size: 14px;
@@ -105,12 +99,10 @@ body.page-request-info {
       .gsection {
         border-bottom: 0px !important;
       }
-
-      .gform_footer {
-        display: flex;
-        flex-direction: column;
-      }
-
     }
+  }
+  .gform_footer {
+    display: flex;
+    flex-direction: column;
   }
 }
