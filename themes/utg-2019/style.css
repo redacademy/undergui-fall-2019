@@ -785,7 +785,11 @@ object {
       transition: transform 0.5s ease-in;
       transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
       -webkit-transform: rotate(180deg);
-              transform: rotate(180deg); }
+              transform: rotate(180deg);
+      padding: 0 0 0 2rem; }
+      .site-header .toggle-menu .left-arrow:active, .site-header .toggle-menu .left-arrow:focus {
+        background-color: #2ba2dd;
+        color: #ffffff; }
     .site-header .toggle-menu .main-navigation {
       text-align: left;
       border-bottom: 1px solid #ffffff; }
@@ -4699,3 +4703,9 @@ body.page-register .progress-step {
     .page .site-main .under-construction-banner .home-button:hover {
       background: #eff1f6;
       border: 1px solid white; }
+
+.page .site-content {
+  margin: 0.75rem; }
+  @media only screen and (min-width: 1000px) {
+    .page .site-content {
+      margin: 7vw; } }

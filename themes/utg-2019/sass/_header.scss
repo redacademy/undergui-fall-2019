@@ -85,6 +85,12 @@
       color: $color_white;
       transition: transform 0.5s ease-in;
       transform: rotate(180deg);
+      padding: 0 0 0 2rem;
+      &:active,
+      &:focus {
+        background-color: $color_blue;
+        color: $color_white;
+      }
     }
 
     .main-navigation {
