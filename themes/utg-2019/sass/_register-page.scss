@@ -1,8 +1,8 @@
 body.page-register {
-  .form-wrapper {
 
+  .form-wrapper {
     @include media($desktop) {
-      margin: 0 10rem;
+      margin: 3rem 10rem;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 10% 1fr;
@@ -12,13 +12,15 @@ body.page-register {
   .gform_page {
     display: flex;
     flex-direction: column;
+
     .gsection_title {
       text-align: center;
     }
   }
 
   .class-card-container {
-    margin-top: 3rem;
+    margin-top: 1rem;
+
     @include media($desktop) {
       justify-self: center;
       grid-column-start: 2;
@@ -48,18 +50,15 @@ body.page-register {
   .gform_page_fields {
     input.medium {
       width: 100%;
-      @include media($desktop) {
-        width: 20rem;
-      }
     }
   }
 
   .gform_body {
     margin: 1rem;
+
     .gform_page_2_1 {
-    @include media($desktop) {
+      @include media($desktop) {}
     }
-  }
   }
 
   .gf_progressbar_wrapper,
@@ -72,9 +71,10 @@ body.page-register {
   }
 
   .gform_wrapper {
+    margin: 0 3rem;
 
     @include media($desktop) {
-    justify-self: center;
+      justify-self: center;
     }
 
     .gsection {
@@ -100,45 +100,28 @@ body.page-register {
 
       input#gform_next_button_2_15 {
         margin: auto;
-
-        @include media($desktop) {
-          // transform: translate(15rem, 0);
-        }
       }
     }
 
     #gform_page_2_2 {
-      max-width: 30rem;
+      @include media($desktop) {
+        max-width: 30rem;
+      }
 
       .gform_page_footer {
         display: flex;
-
-        @include media($desktop) {
-          width: 57rem;
-          justify-content: space-evenly;
-        }
+        justify-content: space-evenly;
       }
     }
   }
 
-  #input_2_13_1 {
-    @include media($desktop) {
-      max-width: 26.8rem;
-    }
-  }
 
-  #input_2_5 {
-    max-width: 30rem;
-  }
-
-
-// Progress bar 
+  // Progress bar 
 
   .progress {
     position: relative;
     display: flex;
     justify-self: center;
-    margin-top: 2rem;
     grid-column-start: 1;
     grid-column-end: 3;
 
@@ -167,6 +150,7 @@ body.page-register {
     &:last-child:after {
       display: none;
     }
+
     // Step's circle in default state
     &:before {
       content: "\f00c";
@@ -193,6 +177,7 @@ body.page-register {
       background: $color_dark_grey;
       z-index: -1;
     }
+
     // Step's active state
     &.is-active {
       color: $color_blue;
@@ -238,6 +223,7 @@ body.page-register {
         box-shadow: 0 0 0 0 rgba(33, 131, 221, 0);
       }
     }
+
     // Progressing to next step animation for Step's progress bar
     @keyframes nextStep {
       0% {

@@ -126,7 +126,8 @@ function utg_scripts()
 	wp_enqueue_script('utg-tabbed-content', get_template_directory_uri() . '/build/js/tabbed-content.min.js', array(), '', true);
 	//Flickity CDN scripts
 	wp_enqueue_script('utg-flickity-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), '', true);
-
+	//Enroll Page scripts
+	// wp_enqueue_script('utg-enroll-js', get_template_directory_uri() . '/build/js/enroll-page.min.js', array(), '', true);
 
 	//Ajax methods
 
