@@ -848,7 +848,6 @@ object {
     height: 4.75rem; }
   @media only screen and (min-width: 900px) {
     .site-header {
-      padding: 0.75rem 7vw;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
@@ -4703,9 +4702,3 @@ body.page-register .progress-step {
     .page .site-main .under-construction-banner .home-button:hover {
       background: #eff1f6;
       border: 1px solid white; }
-
-.page .site-content {
-  margin: 0.75rem; }
-  @media only screen and (min-width: 1000px) {
-    .page .site-content {
-      margin: 7vw; } }
