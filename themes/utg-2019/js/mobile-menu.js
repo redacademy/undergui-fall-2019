@@ -16,6 +16,5 @@ document.addEventListener('DOMContentLoaded', function() {
     e.preventDefault();
     siteHeader.classList.remove('toggle-menu');
     navLinks.classList.remove('toggle-menu');
-    closeMenuButton.classList.toggle('padding');
   });
 });
